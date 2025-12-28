@@ -1,0 +1,17 @@
+# Design Specifications (chỉ có trong nhánh Design)
+.DesignSpecifications/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.swp
