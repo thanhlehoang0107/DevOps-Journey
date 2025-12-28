@@ -1,15 +1,267 @@
-# Track 4: DevSecOps
+# 🔐 Track 4: DevSecOps
 
-> 🔒 Security in DevOps
+[![Duration](https://img.shields.io/badge/Duration-4--6%20weeks-blue?style=flat-square)](.)
+[![Level](https://img.shields.io/badge/Level-Advanced-red?style=flat-square)](.)
+[![Prerequisites](https://img.shields.io/badge/Prerequisites-Track%201--3-green?style=flat-square)](../Track3_Cloud_Network_Design/)
 
-## 📚 Modules
+> **Security-First DevOps** - Tích hợp security vào mọi giai đoạn của CI/CD pipeline.
 
-| # | Module | Thời lượng |
-|---|--------|------------|
-| 4.1 | [Security in Pipeline](./4.1_Security_in_Pipeline/README.md) | 15-18h |
-| 4.2 | [Infra Security](./4.2_Infra_Security/README.md) | 15-18h |
-| 4.3 | [Capstone Project](./4.3_Capstone_Project/README.md) | 15-20h |
+---
+
+## 🎯 Mục Tiêu Track
+
+Sau khi hoàn thành Track 4, bạn sẽ có khả năng:
+
+- ✅ Implement SAST (Static Application Security Testing)
+- ✅ Implement DAST (Dynamic Application Security Testing)
+- ✅ Container image scanning và vulnerability management
+- ✅ Secrets management với HashiCorp Vault
+- ✅ Infrastructure security hardening
+- ✅ Compliance as Code
+- ✅ **Xây dựng Secure CI/CD Pipeline end-to-end**
+
+---
+
+## 📋 Prerequisites
+
+Trước khi bắt đầu Track 4, bạn cần hoàn thành:
+
+- ✅ **Track 1, 2 & 3**
+- ✅ Có kinh nghiệm với CI/CD pipelines
+- ✅ Hiểu container security basics
+- ✅ Familiar với cloud security concepts
+
+---
+
+## 📚 Danh Sách Modules
+
+| # | Module | Thời Gian | Mô Tả |
+|---|--------|-----------|-------|
+| 4.1 | [Security in Pipeline](./4.1_Security_in_Pipeline/) | 2 tuần | SAST, DAST, SCA, Container Scanning |
+| 4.2 | [Infrastructure Security](./4.2_Infra_Security/) | 2 tuần | Secrets Management, Hardening, Compliance |
+| 4.3 | [**Capstone Project**](./4.3_Capstone_Project/) | 1-2 tuần | 🎯 Secure CI/CD Pipeline |
+
+---
+
+## 🗓️ Lịch Trình Đề Xuất
+
+### Tuần 1-2: Security in Pipeline
+
+```
+Week 1:
+- Day 1-2: SAST with SonarQube
+- Day 3-4: Dependency scanning (SCA)
+- Day 5-7: Container image scanning with Trivy
+
+Week 2:
+- Day 1-3: DAST with OWASP ZAP
+- Day 4-5: Secret scanning (GitLeaks, TruffleHog)
+- Day 6-7: Integrating security gates in CI/CD
+```
+
+### Tuần 3-4: Infrastructure Security
+
+```
+Week 3:
+- Day 1-3: Secrets management with Vault
+- Day 4-5: Cloud security best practices
+- Day 6-7: Network security & firewalls
+
+Week 4:
+- Day 1-3: Compliance as Code (OPA, Checkov)
+- Day 4-5: Security monitoring & alerting
+- Day 6-7: Incident response basics
+```
+
+### Tuần 5-6: Capstone Project
+
+```
+Week 5:
+- Day 1-2: Architecture design
+- Day 3-5: Implementation
+- Day 6-7: Security testing
+
+Week 6:
+- Day 1-3: Remediation & hardening
+- Day 4-5: Documentation
+- Day 6-7: Review & presentation
+```
+
+---
+
+## 🛠️ Tools Sử Dụng
+
+### Static Analysis (SAST)
+
+| Tool | Mục Đích | Documentation |
+|------|----------|---------------|
+| **SonarQube** | Code quality & security | [sonarqube.org](https://docs.sonarqube.org/) |
+| **Semgrep** | Static analysis | [semgrep.dev](https://semgrep.dev/docs/) |
+| **Bandit** | Python security | [bandit.readthedocs.io](https://bandit.readthedocs.io/) |
+
+### Dynamic Analysis (DAST)
+
+| Tool | Mục Đích | Documentation |
+|------|----------|---------------|
+| **OWASP ZAP** | Web app security testing | [zaproxy.org](https://www.zaproxy.org/docs/) |
+| **Nuclei** | Vulnerability scanning | [nuclei.projectdiscovery.io](https://nuclei.projectdiscovery.io/) |
+
+### Container Security
+
+| Tool | Mục Đích | Documentation |
+|------|----------|---------------|
+| **Trivy** | Container scanning | [aquasecurity.github.io/trivy](https://aquasecurity.github.io/trivy/) |
+| **Grype** | Vulnerability scanner | [github.com/anchore/grype](https://github.com/anchore/grype) |
+| **Falco** | Runtime security | [falco.org](https://falco.org/docs/) |
+
+### Secrets Management
+
+| Tool | Mục Đích | Documentation |
+|------|----------|---------------|
+| **HashiCorp Vault** | Secrets management | [vaultproject.io](https://www.vaultproject.io/docs) |
+| **AWS Secrets Manager** | AWS secrets | [aws.amazon.com](https://docs.aws.amazon.com/secretsmanager/) |
+| **GitLeaks** | Git secret scanning | [gitleaks.io](https://github.com/gitleaks/gitleaks) |
+
+### Compliance & Policy
+
+| Tool | Mục Đích | Documentation |
+|------|----------|---------------|
+| **Checkov** | IaC scanning | [checkov.io](https://www.checkov.io/1.Welcome/Quick%20Start.html) |
+| **OPA/Gatekeeper** | Policy as Code | [openpolicyagent.org](https://www.openpolicyagent.org/docs/) |
+| **tfsec** | Terraform security | [tfsec.dev](https://aquasecurity.github.io/tfsec/) |
+
+---
+
+## 🔒 Security Concepts Covered
+
+### OWASP Top 10
+
+1. Injection
+2. Broken Authentication
+3. Sensitive Data Exposure
+4. XML External Entities (XXE)
+5. Broken Access Control
+6. Security Misconfiguration
+7. Cross-Site Scripting (XSS)
+8. Insecure Deserialization
+9. Using Components with Known Vulnerabilities
+10. Insufficient Logging & Monitoring
+
+### DevSecOps Practices
+
+- **Shift Left** - Security early in SDLC
+- **Automation** - Automated security testing
+- **Continuous** - Security in every pipeline run
+- **Collaboration** - Dev, Sec, Ops working together
+
+---
+
+## 🎯 Capstone Project Preview
+
+### **Secure CI/CD Pipeline Implementation**
+
+Bạn sẽ xây dựng:
+
+```
+┌─────────────────────────────────────────────────────────────────────┐
+│                    Secure CI/CD Pipeline                            │
+│                                                                     │
+│  ┌─────────┐    ┌─────────┐    ┌─────────┐    ┌─────────┐         │
+│  │  Code   │───▶│  Build  │───▶│  Test   │───▶│ Deploy  │         │
+│  │  Commit │    │  Stage  │    │  Stage  │    │  Stage  │         │
+│  └─────────┘    └─────────┘    └─────────┘    └─────────┘         │
+│       │              │              │              │               │
+│       ▼              ▼              ▼              ▼               │
+│  ┌─────────┐    ┌─────────┐    ┌─────────┐    ┌─────────┐         │
+│  │ Secret  │    │  SAST   │    │  DAST   │    │ Runtime │         │
+│  │ Scan    │    │ Scan    │    │ Scan    │    │ Security│         │
+│  │(GitLeaks)│   │(SonarQube)│  │(OWASP ZAP)│  │(Falco)  │         │
+│  └─────────┘    └─────────┘    └─────────┘    └─────────┘         │
+│       │              │              │              │               │
+│       ▼              ▼              ▼              ▼               │
+│  ┌─────────┐    ┌─────────┐    ┌─────────┐    ┌─────────┐         │
+│  │   SCA   │    │Container│    │ Policy  │    │ Monitor │         │
+│  │  Scan   │    │ Scan    │    │ Check   │    │ & Alert │         │
+│  │(Snyk)   │    │(Trivy)  │    │(OPA)    │    │(Grafana)│         │
+│  └─────────┘    └─────────┘    └─────────┘    └─────────┘         │
+│                                                                     │
+│  ┌───────────────────────────────────────────────────────────────┐ │
+│  │                   HashiCorp Vault                             │ │
+│  │              (Secrets Management Layer)                       │ │
+│  └───────────────────────────────────────────────────────────────┘ │
+│                                                                     │
+│  ┌───────────────────────────────────────────────────────────────┐ │
+│  │              Security Dashboard & Reporting                   │ │
+│  └───────────────────────────────────────────────────────────────┘ │
+└─────────────────────────────────────────────────────────────────────┘
+```
+
+### Security Gates
+
+- ⛔ **Pre-commit**: Secret scanning
+- ⛔ **Build**: SAST, SCA, Container scan
+- ⛔ **Test**: DAST, Integration tests
+- ⛔ **Deploy**: Policy compliance check
+- ⛔ **Runtime**: Continuous monitoring
+
+### Deliverables
+
+- 🔄 Complete CI/CD pipeline với security gates
+- 📊 Security dashboard với metrics
+- 📝 Security policies documented
+- 🔐 Vault integration cho secrets
+- 📋 Compliance reports
+
+👉 **[Xem chi tiết Capstone Project →](./4.3_Capstone_Project/)**
+
+---
+
+## 📊 Đánh Giá
+
+### Tiêu Chí Hoàn Thành Track
+
+- ✅ Hoàn thành tất cả 2 modules
+- ✅ Submit Capstone Project
+- ✅ Pass security audit của pipeline
+- ✅ Demo working security gates
+
+---
+
+## 📚 Certifications Related
+
+Sau Track này, bạn có thể chuẩn bị cho:
+
+| Certification | Provider | Level |
+|--------------|----------|-------|
+| **AWS Security Specialty** | AWS | Professional |
+| **CKS** (Certified Kubernetes Security) | CNCF | Advanced |
+| **CompTIA Security+** | CompTIA | Foundational |
+| **OSCP** | Offensive Security | Advanced |
+
+---
 
 ## 🔗 Navigation
 
-[⬅️ Track 3](../Track3_Cloud_Network_Design/README.md) | [Track 5 ➡️](../Track5_Career_Path/README.md)
+| ← Previous | Current | Next → |
+|------------|---------|--------|
+| [Track 3: Cloud](../Track3_Cloud_Network_Design/) | **Track 4** | [Track 5: Career](../Track5_Career_Path/) |
+
+---
+
+## 📖 Bắt Đầu
+
+```bash
+# Bắt đầu với Module 4.1
+cd 4.1_Security_in_Pipeline
+cat README.md
+```
+
+**📚 Bắt đầu học:** [4.1 Security in Pipeline →](./4.1_Security_in_Pipeline/)
+
+---
+
+<div align="center">
+
+**🔐 Security is Everyone's Responsibility! 🔐**
+
+</div>
