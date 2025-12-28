@@ -1,0 +1,13 @@
+# CI/CD Cheatsheet
+
+```yaml
+name: CI
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: npm install
+      - run: npm test
+```
