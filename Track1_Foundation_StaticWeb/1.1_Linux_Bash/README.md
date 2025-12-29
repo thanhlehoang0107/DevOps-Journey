@@ -22,24 +22,26 @@ After this module, you will (Sau module này, bạn sẽ):
 
 ---
 
-## 📖 Nội dung
+## 📖 Content (Nội dung)
 
-### 1. Linux là gì? (30 phút)
+### 1. What is Linux? (Linux là gì?) - 30 min
 
-#### 1.1 Giới thiệu
+#### 1.1 Introduction (Giới thiệu)
 
-**Linux** là một hệ điều hành mã nguồn mở, được phát triển bởi Linus Torvalds năm 1991. Khác với Windows hay macOS, Linux hoàn toàn miễn phí và có thể tùy chỉnh.
+**Linux** is an open-source operating system, developed by Linus Torvalds in 1991. Unlike Windows or macOS, Linux is completely free and customizable.
 
-#### 1.2 Tại sao DevOps cần Linux?
+*Linux là hệ điều hành mã nguồn mở, được phát triển bởi Linus Torvalds năm 1991. Khác với Windows hay macOS, Linux hoàn toàn miễn phí và có thể tùy chỉnh.*
 
-| Lý do | Giải thích |
-|-------|------------|
-| **Servers chạy Linux** | 90%+ servers trên internet chạy Linux |
-| **Containers** | Docker, Kubernetes đều dựa trên Linux |
-| **Scripting** | Bash scripting là công cụ tự động hóa mạnh mẽ |
-| **Free & Open Source** | Không tốn tiền license, dễ customize |
+#### 1.2 Why DevOps needs Linux? (Tại sao DevOps cần Linux?)
 
-#### 1.3 Các Linux Distributions phổ biến
+| Reason | Explanation |
+|--------|-------------|
+| **Servers run Linux** | 90%+ servers on the internet run Linux |
+| **Containers** | Docker, Kubernetes are based on Linux |
+| **Scripting** | Bash scripting is a powerful automation tool |
+| **Free & Open Source** | No license cost, easy to customize |
+
+#### 1.3 Popular Linux Distributions (Các Linux Distributions phổ biến)
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -55,50 +57,50 @@ After this module, you will (Sau module này, bạn sẽ):
 
 ---
 
-### 2. Linux File System (1 giờ)
+### 2. Linux File System (Hệ thống File Linux) - 1 hour
 
-#### 2.1 Cấu trúc thư mục
+#### 2.1 Directory Structure (Cấu trúc thư mục)
 
 ```
-/                    ← Root directory (gốc)
-├── home/            ← Thư mục người dùng
-│   └── user/        ← Home của user (tương đương C:\Users\username)
-├── etc/             ← File cấu hình hệ thống
+/                    ← Root directory (thư mục gốc)
+├── home/            ← User directories (thư mục người dùng)
+│   └── user/        ← User's home (tương đương C:\Users\username)
+├── etc/             ← System config files (file cấu hình)
 ├── var/             ← Logs, databases
 │   └── log/         ← System logs
-├── tmp/             ← Files tạm (tự động xóa)
-├── opt/             ← Software của bên thứ 3
-├── usr/             ← User programs
+├── tmp/             ← Temporary files (files tạm - tự động xóa)
+├── opt/             ← Third-party software (phần mềm bên thứ 3)
+├── usr/             ← User programs (chương trình người dùng)
 │   ├── bin/         ← User binaries
 │   └── local/       ← Locally installed software
-├── bin/             ← Essential binaries
+├── bin/             ← Essential binaries (binaries thiết yếu)
 ├── sbin/            ← System binaries (admin)
-└── root/            ← Home của root user
+└── root/            ← Root user's home
 ```
 
-#### 2.2 Absolute vs Relative Paths
+#### 2.2 Absolute vs Relative Paths (Đường dẫn tuyệt đối vs tương đối)
 
 ```bash
-# Absolute Path - Bắt đầu từ /
+# Absolute Path - Starts from / (Đường dẫn tuyệt đối - Bắt đầu từ /)
 /home/user/documents/file.txt
 
-# Relative Path - Tương đối với vị trí hiện tại
-./documents/file.txt    # Trong thư mục hiện tại
-../documents/file.txt   # Lùi 1 cấp rồi vào documents
+# Relative Path - Relative to current location (Đường dẫn tương đối - Tương đối với vị trí hiện tại)
+./documents/file.txt    # In current directory (trong thư mục hiện tại)
+../documents/file.txt   # Go up one level then into documents (lùi 1 cấp)
 ```
 
-#### 2.3 Những thư mục quan trọng cần nhớ
+#### 2.3 Important Directories (Những thư mục quan trọng)
 
-| Thư mục | Mục đích | Ví dụ |
-|---------|----------|-------|
-| `/home/user` | Files cá nhân | Documents, Downloads |
-| `/etc` | Config files | `/etc/nginx/nginx.conf` |
-| `/var/log` | Logs | `/var/log/syslog` |
-| `/tmp` | Files tạm | Tự động xóa khi reboot |
+| Directory | Purpose | Example |
+|-----------|---------|---------|
+| `/home/user` | Personal files (Files cá nhân) | Documents, Downloads |
+| `/etc` | Config files (Cấu hình) | `/etc/nginx/nginx.conf` |
+| `/var/log` | Logs (Nhật ký) | `/var/log/syslog` |
+| `/tmp` | Temporary files (Tạm thời) | Auto-deleted on reboot |
 
 ---
 
-### 3. Điều hướng cơ bản (1 giờ)
+### 3. Basic Navigation (Điều hướng cơ bản) - 1 hour
 
 #### 3.1 pwd - Print Working Directory
 
@@ -106,291 +108,291 @@ After this module, you will (Sau module này, bạn sẽ):
 $ pwd
 /home/devops
 
-# Cho biết bạn đang ở đâu
+# Shows where you are (Cho biết bạn đang ở đâu)
 ```
 
-#### 3.2 ls - List Directory Contents
+#### 3.2 ls - List Directory Contents (Liệt kê nội dung thư mục)
 
 ```bash
-ls              # Liệt kê files
-ls -l           # Chi tiết (long format)
-ls -a           # Hiển thị hidden files (bắt đầu bằng .)
-ls -la          # Kết hợp cả 2
+ls              # List files (Liệt kê files)
+ls -l           # Long format (Chi tiết)
+ls -a           # Show hidden files (Hiển thị hidden files)
+ls -la          # Combine both (Kết hợp cả 2)
 ls -lh          # Human readable (KB, MB, GB)
-ls -lt          # Sắp xếp theo thời gian
+ls -lt          # Sort by time (Sắp xếp theo thời gian)
 ```
 
-**Đọc output của `ls -l`:**
+**Reading `ls -l` output (Đọc output của ls -l):**
 
 ```
 -rw-r--r-- 1 user group 4096 Dec 29 10:00 file.txt
 │          │ │    │     │    │            │
-│          │ │    │     │    │            └── Tên file
-│          │ │    │     │    └── Thời gian sửa đổi
-│          │ │    │     └── Kích thước (bytes)
+│          │ │    │     │    │            └── File name (Tên file)
+│          │ │    │     │    └── Modification time (Thời gian sửa)
+│          │ │    │     └── Size in bytes (Kích thước)
 │          │ │    └── Group owner
 │          │ └── User owner
-│          └── Số hard links
+│          └── Hard links count (Số hard links)
 └── Permissions (rwxrwxrwx)
 ```
 
-#### 3.3 cd - Change Directory
+#### 3.3 cd - Change Directory (Thay đổi thư mục)
 
 ```bash
-cd /path/to/directory    # Đi đến đường dẫn tuyệt đối
-cd folder                # Đi vào folder con
-cd ..                    # Lùi lên 1 cấp
-cd ../..                 # Lùi lên 2 cấp
-cd ~                     # Về home directory
-cd -                     # Quay lại thư mục trước đó
+cd /path/to/directory    # Go to absolute path (Đi đến đường dẫn tuyệt đối)
+cd folder                # Go into subfolder (Đi vào folder con)
+cd ..                    # Go up one level (Lùi lên 1 cấp)
+cd ../..                 # Go up two levels (Lùi lên 2 cấp)
+cd ~                     # Go to home directory (Về home)
+cd -                     # Go to previous directory (Quay lại thư mục trước)
 ```
 
 ---
 
-### 4. Thao tác Files và Directories (2 giờ)
+### 4. File and Directory Operations (Thao tác Files và Thư mục) - 2 hours
 
-#### 4.1 Tạo files và thư mục
+#### 4.1 Creating Files and Directories (Tạo files và thư mục)
 
 ```bash
-# Tạo file rỗng
+# Create empty file (Tạo file rỗng)
 touch file.txt
 
-# Tạo file với nội dung
+# Create file with content (Tạo file với nội dung)
 echo "Hello World" > file.txt
 
-# Tạo thư mục
+# Create directory (Tạo thư mục)
 mkdir mydir
 
-# Tạo thư mục lồng nhau
+# Create nested directories (Tạo thư mục lồng nhau)
 mkdir -p parent/child/grandchild
 ```
 
-#### 4.2 Copy, Move, Rename
+#### 4.2 Copy, Move, Rename (Sao chép, Di chuyển, Đổi tên)
 
 ```bash
-# Copy file
+# Copy file (Sao chép file)
 cp source.txt destination.txt
 cp source.txt /path/to/destination/
 
-# Copy thư mục (recursive)
+# Copy directory recursively (Sao chép thư mục đệ quy)
 cp -r source_dir/ destination_dir/
 
-# Move/Rename file
+# Move/Rename file (Di chuyển/Đổi tên file)
 mv oldname.txt newname.txt
 mv file.txt /path/to/destination/
 
-# Move thư mục
+# Move directory (Di chuyển thư mục)
 mv source_dir/ destination/
 ```
 
-#### 4.3 Xóa files và thư mục
+#### 4.3 Deleting Files and Directories (Xóa files và thư mục)
 
 ```bash
-# Xóa file
+# Delete file (Xóa file)
 rm file.txt
 
-# Xóa nhiều files
+# Delete multiple files (Xóa nhiều files)
 rm file1.txt file2.txt file3.txt
-rm *.txt                # Xóa tất cả .txt files
+rm *.txt                # Delete all .txt files (Xóa tất cả .txt)
 
-# Xóa thư mục rỗng
+# Delete empty directory (Xóa thư mục rỗng)
 rmdir empty_dir/
 
-# Xóa thư mục và nội dung bên trong
+# Delete directory and contents (Xóa thư mục và nội dung)
 rm -r directory/
 
-# Xóa không hỏi (NGUY HIỂM!)
+# Delete without confirmation (DANGEROUS!) (Xóa không hỏi - NGUY HIỂM!)
 rm -rf directory/
 
-# ⚠️ CẢNH BÁO: Không bao giờ chạy: rm -rf /
+# ⚠️ WARNING: Never run (CẢNH BÁO: Không bao giờ chạy): rm -rf /
 ```
 
-#### 4.4 Đọc nội dung files
+#### 4.4 Reading File Contents (Đọc nội dung files)
 
 ```bash
-# Xem toàn bộ file
+# View entire file (Xem toàn bộ file)
 cat file.txt
 
-# Xem với phân trang (nhấn q để thoát)
+# View with paging - press q to quit (Xem với phân trang - nhấn q để thoát)
 less file.txt
 
-# Xem 10 dòng đầu/cuối
+# View first/last lines (Xem dòng đầu/cuối)
 head file.txt
-head -n 20 file.txt     # 20 dòng đầu
+head -n 20 file.txt     # First 20 lines (20 dòng đầu)
 tail file.txt
-tail -n 20 file.txt     # 20 dòng cuối
+tail -n 20 file.txt     # Last 20 lines (20 dòng cuối)
 
-# Theo dõi file realtime (logs)
+# Follow file in realtime - for logs (Theo dõi realtime - cho logs)
 tail -f /var/log/syslog
 ```
 
 ---
 
-### 5. Tìm kiếm (1 giờ)
+### 5. Search (Tìm kiếm) - 1 hour
 
-#### 5.1 find - Tìm files
+#### 5.1 find - Find Files (Tìm files)
 
 ```bash
-# Tìm theo tên
+# Find by name (Tìm theo tên)
 find /home -name "*.txt"
 
-# Tìm theo type (f=file, d=directory)
+# Find by type (f=file, d=directory) (Tìm theo loại)
 find . -type f -name "*.log"
 find . -type d -name "config"
 
-# Tìm theo thời gian sửa đổi
-find . -mtime -7        # Sửa trong 7 ngày qua
-find . -mtime +30       # Sửa hơn 30 ngày trước
+# Find by modification time (Tìm theo thời gian sửa đổi)
+find . -mtime -7        # Modified in last 7 days (Sửa trong 7 ngày qua)
+find . -mtime +30       # Modified more than 30 days ago (Sửa hơn 30 ngày trước)
 
-# Tìm theo size
-find . -size +100M      # Lớn hơn 100MB
-find . -size -10K       # Nhỏ hơn 10KB
+# Find by size (Tìm theo kích thước)
+find . -size +100M      # Larger than 100MB (Lớn hơn 100MB)
+find . -size -10K       # Smaller than 10KB (Nhỏ hơn 10KB)
 ```
 
-#### 5.2 grep - Tìm kiếm trong nội dung
+#### 5.2 grep - Search in Content (Tìm kiếm trong nội dung)
 
 ```bash
-# Tìm pattern trong file
+# Find pattern in file (Tìm pattern trong file)
 grep "error" logfile.txt
 
-# Không phân biệt hoa thường
+# Case insensitive (Không phân biệt hoa thường)
 grep -i "Error" logfile.txt
 
-# Hiển thị số dòng
+# Show line numbers (Hiển thị số dòng)
 grep -n "error" logfile.txt
 
-# Tìm đệ quy trong thư mục
+# Search recursively in directory (Tìm đệ quy trong thư mục)
 grep -r "TODO" ./src/
 
-# Đếm số lần xuất hiện
+# Count occurrences (Đếm số lần xuất hiện)
 grep -c "error" logfile.txt
 ```
 
-#### 5.3 Kết hợp find và grep
+#### 5.3 Combining find and grep (Kết hợp find và grep)
 
 ```bash
-# Tìm files .txt chứa "error"
+# Find .txt files containing "error" (Tìm files .txt chứa "error")
 find . -name "*.txt" -exec grep -l "error" {} \;
 ```
 
 ---
 
-### 6. Permissions (2 giờ)
+### 6. Permissions (Quyền truy cập) - 2 hours
 
-#### 6.1 Hiểu về Permissions
+#### 6.1 Understanding Permissions (Hiểu về Permissions)
 
 ```
 -rwxr-xr--
 │└┬─┘└┬─┘└┬─┘
-│ │   │   └── Others (o): r-- = read only
-│ │   └────── Group (g): r-x = read + execute
-│ └────────── User/Owner (u): rwx = full access
+│ │   │   └── Others (o): r-- = read only (chỉ đọc)
+│ │   └────── Group (g): r-x = read + execute (đọc + chạy)
+│ └────────── User/Owner (u): rwx = full access (toàn quyền)
 └──────────── File type (- = file, d = directory)
 ```
 
-| Permission | Ký hiệu | Số | Ý nghĩa |
-|------------|---------|-----|---------|
-| Read | r | 4 | Đọc file/liệt kê thư mục |
-| Write | w | 2 | Ghi file/tạo xóa trong thư mục |
-| Execute | x | 1 | Chạy file/vào thư mục |
+| Permission | Symbol | Number | Meaning |
+|------------|--------|--------|---------|
+| Read | r | 4 | Read file/list directory (Đọc file/liệt kê thư mục) |
+| Write | w | 2 | Write file/create delete in dir (Ghi file/tạo xóa) |
+| Execute | x | 1 | Run file/enter directory (Chạy file/vào thư mục) |
 
-#### 6.2 chmod - Thay đổi permissions
+#### 6.2 chmod - Change Permissions (Thay đổi permissions)
 
-**Cách numeric:**
+**Numeric method (Cách numeric):**
 
 ```bash
 chmod 755 script.sh     # rwxr-xr-x
 chmod 644 file.txt      # rw-r--r--
-chmod 600 secret.txt    # rw------- (chỉ owner đọc ghi)
-chmod 777 folder/       # rwxrwxrwx (KHÔNG NÊN!)
+chmod 600 secret.txt    # rw------- (owner only - chỉ owner)
+chmod 777 folder/       # rwxrwxrwx (NOT RECOMMENDED! - KHÔNG NÊN!)
 ```
 
-**Cách symbolic:**
+**Symbolic method (Cách symbolic):**
 
 ```bash
-chmod +x script.sh      # Thêm execute cho tất cả
-chmod u+x script.sh     # Thêm execute cho owner
-chmod g-w file.txt      # Bỏ write của group
-chmod o-rwx secret.txt  # Bỏ hết quyền của others
+chmod +x script.sh      # Add execute for all (Thêm execute cho tất cả)
+chmod u+x script.sh     # Add execute for owner (Thêm execute cho owner)
+chmod g-w file.txt      # Remove write from group (Bỏ write của group)
+chmod o-rwx secret.txt  # Remove all from others (Bỏ hết quyền của others)
 ```
 
-#### 6.3 chown - Thay đổi owner
+#### 6.3 chown - Change Owner (Thay đổi owner)
 
 ```bash
 sudo chown user:group file.txt
-sudo chown -R user:group directory/  # Recursive
+sudo chown -R user:group directory/  # Recursive (Đệ quy)
 ```
 
 ---
 
-### 7. Quản lý Processes (1.5 giờ)
+### 7. Process Management (Quản lý Processes) - 1.5 hours
 
-#### 7.1 Xem processes
+#### 7.1 Viewing Processes (Xem processes)
 
 ```bash
-# Liệt kê tất cả processes
+# List all processes (Liệt kê tất cả processes)
 ps aux
 
-# Tìm process cụ thể
+# Find specific process (Tìm process cụ thể)
 ps aux | grep nginx
 
-# Xem realtime (nhấn q để thoát)
+# View realtime - press q to quit (Xem realtime - nhấn q để thoát)
 top
-htop    # Phiên bản đẹp hơn (cần cài thêm)
+htop    # Better version - needs install (Phiên bản đẹp hơn - cần cài)
 ```
 
-#### 7.2 Kill processes
+#### 7.2 Kill Processes (Dừng processes)
 
 ```bash
-# Kill bằng PID
+# Kill by PID (Kill bằng PID)
 kill 1234
-kill -9 1234    # Force kill
+kill -9 1234    # Force kill (Buộc dừng)
 
-# Kill bằng tên
+# Kill by name (Kill bằng tên)
 pkill nginx
 killall nginx
 ```
 
-#### 7.3 Background processes
+#### 7.3 Background Processes (Processes chạy nền)
 
 ```bash
-# Chạy trong background
+# Run in background (Chạy trong background)
 ./script.sh &
 
-# Xem background jobs
+# View background jobs (Xem background jobs)
 jobs
 
-# Đưa về foreground
+# Bring to foreground (Đưa về foreground)
 fg %1
 
-# Đưa vào background
+# Send to background (Đưa vào background)
 bg %1
 
-# Chạy process không bị ảnh hưởng khi đóng terminal
+# Run process that persists after terminal closes (Chạy không bị ảnh hưởng khi đóng terminal)
 nohup ./long_running_script.sh &
 ```
 
 ---
 
-### 8. Package Manager (1 giờ)
+### 8. Package Manager (Quản lý Package) - 1 hour
 
 #### 8.1 APT (Ubuntu/Debian)
 
 ```bash
-# Update danh sách packages
+# Update package list (Update danh sách packages)
 sudo apt update
 
-# Upgrade packages đã cài
+# Upgrade installed packages (Upgrade packages đã cài)
 sudo apt upgrade
 
-# Cài đặt package
+# Install package (Cài đặt package)
 sudo apt install nginx
 
-# Gỡ cài đặt
+# Remove package (Gỡ cài đặt)
 sudo apt remove nginx
-sudo apt autoremove     # Xóa dependencies không dùng
+sudo apt autoremove     # Remove unused dependencies (Xóa dependencies không dùng)
 
-# Tìm package
+# Search package (Tìm package)
 apt search nginx
 ```
 
@@ -405,9 +407,9 @@ yum search nginx
 
 ---
 
-### 9. Bash Scripting (3 giờ)
+### 9. Bash Scripting (Viết Script Bash) - 3 hours
 
-#### 9.1 Script đầu tiên
+#### 9.1 First Script (Script đầu tiên)
 
 ```bash
 #!/bin/bash
@@ -416,33 +418,33 @@ yum search nginx
 echo "Hello, DevOps!"
 ```
 
-Chạy script:
+Run script (Chạy script):
 
 ```bash
 chmod +x hello.sh
 ./hello.sh
 ```
 
-#### 9.2 Biến (Variables)
+#### 9.2 Variables (Biến)
 
 ```bash
 #!/bin/bash
 
-# Gán biến (KHÔNG có dấu cách quanh =)
+# Assign variable - NO spaces around the "=" sign (Gán biến - KHÔNG có dấu cách quanh dấu "=")
 NAME="DevOps"
 AGE=25
 
-# Sử dụng biến
+# Use variable (Sử dụng biến)
 echo "Hello, $NAME"
 echo "You are $AGE years old"
 
-# Input từ người dùng
+# Input from user (Input từ người dùng)
 echo "Enter your name:"
 read USERNAME
 echo "Hello, $USERNAME!"
 ```
 
-#### 9.3 Điều kiện (if/else)
+#### 9.3 Conditionals (Điều kiện if/else)
 
 ```bash
 #!/bin/bash
@@ -455,7 +457,7 @@ else
     echo "$FILE does not exist."
 fi
 
-# Kiểm tra số
+# Check numbers (Kiểm tra số)
 NUMBER=10
 if [ $NUMBER -gt 5 ]; then
     echo "Greater than 5"
@@ -466,20 +468,20 @@ else
 fi
 ```
 
-**Operators:**
+**Operators (Toán tử):**
 
-| Operator | Ý nghĩa |
+| Operator | Meaning |
 |----------|---------|
-| `-f` | File exists |
-| `-d` | Directory exists |
-| `-eq` | Equal (số) |
-| `-ne` | Not equal |
-| `-gt` | Greater than |
-| `-lt` | Less than |
-| `=` | String equal |
-| `!=` | String not equal |
+| `-f` | File exists (File tồn tại) |
+| `-d` | Directory exists (Thư mục tồn tại) |
+| `-eq` | Equal - numbers (Bằng - số) |
+| `-ne` | Not equal (Không bằng) |
+| `-gt` | Greater than (Lớn hơn) |
+| `-lt` | Less than (Nhỏ hơn) |
+| `=` | String equal (String bằng nhau) |
+| `!=` | String not equal (String khác nhau) |
 
-#### 9.4 Vòng lặp (Loops)
+#### 9.4 Loops (Vòng lặp)
 
 ```bash
 #!/bin/bash
@@ -489,12 +491,12 @@ for i in 1 2 3 4 5; do
     echo "Number: $i"
 done
 
-# For loop với range
+# For loop with range (Với range)
 for i in {1..10}; do
     echo "Count: $i"
 done
 
-# For loop với files
+# For loop with files (Với files)
 for file in *.txt; do
     echo "Processing: $file"
 done
@@ -507,21 +509,21 @@ while [ $COUNT -lt 5 ]; do
 done
 ```
 
-#### 9.5 Functions
+#### 9.5 Functions (Hàm)
 
 ```bash
 #!/bin/bash
 
-# Định nghĩa function
+# Define function (Định nghĩa function)
 greet() {
     echo "Hello, $1!"
 }
 
-# Gọi function
+# Call function (Gọi function)
 greet "DevOps"
 greet "World"
 
-# Function với return value
+# Function with return value (Function với return value)
 add_numbers() {
     local RESULT=$(( $1 + $2 ))
     echo $RESULT
@@ -533,36 +535,36 @@ echo "Sum: $SUM"
 
 ---
 
-### 10. Pipes và Redirect (1 giờ)
+### 10. Pipes and Redirect (Pipes và Redirect) - 1 hour
 
 #### 10.1 Pipe (|)
 
-Truyền output của command này làm input cho command khác:
+Pass output of one command as input to another (Truyền output của command này làm input cho command khác):
 
 ```bash
-# Đếm số file trong thư mục
+# Count files in directory (Đếm số file trong thư mục)
 ls -la | wc -l
 
-# Tìm process nginx
+# Find nginx process (Tìm process nginx)
 ps aux | grep nginx
 
-# Sắp xếp và lấy 10 file lớn nhất
+# Sort and get 10 largest files (Sắp xếp và lấy 10 file lớn nhất)
 du -h * | sort -rh | head -10
 ```
 
-#### 10.2 Redirect
+#### 10.2 Redirect (Chuyển hướng)
 
 ```bash
-# Ghi output vào file (overwrite)
+# Write output to file - overwrite (Ghi output vào file - ghi đè)
 echo "Hello" > file.txt
 
-# Append vào file
+# Append to file (Nối vào file)
 echo "World" >> file.txt
 
-# Redirect stderr
+# Redirect stderr (Chuyển hướng lỗi)
 command 2> error.log
 
-# Redirect cả stdout và stderr
+# Redirect both stdout and stderr (Chuyển hướng cả output và lỗi)
 command > output.txt 2>&1
 command &> all_output.txt
 ```
