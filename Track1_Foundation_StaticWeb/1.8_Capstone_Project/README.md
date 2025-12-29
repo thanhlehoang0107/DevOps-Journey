@@ -1,29 +1,20 @@
 # 🏆 Module 1.8: Capstone Project
 
-> Static Website with Full CI/CD Pipeline - Tích hợp toàn bộ kiến thức Track 1
+> **Static Website with Full CI/CD Pipeline** - Integrate all Track 1 knowledge.
+>
+> *Website tĩnh với Full CI/CD Pipeline - Tích hợp toàn bộ kiến thức Track 1.*
 
 ---
 
-## 📋 Thông tin Module
+## 🎯 Project Overview (Tổng quan dự án)
 
-| Thuộc tính | Giá trị |
-|------------|---------|
-| **Thời lượng** | 8-12 giờ |
-| **Độ khó** | ⭐⭐ Intermediate |
-| **Yêu cầu trước** | Tất cả modules 1.1-1.7 hoàn thành |
-| **Output** | Portfolio website với CI/CD hoàn chỉnh |
+Build a **static portfolio website** with (Xây dựng portfolio website tĩnh với):
 
----
-
-## 🎯 Mục tiêu Project
-
-Xây dựng một **portfolio website tĩnh** với:
-
-- ✅ Source code quản lý bằng Git
-- ✅ Static website với HTML/CSS/JS
-- ✅ Containerized với Docker + NGINX
-- ✅ CI/CD pipeline với GitHub Actions
-- ✅ Auto deploy khi push code
+- ✅ Source code managed with Git (Quản lý bằng Git)
+- ✅ Static website with HTML/CSS/JS
+- ✅ Containerized with Docker + NGINX
+- ✅ CI/CD pipeline with GitHub Actions
+- ✅ Auto deploy when pushing code (Tự động deploy khi push code)
 
 ---
 
@@ -650,16 +641,18 @@ Thêm uptime monitoring với UptimeRobot
 
 ---
 
-## 🔗 Navigation
+<div align="center">
 
-[⬅️ 1.7 CI/CD](../1.7_CICD_Basic/README.md) | [📚 Track 1](../README.md) | [Track 2 ➡️](../../Track2_Orchestration_Automation/README.md)
+### 🔗 Module Navigation (Điều hướng Module)
 
----
-
-**🎉 Chúc mừng bạn đã hoàn thành Track 1!**
-
-Bạn đã có nền tảng vững chắc để tiếp tục với **Track 2: Orchestration & Automation** với Kubernetes, Jenkins và Monitoring.
+| ← Previous | Current | Next → |
+|:------------------:|:------------------:|:-------------:|
+| [1.7 CI/CD](../1.7_CICD_Basic/) | **1.8 Capstone** | [Track 2](../../Track2_Orchestration_Automation/) |
 
 ---
 
-*Cập nhật: 2025-12-29*
+**🎉 Congratulations! You completed Track 1!**
+
+*Chúc mừng! Bạn đã hoàn thành Track 1!*
+
+</div>

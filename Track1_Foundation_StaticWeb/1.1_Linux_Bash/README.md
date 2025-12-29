@@ -1,30 +1,24 @@
 # 🐧 Module 1.1: Linux & Bash
 
-> Linux Fundamentals & Bash Scripting - Nền tảng cho mọi DevOps Engineer
+[![Duration](https://img.shields.io/badge/Duration-10--15%20hours-blue?style=flat-square)](.)
+[![Level](https://img.shields.io/badge/Level-Beginner-green?style=flat-square)](.)
+
+> **Linux Fundamentals & Bash Scripting** - Foundation for every DevOps Engineer.
+>
+> *Nền tảng Linux & Bash Scripting - Nền tảng cho mọi DevOps Engineer.*
 
 ---
 
-## 📋 Thông tin Module
+## 🎯 Learning Objectives (Mục tiêu học tập)
 
-| Thuộc tính | Giá trị |
-|------------|---------|
-| **Thời lượng** | 10-15 giờ |
-| **Độ khó** | ⭐ Beginner |
-| **Yêu cầu trước** | Setup Environment hoàn thành |
-| **Output** | Viết được Bash script tự động hóa |
+After this module, you will (Sau module này, bạn sẽ):
 
----
-
-## 🎯 Mục tiêu học tập
-
-Sau khi hoàn thành module này, bạn sẽ:
-
-- [ ] Hiểu được Linux là gì và tại sao DevOps engineer cần biết
-- [ ] Điều hướng thành thạo trong file system
-- [ ] Thao tác files và directories
-- [ ] Quản lý users, permissions, processes
-- [ ] Viết được Bash script cơ bản
-- [ ] Sử dụng package manager (apt/yum)
+- ✅ Understand what Linux is and why DevOps engineers need it (Hiểu Linux là gì và tại sao cần)
+- ✅ Navigate the file system proficiently (Điều hướng file system thành thạo)
+- ✅ Manipulate files and directories (Thao tác files và thư mục)
+- ✅ Manage users, permissions, processes (Quản lý users, permissions, processes)
+- ✅ Write basic Bash scripts (Viết Bash script cơ bản)
+- ✅ Use package managers - apt/yum (Sử dụng package manager)
 
 ---
 
@@ -575,31 +569,31 @@ command &> all_output.txt
 
 ---
 
-## 📁 Files trong module này
+## 📝 Module Files (Các file trong Module)
 
-| File | Mục đích |
-|------|----------|
-| [CHEATSHEET.md](./CHEATSHEET.md) | Tra cứu nhanh tất cả lệnh |
-| [LABS.md](./LABS.md) | Bài thực hành hands-on |
-| [QUIZ.md](./QUIZ.md) | Kiểm tra kiến thức |
-| [EXERCISES.md](./EXERCISES.md) | Bài tập tình huống |
-| [PROJECT.md](./PROJECT.md) | Mini project |
-| [SOLUTIONS.md](./SOLUTIONS.md) | Đáp án |
-
----
-
-## 🎓 Tiếp theo
-
-Sau khi hoàn thành module này, bạn đã có nền tảng vững chắc về Linux. Tiếp tục với:
-
-**[➡️ Module 1.2: Python Basics](../1.2_Python_Basics/README.md)**
+| File | Description |
+|------|-------------|
+| [CHEATSHEET.md](./CHEATSHEET.md) | Quick reference (Tra cứu nhanh) |
+| [LABS.md](./LABS.md) | Hands-on labs (Bài thực hành) |
+| [QUIZ.md](./QUIZ.md) | Knowledge check (Kiểm tra kiến thức) |
+| [EXERCISES.md](./EXERCISES.md) | Exercises (Bài tập) |
+| [PROJECT.md](./PROJECT.md) | Mini project (Dự án nhỏ) |
+| [SOLUTIONS.md](./SOLUTIONS.md) | Solutions (Đáp án) |
 
 ---
 
-## 🔗 Navigation
+<div align="center">
 
-[⬅️ Track 1](../README.md) | [📚 Mục lục](../../README.md) | [1.2 Python Basics ➡️](../1.2_Python_Basics/README.md)
+### 🔗 Module Navigation (Điều hướng Module)
+
+| ← Previous | Current | Next → |
+|:------------------:|:------------------:|:-------------:|
+| [Setup Environment](../../Setup_Environment/) | **1.1 Linux & Bash** | [1.2 Python](../1.2_Python_Basics/) |
 
 ---
 
-*Cập nhật: 2025-12-29*
+**Master Linux fundamentals! 🐧**
+
+*Thành thạo nền tảng Linux!*
+
+</div>

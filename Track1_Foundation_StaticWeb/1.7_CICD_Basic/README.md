@@ -1,29 +1,23 @@
 # ⚙️ Module 1.7: CI/CD Basic
 
-> Continuous Integration / Continuous Deployment với GitHub Actions
+[![Duration](https://img.shields.io/badge/Duration-10--12%20hours-blue?style=flat-square)](.)
+[![Level](https://img.shields.io/badge/Level-Beginner--Intermediate-orange?style=flat-square)](.)
+
+> **Continuous Integration / Continuous Deployment** - Automate with GitHub Actions.
+>
+> *Tích hợp liên tục / Triển khai liên tục với GitHub Actions.*
 
 ---
 
-## 📋 Thông tin Module
+## 🎯 Learning Objectives (Mục tiêu học tập)
 
-| Thuộc tính | Giá trị |
-|------------|---------|
-| **Thời lượng** | 10-12 giờ |
-| **Độ khó** | ⭐⭐ Beginner-Intermediate |
-| **Yêu cầu trước** | Module 1.6 hoàn thành |
-| **Output** | Deploy website tự động khi push code |
+After this module, you will (Sau module này, bạn sẽ):
 
----
-
-## 🎯 Mục tiêu học tập
-
-Sau khi hoàn thành module này, bạn sẽ:
-
-- [ ] Hiểu CI/CD là gì và tại sao quan trọng
-- [ ] Hiểu các concepts: Pipeline, Job, Step, Artifact
-- [ ] Viết GitHub Actions workflow
-- [ ] Build Docker image trong pipeline
-- [ ] Deploy tự động khi push code
+- ✅ Understand what CI/CD is and why it's important (Hiểu CI/CD là gì và tại sao quan trọng)
+- ✅ Learn concepts: Pipeline, Job, Step, Artifact (Hiểu các concepts)
+- ✅ Write GitHub Actions workflows (Viết workflow GitHub Actions)
+- ✅ Build Docker images in pipeline (Build Docker image trong pipeline)
+- ✅ Auto deploy when pushing code (Deploy tự động khi push code)
 
 ---
 
@@ -653,23 +647,31 @@ jobs:
 
 ---
 
-## 📁 Files trong module này
+## 📝 Module Files (Các file trong Module)
 
-| File | Mục đích |
-|------|----------|
-| [CHEATSHEET.md](./CHEATSHEET.md) | Tra cứu nhanh |
-| [LABS.md](./LABS.md) | Bài thực hành |
-| [QUIZ.md](./QUIZ.md) | Kiểm tra kiến thức |
-| [EXERCISES.md](./EXERCISES.md) | Bài tập |
-| [PROJECT.md](./PROJECT.md) | Mini project |
-| [SOLUTIONS.md](./SOLUTIONS.md) | Đáp án |
-
----
-
-## 🔗 Navigation
-
-[⬅️ 1.6 NGINX](../1.6_NGINX_Basic/README.md) | [📚 Track 1](../README.md) | [1.8 Capstone ➡️](../1.8_Capstone_Project/README.md)
+| File | Description |
+|------|-------------|
+| [CHEATSHEET.md](./CHEATSHEET.md) | Quick reference (Tra cứu nhanh) |
+| [LABS.md](./LABS.md) | Hands-on labs (Bài thực hành) |
+| [QUIZ.md](./QUIZ.md) | Knowledge check (Kiểm tra kiến thức) |
+| [EXERCISES.md](./EXERCISES.md) | Exercises (Bài tập) |
+| [PROJECT.md](./PROJECT.md) | Mini project (Dự án nhỏ) |
+| [SOLUTIONS.md](./SOLUTIONS.md) | Solutions (Đáp án) |
 
 ---
 
-*Cập nhật: 2025-12-29*
+<div align="center">
+
+### 🔗 Module Navigation (Điều hướng Module)
+
+| ← Previous | Current | Next → |
+|:------------------:|:------------------:|:-------------:|
+| [1.6 NGINX](../1.6_NGINX_Basic/) | **1.7 CI/CD** | [1.8 Capstone](../1.8_Capstone_Project/) |
+
+---
+
+**Master CI/CD! ⚙️**
+
+*Thành thạo CI/CD!*
+
+</div>

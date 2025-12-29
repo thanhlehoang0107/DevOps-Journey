@@ -1,30 +1,24 @@
 # 🌐 Module 1.6: NGINX Basic
 
-> Web Server và Reverse Proxy - Serve static content và điều hướng traffic
+[![Duration](https://img.shields.io/badge/Duration-6--8%20hours-blue?style=flat-square)](.)
+[![Level](https://img.shields.io/badge/Level-Beginner-green?style=flat-square)](.)
+
+> **Web Server and Reverse Proxy** - Serve static content and route traffic.
+>
+> *Web Server và Reverse Proxy - Serve nội dung tĩnh và điều hướng traffic.*
 
 ---
 
-## 📋 Thông tin Module
+## 🎯 Learning Objectives (Mục tiêu học tập)
 
-| Thuộc tính | Giá trị |
-|------------|---------|
-| **Thời lượng** | 6-8 giờ |
-| **Độ khó** | ⭐ Beginner |
-| **Yêu cầu trước** | Module 1.5 Docker hoàn thành |
-| **Output** | Serve static website với NGINX trong Docker |
+After this module, you will (Sau module này, bạn sẽ):
 
----
-
-## 🎯 Mục tiêu học tập
-
-Sau khi hoàn thành module này, bạn sẽ:
-
-- [ ] Hiểu NGINX là gì và use cases
-- [ ] Cấu hình NGINX serve static files
-- [ ] Hiểu cấu trúc file config NGINX
-- [ ] Cấu hình virtual hosts (server blocks)
-- [ ] Hiểu khái niệm Reverse Proxy
-- [ ] Deploy NGINX với Docker
+- ✅ Understand what NGINX is and its use cases (Hiểu NGINX là gì và use cases)
+- ✅ Configure NGINX to serve static files (Cấu hình NGINX serve static files)
+- ✅ Understand NGINX config file structure (Hiểu cấu trúc file config)
+- ✅ Configure virtual hosts - server blocks (Cấu hình virtual hosts)
+- ✅ Understand Reverse Proxy concept (Hiểu khái niệm Reverse Proxy)
+- ✅ Deploy NGINX with Docker (Deploy NGINX với Docker)
 
 ---
 
@@ -597,23 +591,31 @@ server {
 
 ---
 
-## 📁 Files trong module này
+## 📝 Module Files (Các file trong Module)
 
-| File | Mục đích |
-|------|----------|
-| [CHEATSHEET.md](./CHEATSHEET.md) | Tra cứu nhanh NGINX |
-| [LABS.md](./LABS.md) | Bài thực hành |
-| [QUIZ.md](./QUIZ.md) | Kiểm tra kiến thức |
-| [EXERCISES.md](./EXERCISES.md) | Bài tập |
-| [PROJECT.md](./PROJECT.md) | Mini project |
-| [SOLUTIONS.md](./SOLUTIONS.md) | Đáp án |
-
----
-
-## 🔗 Navigation
-
-[⬅️ 1.5 Docker](../1.5_Docker_Fundamentals/README.md) | [📚 Track 1](../README.md) | [1.7 CI/CD ➡️](../1.7_CICD_Basic/README.md)
+| File | Description |
+|------|-------------|
+| [CHEATSHEET.md](./CHEATSHEET.md) | Quick reference (Tra cứu nhanh) |
+| [LABS.md](./LABS.md) | Hands-on labs (Bài thực hành) |
+| [QUIZ.md](./QUIZ.md) | Knowledge check (Kiểm tra kiến thức) |
+| [EXERCISES.md](./EXERCISES.md) | Exercises (Bài tập) |
+| [PROJECT.md](./PROJECT.md) | Mini project (Dự án nhỏ) |
+| [SOLUTIONS.md](./SOLUTIONS.md) | Solutions (Đáp án) |
 
 ---
 
-*Cập nhật: 2025-12-29*
+<div align="center">
+
+### 🔗 Module Navigation (Điều hướng Module)
+
+| ← Previous | Current | Next → |
+|:------------------:|:------------------:|:-------------:|
+| [1.5 Docker](../1.5_Docker_Fundamentals/) | **1.6 NGINX** | [1.7 CI/CD](../1.7_CICD_Basic/) |
+
+---
+
+**Master NGINX! 🌐**
+
+*Thành thạo NGINX!*
+
+</div>

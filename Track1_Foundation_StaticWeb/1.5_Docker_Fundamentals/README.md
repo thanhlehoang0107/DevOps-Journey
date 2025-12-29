@@ -1,30 +1,24 @@
 # 🐳 Module 1.5: Docker Fundamentals
 
-> Containerization - Đóng gói ứng dụng một cách nhất quán
+[![Duration](https://img.shields.io/badge/Duration-12--15%20hours-blue?style=flat-square)](.)
+[![Level](https://img.shields.io/badge/Level-Beginner--Intermediate-orange?style=flat-square)](.)
+
+> **Containerization** - Package applications consistently.
+>
+> *Container hóa - Đóng gói ứng dụng một cách nhất quán.*
 
 ---
 
-## 📋 Thông tin Module
+## 🎯 Learning Objectives (Mục tiêu học tập)
 
-| Thuộc tính | Giá trị |
-|------------|---------|
-| **Thời lượng** | 12-15 giờ |
-| **Độ khó** | ⭐⭐ Beginner-Intermediate |
-| **Yêu cầu trước** | Module 1.4 hoàn thành, Docker đã cài đặt |
-| **Output** | Build và run Docker container cho ứng dụng |
+After this module, you will (Sau module này, bạn sẽ):
 
----
-
-## 🎯 Mục tiêu học tập
-
-Sau khi hoàn thành module này, bạn sẽ:
-
-- [ ] Hiểu Container là gì và khác VM như thế nào
-- [ ] Hiểu Docker architecture (daemon, client, registry)
-- [ ] Viết Dockerfile để build images
-- [ ] Chạy, quản lý containers
-- [ ] Sử dụng Docker volumes và networks
-- [ ] Push images lên Docker Hub
+- ✅ Understand containers and how they differ from VMs (Hiểu Container khác VM như thế nào)
+- ✅ Learn Docker architecture - daemon, client, registry (Hiểu kiến trúc Docker)
+- ✅ Write Dockerfiles to build images (Viết Dockerfile để build images)
+- ✅ Run and manage containers (Chạy và quản lý containers)
+- ✅ Use Docker volumes and networks (Sử dụng volumes và networks)
+- ✅ Push images to Docker Hub (Đẩy images lên Docker Hub)
 
 ---
 
@@ -766,31 +760,31 @@ docker run -d -p 8080:80 --name website my-website:v1.0
 
 ---
 
-## 📁 Files trong module này
+## 📝 Module Files (Các file trong Module)
 
-| File | Mục đích |
-|------|----------|
-| [CHEATSHEET.md](./CHEATSHEET.md) | Tra cứu nhanh Docker |
-| [LABS.md](./LABS.md) | Bài thực hành hands-on |
-| [QUIZ.md](./QUIZ.md) | Kiểm tra kiến thức |
-| [EXERCISES.md](./EXERCISES.md) | Bài tập tình huống |
-| [PROJECT.md](./PROJECT.md) | Mini project |
-| [SOLUTIONS.md](./SOLUTIONS.md) | Đáp án |
-
----
-
-## 🎓 Tiếp theo
-
-Sau khi hoàn thành module này, bạn đã biết cách containerize ứng dụng. Tiếp tục với:
-
-**[➡️ Module 1.6: NGINX Basic](../1.6_NGINX_Basic/README.md)**
+| File | Description |
+|------|-------------|
+| [CHEATSHEET.md](./CHEATSHEET.md) | Quick reference (Tra cứu nhanh) |
+| [LABS.md](./LABS.md) | Hands-on labs (Bài thực hành) |
+| [QUIZ.md](./QUIZ.md) | Knowledge check (Kiểm tra kiến thức) |
+| [EXERCISES.md](./EXERCISES.md) | Exercises (Bài tập) |
+| [PROJECT.md](./PROJECT.md) | Mini project (Dự án nhỏ) |
+| [SOLUTIONS.md](./SOLUTIONS.md) | Solutions (Đáp án) |
 
 ---
 
-## 🔗 Navigation
+<div align="center">
 
-[⬅️ 1.4 Git & GitHub](../1.4_Git_GitLab/README.md) | [📚 Track 1](../README.md) | [1.6 NGINX Basic ➡️](../1.6_NGINX_Basic/README.md)
+### 🔗 Module Navigation (Điều hướng Module)
+
+| ← Previous | Current | Next → |
+|:------------------:|:------------------:|:-------------:|
+| [1.4 Git](../1.4_Git_GitLab/) | **1.5 Docker** | [1.6 NGINX](../1.6_NGINX_Basic/) |
 
 ---
 
-*Cập nhật: 2025-12-29*
+**Master Docker fundamentals! 🐳**
+
+*Thành thạo Docker cơ bản!*
+
+</div>
