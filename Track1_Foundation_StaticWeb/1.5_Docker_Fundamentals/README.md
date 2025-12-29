@@ -22,9 +22,9 @@ After this module, you will (Sau module này, bạn sẽ):
 
 ---
 
-## 📖 Nội dung
+## 📖 Content (Nội dung)
 
-### 1. Container vs Virtual Machine (1 giờ)
+### 1. Container vs Virtual Machine - 1 hour
 
 #### 1.1 Virtual Machine
 
@@ -37,7 +37,7 @@ After this module, you will (Sau module này, bạn sẽ):
 │  ├─────────────┤  ├─────────────┤  ├─────────────┤         │
 │  │   Bins/Libs │  │   Bins/Libs │  │   Bins/Libs │         │
 │  ├─────────────┤  ├─────────────┤  ├─────────────┤         │
-│  │  Guest OS   │  │  Guest OS   │  │  Guest OS   │ ← Nặng! │
+│  │  Guest OS   │  │  Guest OS   │  │  Guest OS   │ ← Heavy!│
 │  │  (Ubuntu)   │  │  (CentOS)   │  │  (Debian)   │         │
 │  └─────────────┘  └─────────────┘  └─────────────┘         │
 ├─────────────────────────────────────────────────────────────┤
@@ -49,12 +49,12 @@ After this module, you will (Sau module này, bạn sẽ):
 └─────────────────────────────────────────────────────────────┘
 ```
 
-**Đặc điểm VM:**
+**VM Characteristics (Đặc điểm VM):**
 
-- ✅ Isolation hoàn toàn
-- ❌ Nặng (GB mỗi VM)
-- ❌ Khởi động chậm (phút)
-- ❌ Tốn tài nguyên
+- ✅ Complete isolation (Isolation hoàn toàn)
+- ❌ Heavy - GBs per VM (Nặng - GB mỗi VM)
+- ❌ Slow startup - minutes (Khởi động chậm - phút)
+- ❌ Resource intensive (Tốn tài nguyên)
 
 #### 1.2 Container
 
@@ -65,7 +65,7 @@ After this module, you will (Sau module này, bạn sẽ):
 │  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐         │
 │  │    App A    │  │    App B    │  │    App C    │         │
 │  ├─────────────┤  ├─────────────┤  ├─────────────┤         │
-│  │   Bins/Libs │  │   Bins/Libs │  │   Bins/Libs │ ← Nhẹ! │
+│  │   Bins/Libs │  │   Bins/Libs │  │   Bins/Libs │ ← Light!│
 │  └─────────────┘  └─────────────┘  └─────────────┘         │
 ├─────────────────────────────────────────────────────────────┤
 │                    DOCKER ENGINE                             │
@@ -76,27 +76,27 @@ After this module, you will (Sau module này, bạn sẽ):
 └─────────────────────────────────────────────────────────────┘
 ```
 
-**Đặc điểm Container:**
+**Container Characteristics (Đặc điểm Container):**
 
-- ✅ Nhẹ (MB)
-- ✅ Khởi động nhanh (giây)
-- ✅ Chia sẻ kernel với host
-- ✅ Portable - chạy ở đâu cũng được
+- ✅ Lightweight - MBs (Nhẹ - MB)
+- ✅ Fast startup - seconds (Khởi động nhanh - giây)
+- ✅ Share kernel with host (Chia sẻ kernel với host)
+- ✅ Portable - runs anywhere (Chạy ở đâu cũng được)
 
-#### 1.3 So sánh
+#### 1.3 Comparison (So sánh)
 
-| Tiêu chí | VM | Container |
+| Criteria | VM | Container |
 |----------|-----|-----------|
-| **Kích thước** | GB | MB |
-| **Khởi động** | Phút | Giây |
-| **Isolation** | Hoàn toàn | Process level |
-| **OS** | Riêng biệt | Chia sẻ kernel |
-| **Density** | Ít VM/host | Nhiều container/host |
+| **Size** | GB | MB |
+| **Startup** | Minutes | Seconds |
+| **Isolation** | Complete | Process level |
+| **OS** | Separate | Shared kernel |
+| **Density** | Few VMs/host | Many containers/host |
 | **Use case** | Multi-tenant, legacy | Microservices, CI/CD |
 
 ---
 
-### 2. Docker Architecture (1 giờ)
+### 2. Docker Architecture (Kiến trúc Docker) - 1 hour
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -136,28 +136,28 @@ After this module, you will (Sau module này, bạn sẽ):
 └─────────────────────────────────────────────────────────────┘
 ```
 
-#### Các thành phần chính
+#### Main Components (Các thành phần chính)
 
-| Component | Mô tả |
-|-----------|-------|
-| **Docker Client** | CLI bạn dùng (`docker run`, `docker build`) |
-| **Docker Daemon** | Service chạy ngầm, quản lý containers |
-| **Docker Image** | Template read-only, chứa app + dependencies |
-| **Docker Container** | Instance đang chạy của image |
-| **Docker Registry** | Nơi lưu trữ images (Docker Hub) |
+| Component | Description |
+|-----------|-------------|
+| **Docker Client** | CLI you use - `docker run`, `docker build` |
+| **Docker Daemon** | Background service managing containers |
+| **Docker Image** | Read-only template with app + dependencies |
+| **Docker Container** | Running instance of an image |
+| **Docker Registry** | Image storage - Docker Hub, etc. |
 
 ---
 
-### 3. Docker Images (2 giờ)
+### 3. Docker Images - 2 hours
 
-#### 3.1 Khái niệm Image
+#### 3.1 Image Concept (Khái niệm Image)
 
-**Image** = Read-only template chứa:
+**Image** = Read-only template containing (Template read-only chứa):
 
 - Base OS (Alpine, Ubuntu, Debian...)
-- Application code
+- Application code (Mã ứng dụng)
 - Dependencies (libs, packages)
-- Configuration
+- Configuration (Cấu hình)
 
 ```
 ┌─────────────────────────────────────────┐
@@ -175,12 +175,12 @@ After this module, you will (Sau module này, bạn sẽ):
 └─────────────────────────────────────────┘
 ```
 
-#### 3.2 Image naming convention
+#### 3.2 Image Naming Convention (Quy ước đặt tên)
 
 ```
 [registry/]repository[:tag]
 
-Ví dụ:
+Examples (Ví dụ):
 nginx                          # Docker Hub, latest tag
 nginx:alpine                   # Docker Hub, alpine tag
 nginx:1.25.3                   # Specific version
@@ -189,126 +189,126 @@ gcr.io/project/app:latest      # Google Container Registry
 123456789.dkr.ecr.region.amazonaws.com/app:v1  # AWS ECR
 ```
 
-#### 3.3 Pull images
+#### 3.3 Pull Images (Tải images)
 
 ```bash
-# Pull image từ Docker Hub
+# Pull image from Docker Hub (Tải image từ Docker Hub)
 docker pull nginx
 docker pull nginx:alpine
 docker pull nginx:1.25.3
 
-# Xem images đã pull
+# View pulled images (Xem images đã tải)
 docker images
 docker image ls
 
-# Xem chi tiết image
+# View image details (Xem chi tiết image)
 docker image inspect nginx
 
-# Xem history/layers
+# View history/layers (Xem lịch sử/layers)
 docker history nginx
 ```
 
-#### 3.4 Xóa images
+#### 3.4 Remove Images (Xóa images)
 
 ```bash
-# Xóa 1 image
+# Remove one image (Xóa 1 image)
 docker rmi nginx
 docker image rm nginx
 
-# Xóa nhiều images
+# Remove multiple images (Xóa nhiều images)
 docker rmi nginx redis mysql
 
-# Xóa all unused images
+# Remove all unused images (Xóa tất cả images không dùng)
 docker image prune
 
-# Xóa all images (nguy hiểm!)
+# Remove all images - DANGEROUS! (Xóa tất cả - NGUY HIỂM!)
 docker rmi $(docker images -q)
 ```
 
 ---
 
-### 4. Docker Containers (3 giờ)
+### 4. Docker Containers - 3 hours
 
-#### 4.1 Chạy container
+#### 4.1 Running Containers (Chạy container)
 
 ```bash
-# Chạy container đơn giản
+# Run simple container (Chạy container đơn giản)
 docker run nginx
 
-# Chạy trong background (detached)
+# Run in background/detached (Chạy trong background)
 docker run -d nginx
 
-# Đặt tên cho container
+# Name the container (Đặt tên cho container)
 docker run -d --name my-nginx nginx
 
 # Map port (host:container)
 docker run -d -p 8080:80 nginx
-# Truy cập: http://localhost:8080
+# Access: http://localhost:8080 (Truy cập)
 
-# Map nhiều ports
+# Map multiple ports (Map nhiều ports)
 docker run -d -p 8080:80 -p 8443:443 nginx
 
-# Chạy với environment variables
+# Run with environment variables (Chạy với biến môi trường)
 docker run -d -e MYSQL_ROOT_PASSWORD=secret mysql
 
-# Tự động xóa khi dừng
+# Auto-remove when stopped (Tự động xóa khi dừng)
 docker run --rm -it alpine sh
 ```
 
-#### 4.2 Quản lý containers
+#### 4.2 Managing Containers (Quản lý containers)
 
 ```bash
-# Liệt kê containers đang chạy
+# List running containers (Liệt kê containers đang chạy)
 docker ps
 
-# Liệt kê tất cả (kể cả đã dừng)
+# List all - including stopped (Liệt kê tất cả - kể cả đã dừng)
 docker ps -a
 
-# Dừng container
+# Stop container (Dừng container)
 docker stop my-nginx
 docker stop container_id
 
-# Start container đã dừng
+# Start stopped container (Start container đã dừng)
 docker start my-nginx
 
 # Restart container
 docker restart my-nginx
 
-# Xóa container (phải stop trước)
+# Remove container - must stop first (Xóa container - phải stop trước)
 docker rm my-nginx
 
-# Force remove (đang chạy)
+# Force remove - running (Force xóa - đang chạy)
 docker rm -f my-nginx
 
-# Xóa all stopped containers
+# Remove all stopped containers (Xóa tất cả containers đã dừng)
 docker container prune
 ```
 
-#### 4.3 Tương tác với container
+#### 4.3 Interacting with Containers (Tương tác với container)
 
 ```bash
-# Xem logs
+# View logs (Xem logs)
 docker logs my-nginx
 docker logs -f my-nginx         # Follow mode
-docker logs --tail 100 my-nginx # 100 dòng cuối
+docker logs --tail 100 my-nginx # Last 100 lines (100 dòng cuối)
 
-# Vào terminal của container
+# Enter container terminal (Vào terminal của container)
 docker exec -it my-nginx bash
-docker exec -it my-nginx sh     # Nếu không có bash
+docker exec -it my-nginx sh     # If no bash (Nếu không có bash)
 
-# Chạy lệnh trong container
+# Run command in container (Chạy lệnh trong container)
 docker exec my-nginx cat /etc/nginx/nginx.conf
 
-# Copy files
+# Copy files (Sao chép files)
 docker cp local_file.txt my-nginx:/path/in/container/
 docker cp my-nginx:/path/in/container/file.txt ./local/
 
-# Xem stats (CPU, Memory)
+# View stats - CPU, Memory (Xem thống kê)
 docker stats
 docker stats my-nginx
 ```
 
-#### 4.4 Container lifecycle
+#### 4.4 Container Lifecycle (Vòng đời Container)
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
