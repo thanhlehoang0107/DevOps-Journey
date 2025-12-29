@@ -93,7 +93,7 @@ Use for:
 **Example:**
 
 ```markdown
-| File | Description (Mô tả) |
+| File | Description |
 |------|---------------------|
 | LABS.md | Hands-on labs (Bài thực hành) |
 | QUIZ.md | Knowledge check (Kiểm tra kiến thức) |
@@ -119,7 +119,7 @@ Navigation must be:
 
 ### 🔗 Module Navigation (Điều hướng Module)
 
-| ← Previous (Trước) | Current (Hiện tại) | Next (Tiếp) → |
+| ← Previous | Current | Next → |
 |:------------------:|:------------------:|:-------------:|
 | [Previous Module](../path/) | **Current Module** | [Next Module](../path/) |
 
@@ -176,7 +176,7 @@ code here
 
 ## 📝 Module Files (Các file trong Module)
 
-| File | Description (Mô tả) |
+| File | Description |
 |------|---------------------|
 | [LABS.md](./LABS.md) | Hands-on labs (Bài thực hành) |
 | [QUIZ.md](./QUIZ.md) | Knowledge check (Kiểm tra kiến thức) |
@@ -191,7 +191,7 @@ code here
 
 ### 🔗 Module Navigation (Điều hướng Module)
 
-| ← Previous (Trước) | Current (Hiện tại) | Next (Tiếp) → |
+| ← Previous | Current | Next → |
 |:------------------:|:------------------:|:-------------:|
 | [X.X Previous](../path/) | **X.X Current** | [X.X Next](../path/) |
 
