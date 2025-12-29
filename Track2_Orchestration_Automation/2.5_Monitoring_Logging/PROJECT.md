@@ -1,3 +1,34 @@
-# Project - Monitoring
+# 🎯 Project: Monitoring & Logging
 
-*(Nội dung sẽ được bổ sung)*
+> **Complete Observability Stack**
+
+---
+
+## 📋 Requirements
+
+Deploy monitoring cho microservices:
+
+- Prometheus (metrics)
+- Grafana (visualization)
+- Loki (logs)
+- Alertmanager (alerts)
+
+Dashboards:
+
+- System metrics
+- Application metrics
+- Business metrics
+- Logs exploration
+
+---
+
+## ✅ Deliverables
+
+- [ ] docker-compose.yml
+- [ ] 3 Grafana dashboards
+- [ ] Alert rules
+- [ ] Documentation
+
+---
+
+**Good luck! 🚀**
