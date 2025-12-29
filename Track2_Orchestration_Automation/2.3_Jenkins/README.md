@@ -120,7 +120,7 @@ pipeline {
 
 ## 📝 Module Files (Các file trong Module)
 
-| File | Description (Mô tả) |
+| File | Description |
 |------|---------------------|
 | [LABS.md](./LABS.md) | Hands-on labs (Bài thực hành) |
 | [QUIZ.md](./QUIZ.md) | Knowledge check (Kiểm tra kiến thức) |
@@ -135,7 +135,7 @@ pipeline {
 
 ### 🔗 Module Navigation (Điều hướng Module)
 
-| ← Previous (Trước) | Current (Hiện tại) | Next (Tiếp) → |
+| ← Previous | Current | Next → |
 |:------------------:|:------------------:|:-------------:|
 | [2.2 Docker Compose](../2.2_Docker_Compose/) | **2.3 Jenkins** | [2.4 Kubernetes](../2.4_Kubernetes_Core/) |
 

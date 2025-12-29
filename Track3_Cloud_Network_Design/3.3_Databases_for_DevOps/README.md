@@ -63,7 +63,7 @@ python manage.py migrate
 
 ## 📝 Module Files (Các file trong Module)
 
-| File | Description (Mô tả) |
+| File | Description |
 |------|---------------------|
 | [LABS.md](./LABS.md) | Hands-on labs (Bài thực hành) |
 | [QUIZ.md](./QUIZ.md) | Knowledge check (Kiểm tra kiến thức) |
@@ -76,7 +76,7 @@ python manage.py migrate
 
 ### 🔗 Module Navigation (Điều hướng Module)
 
-| ← Previous (Trước) | Current (Hiện tại) | Next (Tiếp) → |
+| ← Previous | Current | Next → |
 |:------------------:|:------------------:|:-------------:|
 | [3.2 AWS Core](../3.2_AWS_Core_Services/) | **3.3 Databases** | [3.4 Ansible](../3.4_Config_Management_Ansible/) |
 

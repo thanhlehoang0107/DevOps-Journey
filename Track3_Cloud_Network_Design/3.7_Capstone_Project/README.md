@@ -65,7 +65,7 @@ Deploy production-ready infrastructure on AWS with multi-AZ, auto scaling, and m
 
 ### 🔗 Module Navigation (Điều hướng Module)
 
-| ← Previous (Trước) | Current (Hiện tại) | Next (Tiếp) → |
+| ← Previous | Current | Next → |
 |:------------------:|:------------------:|:-------------:|
 | [3.6 System Design](../3.6_System_Design_Reliability/) | **3.7 Capstone** | [Track 4](../../Track4_DevSecOps/) |
 

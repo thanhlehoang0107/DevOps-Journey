@@ -183,7 +183,7 @@ spec:
 
 ## 📝 Module Files (Các file trong Module)
 
-| File | Description (Mô tả) |
+| File | Description |
 |------|---------------------|
 | [LABS.md](./LABS.md) | Hands-on labs (Bài thực hành) |
 | [QUIZ.md](./QUIZ.md) | Knowledge check (Kiểm tra kiến thức) |
@@ -198,7 +198,7 @@ spec:
 
 ### 🔗 Module Navigation (Điều hướng Module)
 
-| ← Previous (Trước) | Current (Hiện tại) | Next (Tiếp) → |
+| ← Previous | Current | Next → |
 |:------------------:|:------------------:|:-------------:|
 | [2.3 Jenkins](../2.3_Jenkins/) | **2.4 Kubernetes Core** | [2.5 Monitoring](../2.5_Monitoring_Logging/) |
 

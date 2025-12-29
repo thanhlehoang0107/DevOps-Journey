@@ -89,7 +89,7 @@ After this module, you will (Sau module này, bạn sẽ):
 
 ## 📝 Module Files (Các file trong Module)
 
-| File | Description (Mô tả) |
+| File | Description |
 |------|---------------------|
 | [LABS.md](./LABS.md) | Practice questions (Câu hỏi luyện tập) |
 
@@ -99,7 +99,7 @@ After this module, you will (Sau module này, bạn sẽ):
 
 ### 🔗 Module Navigation (Điều hướng Module)
 
-| ← Previous (Trước) | Current (Hiện tại) | Next (Tiếp) → |
+| ← Previous | Current | Next → |
 |:------------------:|:------------------:|:-------------:|
 | [5.1 Certifications](../5.1_Certifications/) | **5.2 Interview Prep** | [5.3 Portfolio](../5.3_Portfolio_Launch/) |
 

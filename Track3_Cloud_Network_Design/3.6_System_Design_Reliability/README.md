@@ -64,7 +64,7 @@ After this module, you will (Sau module này, bạn sẽ):
 
 ## 📝 Module Files (Các file trong Module)
 
-| File | Description (Mô tả) |
+| File | Description |
 |------|---------------------|
 | [LABS.md](./LABS.md) | Hands-on labs (Bài thực hành) |
 | [QUIZ.md](./QUIZ.md) | Knowledge check (Kiểm tra kiến thức) |
@@ -77,7 +77,7 @@ After this module, you will (Sau module này, bạn sẽ):
 
 ### 🔗 Module Navigation (Điều hướng Module)
 
-| ← Previous (Trước) | Current (Hiện tại) | Next (Tiếp) → |
+| ← Previous | Current | Next → |
 |:------------------:|:------------------:|:-------------:|
 | [3.5 Terraform](../3.5_Terraform_IaC/) | **3.6 System Design** | [3.7 Capstone](../3.7_Capstone_Project/) |
 

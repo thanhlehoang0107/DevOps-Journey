@@ -295,7 +295,7 @@ def check_health(urls):
 
 ## Module Files (Các file trong Module)
 
-| File | Description (Mô tả) |
+| File | Description |
 |------|-------------|
 | [LABS.md](./LABS.md) | Hands-on labs (Bài thực hành) |
 | [QUIZ.md](./QUIZ.md) | Knowledge check (Kiểm tra kiến thức) |
@@ -310,7 +310,7 @@ def check_health(urls):
 
 ### 🔗 Module Navigation (Điều hướng Module)
 
-| ← Previous (Trước) | Current (Hiện tại) | Next (Tiếp) → |
+| ← Previous | Current | Next → |
 |:------------------:|:------------------:|:-------------:|
 | [1.1 Linux & Bash](../1.1_Linux_Bash/) | **1.2 Python** | [1.3 Network](../1.3_Network_Basics/) |
 

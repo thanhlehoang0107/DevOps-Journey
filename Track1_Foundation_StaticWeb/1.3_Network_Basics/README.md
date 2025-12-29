@@ -1,4 +1,4 @@
-# 🌐 Module 1.3: Network Basics
+﻿# 🌐 Module 1.3: Network Basics
 
 [![Duration](https://img.shields.io/badge/Duration-8--10%20hours-blue?style=flat-square)](.)
 [![Level](https://img.shields.io/badge/Level-Beginner-green?style=flat-square)](.)
@@ -63,7 +63,7 @@
 
 #### Important IP Ranges (Các dải IP quan trọng)
 
-| Type (Loại) | Range (Dải) | Description (Mô tả) |
+| Type (Loại) | Range (Dải) | Description |
 |-------------|-------------|---------------------|
 | **Private** | 192.168.0.0/16 | Internal network - popular (Mạng nội bộ - phổ biến) |
 | **Private** | 10.0.0.0/8 | Internal network - large (Mạng nội bộ - lớn) |
@@ -142,7 +142,7 @@ Browser request: www.example.com
 
 #### DNS Record Types (Các loại bản ghi DNS)
 
-| Record | Description (Mô tả) | Example (Ví dụ) |
+| Record | Description | Example (Ví dụ) |
 |--------|---------------------|-----------------|
 | **A** | Domain → IPv4 | example.com → 93.184.216.34 |
 | **AAAA** | Domain → IPv6 | example.com → 2001:db8::1 |
@@ -156,7 +156,7 @@ Browser request: www.example.com
 
 #### HTTP Methods (Các phương thức HTTP)
 
-| Method | Description (Mô tả) | Example (Ví dụ) |
+| Method | Description | Example (Ví dụ) |
 |--------|---------------------|-----------------|
 | GET | Retrieve data (Lấy dữ liệu) | View webpage (Xem trang web) |
 | POST | Create new (Tạo mới) | Submit form (Gửi form) |
@@ -250,7 +250,7 @@ curl -u user:pass https://api.example.com
 
 ## 📝 Module Files (Các file trong Module)
 
-| File | Description (Mô tả) |
+| File | Description |
 |------|---------------------|
 | [CHEATSHEET.md](./CHEATSHEET.md) | Quick reference (Tra cứu nhanh) |
 | [LABS.md](./LABS.md) | Hands-on labs (Bài thực hành) |
@@ -265,7 +265,7 @@ curl -u user:pass https://api.example.com
 
 ### 🔗 Module Navigation (Điều hướng Module)
 
-| ← Previous (Trước) | Current (Hiện tại) | Next (Tiếp) → |
+| ← Previous | Current | Next → |
 |:------------------:|:------------------:|:-------------:|
 | [1.2 Python](../1.2_Python_Basics/) | **1.3 Network** | [1.4 Git](../1.4_Git_GitLab/) |
 

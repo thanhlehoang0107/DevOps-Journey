@@ -109,7 +109,7 @@ aws lambda create-function \
 
 ## 📝 Module Files (Các file trong Module)
 
-| File | Description (Mô tả) |
+| File | Description |
 |------|---------------------|
 | [LABS.md](./LABS.md) | Hands-on labs (Bài thực hành) |
 | [QUIZ.md](./QUIZ.md) | Knowledge check (Kiểm tra kiến thức) |
@@ -124,7 +124,7 @@ aws lambda create-function \
 
 ### 🔗 Module Navigation (Điều hướng Module)
 
-| ← Previous (Trước) | Current (Hiện tại) | Next (Tiếp) → |
+| ← Previous | Current | Next → |
 |:------------------:|:------------------:|:-------------:|
 | [3.1 Network Advanced](../3.1_Network_Advanced/) | **3.2 AWS Core** | [3.3 Databases](../3.3_Databases_for_DevOps/) |
 

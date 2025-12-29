@@ -149,7 +149,7 @@ capstone-project/
 
 ### 🔗 Module Navigation (Điều hướng Module)
 
-| ← Previous (Trước) | Current (Hiện tại) | Next (Tiếp) → |
+| ← Previous | Current | Next → |
 |:------------------:|:------------------:|:-------------:|
 | [2.5 Monitoring](../2.5_Monitoring_Logging/) | **2.6 Capstone** | [Track 3](../../Track3_Cloud_Network_Design/) |
 

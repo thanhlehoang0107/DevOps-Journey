@@ -409,7 +409,7 @@ docker run -it debug_image sh
 
 ## 📝 Module Files (Các file trong Module)
 
-| File | Description (Mô tả) |
+| File | Description |
 |------|---------------------|
 | [LABS.md](./LABS.md) | Hands-on labs (Bài thực hành) |
 | [QUIZ.md](./QUIZ.md) | Knowledge check (Kiểm tra kiến thức) |
@@ -424,7 +424,7 @@ docker run -it debug_image sh
 
 ### 🔗 Module Navigation (Điều hướng Module)
 
-| ← Previous (Trước) | Current (Hiện tại) | Next (Tiếp) → |
+| ← Previous | Current | Next → |
 |:------------------:|:------------------:|:-------------:|
 | [Track 1 Capstone](../../Track1_Foundation_StaticWeb/1.8_Capstone_Project/) | **2.1 Docker Advanced** | [2.2 Docker Compose](../2.2_Docker_Compose/) |
 

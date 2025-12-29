@@ -110,7 +110,7 @@ Upon completing this project, you have demonstrated (Khi hoàn thành dự án n
 
 ### 🔗 Module Navigation (Điều hướng Module)
 
-| ← Previous (Trước) | Current (Hiện tại) | Next (Tiếp) → |
+| ← Previous | Current | Next → |
 |:------------------:|:------------------:|:-------------:|
 | [5.3 Portfolio](../5.3_Portfolio_Launch/) | **5.4 Grand Capstone** | [Home](../../README.md) |
 

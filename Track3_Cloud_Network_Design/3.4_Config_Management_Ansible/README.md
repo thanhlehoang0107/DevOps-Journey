@@ -111,7 +111,7 @@ ansible-playbook playbook.yml -e "env=production"
 
 ## 📝 Module Files (Các file trong Module)
 
-| File | Description (Mô tả) |
+| File | Description |
 |------|---------------------|
 | [LABS.md](./LABS.md) | Hands-on labs (Bài thực hành) |
 | [QUIZ.md](./QUIZ.md) | Knowledge check (Kiểm tra kiến thức) |
@@ -124,7 +124,7 @@ ansible-playbook playbook.yml -e "env=production"
 
 ### 🔗 Module Navigation (Điều hướng Module)
 
-| ← Previous (Trước) | Current (Hiện tại) | Next (Tiếp) → |
+| ← Previous | Current | Next → |
 |:------------------:|:------------------:|:-------------:|
 | [3.3 Databases](../3.3_Databases_for_DevOps/) | **3.4 Ansible** | [3.5 Terraform](../3.5_Terraform_IaC/) |
 

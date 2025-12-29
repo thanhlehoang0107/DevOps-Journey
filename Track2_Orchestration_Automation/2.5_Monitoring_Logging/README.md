@@ -127,7 +127,7 @@ schema_config:
 
 ## 📝 Module Files (Các file trong Module)
 
-| File | Description (Mô tả) |
+| File | Description |
 |------|---------------------|
 | [LABS.md](./LABS.md) | Hands-on labs (Bài thực hành) |
 | [QUIZ.md](./QUIZ.md) | Knowledge check (Kiểm tra kiến thức) |
@@ -142,7 +142,7 @@ schema_config:
 
 ### 🔗 Module Navigation (Điều hướng Module)
 
-| ← Previous (Trước) | Current (Hiện tại) | Next (Tiếp) → |
+| ← Previous | Current | Next → |
 |:------------------:|:------------------:|:-------------:|
 | [2.4 Kubernetes](../2.4_Kubernetes_Core/) | **2.5 Monitoring** | [2.6 Capstone](../2.6_Capstone_Project/) |
 

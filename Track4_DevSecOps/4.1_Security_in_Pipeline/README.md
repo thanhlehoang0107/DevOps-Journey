@@ -89,7 +89,7 @@ deny[msg] {
 
 ## 📝 Module Files (Các file trong Module)
 
-| File | Description (Mô tả) |
+| File | Description |
 |------|---------------------|
 | [LABS.md](./LABS.md) | Hands-on labs (Bài thực hành) |
 | [QUIZ.md](./QUIZ.md) | Knowledge check (Kiểm tra kiến thức) |
@@ -102,7 +102,7 @@ deny[msg] {
 
 ### 🔗 Module Navigation (Điều hướng Module)
 
-| ← Previous (Trước) | Current (Hiện tại) | Next (Tiếp) → |
+| ← Previous | Current | Next → |
 |:------------------:|:------------------:|:-------------:|
 | [Track 3 Capstone](../../Track3_Cloud_Network_Design/3.7_Capstone_Project/) | **4.1 Security Pipeline** | [4.2 Infra Security](../4.2_Infra_Security/) |
 

@@ -68,7 +68,7 @@ Build secure CI/CD pipeline with all security controls.
 
 ### 🔗 Module Navigation (Điều hướng Module)
 
-| ← Previous (Trước) | Current (Hiện tại) | Next (Tiếp) → |
+| ← Previous | Current | Next → |
 |:------------------:|:------------------:|:-------------:|
 | [4.2 Infra Security](../4.2_Infra_Security/) | **4.3 Capstone** | [Track 5](../../Track5_Career_Path/) |
 

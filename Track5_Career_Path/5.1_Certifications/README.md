@@ -72,7 +72,7 @@ After this module, you will (Sau module này, bạn sẽ):
 
 ## 📝 Module Files (Các file trong Module)
 
-| File | Description (Mô tả) |
+| File | Description |
 |------|---------------------|
 | [LABS.md](./LABS.md) | Study guides (Hướng dẫn học) |
 
@@ -82,7 +82,7 @@ After this module, you will (Sau module này, bạn sẽ):
 
 ### 🔗 Module Navigation (Điều hướng Module)
 
-| ← Previous (Trước) | Current (Hiện tại) | Next (Tiếp) → |
+| ← Previous | Current | Next → |
 |:------------------:|:------------------:|:-------------:|
 | [Track 4 Capstone](../../Track4_DevSecOps/4.3_Capstone_Project/) | **5.1 Certifications** | [5.2 Interview Prep](../5.2_Interview_Prep/) |
 

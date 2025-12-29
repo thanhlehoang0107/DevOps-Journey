@@ -69,7 +69,7 @@ After this module, you will (Sau module này, bạn sẽ):
 
 ## 📝 Module Files (Các file trong Module)
 
-| File | Description (Mô tả) |
+| File | Description |
 |------|---------------------|
 | [LABS.md](./LABS.md) | Portfolio setup guide (Hướng dẫn thiết lập portfolio) |
 
@@ -79,7 +79,7 @@ After this module, you will (Sau module này, bạn sẽ):
 
 ### 🔗 Module Navigation (Điều hướng Module)
 
-| ← Previous (Trước) | Current (Hiện tại) | Next (Tiếp) → |
+| ← Previous | Current | Next → |
 |:------------------:|:------------------:|:-------------:|
 | [5.2 Interview Prep](../5.2_Interview_Prep/) | **5.3 Portfolio** | [5.4 Grand Capstone](../5.4_Grand_Capstone/) |
 

@@ -286,7 +286,7 @@ ssh -T git@github.com
 
 ## 📝 Module Files (Các file trong Module)
 
-| File | Description (Mô tả) |
+| File | Description |
 |------|---------------------|
 | [CHEATSHEET.md](./CHEATSHEET.md) | Quick reference Git (Tra cứu nhanh Git) |
 | [LABS.md](./LABS.md) | Hands-on labs (Bài thực hành) |
@@ -301,7 +301,7 @@ ssh -T git@github.com
 
 ### 🔗 Module Navigation (Điều hướng Module)
 
-| ← Previous (Trước) | Current (Hiện tại) | Next (Tiếp) → |
+| ← Previous | Current | Next → |
 |:------------------:|:------------------:|:-------------:|
 | [1.3 Network](../1.3_Network_Basics/) | **1.4 Git** | [1.5 Docker](../1.5_Docker_Fundamentals/) |
 

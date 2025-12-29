@@ -101,7 +101,7 @@ User → Edge Location → Origin Server
 
 ## 📝 Module Files (Các file trong Module)
 
-| File | Description (Mô tả) |
+| File | Description |
 |------|---------------------|
 | [LABS.md](./LABS.md) | Hands-on labs (Bài thực hành) |
 | [QUIZ.md](./QUIZ.md) | Knowledge check (Kiểm tra kiến thức) |
@@ -116,7 +116,7 @@ User → Edge Location → Origin Server
 
 ### 🔗 Module Navigation (Điều hướng Module)
 
-| ← Previous (Trước) | Current (Hiện tại) | Next (Tiếp) → |
+| ← Previous | Current | Next → |
 |:------------------:|:------------------:|:-------------:|
 | [Track 2 Capstone](../../Track2_Orchestration_Automation/2.6_Capstone_Project/) | **3.1 Network Advanced** | [3.2 AWS Core](../3.2_AWS_Core_Services/) |
 

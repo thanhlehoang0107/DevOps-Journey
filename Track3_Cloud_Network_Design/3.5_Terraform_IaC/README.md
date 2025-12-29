@@ -106,7 +106,7 @@ module "vpc" {
 
 ## 📝 Module Files (Các file trong Module)
 
-| File | Description (Mô tả) |
+| File | Description |
 |------|---------------------|
 | [LABS.md](./LABS.md) | Hands-on labs (Bài thực hành) |
 | [QUIZ.md](./QUIZ.md) | Knowledge check (Kiểm tra kiến thức) |
@@ -119,7 +119,7 @@ module "vpc" {
 
 ### 🔗 Module Navigation (Điều hướng Module)
 
-| ← Previous (Trước) | Current (Hiện tại) | Next (Tiếp) → |
+| ← Previous | Current | Next → |
 |:------------------:|:------------------:|:-------------:|
 | [3.4 Ansible](../3.4_Config_Management_Ansible/) | **3.5 Terraform** | [3.6 System Design](../3.6_System_Design_Reliability/) |
 
