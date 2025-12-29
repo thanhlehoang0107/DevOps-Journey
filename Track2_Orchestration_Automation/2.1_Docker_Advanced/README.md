@@ -3,32 +3,34 @@
 [![Duration](https://img.shields.io/badge/Duration-1%20week-blue?style=flat-square)](.)
 [![Level](https://img.shields.io/badge/Level-Intermediate-orange?style=flat-square)](.)
 
-> **Nâng cao kỹ năng Docker** - Multi-stage builds, optimization, và security best practices.
+> **Advanced Docker Skills** - Multi-stage builds, optimization, and security best practices.
+>
+> *Nâng cao kỹ năng Docker - Multi-stage builds, tối ưu hóa, và bảo mật.*
 
 ---
 
-## 🎯 Learning Objectives
+## 🎯 Learning Objectives (Mục tiêu học tập)
 
-Sau module này, bạn sẽ:
+After this module, you will (Sau module này, bạn sẽ):
 
-- ✅ Master multi-stage builds
-- ✅ Optimize Docker images (size, layers, caching)
-- ✅ Implement Docker security best practices
-- ✅ Use BuildKit advanced features
-- ✅ Debug và troubleshoot containers
-- ✅ Understand Docker internals
-
----
-
-## 📋 Prerequisites
-
-- Hoàn thành Track 1 (đặc biệt module 1.5 Docker Fundamentals)
-- Docker Desktop installed
-- Hiểu Dockerfile basics
+- ✅ Master multi-stage builds (Thành thạo multi-stage builds)
+- ✅ Optimize Docker images - size, layers, caching (Tối ưu Docker images)
+- ✅ Implement Docker security best practices (Áp dụng bảo mật Docker)
+- ✅ Use BuildKit advanced features (Sử dụng tính năng BuildKit)
+- ✅ Debug and troubleshoot containers (Debug và xử lý sự cố)
+- ✅ Understand Docker internals (Hiểu cơ chế bên trong Docker)
 
 ---
 
-## 📚 Content
+## 📋 Prerequisites (Điều kiện tiên quyết)
+
+- Complete Track 1, especially module 1.5 Docker Fundamentals (Hoàn thành Track 1)
+- Docker Desktop installed (Đã cài Docker Desktop)
+- Understand Dockerfile basics (Hiểu Dockerfile cơ bản)
+
+---
+
+## 📚 Content (Nội dung)
 
 ### 1. Multi-stage Builds
 
@@ -405,29 +407,31 @@ docker run -it debug_image sh
 
 ---
 
-## 🔗 Module Navigation
+## 📝 Module Files (Các file trong Module)
 
-| Previous | Current | Next |
-|----------|---------|------|
-| [Track 1 Capstone](../../Track1_Foundation_StaticWeb/1.8_Capstone_Project/) | **2.1 Docker Advanced** | [2.2 Docker Compose](../2.2_Docker_Compose/) |
-
----
-
-## 📝 Module Files
-
-| File | Description |
-|------|-------------|
-| [LABS.md](./LABS.md) | Hands-on labs |
-| [QUIZ.md](./QUIZ.md) | Knowledge check |
-| [EXERCISES.md](./EXERCISES.md) | Practice exercises |
-| [PROJECT.md](./PROJECT.md) | Mini project |
-| [SOLUTIONS.md](./SOLUTIONS.md) | Exercise solutions |
-| [CHEATSHEET.md](./CHEATSHEET.md) | Quick reference |
+| File | Description (Mô tả) |
+|------|---------------------|
+| [LABS.md](./LABS.md) | Hands-on labs (Bài thực hành) |
+| [QUIZ.md](./QUIZ.md) | Knowledge check (Kiểm tra kiến thức) |
+| [EXERCISES.md](./EXERCISES.md) | Practice exercises (Bài tập) |
+| [PROJECT.md](./PROJECT.md) | Mini project (Dự án nhỏ) |
+| [SOLUTIONS.md](./SOLUTIONS.md) | Solutions (Đáp án) |
+| [CHEATSHEET.md](./CHEATSHEET.md) | Quick reference (Tra cứu nhanh) |
 
 ---
 
 <div align="center">
 
+### 🔗 Module Navigation (Điều hướng Module)
+
+| ← Previous (Trước) | Current (Hiện tại) | Next (Tiếp) → |
+|:------------------:|:------------------:|:-------------:|
+| [Track 1 Capstone](../../Track1_Foundation_StaticWeb/1.8_Capstone_Project/) | **2.1 Docker Advanced** | [2.2 Docker Compose](../2.2_Docker_Compose/) |
+
+---
+
 **Level up your Docker skills! 🐳**
+
+*Nâng cấp kỹ năng Docker của bạn!*
 
 </div>
