@@ -343,38 +343,40 @@ docker stats my-nginx
 
 ---
 
-### 5. Dockerfile (3 giờ)
+### 5. Dockerfile - 3 hours
 
-#### 5.1 Dockerfile là gì?
+#### 5.1 What is Dockerfile? (Dockerfile là gì?)
 
-**Dockerfile** = Text file chứa instructions để build Docker image
+**Dockerfile** = Text file containing instructions to build Docker image
 
-#### 5.2 Cấu trúc cơ bản
+*File text chứa các instructions để build Docker image*
+
+#### 5.2 Basic Structure (Cấu trúc cơ bản)
 
 ```dockerfile
-# Syntax
+# Syntax (Cú pháp)
 # INSTRUCTION arguments
 
-# Comment bắt đầu bằng #
+# Comments start with # (Comment bắt đầu bằng #)
 
-FROM base_image          # Base image (BẮT BUỘC)
-WORKDIR /app             # Set working directory
-COPY source dest         # Copy files từ host vào image
-RUN command              # Chạy command khi build
-EXPOSE port              # Document port (không mở port)
-ENV KEY=value            # Set environment variable
-CMD ["executable"]       # Command mặc định khi run
+FROM base_image          # Base image (REQUIRED - BẮT BUỘC)
+WORKDIR /app             # Set working directory (Đặt thư mục làm việc)
+COPY source dest         # Copy files from host to image
+RUN command              # Run command during build (Chạy lệnh khi build)
+EXPOSE port              # Document port - doesn't open port (Không mở port)
+ENV KEY=value            # Set environment variable (Đặt biến môi trường)
+CMD ["executable"]       # Default command when run (Lệnh mặc định khi chạy)
 ```
 
-#### 5.3 Các instructions quan trọng
+#### 5.3 Important Instructions (Các instructions quan trọng)
 
-| Instruction | Mô tả | Ví dụ |
-|-------------|-------|-------|
+| Instruction | Description | Example |
+|-------------|-------------|---------|
 | `FROM` | Base image | `FROM node:18-alpine` |
 | `WORKDIR` | Set working directory | `WORKDIR /app` |
-| `COPY` | Copy files từ host | `COPY . .` |
+| `COPY` | Copy files from host | `COPY . .` |
 | `ADD` | Copy + extract archives | `ADD app.tar.gz /app` |
-| `RUN` | Chạy command (build time) | `RUN npm install` |
+| `RUN` | Run command (build time) | `RUN npm install` |
 | `CMD` | Default command (run time) | `CMD ["node", "app.js"]` |
 | `ENTRYPOINT` | Fixed command | `ENTRYPOINT ["python"]` |
 | `EXPOSE` | Document port | `EXPOSE 3000` |
@@ -513,14 +515,14 @@ Dockerfile
 
 ---
 
-### 6. Docker Volumes (2 giờ)
+### 6. Docker Volumes - 2 hours
 
-#### 6.1 Vấn đề: Data trong container
+#### 6.1 The Problem: Data in Containers (Vấn đề: Data trong container)
 
-- Container bị xóa → Data mất
-- Cần lưu data persistent
+- Container deleted → Data lost (Container bị xóa → Data mất)
+- Need persistent data (Cần lưu data bền vững)
 
-#### 6.2 Các loại mounts
+#### 6.2 Mount Types (Các loại mounts)
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -542,32 +544,32 @@ Dockerfile
 #### 6.3 Volumes
 
 ```bash
-# Tạo volume
+# Create volume (Tạo volume)
 docker volume create my-data
 
-# Liệt kê volumes
+# List volumes (Liệt kê volumes)
 docker volume ls
 
-# Inspect volume
+# Inspect volume (Xem chi tiết volume)
 docker volume inspect my-data
 
-# Sử dụng volume
+# Use volume (Sử dụng volume)
 docker run -d \
     -v my-data:/var/lib/mysql \
     --name mysql \
     mysql
 
-# Xóa volume
+# Remove volume (Xóa volume)
 docker volume rm my-data
 
-# Xóa unused volumes
+# Remove unused volumes (Xóa volumes không dùng)
 docker volume prune
 ```
 
 #### 6.4 Bind Mounts
 
 ```bash
-# Mount folder từ host
+# Mount folder from host (Mount folder từ host)
 docker run -d \
     -v $(pwd)/data:/app/data \
     --name app \
@@ -579,30 +581,30 @@ docker run -d `
     --name app `
     my-app
 
-# Read-only mount
+# Read-only mount (Mount chỉ đọc)
 docker run -d \
     -v $(pwd)/config:/app/config:ro \
     my-app
 ```
 
-#### 6.5 Use cases
+#### 6.5 Use Cases (Trường hợp sử dụng)
 
-| Use case | Loại mount | Ví dụ |
-|----------|------------|-------|
+| Use case | Mount type | Example |
+|----------|------------|---------|
 | Database data | Volume | MySQL, PostgreSQL data |
 | Development | Bind mount | Live reload code |
 | Config files | Bind mount (ro) | nginx.conf |
-| Logs | Volume hoặc Bind | application logs |
+| Logs | Volume or Bind | Application logs |
 | Secrets | tmpfs | Passwords, tokens |
 
 ---
 
-### 7. Docker Networks (2 giờ)
+### 7. Docker Networks (Mạng Docker) - 2 hours
 
-#### 7.1 Network Types
+#### 7.1 Network Types (Các loại Network)
 
-| Driver | Mô tả | Use case |
-|--------|-------|----------|
+| Driver | Description | Use case |
+|--------|-------------|----------|
 | **bridge** | Default, isolated network | Single host, dev |
 | **host** | Use host network directly | Performance |
 | **none** | No networking | Security |
@@ -611,23 +613,24 @@ docker run -d \
 #### 7.2 Bridge Network (Default)
 
 ```bash
-# Tạo network
+# Create network (Tạo network)
 docker network create my-network
 
-# Liệt kê networks
+# List networks (Liệt kê networks)
 docker network ls
 
-# Inspect network
+# Inspect network (Xem chi tiết network)
 docker network inspect my-network
 
-# Chạy container trong network
+# Run container in network (Chạy container trong network)
 docker run -d --name web --network my-network nginx
 docker run -d --name api --network my-network my-api
 
+# Containers can call each other by name
 # Containers có thể gọi nhau bằng tên
-# Từ web: curl http://api:3000
+# From web: curl http://api:3000
 
-# Xóa network
+# Remove network (Xóa network)
 docker network rm my-network
 ```
 
