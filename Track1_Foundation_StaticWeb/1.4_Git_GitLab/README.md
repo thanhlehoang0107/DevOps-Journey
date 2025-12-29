@@ -1,34 +1,37 @@
 # 📦 Module 1.4: Git & GitHub
 
-> Version Control - Quản lý code và cộng tác hiệu quả
+[![Duration](https://img.shields.io/badge/Duration-8--10%20hours-blue?style=flat-square)](.)
+[![Level](https://img.shields.io/badge/Level-Beginner-green?style=flat-square)](.)
+
+> **Version Control** - Manage code and collaborate effectively.
+>
+> *Quản lý phiên bản - Quản lý code và cộng tác hiệu quả.*
 
 ---
 
-## 📋 Thông tin Module
+## 🎯 Learning Objectives (Mục tiêu học tập)
 
-| Thuộc tính | Giá trị |
-|------------|---------|
-| **Thời lượng** | 8-10 giờ |
-| **Độ khó** | ⭐ Beginner |
-| **Yêu cầu trước** | Module 1.3 hoàn thành |
-
----
-
-## 🎯 Mục tiêu học tập
-
-- [ ] Hiểu Git là gì và tại sao cần dùng
-- [ ] Thao tác cơ bản: init, add, commit, push, pull
-- [ ] Branching và merging
-- [ ] Xử lý conflicts
-- [ ] Làm việc với GitHub/GitLab
+- [ ] Understand what Git is and why we need it (Hiểu Git là gì và tại sao cần dùng)
+- [ ] Basic operations: init, add, commit, push, pull (Thao tác cơ bản)
+- [ ] Branching and merging (Phân nhánh và hợp nhất)
+- [ ] Handle conflicts (Xử lý xung đột)
+- [ ] Work with GitHub/GitLab (Làm việc với GitHub/GitLab)
 
 ---
 
-## 📖 Nội dung
+## 📋 Prerequisites (Điều kiện tiên quyết)
 
-### 1. Git là gì?
+- Complete Module 1.3 (Hoàn thành Module 1.3)
+
+---
+
+## 📚 Content (Nội dung)
+
+### 1. What is Git? (Git là gì?)
 
 **Git** = Distributed Version Control System (DVCS)
+
+*Hệ thống quản lý phiên bản phân tán*
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -49,71 +52,71 @@
 
 ---
 
-### 2. Cấu hình Git
+### 2. Git Configuration (Cấu hình Git)
 
 ```bash
-# Cấu hình user (bắt buộc)
+# Configure user - required (Cấu hình user - bắt buộc)
 git config --global user.name "Your Name"
 git config --global user.email "your.email@example.com"
 
-# Kiểm tra cấu hình
+# Check configuration (Kiểm tra cấu hình)
 git config --list
 
-# Cấu hình editor (optional)
+# Configure editor - optional (Cấu hình editor - tùy chọn)
 git config --global core.editor "code --wait"
 
-# Line endings
+# Line endings (Xử lý xuống dòng)
 git config --global core.autocrlf true   # Windows
 git config --global core.autocrlf input  # Linux/macOS
 ```
 
 ---
 
-### 3. Các lệnh cơ bản
+### 3. Basic Commands (Các lệnh cơ bản)
 
-#### Khởi tạo Repository
+#### Initialize Repository (Khởi tạo Repository)
 
 ```bash
-# Tạo repo mới
+# Create new repo (Tạo repo mới)
 git init
 
-# Clone repo từ remote
+# Clone repo from remote (Clone repo từ remote)
 git clone https://github.com/user/repo.git
 git clone git@github.com:user/repo.git
 ```
 
-#### Workflow cơ bản
+#### Basic Workflow (Quy trình cơ bản)
 
 ```bash
-# Xem trạng thái
+# Check status (Xem trạng thái)
 git status
 
-# Stage files
-git add file.txt          # Một file
-git add .                 # Tất cả files
+# Stage files (Đưa files vào staging)
+git add file.txt          # One file (Một file)
+git add .                 # All files (Tất cả files)
 
-# Commit
+# Commit (Lưu thay đổi)
 git commit -m "Add feature X"
 
-# Push lên remote
+# Push to remote (Push lên remote)
 git push origin main
 
-# Pull từ remote
+# Pull from remote (Pull từ remote)
 git pull origin main
 ```
 
-#### Xem lịch sử
+#### View History (Xem lịch sử)
 
 ```bash
-git log                   # Full log
-git log --oneline         # Compact
-git log --oneline -10     # 10 commits gần nhất
-git log --graph           # Với graph
+git log                   # Full log (Log đầy đủ)
+git log --oneline         # Compact (Gọn)
+git log --oneline -10     # Last 10 commits (10 commits gần nhất)
+git log --graph           # With graph (Với biểu đồ)
 ```
 
 ---
 
-### 4. Branching
+### 4. Branching (Phân nhánh)
 
 ```
 main      ─────●─────●─────●─────────●─────►
@@ -123,65 +126,65 @@ main      ─────●─────●─────●─────�
                └─────┘
 ```
 
-#### Làm việc với branches
+#### Working with Branches (Làm việc với branches)
 
 ```bash
-# Xem branches
+# View branches (Xem branches)
 git branch              # Local
 git branch -a           # Local + Remote
 
-# Tạo branch mới
+# Create new branch (Tạo branch mới)
 git branch feature-x
 
-# Chuyển branch
+# Switch branch (Chuyển branch)
 git checkout feature-x
-git switch feature-x    # Modern syntax
+git switch feature-x    # Modern syntax (Cú pháp mới)
 
-# Tạo và chuyển (1 lệnh)
+# Create and switch - 1 command (Tạo và chuyển - 1 lệnh)
 git checkout -b feature-x
 git switch -c feature-x
 
-# Xóa branch
-git branch -d feature-x   # Đã merge
-git branch -D feature-x   # Force delete
+# Delete branch (Xóa branch)
+git branch -d feature-x   # Already merged (Đã merge)
+git branch -D feature-x   # Force delete (Xóa cưỡng bức)
 ```
 
-#### Merge
+#### Merge (Hợp nhất)
 
 ```bash
-# Đứng ở main, merge feature vào
+# On main, merge feature into (Đứng ở main, merge feature vào)
 git checkout main
 git merge feature-x
 
-# Merge với commit message
+# Merge with commit message (Merge với commit message)
 git merge feature-x -m "Merge feature-x into main"
 ```
 
 ---
 
-### 5. Git Workflow phổ biến
+### 5. Common Git Workflow (Quy trình Git phổ biến)
 
 #### Feature Branch Workflow
 
 ```bash
-# 1. Cập nhật main
+# 1. Update main (Cập nhật main)
 git checkout main
 git pull origin main
 
-# 2. Tạo feature branch
+# 2. Create feature branch (Tạo feature branch)
 git checkout -b feature/login-page
 
-# 3. Làm việc, commit
+# 3. Work and commit (Làm việc và commit)
 git add .
 git commit -m "Add login form"
 git commit -m "Add validation"
 
-# 4. Push branch
+# 4. Push branch (Push branch)
 git push origin feature/login-page
 
-# 5. Tạo Pull Request trên GitHub
+# 5. Create Pull Request on GitHub (Tạo Pull Request trên GitHub)
 
-# 6. Sau khi merge, xóa branch
+# 6. After merge, delete branch (Sau khi merge, xóa branch)
 git checkout main
 git pull origin main
 git branch -d feature/login-page
@@ -189,40 +192,41 @@ git branch -d feature/login-page
 
 ---
 
-### 6. Xử lý Conflicts
+### 6. Handling Conflicts (Xử lý xung đột)
 
 ```bash
-# Khi merge hoặc pull có conflict
+# When merge or pull has conflict (Khi merge hoặc pull có xung đột)
 <<<<<<< HEAD
-code từ branch hiện tại
+code from current branch (code từ branch hiện tại)
 =======
-code từ branch khác
+code from other branch (code từ branch khác)
 >>>>>>> feature-x
 
-# Giải quyết:
-# 1. Sửa file, xóa conflict markers
-# 2. git add file-đã-fix
+# Resolve (Giải quyết):
+# 1. Edit file, remove conflict markers (Sửa file, xóa các dấu xung đột)
+# 2. git add file-that-was-fixed (git add file-đã-sửa)
 # 3. git commit
 ```
 
 ---
 
-### 7. Undo Changes
+### 7. Undo Changes (Hoàn tác thay đổi)
 
 ```bash
-# Unstage file
+# Unstage file (Bỏ stage file)
 git restore --staged file.txt
 
-# Discard changes (chưa commit)
+# Discard changes - not committed (Bỏ thay đổi - chưa commit)
 git restore file.txt
 
-# Undo last commit (giữ changes)
+# Undo last commit - keep changes (Hoàn tác commit cuối - giữ changes)
 git reset --soft HEAD~1
 
-# Undo last commit (xóa changes) - NGUY HIỂM!
+# Undo last commit - delete changes (Hoàn tác commit cuối - xóa changes)
+# DANGEROUS! (NGUY HIỂM!)
 git reset --hard HEAD~1
 
-# Revert commit (tạo commit ngược)
+# Revert commit - create reverse commit (Revert commit - tạo commit ngược)
 git revert abc1234
 ```
 
@@ -233,12 +237,12 @@ git revert abc1234
 ```bash
 # File: .gitignore
 
-# Dependencies
+# Dependencies (Thư viện)
 node_modules/
 vendor/
 venv/
 
-# Build outputs
+# Build outputs (Kết quả build)
 dist/
 build/
 *.pyc
@@ -247,12 +251,12 @@ build/
 .vscode/
 .idea/
 
-# Secrets
+# Secrets (Bí mật)
 .env
 *.key
 secrets/
 
-# OS files
+# OS files (Files hệ điều hành)
 .DS_Store
 Thumbs.db
 
@@ -263,39 +267,48 @@ logs/
 
 ---
 
-### 9. SSH Keys cho GitHub
+### 9. SSH Keys for GitHub (SSH Keys cho GitHub)
 
 ```bash
-# Tạo SSH key
+# Generate SSH key (Tạo SSH key)
 ssh-keygen -t ed25519 -C "your.email@example.com"
 
-# Copy public key
+# Copy public key (Copy public key)
 cat ~/.ssh/id_ed25519.pub
-# Paste vào GitHub → Settings → SSH Keys
+# Paste into GitHub → Settings → SSH Keys
+# (Dán vào GitHub → Settings → SSH Keys)
 
-# Test connection
+# Test connection (Kiểm tra kết nối)
 ssh -T git@github.com
 ```
 
 ---
 
-## 📁 Files trong module này
+## 📝 Module Files (Các file trong Module)
 
-| File | Mục đích |
-|------|----------|
-| [CHEATSHEET.md](./CHEATSHEET.md) | Tra cứu nhanh Git |
-| [LABS.md](./LABS.md) | Bài thực hành |
-| [QUIZ.md](./QUIZ.md) | Kiểm tra kiến thức |
-| [EXERCISES.md](./EXERCISES.md) | Bài tập |
-| [PROJECT.md](./PROJECT.md) | Mini project |
-| [SOLUTIONS.md](./SOLUTIONS.md) | Đáp án |
-
----
-
-## 🔗 Navigation
-
-[⬅️ 1.3 Network](../1.3_Network_Basics/README.md) | [📚 Track 1](../README.md) | [1.5 Docker ➡️](../1.5_Docker_Fundamentals/README.md)
+| File | Description (Mô tả) |
+|------|---------------------|
+| [CHEATSHEET.md](./CHEATSHEET.md) | Quick reference Git (Tra cứu nhanh Git) |
+| [LABS.md](./LABS.md) | Hands-on labs (Bài thực hành) |
+| [QUIZ.md](./QUIZ.md) | Knowledge check (Kiểm tra kiến thức) |
+| [EXERCISES.md](./EXERCISES.md) | Exercises (Bài tập) |
+| [PROJECT.md](./PROJECT.md) | Mini project (Dự án nhỏ) |
+| [SOLUTIONS.md](./SOLUTIONS.md) | Solutions (Đáp án) |
 
 ---
 
-*Cập nhật: 2025-12-29*
+<div align="center">
+
+### 🔗 Module Navigation (Điều hướng Module)
+
+| ← Previous (Trước) | Current (Hiện tại) | Next (Tiếp) → |
+|:------------------:|:------------------:|:-------------:|
+| [1.3 Network](../1.3_Network_Basics/) | **1.4 Git** | [1.5 Docker](../1.5_Docker_Fundamentals/) |
+
+---
+
+**Master version control with Git! 📦**
+
+*Thành thạo quản lý phiên bản với Git!*
+
+</div>
