@@ -1,55 +1,55 @@
 # 🤝 Contributing to DevOps Journey
 
-Cảm ơn bạn đã quan tâm đến việc đóng góp cho **DevOps Journey**! Mọi đóng góp đều được chào đón và đánh giá cao.
+Thank you for your interest in contributing to **DevOps Journey**! All contributions are welcome and appreciated.
 
 ---
 
-## 📋 Mục Lục
+## 📋 Table of Contents
 
 - [Code of Conduct](#-code-of-conduct)
-- [Cách Đóng Góp](#-cách-đóng-góp)
-- [Quy Trình Pull Request](#-quy-trình-pull-request)
+- [How to Contribute](#-how-to-contribute)
+- [Pull Request Process](#-pull-request-process)
 - [Coding Standards](#-coding-standards)
 - [Commit Convention](#-commit-convention)
 - [Documentation Guidelines](#-documentation-guidelines)
-- [Báo Cáo Bugs](#-báo-cáo-bugs)
-- [Đề Xuất Features](#-đề-xuất-features)
+- [Reporting Bugs](#-reporting-bugs)
+- [Feature Requests](#-feature-requests)
 - [Community](#-community)
 
 ---
 
 ## 📜 Code of Conduct
 
-Dự án này tuân theo [Contributor Covenant Code of Conduct](https://www.contributor-covenant.org/). Bằng việc tham gia, bạn đồng ý tuân thủ các quy tắc này.
+This project follows the [Contributor Covenant Code of Conduct](https://www.contributor-covenant.org/). By participating, you agree to abide by these rules.
 
-### Quy tắc cơ bản
+### Basic Rules
 
-- ✅ Tôn trọng tất cả contributors
-- ✅ Đón nhận phản hồi mang tính xây dựng
-- ✅ Tập trung vào điều tốt nhất cho community
-- ✅ Thể hiện sự đồng cảm với người khác
+- ✅ Respect all contributors
+- ✅ Welcome constructive feedback
+- ✅ Focus on what's best for the community
+- ✅ Show empathy towards others
 
 ---
 
-## 🚀 Cách Đóng Góp
+## 🚀 How to Contribute
 
-### Các loại đóng góp được chào đón
+### Types of Contributions Welcome
 
-| Loại | Mô Tả |
-|------|-------|
-| 📝 **Content** | Viết/cập nhật nội dung module |
-| 🐛 **Bug fixes** | Sửa lỗi typo, links hỏng |
-| 🔬 **Labs** | Thêm bài thực hành mới |
-| ❓ **Quizzes** | Thêm câu hỏi kiểm tra |
-| 🌐 **Translations** | Dịch sang ngôn ngữ khác |
-| 🖼️ **Diagrams** | Thêm hình ảnh minh họa |
-| 📖 **Documentation** | Cải thiện documentation |
+| Type | Description |
+|------|-------------|
+| 📝 **Content** | Write/update module content |
+| 🐛 **Bug fixes** | Fix typos, broken links |
+| 🔬 **Labs** | Add new hands-on labs |
+| ❓ **Quizzes** | Add knowledge check questions |
+| 🌐 **Translations** | Translate to other languages |
+| 🖼️ **Diagrams** | Add illustration images |
+| 📖 **Documentation** | Improve documentation |
 
 ### Quick Start
 
 ```bash
 # 1. Fork repository
-# Click "Fork" button trên GitHub
+# Click "Fork" button on GitHub
 
 # 2. Clone your fork
 git clone https://github.com/YOUR_USERNAME/DevOps-Journey.git
@@ -77,21 +77,21 @@ git push origin feature/your-feature-name
 
 ---
 
-## 🔄 Quy Trình Pull Request
+## 🔄 Pull Request Process
 
-### Trước khi tạo PR
+### Before Creating PR
 
-- [ ] Sync fork với upstream mới nhất
-- [ ] Tạo branch mới từ `main`
-- [ ] Test nội dung/code của bạn
-- [ ] Đảm bảo không có lỗi spelling
-- [ ] Cập nhật documentation nếu cần
+- [ ] Sync fork with latest upstream
+- [ ] Create new branch from `main`
+- [ ] Test your content/code
+- [ ] Ensure no spelling errors
+- [ ] Update documentation if needed
 
 ### PR Checklist
 
 ```markdown
 ## Description
-<!-- Mô tả ngắn gọn về thay đổi -->
+<!-- Brief description of changes -->
 
 ## Type of Change
 - [ ] 📝 Content update
@@ -101,24 +101,24 @@ git push origin feature/your-feature-name
 - [ ] 🔧 Configuration
 
 ## Testing
-<!-- Bạn đã test như thế nào? -->
+<!-- How did you test this? -->
 
-## Screenshots (nếu có)
-<!-- Thêm screenshots nếu relevant -->
+## Screenshots (if applicable)
+<!-- Add screenshots if relevant -->
 
 ## Checklist
-- [ ] Tôi đã đọc Contributing Guidelines
-- [ ] Code/Content tuân theo project standards
-- [ ] Không có lỗi typo
-- [ ] Links hoạt động đúng
+- [ ] I have read the Contributing Guidelines
+- [ ] Code/Content follows project standards
+- [ ] No typos
+- [ ] Links work correctly
 ```
 
 ### Review Process
 
-1. **Automated Checks** - GitHub Actions kiểm tra format
-2. **Maintainer Review** - Review trong 2-3 ngày làm việc
-3. **Feedback** - Sửa đổi nếu cần
-4. **Merge** - PR được merge vào main
+1. **Automated Checks** - GitHub Actions checks format
+2. **Maintainer Review** - Review within 2-3 business days
+3. **Feedback** - Make changes if needed
+4. **Merge** - PR is merged into main
 
 ---
 
@@ -127,22 +127,22 @@ git push origin feature/your-feature-name
 ### Markdown Files
 
 ```markdown
-# Heading 1 (chỉ 1 per file)
+# Heading 1 (only 1 per file)
 
 ## Heading 2
 
 ### Heading 3
 
-- Bullet points với dấu `-`
-- Không trộn `-` và `*`
+- Bullet points with `-`
+- Don't mix `-` and `*`
 
 1. Numbered lists
-2. Sử dụng đúng thứ tự
+2. Use correct order
 
-`inline code` cho commands ngắn
+`inline code` for short commands
 
 ​```bash
-# Code blocks cho multi-line
+# Code blocks for multi-line
 docker run -d nginx
 ​```
 
@@ -169,16 +169,16 @@ my script.sh
 
 ### Images
 
-- Đặt trong folder `images/` của module
-- Sử dụng format `.png` hoặc `.webp`
-- Tên file lowercase với dashes: `docker-architecture.png`
-- Resize images hợp lý (max 1200px width)
+- Place in `images/` folder of the module
+- Use `.png` or `.webp` format
+- Filename lowercase with dashes: `docker-architecture.png`
+- Resize images appropriately (max 1200px width)
 
 ---
 
 ## 💬 Commit Convention
 
-Sử dụng [Conventional Commits](https://www.conventionalcommits.org/):
+Use [Conventional Commits](https://www.conventionalcommits.org/):
 
 ```
 <type>(<scope>): <description>
@@ -190,14 +190,14 @@ Sử dụng [Conventional Commits](https://www.conventionalcommits.org/):
 
 ### Types
 
-| Type | Mô Tả |
-|------|-------|
-| `feat` | Thêm feature/content mới |
-| `fix` | Sửa bug/lỗi |
-| `docs` | Thay đổi documentation |
-| `style` | Formatting, không thay đổi code |
-| `refactor` | Restructure, không thay đổi behavior |
-| `test` | Thêm/sửa tests |
+| Type | Description |
+|------|-------------|
+| `feat` | Add new feature/content |
+| `fix` | Fix bug/error |
+| `docs` | Documentation changes |
+| `style` | Formatting, no code changes |
+| `refactor` | Restructure, no behavior change |
+| `test` | Add/fix tests |
 | `chore` | Maintenance tasks |
 
 ### Examples
@@ -221,7 +221,7 @@ git commit -m "WIP"
 
 ### README.md Structure
 
-Mỗi module README nên có:
+Each module README should have:
 
 ```markdown
 # Module Title
@@ -305,16 +305,16 @@ How to verify the lab is complete
 
 ---
 
-## 🐛 Báo Cáo Bugs
+## 🐛 Reporting Bugs
 
-### Tạo Bug Report
+### Create a Bug Report
 
-1. **Check existing issues** - Xem bug đã được report chưa
-2. **Create new issue** với template:
+1. **Check existing issues** - See if bug has already been reported
+2. **Create new issue** with template:
 
 ```markdown
 ## Bug Description
-<!-- Mô tả rõ ràng bug -->
+<!-- Clear description of the bug -->
 
 ## Steps to Reproduce
 1. Go to '...'
@@ -322,13 +322,13 @@ How to verify the lab is complete
 3. See error
 
 ## Expected Behavior
-<!-- Bạn mong đợi điều gì xảy ra -->
+<!-- What you expected to happen -->
 
 ## Actual Behavior
-<!-- Điều gì thực sự xảy ra -->
+<!-- What actually happened -->
 
 ## Screenshots
-<!-- Nếu có -->
+<!-- If applicable -->
 
 ## Environment
 - OS: [e.g. Windows 11]
@@ -336,43 +336,43 @@ How to verify the lab is complete
 - Tool version: [e.g. Docker 24.0]
 
 ## Additional Context
-<!-- Thông tin thêm -->
+<!-- Any other information -->
 ```
 
 ---
 
-## 💡 Đề Xuất Features
+## 💡 Feature Requests
 
-### Tạo Feature Request
+### Create a Feature Request
 
 ```markdown
 ## Feature Description
-<!-- Mô tả feature bạn muốn -->
+<!-- Describe the feature you want -->
 
 ## Problem it Solves
-<!-- Vấn đề này giải quyết điều gì? -->
+<!-- What problem does this solve? -->
 
 ## Proposed Solution
-<!-- Bạn đề xuất giải pháp như thế nào? -->
+<!-- How do you propose to implement this? -->
 
 ## Alternatives Considered
-<!-- Các phương án khác bạn đã cân nhắc -->
+<!-- Other alternatives you've considered -->
 
 ## Additional Context
-<!-- Hình ảnh, links, ví dụ... -->
+<!-- Images, links, examples... -->
 ```
 
 ---
 
 ## 🏷️ Labels
 
-| Label | Mô Tả |
-|-------|-------|
-| `good first issue` | Phù hợp cho người mới |
-| `help wanted` | Cần người hỗ trợ |
-| `bug` | Lỗi cần sửa |
+| Label | Description |
+|-------|-------------|
+| `good first issue` | Suitable for newcomers |
+| `help wanted` | Need help |
+| `bug` | Bug to fix |
 | `enhancement` | Feature request |
-| `documentation` | Liên quan đến docs |
+| `documentation` | Related to docs |
 | `track-1` ... `track-5` | Specific track |
 
 ---
@@ -381,28 +381,28 @@ How to verify the lab is complete
 
 ### Maintainers
 
-- **Thanh Le Hoang** - [@thanhlehoang0107](https://github.com/thanhlehoang0107)
+- **ThanhRòm** - [@thanhlehoang0107](https://github.com/thanhlehoang0107)
 
 ### Contributors
 
-<!-- Contributors sẽ được liệt kê tự động -->
+<!-- Contributors will be listed automatically -->
 
-Cảm ơn tất cả những người đã đóng góp! 🙏
+Thank you to all contributors! 🙏
 
 ---
 
 ## ❓ Questions?
 
-Nếu bạn có câu hỏi:
+If you have questions:
 
 1. Check [existing issues](https://github.com/thanhlehoang0107/DevOps-Journey/issues)
-2. Tạo issue mới với label `question`
+2. Create a new issue with label `question`
 3. Email: <thanhlehoang0107@gmail.com>
 
 ---
 
 <div align="center">
 
-**Cảm ơn bạn đã đóng góp cho DevOps Journey! 🚀**
+**Thank you for contributing to DevOps Journey! 🚀**
 
 </div>

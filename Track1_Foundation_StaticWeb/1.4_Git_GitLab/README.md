@@ -1,4 +1,4 @@
-# 📦 Module 1.4: Git & GitHub
+# 📦 Module 1.4: Git & GitLab
 
 [![Duration](https://img.shields.io/badge/Duration-8--10%20hours-blue?style=flat-square)](.)
 [![Level](https://img.shields.io/badge/Level-Beginner-green?style=flat-square)](.)

@@ -3,9 +3,22 @@
 [![Duration](https://img.shields.io/badge/Duration-10--12%20hours-blue?style=flat-square)](.)
 [![Level](https://img.shields.io/badge/Level-Beginner--Intermediate-orange?style=flat-square)](.)
 
-> **Continuous Integration / Continuous Deployment** - Automate with GitHub Actions.
+> **Continuous Integration / Continuous Deployment** - Automate with GitLab CI/CD.
 >
-> *Tích hợp liên tục / Triển khai liên tục với GitHub Actions.*
+> *Tích hợp liên tục / Triển khai liên tục với GitLab CI/CD.*
+
+---
+
+## 🔀 Platform Options (Lựa chọn nền tảng)
+
+| Platform | Status | File |
+|----------|--------|------|
+| **GitLab CI/CD** | ⭐ **Primary (Chính)** | This file |
+| GitHub Actions | Alternative | [README_GITHUB_ACTIONS.md](./README_GITHUB_ACTIONS.md) |
+
+> 💡 **Note:** This module uses GitLab CI/CD as the primary platform. If you're using GitHub, see the [GitHub Actions guide](./README_GITHUB_ACTIONS.md).
+>
+> *Module này sử dụng GitLab CI/CD làm nền tảng chính. Nếu bạn dùng GitHub, xem [hướng dẫn GitHub Actions](./README_GITHUB_ACTIONS.md).*
 
 ---
 
@@ -14,16 +27,16 @@
 After this module, you will (Sau module này, bạn sẽ):
 
 - ✅ Understand what CI/CD is and why it's important (Hiểu CI/CD là gì và tại sao quan trọng)
-- ✅ Learn concepts: Pipeline, Job, Step, Artifact (Hiểu các concepts)
-- ✅ Write GitHub Actions workflows (Viết workflow GitHub Actions)
+- ✅ Learn concepts: Pipeline, Job, Stage, Artifact (Hiểu các concepts)
+- ✅ Write GitLab CI/CD pipelines (Viết pipeline GitLab CI/CD)
 - ✅ Build Docker images in pipeline (Build Docker image trong pipeline)
 - ✅ Auto deploy when pushing code (Deploy tự động khi push code)
 
 ---
 
-## 📖 Nội dung
+## 📖 Content (Nội dung)
 
-### 1. CI/CD là gì? (1 giờ)
+### 1. What is CI/CD? (CI/CD là gì?) - 1 hour
 
 #### 1.1 Continuous Integration (CI)
 
@@ -54,13 +67,13 @@ After this module, you will (Sau module này, bạn sẽ):
 └─────────────────────────────────────────────────────────────┘
 ```
 
-**CI = Tự động hóa:**
+**CI = Automation of (CI = Tự động hóa):**
 
 - ✅ Build code
-- ✅ Chạy unit tests
-- ✅ Chạy linting
+- ✅ Run unit tests (Chạy unit tests)
+- ✅ Run linting (Chạy linting)
 - ✅ Security scanning
-- ✅ Notify kết quả
+- ✅ Notify results (Thông báo kết quả)
 
 #### 1.2 Continuous Delivery (CD)
 
@@ -82,567 +95,415 @@ After this module, you will (Sau module này, bạn sẽ):
 └─────────────────────────────────────────────────────────────┘
 ```
 
-**CD = Continuous Delivery:**
+**Continuous Delivery:**
 
-- Deploy tự động đến staging
-- Deploy production cần approval
+- Auto deploy to staging (Deploy tự động đến staging)
+- Production requires approval (Production cần approval)
 
-**CD = Continuous Deployment:**
+**Continuous Deployment:**
 
-- Deploy tự động đến tất cả environments
-
-#### 1.3 CI/CD Pipeline
-
-```
-┌─────────────────────────────────────────────────────────────┐
-│                    FULL CI/CD PIPELINE                       │
-├─────────────────────────────────────────────────────────────┤
-│                                                              │
-│   ┌─────────┐   ┌─────────┐   ┌─────────┐   ┌─────────┐   │
-│   │  Code   │──►│  Build  │──►│  Test   │──►│ Deploy  │   │
-│   │  Push   │   │         │   │         │   │         │   │
-│   └─────────┘   └─────────┘   └─────────┘   └─────────┘   │
-│                                                              │
-│   Triggers:     Jobs:                       Environments:   │
-│   - push        - compile                   - staging       │
-│   - PR          - unit test                 - production    │
-│   - schedule    - integration               - preview       │
-│   - manual      - security scan                             │
-│                                                              │
-└─────────────────────────────────────────────────────────────┘
-```
+- Auto deploy to all environments (Deploy tự động đến tất cả environments)
 
 ---
 
-### 2. CI/CD Tools Overview (30 phút)
+### 2. CI/CD Tools Overview - 30 min
 
-| Tool | Đặc điểm | Sử dụng |
-|------|----------|---------|
+| Tool | Features | Use Case |
+|------|----------|----------|
+| **GitLab CI/CD** | Native GitLab, powerful | GitLab projects ⭐ |
 | **GitHub Actions** | Native GitHub, YAML | GitHub projects |
-| **GitLab CI** | Native GitLab | GitLab projects |
 | **Jenkins** | Self-hosted, flexible | Enterprise, legacy |
-| **CircleCI** | Cloud-based, fast | Startups, open source |
-| **Travis CI** | Simple, open source | Open source projects |
+| **CircleCI** | Cloud-based, fast | Startups |
 | **Azure DevOps** | Microsoft ecosystem | Azure, .NET |
 | **AWS CodePipeline** | AWS native | AWS workloads |
 
-**Trong module này, chúng ta sẽ học GitHub Actions.**
+**In this module, we learn GitLab CI/CD.**
+
+*Trong module này, chúng ta học GitLab CI/CD.*
 
 ---
 
-### 3. GitHub Actions Fundamentals (2 giờ)
+### 3. GitLab CI/CD Fundamentals - 2 hours
 
-#### 3.1 Concepts
+#### 3.1 Concepts (Khái niệm)
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                GITHUB ACTIONS CONCEPTS                       │
+│                GITLAB CI/CD CONCEPTS                         │
 ├─────────────────────────────────────────────────────────────┤
 │                                                              │
-│  WORKFLOW (.github/workflows/main.yml)                      │
-│  ├── Trigger (on: push, pull_request, schedule)             │
+│  PIPELINE (.gitlab-ci.yml in root directory)                │
+│  ├── Triggered by: push, merge request, schedule            │
 │  │                                                           │
-│  └── JOBS (runs in parallel by default)                     │
-│      ├── Job 1: build                                        │
-│      │   ├── runs-on: ubuntu-latest                         │
-│      │   └── STEPS                                           │
-│      │       ├── Step 1: Checkout code                      │
-│      │       ├── Step 2: Setup Node.js                      │
-│      │       ├── Step 3: Install deps                       │
-│      │       └── Step 4: Run tests                          │
+│  └── STAGES (run sequentially - chạy tuần tự)               │
+│      ├── Stage 1: build                                      │
+│      │   └── JOBS (run in parallel within stage)            │
+│      │       ├── Job: build-frontend                        │
+│      │       └── Job: build-backend                         │
 │      │                                                       │
-│      └── Job 2: deploy (needs: build)                       │
-│          ├── runs-on: ubuntu-latest                         │
-│          └── STEPS                                           │
-│              ├── Step 1: Checkout                           │
-│              └── Step 2: Deploy to server                   │
+│      ├── Stage 2: test                                       │
+│      │   └── JOBS                                            │
+│      │       ├── Job: unit-test                             │
+│      │       └── Job: integration-test                      │
+│      │                                                       │
+│      └── Stage 3: deploy                                     │
+│          └── JOBS                                            │
+│              ├── Job: deploy-staging                        │
+│              └── Job: deploy-production (manual)            │
 │                                                              │
 └─────────────────────────────────────────────────────────────┘
 ```
 
-#### 3.2 Terminology
+#### 3.2 Terminology (Thuật ngữ)
 
 | Term | Description |
 |------|-------------|
-| **Workflow** | Automated process defined in YAML |
-| **Event** | Trigger that starts workflow (push, PR, etc.) |
-| **Job** | Set of steps that run on same runner |
-| **Step** | Individual task (run command or action) |
-| **Action** | Reusable unit (marketplace or custom) |
-| **Runner** | Server that runs the jobs |
-| **Artifact** | Files produced by job (can share between jobs) |
+| **Pipeline** | Complete CI/CD process (Quy trình CI/CD hoàn chỉnh) |
+| **Stage** | Phase of pipeline - build, test, deploy (Giai đoạn) |
+| **Job** | Task that runs in a stage (Công việc trong stage) |
+| **Runner** | Server that executes jobs (Server chạy jobs) |
+| **Artifact** | Files produced by job (Files tạo ra bởi job) |
+| **Cache** | Files cached between pipelines (Files cache giữa các pipeline) |
+| **Variable** | Environment variable (Biến môi trường) |
 
 ---
 
-### 4. Workflow Syntax (2 giờ)
+### 4. Pipeline Syntax (Cú pháp Pipeline) - 2 hours
 
-#### 4.1 Basic Workflow
-
-```yaml
-# .github/workflows/ci.yml
-
-name: CI Pipeline                    # Workflow name
-
-on:                                   # Triggers
-  push:
-    branches: [main, develop]
-  pull_request:
-    branches: [main]
-
-jobs:                                 # Jobs
-  build:                              # Job name
-    runs-on: ubuntu-latest            # Runner OS
-    
-    steps:                            # Steps
-      - name: Checkout code
-        uses: actions/checkout@v4     # Use an action
-
-      - name: Run a script
-        run: echo "Hello World!"      # Run command
-
-      - name: Multi-line script
-        run: |
-          echo "Line 1"
-          echo "Line 2"
-          ls -la
-```
-
-#### 4.2 Triggers (Events)
+#### 4.1 Basic Pipeline (Pipeline cơ bản)
 
 ```yaml
-on:
-  # Push to specific branches
-  push:
-    branches:
-      - main
-      - 'feature/**'        # Wildcard
+# .gitlab-ci.yml <-- in root of repository (đặt ở thư mục gốc repository)
+
+# Define stages - run in order (Định nghĩa stages - chạy theo thứ tự)
+stages:
+  - build
+  - test
+  - deploy
+
+# Build job
+build:
+  stage: build
+  image: node:18-alpine
+  script:
+    - npm install
+    - npm run build
+  artifacts:
     paths:
-      - 'src/**'            # Only when src changes
-      - '!src/**/*.md'      # Except markdown
-    tags:
-      - 'v*'                # Tags starting with v
+      - dist/
+    expire_in: 1 hour
 
-  # Pull requests
-  pull_request:
-    branches: [main]
-    types: [opened, synchronize, reopened]
+# Test job (Job kiểm thử)
+test:
+  stage: test
+  image: node:18-alpine
+  script:
+    - npm install
+    - npm run test
+  dependencies:
+    - build
 
-  # Schedule (cron)
-  schedule:
-    - cron: '0 0 * * *'     # Daily at midnight UTC
-
-  # Manual trigger
-  workflow_dispatch:
-    inputs:
-      environment:
-        description: 'Environment to deploy'
-        required: true
-        default: 'staging'
+# Deploy job (Job triển khai)
+deploy:
+  stage: deploy
+  image: docker:latest
+  script:
+    - echo "Deploying to server..."
+  only:
+    - main  # Only run on main branch (Chỉ chạy trên nhánh main)
 ```
 
-#### 4.3 Jobs và Dependencies
+#### 4.2 Key Differences: GitLab CI vs GitHub Actions
+
+| Feature | GitLab CI | GitHub Actions |
+|---------|-----------|----------------|
+| **Config file** | `.gitlab-ci.yml` | `.github/workflows/*.yml` |
+| **Stages** | `stages:` keyword | `jobs:` with `needs:` |
+| **Scripts** | `script:` keyword | `run:` keyword |
+| **Docker image** | `image:` keyword | `container:` or in step |
+| **Conditionals** | `only:`, `except:`, `rules:` | `if:` conditions |
+| **Triggers** | Automatic on push | `on:` keyword |
+
+#### 4.3 Stages and Jobs
 
 ```yaml
-jobs:
-  # Job 1: Build
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - run: npm install
-      - run: npm run build
+# Stages define ORDER of execution (Stages định nghĩa THỨ TỰ thực thi)
+stages:
+  - build      # Runs first (Chạy đầu tiên)
+  - test       # Runs second - after build completes (Chạy thứ hai - sau khi build hoàn thành)
+  - deploy     # Runs third - after test completes (Chạy thứ ba - sau khi test hoàn thành)
 
-  # Job 2: Test (parallel với build)
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - run: npm test
+# Multiple jobs in same stage run IN PARALLEL (Nhiều jobs trong cùng stage chạy SONG SONG
+build-frontend:
+  stage: build
+  script:
+    - npm run build:frontend
 
-  # Job 3: Deploy (sau khi build VÀ test hoàn thành)
-  deploy:
-    runs-on: ubuntu-latest
-    needs: [build, test]          # Dependencies
-    if: github.ref == 'refs/heads/main'  # Condition
-    steps:
-      - run: echo "Deploying..."
+build-backend:
+  stage: build
+  script:
+    - npm run build:backend
+
+# Both build jobs run at the same time! (Cả 2 jobs chạy cùng lúc!)
 ```
 
-#### 4.4 Environment Variables và Secrets
+#### 4.4 Triggers (Kích hoạt)
 
 ```yaml
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    
-    env:                           # Job-level env vars
-      NODE_ENV: production
-    
-    steps:
-      - name: Use env vars
-        env:                       # Step-level env vars
-          API_KEY: ${{ secrets.API_KEY }}
-        run: |
-          echo "Node env: $NODE_ENV"
-          echo "Running with API key..."
+# Default: runs on every push to any branch (Mặc định: chạy mỗi khi push lên bất kỳ branch nào
 
-      - name: Use GitHub context
-        run: |
-          echo "Repo: ${{ github.repository }}"
-          echo "Branch: ${{ github.ref_name }}"
-          echo "SHA: ${{ github.sha }}"
-          echo "Actor: ${{ github.actor }}"
-```
+# Run only on specific branches (Chỉ chạy trên nhánh cụ thể)
+deploy-staging:
+  stage: deploy
+  script:
+    - ./deploy.sh staging
+  only:
+    - develop
 
----
+# Run only on main branch (Chỉ chạy trên nhánh main)
+deploy-production:
+  stage: deploy
+  script:
+    - ./deploy.sh production
+  only:
+    - main
+  when: manual  # Requires manual click (Cần click thủ công)
 
-### 5. Common Actions (1.5 giờ)
-
-#### 5.1 Checkout Code
-
-```yaml
-- name: Checkout
-  uses: actions/checkout@v4
-  with:
-    fetch-depth: 0        # Full history (for versioning)
-```
-
-#### 5.2 Setup Languages
-
-```yaml
-# Node.js
-- name: Setup Node.js
-  uses: actions/setup-node@v4
-  with:
-    node-version: '18'
-    cache: 'npm'
-
-# Python
-- name: Setup Python
-  uses: actions/setup-python@v5
-  with:
-    python-version: '3.11'
-    cache: 'pip'
-
-# Go
-- name: Setup Go
-  uses: actions/setup-go@v5
-  with:
-    go-version: '1.21'
-```
-
-#### 5.3 Caching
-
-```yaml
-- name: Cache node_modules
-  uses: actions/cache@v3
-  with:
-    path: ~/.npm
-    key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-    restore-keys: |
-      ${{ runner.os }}-node-
-```
-
-#### 5.4 Upload/Download Artifacts
-
-```yaml
-# Upload artifact
-- name: Upload build
-  uses: actions/upload-artifact@v4
-  with:
-    name: build-output
-    path: dist/
-
-# Download artifact (in another job)
-- name: Download build
-  uses: actions/download-artifact@v4
-  with:
-    name: build-output
-    path: dist/
+# Rules syntax - more powerful (Cú pháp rules - mạnh hơn)
+deploy:
+  stage: deploy
+  script:
+    - ./deploy.sh
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+      when: manual
+    - if: '$CI_COMMIT_BRANCH == "develop"'
+      when: on_success
+    - when: never  # Don't run on other branches (Không chạy trên nhánh khác)
 ```
 
 ---
 
-### 6. Docker in GitHub Actions (2 giờ)
+### 5. Building Docker Images in Pipeline (Build Docker Image trong Pipeline) - 2 hours
 
-#### 6.1 Build và Push Docker Image
+#### 5.1 Docker-in-Docker (DinD)
 
 ```yaml
-name: Docker Build and Push
-
-on:
-  push:
-    branches: [main]
-    tags: ['v*']
-
-jobs:
-  docker:
-    runs-on: ubuntu-latest
-    
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
-
-      - name: Login to Docker Hub
-        uses: docker/login-action@v3
-        with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
-
-      - name: Extract metadata
-        id: meta
-        uses: docker/metadata-action@v5
-        with:
-          images: myuser/myapp
-          tags: |
-            type=ref,event=branch
-            type=ref,event=tag
-            type=sha,prefix=
-
-      - name: Build and push
-        uses: docker/build-push-action@v5
-        with:
-          context: .
-          push: true
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
+# Build and push Docker image (Build và push Docker image)
+build-docker:
+  stage: build
+  image: docker:latest
+  services:
+    - docker:dind
+  variables:
+    DOCKER_TLS_CERTDIR: "/certs"
+  before_script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+  script:
+    - docker build -t $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA .
+    - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA
 ```
 
-#### 6.2 Build Multi-platform Images
+#### 5.2 Using GitLab Container Registry (Sử dụng GitLab Container Registry)
 
 ```yaml
-- name: Build and push multi-platform
-  uses: docker/build-push-action@v5
-  with:
-    context: .
-    platforms: linux/amd64,linux/arm64
-    push: true
-    tags: myuser/myapp:latest
+variables:
+  IMAGE_TAG: $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG
+
+build:
+  stage: build
+  image: docker:latest
+  services:
+    - docker:dind
+  script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - docker build -t $IMAGE_TAG .
+    - docker push $IMAGE_TAG
+
+deploy:
+  stage: deploy
+  image: docker:latest
+  script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - docker pull $IMAGE_TAG
+    - docker run -d -p 80:80 $IMAGE_TAG
+  only:
+    - main  # Only deploy on main branch ()
 ```
 
 ---
 
-### 7. Complete CI/CD Example (2 giờ)
+### 6. Variables and Secrets (Biến và Secrets) - 1 hour
 
-#### 7.1 Static Website CI/CD
+#### 6.1 Predefined Variables (Biến đã định nghĩa sẵn)
+
+| Variable | Description |
+|----------|-------------|
+| `$CI_COMMIT_SHA` | Full commit SHA (Mã commit đầy đủ) |
+| `$CI_COMMIT_REF_NAME` | Branch or tag name (Tên branch hoặc tag) |
+| `$CI_COMMIT_REF_SLUG` | Slug of branch - url-safe (Slug của branch) |
+| `$CI_PROJECT_NAME` | Project name (Tên dự án) |
+| `$CI_REGISTRY` | GitLab Container Registry URL |
+| `$CI_REGISTRY_IMAGE` | Full image path (Đường dẫn image đầy đủ) |
+| `$CI_PIPELINE_ID` | Pipeline ID |
+
+#### 6.2 Custom Variables (Biến tùy chỉnh)
 
 ```yaml
-# .github/workflows/deploy.yml
+# Define in .gitlab-ci.yml (Định nghĩa trong .gitlab-ci.yml)
+variables:
+  NODE_ENV: production
+  APP_PORT: "3000"
 
-name: Deploy Static Website
-
-on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
-
-jobs:
-  # Job 1: Build
-  build:
-    runs-on: ubuntu-latest
-    
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Run linting
-        run: npm run lint
-
-      - name: Run tests
-        run: npm test
-
-      - name: Build
-        run: npm run build
-
-      - name: Upload build artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: dist
-          path: dist/
-
-  # Job 2: Deploy (only on main branch)
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-    
-    environment:
-      name: production
-      url: https://example.com
-    
-    steps:
-      - name: Download artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: dist
-          path: dist/
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+build:
+  stage: build
+  script:
+    - echo "Building for $NODE_ENV on port $APP_PORT"
 ```
 
-#### 7.2 Docker + Deploy Example
+#### 6.3 Secret Variables - in GitLab UI (Biến bí mật - trong giao diện GitLab)
+
+1. Go to **Settings > CI/CD > Variables** (Vào Settings > CI/CD > Variables)
+2. Add variable, e.g., `DEPLOY_TOKEN` (Thêm biến)
+3. Check **Masked** to hide in logs (Đánh dấu Masked để ẩn trong logs)
+4. Check **Protected** for protected branches only (Đánh dấu Protected cho nhánh được bảo vệ)
 
 ```yaml
-name: Build and Deploy
-
-on:
-  push:
-    branches: [main]
-    tags: ['v*']
-
-env:
-  REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
-    
-    outputs:
-      image-tag: ${{ steps.meta.outputs.tags }}
-    
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Log in to Container Registry
-        uses: docker/login-action@v3
-        with:
-          registry: ${{ env.REGISTRY }}
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Extract metadata
-        id: meta
-        uses: docker/metadata-action@v5
-        with:
-          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-
-      - name: Build and push
-        uses: docker/build-push-action@v5
-        with:
-          context: .
-          push: true
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
-
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-    if: github.ref == 'refs/heads/main'
-    
-    steps:
-      - name: Deploy to server
-        uses: appleboy/ssh-action@v1.0.0
-        with:
-          host: ${{ secrets.SERVER_HOST }}
-          username: ${{ secrets.SERVER_USER }}
-          key: ${{ secrets.SERVER_SSH_KEY }}
-          script: |
-            docker pull ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:main
-            docker stop myapp || true
-            docker rm myapp || true
-            docker run -d --name myapp -p 80:80 ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:main
+deploy:
+  stage: deploy
+  script:
+    - echo "$DEPLOY_TOKEN" | docker login -u token --password-stdin registry.example.com
 ```
 
 ---
 
-### 8. Best Practices (1 giờ)
+### 7. Artifacts and Caching (Artifacts và Caching) - 1 hour
 
-#### 8.1 Security
+#### 7.1 Artifacts - Shared between jobs (Chia sẻ giữa các jobs)
 
 ```yaml
-# Sử dụng specific versions
-- uses: actions/checkout@v4.1.1  # Không dùng @main
+build:
+  stage: build
+  script:
+    - npm install
+    - npm run build
+  artifacts:
+    paths:
+      - dist/
+      - node_modules/
+    expire_in: 1 week  # Keep for 1 week (Giữ 1 tuần)
 
-# Limit permissions
-permissions:
-  contents: read
-  packages: write
-
-# Sử dụng secrets đúng cách
-env:
-  API_KEY: ${{ secrets.API_KEY }}
-
-# Không log secrets
-run: |
-  # ❌ Bad
-  echo ${{ secrets.API_KEY }}
-  
-  # ✅ Good
-  echo "Using API key..."
+test:
+  stage: test
+  script:
+    - npm test
+  dependencies:
+    - build  # Download artifacts from build job (Tải artifacts từ job build)
 ```
 
-#### 8.2 Performance
+#### 7.2 Cache - Shared between pipelines (Chia sẻ giữa các pipelines)
 
 ```yaml
-# Sử dụng caching
-- uses: actions/cache@v3
-  with:
-    path: ~/.npm
-    key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
+# Cache node_modules between pipelines (Cache node_modules giữa các pipelines)
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - node_modules/
 
-# Fail fast
-strategy:
-  fail-fast: true
-
-# Timeout
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
+build:
+  stage: build
+  script:
+    - npm install  # Uses cache if exists (Dùng cache nếu có)
+    - npm run build
 ```
 
-#### 8.3 Organization
+---
+
+### 8. Complete Pipeline Example (Ví dụ Pipeline hoàn chỉnh) - 1 hour
+
+#### Static Website with Docker (Website tĩnh với Docker)
 
 ```yaml
-# Reusable workflows
-# .github/workflows/reusable-build.yml
-on:
-  workflow_call:
-    inputs:
-      node-version:
-        required: true
-        type: string
+# .gitlab-ci.yml - Complete example (Ví dụ hoàn chỉnh)
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: ${{ inputs.node-version }}
+stages:
+  - build
+  - test
+  - deploy
 
-# Sử dụng reusable workflow
-# .github/workflows/main.yml
-jobs:
-  build:
-    uses: ./.github/workflows/reusable-build.yml
-    with:
-      node-version: '18'
+variables:
+  IMAGE_TAG: $CI_REGISTRY_IMAGE:$CI_COMMIT_SHORT_SHA
+
+# Cache npm packages (Cache các gói npm)
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - node_modules/
+
+# Build stage (Giai đoạn build)
+build:
+  stage: build
+  image: node:18-alpine
+  script:
+    - npm ci
+    - npm run build
+  artifacts:
+    paths:
+      - dist/
+    expire_in: 1 hour
+
+# Test stage (Giai đoạn kiểm thử)
+test:
+  stage: test
+  image: node:18-alpine
+  script:
+    - npm ci
+    - npm run test
+    - npm run lint
+  dependencies:
+    - build
+
+# Build Docker image (Build Docker image)
+docker-build:
+  stage: deploy
+  image: docker:latest
+  services:
+    - docker:dind
+  before_script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+  script:
+    - docker build -t $IMAGE_TAG .
+    - docker push $IMAGE_TAG
+  only:
+    - main
+    - develop
+
+# Deploy to staging - auto (Triển khai staging - tự động)
+deploy-staging:
+  stage: deploy
+  image: alpine:latest
+  script:
+    - echo "Deploying $IMAGE_TAG to staging..."
+    # Add your deployment commands here (Thêm lệnh triển khai ở đây)
+  environment:
+    name: staging
+    url: https://staging.example.com
+  only:
+    - develop
+
+# Deploy to production - manual (Triển khai production - thủ công)
+deploy-production:
+  stage: deploy
+  image: alpine:latest
+  script:
+    - echo "Deploying $IMAGE_TAG to production..."
+    # Add your deployment commands here (Thêm lệnh triển khai ở đây)
+  environment:
+    name: production
+    url: https://example.com
+  when: manual  # Requires manual approval (Cần phê duyệt thủ công)
+  only:
+    - main
 ```
 
 ---
@@ -651,6 +512,7 @@ jobs:
 
 | File | Description |
 |------|-------------|
+| [README_GITHUB_ACTIONS.md](./README_GITHUB_ACTIONS.md) | GitHub Actions alternative guide (Hướng dẫn GitHub Actions) |
 | [CHEATSHEET.md](./CHEATSHEET.md) | Quick reference (Tra cứu nhanh) |
 | [LABS.md](./LABS.md) | Hands-on labs (Bài thực hành) |
 | [QUIZ.md](./QUIZ.md) | Knowledge check (Kiểm tra kiến thức) |
@@ -660,18 +522,33 @@ jobs:
 
 ---
 
+## 🔗 Resources (Tài nguyên)
+
+### Official Documentation (Tài liệu chính thức)
+
+- [GitLab CI/CD Documentation](https://docs.gitlab.com/ee/ci/)
+- [GitLab CI/CD YAML Reference](https://docs.gitlab.com/ee/ci/yaml/)
+- [GitLab Container Registry](https://docs.gitlab.com/ee/user/packages/container_registry/)
+
+### Free GitLab Runners (GitLab Runners miễn phí)
+
+- GitLab.com includes **400 CI/CD minutes/month** on free tier (400 phút CI/CD/tháng miễn phí)
+- Or set up your own [GitLab Runner](https://docs.gitlab.com/runner/) (Hoặc cài đặt Runner riêng)
+
+---
+
 <div align="center">
 
-### 🔗 Module Navigation (Điều hướng Module)
+### 🔗 Module Navigation
 
 | ← Previous | Current | Next → |
-|:------------------:|:------------------:|:-------------:|
+|:----------:|:-------:|:------:|
 | [1.6 NGINX](../1.6_NGINX_Basic/) | **1.7 CI/CD** | [1.8 Capstone](../1.8_Capstone_Project/) |
 
 ---
 
-**Master CI/CD! ⚙️**
+**Master CI/CD with GitLab! 🚀**
 
-*Thành thạo CI/CD!*
+*Thành thạo CI/CD với GitLab!*
 
 </div>

@@ -22,31 +22,33 @@ After this module, you will (Sau module này, bạn sẽ):
 
 ---
 
-## 📖 Nội dung
+## 📖 Content (Nội dung)
 
-### 1. NGINX là gì? (30 phút)
+### 1. What is NGINX? (NGINX là gì?) - 30 min
 
-#### 1.1 Giới thiệu
+#### 1.1 Introduction (Giới thiệu)
 
-**NGINX** (đọc là "engine-x") là:
+**NGINX** (pronounced "engine-x") is:
+
+*NGINX (đọc là "engine-x") là:*
 
 - 🌐 **Web Server**: Serve static files (HTML, CSS, JS, images)
-- 🔄 **Reverse Proxy**: Điều hướng requests đến backend
-- ⚖️ **Load Balancer**: Phân tải giữa nhiều servers
-- 📦 **Cache**: Lưu cache responses
+- 🔄 **Reverse Proxy**: Route requests to backend (Điều hướng requests)
+- ⚖️ **Load Balancer**: Distribute load across servers (Phân tải)
+- 📦 **Cache**: Store cached responses (Lưu cache)
 
 #### 1.2 NGINX vs Apache
 
-| Tiêu chí | NGINX | Apache |
+| Criteria | NGINX | Apache |
 |----------|-------|--------|
 | **Architecture** | Event-driven, async | Process/Thread per request |
-| **Static content** | ✅ Rất nhanh | Chậm hơn |
-| **Memory** | ✅ Ít RAM | Nhiều RAM hơn |
-| **Concurrent connections** | ✅ Cao (10k+) | Giới hạn |
-| **Config** | Đơn giản hơn | .htaccess linh hoạt |
+| **Static content** | ✅ Very fast | Slower |
+| **Memory** | ✅ Low RAM | More RAM |
+| **Concurrent connections** | ✅ High (10k+) | Limited |
+| **Config** | Simpler | .htaccess flexible |
 | **Modules** | Compile time | Runtime |
 
-#### 1.3 Use cases phổ biến
+#### 1.3 Common Use Cases (Use cases phổ biến)
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -74,26 +76,26 @@ After this module, you will (Sau module này, bạn sẽ):
 
 ---
 
-### 2. Cài đặt và Chạy NGINX (1 giờ)
+### 2. Installing and Running NGINX (Cài đặt và Chạy NGINX) - 1 hour
 
-#### 2.1 Chạy với Docker (Khuyến nghị)
+#### 2.1 Run with Docker - Recommended (Chạy với Docker - Khuyến nghị)
 
 ```bash
-# Chạy NGINX container
+# Run NGINX container (Chạy NGINX container)
 docker run -d -p 80:80 --name nginx nginx:alpine
 
-# Kiểm tra
+# Verify (Kiểm tra)
 curl http://localhost
-# Hoặc mở browser: http://localhost
+# Or open browser (Hoặc mở browser): http://localhost
 
-# Xem logs
+# View logs (Xem logs)
 docker logs nginx
 
-# Vào terminal container
+# Enter container terminal (Vào terminal container)
 docker exec -it nginx sh
 ```
 
-#### 2.2 Cài đặt trực tiếp (Optional)
+#### 2.2 Install Directly - Optional (Cài đặt trực tiếp - Tùy chọn)
 
 ```bash
 # Ubuntu/Debian
@@ -102,44 +104,44 @@ sudo apt install nginx
 sudo systemctl start nginx
 sudo systemctl enable nginx
 
-# Kiểm tra status
+# Check status (Kiểm tra status)
 sudo systemctl status nginx
 
-# macOS với Homebrew
+# macOS with Homebrew
 brew install nginx
 brew services start nginx
 ```
 
-#### 2.3 Kiểm tra cài đặt
+#### 2.3 Verify Installation (Kiểm tra cài đặt)
 
 ```bash
-# Kiểm tra version
+# Check version (Kiểm tra version)
 nginx -v
 
-# Kiểm tra config syntax
+# Check config syntax (Kiểm tra cú pháp config)
 nginx -t
 
-# Xem config đang dùng
+# View current config (Xem config đang dùng)
 nginx -T
 ```
 
 ---
 
-### 3. Cấu trúc thư mục NGINX (30 phút)
+### 3. NGINX Directory Structure (Cấu trúc thư mục NGINX) - 30 min
 
-#### 3.1 Thư mục quan trọng
+#### 3.1 Important Directories (Thư mục quan trọng)
 
 ```
-/etc/nginx/                    # Config directory
-├── nginx.conf                 # Main config file
-├── conf.d/                    # Additional configs
+/etc/nginx/                    # Config directory (Thư mục cấu hình)
+├── nginx.conf                 # Main config file (File config chính)
+├── conf.d/                    # Additional configs (Configs bổ sung)
 │   └── default.conf           # Default server block
 ├── sites-available/           # Available site configs (Debian)
 ├── sites-enabled/             # Enabled sites (symlinks)
 ├── snippets/                  # Reusable config snippets
 └── mime.types                 # MIME type mappings
 
-/var/log/nginx/                # Logs
+/var/log/nginx/                # Logs (Nhật ký)
 ├── access.log                 # Access logs
 └── error.log                  # Error logs
 
@@ -147,48 +149,48 @@ nginx -T
 └── index.html                 # Default welcome page
 ```
 
-#### 3.2 Trong Docker Alpine
+#### 3.2 In Docker Alpine (Trong Docker Alpine)
 
 ```bash
 docker exec -it nginx sh
 
-# Config
+# Config (Cấu hình)
 cat /etc/nginx/nginx.conf
 ls /etc/nginx/conf.d/
 
-# Web root
+# Web root (Thư mục web)
 ls /usr/share/nginx/html/
 
-# Logs
+# Logs (Nhật ký)
 ls /var/log/nginx/
 ```
 
 ---
 
-### 4. Cấu hình NGINX cơ bản (2 giờ)
+### 4. Basic NGINX Configuration (Cấu hình NGINX cơ bản) - 2 hours
 
-#### 4.1 Cấu trúc file config
+#### 4.1 Config File Structure (Cấu trúc file config)
 
 ```nginx
-# nginx.conf - Main config file
+# nginx.conf - Main config file (File config chính)
 
-# Global context
+# Global context (Ngữ cảnh toàn cục)
 user nginx;
 worker_processes auto;
 error_log /var/log/nginx/error.log warn;
 pid /var/run/nginx.pid;
 
-# Events context
+# Events context (Ngữ cảnh sự kiện)
 events {
     worker_connections 1024;
 }
 
-# HTTP context
+# HTTP context (Ngữ cảnh HTTP)
 http {
     include /etc/nginx/mime.types;
     default_type application/octet-stream;
 
-    # Logging format
+    # Logging format (Định dạng log)
     log_format main '$remote_addr - $remote_user [$time_local] '
                     '"$request" $status $body_bytes_sent '
                     '"$http_referer" "$http_user_agent"';
@@ -198,7 +200,7 @@ http {
     sendfile on;
     keepalive_timeout 65;
 
-    # Include server blocks
+    # Include server blocks (Bao gồm các server block)
     include /etc/nginx/conf.d/*.conf;
 }
 ```
@@ -209,45 +211,45 @@ http {
 # /etc/nginx/conf.d/default.conf
 
 server {
-    # Listen port
+    # Listen port (Lắng nghe port)
     listen 80;
     listen [::]:80;
 
-    # Server name (domain)
+    # Server name - domain (Tên server - domain)
     server_name localhost example.com www.example.com;
 
-    # Document root
+    # Document root (Thư mục gốc)
     root /usr/share/nginx/html;
     
-    # Default file
+    # Default file (File mặc định)
     index index.html index.htm;
 
-    # Location block
+    # Location block (Khối location)
     location / {
         try_files $uri $uri/ =404;
     }
 }
 ```
 
-#### 4.3 Các directives quan trọng
+#### 4.3 Important Directives (Các directives quan trọng)
 
-| Directive | Mô tả | Ví dụ |
-|-----------|-------|-------|
-| `listen` | Port để lắng nghe | `listen 80;` |
+| Directive | Description | Example |
+|-----------|-------------|---------|
+| `listen` | Port to listen on (Port lắng nghe) | `listen 80;` |
 | `server_name` | Domain name | `server_name example.com;` |
-| `root` | Document root | `root /var/www/html;` |
-| `index` | Default files | `index index.html;` |
+| `root` | Document root (Thư mục gốc) | `root /var/www/html;` |
+| `index` | Default files (Files mặc định) | `index index.html;` |
 | `location` | URL pattern matching | `location /api { }` |
 | `try_files` | Try multiple files | `try_files $uri $uri/ =404;` |
-| `error_page` | Custom error pages | `error_page 404 /404.html;` |
+| `error_page` | Custom error pages (Trang lỗi tùy chỉnh) | `error_page 404 /404.html;` |
 
 ---
 
-### 5. Serve Static Files (1 giờ)
+### 5. Serving Static Files (Phục vụ Static Files) - 1 hour
 
 #### 5.1 Basic Static Website
 
-**Cấu trúc project:**
+**Project structure (Cấu trúc project):**
 
 ```
 my-website/

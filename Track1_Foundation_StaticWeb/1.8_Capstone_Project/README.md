@@ -6,53 +6,60 @@
 
 ---
 
+## 🔀 Platform Options (Lựa chọn nền tảng)
+
+| Platform | Status | Notes |
+|----------|--------|-------|
+| **GitLab CI/CD** | ⭐ Primary (Chính) | This guide uses GitLab |
+| GitHub Actions | Alternative | See [1.7 CI/CD GitHub guide](../1.7_CICD_Basic/README_GITHUB_ACTIONS.md) |
+
+---
+
 ## 🎯 Project Overview (Tổng quan dự án)
 
 Build a **static portfolio website** with (Xây dựng portfolio website tĩnh với):
 
 - ✅ Source code managed with Git (Quản lý bằng Git)
-- ✅ Static website with HTML/CSS/JS
-- ✅ Containerized with Docker + NGINX
-- ✅ CI/CD pipeline with GitHub Actions
+- ✅ Static website with HTML/CSS/JS (Website tĩnh với HTML/CSS/JS)
+- ✅ Containerized with Docker + NGINX (Container hóa với Docker + NGINX)
+- ✅ CI/CD pipeline with **GitLab CI/CD** (Pipeline với GitLab CI/CD)
 - ✅ Auto deploy when pushing code (Tự động deploy khi push code)
 
 ---
 
-## 📐 Project Requirements
+## 📐 Project Requirements (Yêu cầu dự án)
 
-### 1. Functional Requirements
+### 1. Functional Requirements (Yêu cầu chức năng)
 
-| # | Requirement | Mô tả |
-|---|-------------|-------|
-| FR-01 | Homepage | Trang giới thiệu bản thân |
-| FR-02 | About page | Chi tiết về skills, kinh nghiệm |
-| FR-03 | Projects page | Showcase các projects |
-| FR-04 | Contact form | Form liên hệ (UI only) |
-| FR-05 | Responsive | Hiển thị tốt trên mobile/tablet/desktop |
+| # | Requirement | Description |
+|---|-------------|-------------|
+| FR-01 | Homepage | Introduction page (Trang giới thiệu) |
+| FR-02 | About page | Skills & experience details (Chi tiết kỹ năng) |
+| FR-03 | Projects page | Showcase projects (Trưng bày dự án) |
+| FR-04 | Contact form | Contact form - UI only (Form liên hệ) |
+| FR-05 | Responsive | Display well on mobile/tablet/desktop |
 
-### 2. Technical Requirements
+### 2. Technical Requirements (Yêu cầu kỹ thuật)
 
-| # | Requirement | Mô tả |
-|---|-------------|-------|
-| TR-01 | Git | Quản lý code với Git, có .gitignore |
-| TR-02 | Docker | Dockerfile để build image |
-| TR-03 | NGINX | Serve static files với NGINX |
-| TR-04 | CI | GitHub Actions workflow cho lint/build |
-| TR-05 | CD | Auto deploy khi push main branch |
-| TR-06 | Docker Hub | Push image lên registry |
+| # | Requirement | Description |
+|---|-------------|-------------|
+| TR-01 | Git | Manage code with Git, .gitignore (Quản lý code với Git) |
+| TR-02 | Docker | Dockerfile to build image (File Docker để build image) |
+| TR-03 | NGINX | Serve static files with NGINX (Cung cấp file tĩnh với NGINX) |
+| TR-04 | CI | **GitLab CI** pipeline for lint/build (Pipeline với GitLab CI/CD cho lint/build) |
+| TR-05 | CD | Auto deploy on push to main branch (Tự động deploy khi push code lên main branch) |
+| TR-06 | Registry | Push image to **GitLab Container Registry** (Push image lên **GitLab Container Registry**)|
 
 ---
 
-## 📁 Project Structure
+## 📁 Project Structure (Cấu trúc dự án)
 
 ```
 devops-portfolio/
 │
-├── .github/
-│   └── workflows/
-│       └── deploy.yml              # CI/CD workflow
+├── .gitlab-ci.yml                  # GitLab CI/CD pipeline (File CI/CD chính)
 │
-├── src/                            # Source code
+├── src/                            # Source code (Mã nguồn)
 │   ├── index.html
 │   ├── about.html
 │   ├── projects.html
@@ -65,35 +72,35 @@ devops-portfolio/
 │       └── profile.jpg
 │
 ├── nginx/
-│   └── nginx.conf                  # NGINX configuration
+│   └── nginx.conf                  # NGINX configuration (Cấu hình NGINX)
 │
-├── Dockerfile                      # Docker build file
-├── .dockerignore                   # Docker ignore
-├── .gitignore                      # Git ignore
-├── README.md                       # Project documentation
-└── LICENSE                         # License file
+├── Dockerfile                      # Docker build file (File Docker để build image)
+├── .dockerignore                   # Docker ignore (Docker ignore)
+├── .gitignore                      # Git ignore (Git ignore)
+├── README.md                       # Project documentation (Giới thiệu dự án)
+└── LICENSE                         # License file (File license)
 ```
 
 ---
 
 ## 📝 Step-by-Step Guide
 
-### Step 1: Tạo Project 📂
+### Step 1: Create Project (Tạo dự án) 📂
 
 ```bash
-# 1. Tạo thư mục project
+# 1. Create project directory (Tạo thư mục dự án)
 mkdir devops-portfolio
 cd devops-portfolio
 
-# 2. Khởi tạo Git
+# 2. Initialize Git (Khởi tạo Git)
 git init
 
-# 3. Tạo cấu trúc thư mục
+# 3. Create directory structure (Tạo cấu trúc thư mục)
 mkdir -p src/{css,js,images}
 mkdir -p nginx
 mkdir -p .github/workflows
 
-# 4. Tạo .gitignore
+# 4. Create .gitignore (Tạo .gitignore)
 cat > .gitignore << 'EOF'
 # OS files
 .DS_Store
@@ -117,7 +124,7 @@ EOF
 
 ---
 
-### Step 2: Tạo Website 🌐
+### Step 2: Create Website (Tạo website) 🌐
 
 #### index.html
 
@@ -347,11 +354,11 @@ footer {
 #### js/main.js
 
 ```javascript
-// Simple interactivity
+// Simple interactivity (Tương tác đơn giản)
 document.addEventListener('DOMContentLoaded', function() {
     console.log('🚀 DevOps Portfolio loaded!');
     
-    // Add animation on scroll
+    // Add animation on scroll (Thêm hiệu ứng khi cuộn)
     const cards = document.querySelectorAll('.card');
     cards.forEach((card, index) => {
         card.style.animationDelay = `${index * 0.1}s`;
@@ -361,7 +368,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 ---
 
-### Step 3: Tạo Docker Configuration 🐳
+### Step 3: Create Docker Configuration (Tạo Docker Configuration) 🐳
 
 #### Dockerfile
 
@@ -443,7 +450,7 @@ Thumbs.db
 
 ---
 
-### Step 4: Test Local 🧪
+### Step 4: Test Local (Kiểm tra cục bộ) 🧪
 
 ```bash
 # Build Docker image
@@ -468,126 +475,94 @@ docker rm portfolio
 
 ### Step 5: CI/CD Pipeline ⚙️
 
-#### .github/workflows/deploy.yml
+#### .gitlab-ci.yml
 
 ```yaml
-name: Build and Deploy
+# .gitlab-ci.yml - GitLab CI/CD Pipeline (Pipeline CI/CD GitLab)
 
-on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+stages:
+  - lint
+  - build
+  - deploy
 
-env:
-  REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}
+variables:
+  IMAGE_TAG: $CI_REGISTRY_IMAGE:$CI_COMMIT_SHORT_SHA
 
-jobs:
-  # Job 1: Lint and Test
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+# Cache for faster builds (Cache để build nhanh hơn)
+cache:
+  paths:
+    - node_modules/
 
-      - name: Check HTML files exist
-        run: |
-          echo "Checking required files..."
-          test -f src/index.html && echo "✅ index.html exists"
-          test -f src/css/style.css && echo "✅ style.css exists"
-          test -f Dockerfile && echo "✅ Dockerfile exists"
+# Job 1: Lint and Test (Kiểm tra và test)
+lint:
+  stage: lint
+  image: alpine:latest
+  script:
+    - echo "Checking required files... (Kiểm tra files cần thiết...)"
+    - test -f src/index.html && echo "✅ index.html exists"
+    - test -f src/css/style.css && echo "✅ style.css exists"
+    - test -f Dockerfile && echo "✅ Dockerfile exists"
 
-      - name: Validate Dockerfile
-        uses: hadolint/hadolint-action@v3.1.0
-        with:
-          dockerfile: Dockerfile
-          failure-threshold: warning
+# Job 2: Build Docker Image (Build Docker image)
+build:
+  stage: build
+  image: docker:latest
+  services:
+    - docker:dind
+  variables:
+    DOCKER_TLS_CERTDIR: "/certs"
+  before_script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+  script:
+    - docker build -t $IMAGE_TAG .
+    - docker build -t $CI_REGISTRY_IMAGE:latest .
+    - docker push $IMAGE_TAG
+    - docker push $CI_REGISTRY_IMAGE:latest
+  only:
+    - main
+    - develop
 
-  # Job 2: Build Docker Image
-  build:
-    runs-on: ubuntu-latest
-    needs: lint
-    permissions:
-      contents: read
-      packages: write
-    
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+# Job 3: Deploy to Staging - auto (Triển khai staging - tự động)
+deploy-staging:
+  stage: deploy
+  image: alpine:latest
+  script:
+    - echo "Deploying $IMAGE_TAG to staging..."
+    # Add your deployment commands here (Thêm lệnh triển khai ở đây)
+  environment:
+    name: staging
+    url: https://staging.example.com
+  only:
+    - develop
 
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
-
-      - name: Log in to Container Registry
-        if: github.event_name != 'pull_request'
-        uses: docker/login-action@v3
-        with:
-          registry: ${{ env.REGISTRY }}
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Extract metadata
-        id: meta
-        uses: docker/metadata-action@v5
-        with:
-          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-          tags: |
-            type=ref,event=branch
-            type=sha,prefix=
-            type=raw,value=latest,enable={{is_default_branch}}
-
-      - name: Build and push
-        uses: docker/build-push-action@v5
-        with:
-          context: .
-          push: ${{ github.event_name != 'pull_request' }}
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
-
-  # Job 3: Deploy (Optional - GitHub Pages)
-  deploy-pages:
-    runs-on: ubuntu-latest
-    needs: build
-    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-    
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
-    
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: './src'
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+# Job 4: Deploy to Production - manual (Triển khai production - thủ công)
+deploy-production:
+  stage: deploy
+  image: alpine:latest
+  script:
+    - echo "Deploying $IMAGE_TAG to production..."
+    # Add your deployment commands here (Thêm lệnh triển khai ở đây)
+  environment:
+    name: production
+    url: https://example.com
+  when: manual  # Requires manual approval (Cần phê duyệt thủ công)
+  only:
+    - main
 ```
+
+> 💡 **GitHub Users:** If using GitHub, see [GitHub Actions workflow example](../1.7_CICD_Basic/README_GITHUB_ACTIONS.md).
+>
+> *Nếu dùng GitHub, xem ví dụ GitHub Actions workflow.*
 
 ---
 
-### Step 6: Push to GitHub 🚀
+### Step 6: Push to GitLab (Push lên GitLab) 🚀
 
 ```bash
-# Thêm remote
-git remote add origin https://github.com/YOUR_USERNAME/devops-portfolio.git
+# Add remote (Thêm remote)
+git remote add origin https://gitlab.com/YOUR_USERNAME/devops-portfolio.git
 
-# Commit tất cả
+# Commit all (Commit tất cả)
 git add .
 git commit -m "Initial commit: DevOps Portfolio with CI/CD"
 
@@ -595,40 +570,44 @@ git commit -m "Initial commit: DevOps Portfolio with CI/CD"
 git push -u origin main
 ```
 
+> 💡 **GitHub Users:** Replace `gitlab.com` with `github.com` if using GitHub.
+>
+> *Nếu dùng GitHub, thay `gitlab.com` bằng `github.com`.*
+
 ---
 
-## ✅ Tiêu chí đánh giá
+## ✅ Assessment Criteria (Tiêu chí đánh giá)
 
-| # | Tiêu chí | Điểm | Mô tả |
-|---|----------|------|-------|
-| 1 | **Website** | 20% | HTML/CSS đúng chuẩn, responsive |
-| 2 | **Git** | 10% | Commit messages rõ ràng, .gitignore |
-| 3 | **Dockerfile** | 20% | Build thành công, tối ưu layers |
-| 4 | **NGINX** | 15% | Config đúng, security headers |
-| 5 | **CI/CD** | 25% | Pipeline chạy thành công |
-| 6 | **README** | 10% | Documentation đầy đủ |
+| # | Criteria | Points | Description |
+|---|----------|--------|-------------|
+| 1 | **Website** | 20% | HTML/CSS standards, responsive |
+| 2 | **Git** | 10% | Clear commit messages, .gitignore |
+| 3 | **Dockerfile** | 20% | Builds successfully, optimized layers |
+| 4 | **NGINX** | 15% | Correct config, security headers |
+| 5 | **CI/CD** | 25% | Pipeline runs successfully |
+| 6 | **README** | 10% | Complete documentation |
 
 ---
 
 ## 🎯 Bonus Challenges
 
-Sau khi hoàn thành yêu cầu cơ bản, thử các challenges sau:
+After completing the basic requirements, try the following challenges (Sau khi hoàn thành yêu cầu cơ bản, thử các challenges sau):
 
-### Challenge 1: Multi-stage Build ⭐
+### Challenge 1: Multi-stage Build (Xây dựng nhiều giai đoạn) ⭐
 
-Thêm build step cho CSS/JS minification
+Thêm build step cho CSS/JS minification (Thêm bước biên dịch để thu nhỏ CSS/JS)
 
-### Challenge 2: Custom Domain ⭐⭐
+### Challenge 2: Custom Domain (Tên miền tùy chỉnh) ⭐⭐
 
-Cấu hình custom domain cho GitHub Pages
+Configure a custom domain for your GitHub Page (Cấu hình miền tùy chỉnh cho Trang GitHub)
 
-### Challenge 3: SSL/HTTPS ⭐⭐
+### Challenge 3: SSL/HTTPS (Máy chủ SSL/HTTPS) ⭐⭐
 
-Cấu hình HTTPS với Let's Encrypt
+Configure HTTPS with Let's Encrypt (Cấu hình HTTPS với Let's Encrypt)
 
-### Challenge 4: Monitoring ⭐⭐⭐
+### Challenge 4: Monitoring (Theo dõi) ⭐⭐⭐
 
-Thêm uptime monitoring với UptimeRobot
+Add uptime monitoring with UptimeRobot (Thêm tính năng giám sát thời gian hoạt động với UptimeRobot)
 
 ---
 

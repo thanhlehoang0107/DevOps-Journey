@@ -24,24 +24,24 @@ After completing Track 1, you will (Sau khi hoàn thành Track 1, bạn sẽ):
 
 ---
 
-## 📚 Danh Sách Modules
+## 📚 Module List (Danh Sách Modules)
 
-| # | Module | Thời Gian | Mô Tả |
-|---|--------|-----------|-------|
-| 1.1 | [Linux & Bash](./1.1_Linux_Bash/) | 1 tuần | Hệ điều hành Linux, command line, Bash scripting |
-| 1.2 | [Python Basics](./1.2_Python_Basics/) | 1 tuần | Python fundamentals cho DevOps automation |
-| 1.3 | [Network Basics](./1.3_Network_Basics/) | 3-4 ngày | TCP/IP, DNS, HTTP, OSI model |
-| 1.4 | [Git & GitHub](./1.4_Git_GitLab/) | 1 tuần | Version control, branching strategies |
-| 1.5 | [Docker Fundamentals](./1.5_Docker_Fundamentals/) | 1 tuần | Containers, Dockerfile, Docker images |
-| 1.6 | [NGINX Basic](./1.6_NGINX_Basic/) | 3-4 ngày | Web server configuration, reverse proxy |
-| 1.7 | [CI/CD Basic](./1.7_CICD_Basic/) | 1 tuần | GitHub Actions, automated workflows |
-| 1.8 | [**Capstone Project**](./1.8_Capstone_Project/) | 3-4 ngày | 🎯 Deploy Static Website với CI/CD |
+| # | Module | Duration | Description |
+|---|--------|----------|-------------|
+| 1.1 | [Linux & Bash](./1.1_Linux_Bash/) | 1 week | Linux OS, command line, Bash scripting |
+| 1.2 | [Python Basics](./1.2_Python_Basics/) | 1 week | Python fundamentals for DevOps automation |
+| 1.3 | [Network Basics](./1.3_Network_Basics/) | 3-4 days | TCP/IP, DNS, HTTP, OSI model |
+| 1.4 | [Git & GitHub](./1.4_Git_GitLab/) | 1 week | Version control, branching strategies |
+| 1.5 | [Docker Fundamentals](./1.5_Docker_Fundamentals/) | 1 week | Containers, Dockerfile, Docker images |
+| 1.6 | [NGINX Basic](./1.6_NGINX_Basic/) | 3-4 days | Web server configuration, reverse proxy |
+| 1.7 | [CI/CD Basic](./1.7_CICD_Basic/) | 1 week | GitHub Actions, automated workflows |
+| 1.8 | [**Capstone Project**](./1.8_Capstone_Project/) | 3-4 days | 🎯 Deploy Static Website with CI/CD |
 
 ---
 
-## 🗓️ Lịch Trình Đề Xuất
+## 🗓️ Suggested Schedule (Lịch Trình Đề Xuất)
 
-### Tuần 1: Linux & Bash
+### Week 1: Linux & Bash
 
 ```
 Day 1-2: Linux fundamentals, file system, permissions
@@ -49,7 +49,7 @@ Day 3-4: Text processing, pipes, redirects
 Day 5-7: Bash scripting, variables, loops, functions
 ```
 
-### Tuần 2: Python Basics
+### Week 2: Python Basics
 
 ```
 Day 1-2: Data types, control flow
@@ -57,14 +57,14 @@ Day 3-4: Functions, modules, file I/O
 Day 5-7: Error handling, automation scripts
 ```
 
-### Tuần 3: Networking + Git
+### Week 3: Networking + Git
 
 ```
 Day 1-3: Network fundamentals (OSI, TCP/IP, DNS)
 Day 4-7: Git commands, GitHub, branching, PRs
 ```
 
-### Tuần 4: Docker
+### Week 4: Docker
 
 ```
 Day 1-2: Container concepts, Docker basics
@@ -72,14 +72,14 @@ Day 3-5: Dockerfile, building images
 Day 6-7: Docker Hub, registries
 ```
 
-### Tuần 5: NGINX + CI/CD
+### Week 5: NGINX + CI/CD
 
 ```
 Day 1-3: NGINX installation, configuration
 Day 4-7: GitHub Actions, workflows, automation
 ```
 
-### Tuần 6: Capstone Project
+### Week 6: Capstone Project
 
 ```
 Day 1-2: Planning, setup repository
@@ -89,10 +89,10 @@ Day 5-7: Testing, documentation, deployment
 
 ---
 
-## 🛠️ Tools Sử Dụng
+## 🛠️ Tools Used (Công Cụ Sử Dụng)
 
-| Tool | Mục Đích | Cài Đặt |
-|------|----------|---------|
+| Tool | Purpose | Installation |
+|------|---------|--------------|
 | **Linux (Ubuntu)** | Operating System | WSL2 / VM / Docker |
 | **Bash** | Shell scripting | Built-in |
 | **Python 3.x** | Automation scripting | [python.org](https://python.org) |
@@ -104,22 +104,22 @@ Day 5-7: Testing, documentation, deployment
 
 ---
 
-## 📋 Prerequisites
+## 📋 Prerequisites (Yêu cầu tiên quyết)
 
-Trước khi bắt đầu Track 1, hãy đảm bảo:
+Before starting Track 1, make sure you have (Trước khi bắt đầu, hãy đảm bảo):
 
-- [ ] Đã cài đặt [môi trường phát triển](../Setup_Environment/README.md)
-- [ ] Đã tạo tài khoản GitHub
-- [ ] Đã cài đặt Docker Desktop
-- [ ] Đã cài đặt VS Code với extensions
+- [ ] Installed [development environment](../Setup_Environment/README.md) (Đã cài đặt môi trường)
+- [ ] Created GitHub account (Đã tạo tài khoản GitHub)
+- [ ] Installed Docker Desktop (Đã cài đặt Docker Desktop)
+- [ ] Installed VS Code with extensions (Đã cài đặt VS Code)
 
 ---
 
 ## 🎯 Capstone Project Preview
 
-### **Static Website Deployment với CI/CD Pipeline**
+### **Static Website Deployment with CI/CD Pipeline**
 
-Bạn sẽ xây dựng:
+You will build (Bạn sẽ xây dựng):
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -143,26 +143,26 @@ Bạn sẽ xây dựng:
 └─────────────────────────────────────────────────────────────┘
 ```
 
-👉 **[Xem chi tiết Capstone Project →](./1.8_Capstone_Project/)**
+👉 **[View Capstone Project Details → (Xem chi tiết)](./1.8_Capstone_Project/)**
 
 ---
 
-## 📊 Đánh Giá
+## 📊 Assessment (Đánh Giá)
 
-### Tiêu Chí Hoàn Thành Module
+### Module Completion Criteria (Tiêu Chí Hoàn Thành Module)
 
 | Criteria | Requirement |
 |----------|-------------|
-| Labs | Hoàn thành 100% hands-on labs |
-| Quiz | Đạt ≥ 70% điểm quiz |
-| Exercises | Hoàn thành ≥ 80% exercises |
-| Project | Submit và được review |
+| Labs | Complete 100% hands-on labs |
+| Quiz | Score ≥ 70% on quiz |
+| Exercises | Complete ≥ 80% exercises |
+| Project | Submit and reviewed |
 
-### Tiêu Chí Hoàn Thành Track
+### Track Completion Criteria (Tiêu Chí Hoàn Thành Track)
 
-- ✅ Hoàn thành tất cả 7 modules
+- ✅ Complete all 7 modules (Hoàn thành tất cả 7 modules)
 - ✅ Submit Capstone Project
-- ✅ Capstone được review và approve
+- ✅ Capstone reviewed and approved
 
 ---
 
@@ -174,20 +174,22 @@ Bạn sẽ xây dựng:
 
 ---
 
-## 📖 Bắt Đầu
+## 📖 Getting Started (Bắt Đầu)
 
 ```bash
-# Bắt đầu với Module 1.1
+# Start with Module 1.1 (Bắt đầu với Module 1.1)
 cd 1.1_Linux_Bash
 cat README.md
 ```
 
-**📚 Bắt đầu học:** [1.1 Linux & Bash →](./1.1_Linux_Bash/)
+**📚 Start Learning (Bắt đầu học):** [1.1 Linux & Bash →](./1.1_Linux_Bash/)
 
 ---
 
 <div align="center">
 
-**🚀 Chúc bạn học tốt! 🚀**
+**🚀 Good luck with your learning! 🚀**
+
+*Chúc bạn học tốt!*
 
 </div>

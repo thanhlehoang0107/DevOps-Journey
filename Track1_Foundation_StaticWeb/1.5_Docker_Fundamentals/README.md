@@ -626,20 +626,19 @@ docker network inspect my-network
 docker run -d --name web --network my-network nginx
 docker run -d --name api --network my-network my-api
 
-# Containers can call each other by name
-# Containers có thể gọi nhau bằng tên
+# Containers can call each other by name (Containers có thể gọi nhau bằng tên)
 # From web: curl http://api:3000
 
 # Remove network (Xóa network)
 docker network rm my-network
 ```
 
-#### 7.3 Container Communication
+#### 7.3 Container Communication (Giao tiếp Container)
 
 ```bash
-# Ví dụ: Web + API + Database
+# Example: Web + API + Database (Ví dụ: Web + API + Database)
 
-# 1. Tạo network
+# 1. Create network (Tạo network)
 docker network create app-network
 
 # 2. Database
@@ -667,19 +666,19 @@ docker run -d \
 
 ---
 
-### 8. Docker Hub (1 giờ)
+### 8. Docker Hub - 1 hour
 
-#### 8.1 Login
+#### 8.1 Login (Đăng nhập)
 
 ```bash
 docker login
-# Enter username and password
+# Enter username and password (Nhập username và password)
 ```
 
-#### 8.2 Push image
+#### 8.2 Push Image (Push image)
 
 ```bash
-# Tag image với username
+# Tag image with username (Tag image với username)
 docker tag my-app:v1.0 username/my-app:v1.0
 
 # Push
@@ -690,7 +689,7 @@ docker tag my-app:v1.0 username/my-app:latest
 docker push username/my-app:latest
 ```
 
-#### 8.3 Pull image
+#### 8.3 Pull Image (Pull image)
 
 ```bash
 docker pull username/my-app:v1.0
@@ -698,9 +697,9 @@ docker pull username/my-app:v1.0
 
 ---
 
-### 9. Thực hành: Deploy Static Website
+### 9. Practice: Deploy Static Website (Thực hành: Deploy Website)
 
-#### Project Structure
+#### Project Structure (Cấu trúc dự án)
 
 ```
 my-website/
@@ -739,7 +738,7 @@ my-website/
 ```dockerfile
 FROM nginx:alpine
 
-# Copy website files
+# Copy website files (Sao chép files website)
 COPY html/ /usr/share/nginx/html/
 
 # Expose port
@@ -749,16 +748,16 @@ EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
 ```
 
-#### Build và Run
+#### Build and Run (Build và Chạy)
 
 ```bash
 # Build
 docker build -t my-website:v1.0 .
 
-# Run
+# Run (Chạy)
 docker run -d -p 8080:80 --name website my-website:v1.0
 
-# Access: http://localhost:8080
+# Access (Truy cập): http://localhost:8080
 ```
 
 ---
