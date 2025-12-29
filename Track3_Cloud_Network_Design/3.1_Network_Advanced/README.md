@@ -3,24 +3,28 @@
 [![Duration](https://img.shields.io/badge/Duration-1%20week-blue?style=flat-square)](.)
 [![Level](https://img.shields.io/badge/Level-Intermediate-orange?style=flat-square)](.)
 
-> **Advanced Networking** - VPNs, Load Balancing, và Cloud Networking.
+> **Advanced Networking** - VPNs, Load Balancing, and Cloud Networking.
+>
+> *Mạng nâng cao - VPNs, Cân bằng tải, và Mạng đám mây.*
 
 ---
 
-## 🎯 Learning Objectives
+## 🎯 Learning Objectives (Mục tiêu học tập)
 
-- ✅ VPN và Tunneling concepts
-- ✅ Load balancing strategies
-- ✅ Cloud networking (VPC, Subnets)
-- ✅ Network security (Security Groups, NACLs)
-- ✅ CDN và Edge computing
-- ✅ Service mesh concepts
+After this module, you will (Sau module này, bạn sẽ):
+
+- ✅ Understand VPN and Tunneling concepts (Hiểu VPN và Tunneling)
+- ✅ Master load balancing strategies (Thành thạo chiến lược cân bằng tải)
+- ✅ Design cloud networking - VPC, Subnets (Thiết kế mạng cloud)
+- ✅ Implement network security - Security Groups, NACLs (Triển khai bảo mật mạng)
+- ✅ Understand CDN and Edge computing (Hiểu CDN và Edge computing)
+- ✅ Learn service mesh concepts (Tìm hiểu service mesh)
 
 ---
 
-## 📚 Content
+## 📚 Content (Nội dung)
 
-### 1. VPC Architecture
+### 1. VPC Architecture (Kiến trúc VPC)
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -49,7 +53,7 @@
 └─────────────────────────────────────────────────────────────┘
 ```
 
-### 2. Load Balancing
+### 2. Load Balancing (Cân bằng tải)
 
 ```
             ┌─────────────────────┐
@@ -64,44 +68,62 @@
    └───────┘       └───────┘       └───────┘
 ```
 
-**Load Balancing Algorithms:**
+**Load Balancing Algorithms (Thuật toán cân bằng tải):**
 
-- Round Robin
-- Least Connections
+- Round Robin (Luân phiên)
+- Least Connections (Ít kết nối nhất)
 - IP Hash
-- Weighted
+- Weighted (Có trọng số)
 
 ### 3. Security Groups vs NACLs
 
-| Feature | Security Group | NACL |
-|---------|---------------|------|
-| Level | Instance | Subnet |
-| State | Stateful | Stateless |
-| Rules | Allow only | Allow & Deny |
-| Evaluation | All rules | Order matters |
+| Feature (Tính năng) | Security Group | NACL |
+|---------------------|----------------|------|
+| Level (Cấp độ) | Instance | Subnet |
+| State (Trạng thái) | Stateful | Stateless |
+| Rules (Quy tắc) | Allow only (Chỉ cho phép) | Allow & Deny (Cho phép & Từ chối) |
+| Evaluation (Đánh giá) | All rules (Tất cả rules) | Order matters (Thứ tự quan trọng) |
 
-### 4. VPN Types
+### 4. VPN Types (Các loại VPN)
 
-- **Site-to-Site VPN**: Connect on-premises to cloud
-- **Client VPN**: Remote access for users
-- **Transit Gateway**: Hub for multiple VPCs
+- **Site-to-Site VPN**: Connect on-premises to cloud (Kết nối on-premises với cloud)
+- **Client VPN**: Remote access for users (Truy cập từ xa cho người dùng)
+- **Transit Gateway**: Hub for multiple VPCs (Hub cho nhiều VPCs)
 
-### 5. CDN Concepts
+### 5. CDN Concepts (Khái niệm CDN)
 
 ```
 User → Edge Location → Origin Server
-         (Cache)
+          (Cache)
 ```
 
 ---
 
-## 📝 Module Files
+## 📝 Module Files (Các file trong Module)
 
-| File | Description |
-|------|-------------|
-| [LABS.md](./LABS.md) | Hands-on labs |
-| [QUIZ.md](./QUIZ.md) | Knowledge check |
-| [EXERCISES.md](./EXERCISES.md) | Exercises |
-| [PROJECT.md](./PROJECT.md) | Mini project |
-| [SOLUTIONS.md](./SOLUTIONS.md) | Solutions |
-| [CHEATSHEET.md](./CHEATSHEET.md) | Quick reference |
+| File | Description (Mô tả) |
+|------|---------------------|
+| [LABS.md](./LABS.md) | Hands-on labs (Bài thực hành) |
+| [QUIZ.md](./QUIZ.md) | Knowledge check (Kiểm tra kiến thức) |
+| [EXERCISES.md](./EXERCISES.md) | Exercises (Bài tập) |
+| [PROJECT.md](./PROJECT.md) | Mini project (Dự án nhỏ) |
+| [SOLUTIONS.md](./SOLUTIONS.md) | Solutions (Đáp án) |
+| [CHEATSHEET.md](./CHEATSHEET.md) | Quick reference (Tra cứu nhanh) |
+
+---
+
+<div align="center">
+
+### 🔗 Module Navigation (Điều hướng Module)
+
+| ← Previous (Trước) | Current (Hiện tại) | Next (Tiếp) → |
+|:------------------:|:------------------:|:-------------:|
+| [Track 2 Capstone](../../Track2_Orchestration_Automation/2.6_Capstone_Project/) | **3.1 Network Advanced** | [3.2 AWS Core](../3.2_AWS_Core_Services/) |
+
+---
+
+**Master advanced networking! 🌐**
+
+*Thành thạo mạng nâng cao!*
+
+</div>

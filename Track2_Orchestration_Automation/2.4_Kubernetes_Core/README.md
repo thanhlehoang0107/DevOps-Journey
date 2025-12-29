@@ -3,24 +3,28 @@
 [![Duration](https://img.shields.io/badge/Duration-1--2%20weeks-blue?style=flat-square)](.)
 [![Level](https://img.shields.io/badge/Level-Intermediate-orange?style=flat-square)](.)
 
-> **Container Orchestration** - Deploy và manage containers với Kubernetes.
+> **Container Orchestration** - Deploy and manage containers with Kubernetes.
+>
+> *Điều phối Container - Deploy và quản lý containers với Kubernetes.*
 
 ---
 
-## 🎯 Learning Objectives
+## 🎯 Learning Objectives (Mục tiêu học tập)
 
-- ✅ Hiểu Kubernetes architecture
-- ✅ Deploy applications với kubectl
-- ✅ Work với Pods, Deployments, Services
-- ✅ ConfigMaps và Secrets
-- ✅ Persistent storage
-- ✅ Rolling updates và rollbacks
+After this module, you will (Sau module này, bạn sẽ):
+
+- ✅ Understand Kubernetes architecture (Hiểu kiến trúc Kubernetes)
+- ✅ Deploy applications with kubectl (Deploy ứng dụng với kubectl)
+- ✅ Work with Pods, Deployments, Services (Làm việc với Pods, Deployments, Services)
+- ✅ Use ConfigMaps and Secrets (Sử dụng ConfigMaps và Secrets)
+- ✅ Implement Persistent storage (Triển khai lưu trữ bền vững)
+- ✅ Perform Rolling updates and rollbacks (Thực hiện cập nhật và hoàn tác)
 
 ---
 
-## 📚 Content
+## 📚 Content (Nội dung)
 
-### 1. Architecture
+### 1. Architecture (Kiến trúc)
 
 ```
 ┌─────────────────────────────────────────┐
@@ -45,7 +49,7 @@
 └───────────────────────────────────────┘
 ```
 
-### 2. Basic Resources
+### 2. Basic Resources (Tài nguyên cơ bản)
 
 ```yaml
 # Pod
@@ -97,10 +101,10 @@ spec:
   type: ClusterIP
 ```
 
-### 3. kubectl Commands
+### 3. kubectl Commands (Các lệnh kubectl)
 
 ```bash
-# Cluster info
+# Cluster info (Thông tin cluster)
 kubectl cluster-info
 kubectl get nodes
 
@@ -119,7 +123,7 @@ kubectl set image deployment/nginx nginx=nginx:1.20
 kubectl expose deployment nginx --port=80 --type=LoadBalancer
 kubectl get services
 
-# Apply manifests
+# Apply manifests (Áp dụng manifests)
 kubectl apply -f manifest.yaml
 kubectl delete -f manifest.yaml
 ```
@@ -144,10 +148,10 @@ metadata:
   name: app-secret
 type: Opaque
 data:
-  DB_PASSWORD: cGFzc3dvcmQ=  # base64 encoded
+  DB_PASSWORD: cGFzc3dvcmQ=  # base64 encoded (mã hóa base64)
 ```
 
-### 5. Persistent Volume
+### 5. Persistent Volume (Volume bền vững)
 
 ```yaml
 apiVersion: v1
@@ -161,9 +165,8 @@ spec:
     requests:
       storage: 1Gi
 
-
 ---
-# Use in Pod
+# Use in Pod (Sử dụng trong Pod)
 spec:
   volumes:
     - name: data
@@ -178,13 +181,31 @@ spec:
 
 ---
 
-## 📝 Module Files
+## 📝 Module Files (Các file trong Module)
 
-| File | Description |
-|------|-------------|
-| [LABS.md](./LABS.md) | Hands-on labs |
-| [QUIZ.md](./QUIZ.md) | Knowledge check |
-| [EXERCISES.md](./EXERCISES.md) | Exercises |
-| [PROJECT.md](./PROJECT.md) | Mini project |
-| [SOLUTIONS.md](./SOLUTIONS.md) | Solutions |
-| [CHEATSHEET.md](./CHEATSHEET.md) | Quick reference |
+| File | Description (Mô tả) |
+|------|---------------------|
+| [LABS.md](./LABS.md) | Hands-on labs (Bài thực hành) |
+| [QUIZ.md](./QUIZ.md) | Knowledge check (Kiểm tra kiến thức) |
+| [EXERCISES.md](./EXERCISES.md) | Exercises (Bài tập) |
+| [PROJECT.md](./PROJECT.md) | Mini project (Dự án nhỏ) |
+| [SOLUTIONS.md](./SOLUTIONS.md) | Solutions (Đáp án) |
+| [CHEATSHEET.md](./CHEATSHEET.md) | Quick reference (Tra cứu nhanh) |
+
+---
+
+<div align="center">
+
+### 🔗 Module Navigation (Điều hướng Module)
+
+| ← Previous (Trước) | Current (Hiện tại) | Next (Tiếp) → |
+|:------------------:|:------------------:|:-------------:|
+| [2.3 Jenkins](../2.3_Jenkins/) | **2.4 Kubernetes Core** | [2.5 Monitoring](../2.5_Monitoring_Logging/) |
+
+---
+
+**Master container orchestration with Kubernetes! ☸️**
+
+*Thành thạo điều phối container với Kubernetes!*
+
+</div>

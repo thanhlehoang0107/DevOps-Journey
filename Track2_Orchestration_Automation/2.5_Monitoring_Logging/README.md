@@ -3,22 +3,26 @@
 [![Duration](https://img.shields.io/badge/Duration-1%20week-blue?style=flat-square)](.)
 [![Level](https://img.shields.io/badge/Level-Intermediate-orange?style=flat-square)](.)
 
-> **Observability** - Monitor và debug distributed systems.
+> **Observability** - Monitor and debug distributed systems.
+>
+> *Khả năng quan sát - Giám sát và debug hệ thống phân tán.*
 
 ---
 
-## 🎯 Learning Objectives
+## 🎯 Learning Objectives (Mục tiêu học tập)
 
-- ✅ Hiểu observability pillars (metrics, logs, traces)
-- ✅ Setup Prometheus & Grafana
-- ✅ Create dashboards và alerts
-- ✅ Centralized logging với ELK/Loki
-- ✅ Application metrics
-- ✅ Alerting và oncall
+After this module, you will (Sau module này, bạn sẽ):
+
+- ✅ Understand observability pillars - metrics, logs, traces (Hiểu các trụ cột observability)
+- ✅ Setup Prometheus & Grafana (Thiết lập Prometheus & Grafana)
+- ✅ Create dashboards and alerts (Tạo dashboard và cảnh báo)
+- ✅ Implement centralized logging with ELK/Loki (Triển khai logging tập trung)
+- ✅ Collect application metrics (Thu thập metrics ứng dụng)
+- ✅ Configure alerting and oncall (Cấu hình cảnh báo và trực)
 
 ---
 
-## 📚 Content
+## 📚 Content (Nội dung)
 
 ### 1. Prometheus
 
@@ -59,26 +63,26 @@ scrape_configs:
 }
 ```
 
-### 3. PromQL Basics
+### 3. PromQL Basics (PromQL cơ bản)
 
 ```promql
-# CPU usage
+# CPU usage (Sử dụng CPU)
 rate(process_cpu_seconds_total[5m])
 
-# Memory usage
+# Memory usage (Sử dụng bộ nhớ)
 process_resident_memory_bytes / 1024 / 1024
 
-# HTTP request rate
+# HTTP request rate (Tỷ lệ yêu cầu HTTP)
 rate(http_requests_total[5m])
 
-# Error rate
+# Error rate (Tỷ lệ lỗi)
 rate(http_requests_total{status="500"}[5m])
 
-# 95th percentile latency
+# 95th percentile latency (Độ trễ phân vị 95)
 histogram_quantile(0.95, rate(http_request_duration_seconds_bucket[5m]))
 ```
 
-### 4. Alerting
+### 4. Alerting (Cảnh báo)
 
 ```yaml
 # alerting.rules.yml
@@ -121,13 +125,31 @@ schema_config:
 
 ---
 
-## 📝 Module Files
+## 📝 Module Files (Các file trong Module)
 
-| File | Description |
-|------|-------------|
-| [LABS.md](./LABS.md) | Hands-on labs |
-| [QUIZ.md](./QUIZ.md) | Knowledge check |
-| [EXERCISES.md](./EXERCISES.md) | Exercises |
-| [PROJECT.md](./PROJECT.md) | Mini project |
-| [SOLUTIONS.md](./SOLUTIONS.md) | Solutions |
-| [CHEATSHEET.md](./CHEATSHEET.md) | Quick reference |
+| File | Description (Mô tả) |
+|------|---------------------|
+| [LABS.md](./LABS.md) | Hands-on labs (Bài thực hành) |
+| [QUIZ.md](./QUIZ.md) | Knowledge check (Kiểm tra kiến thức) |
+| [EXERCISES.md](./EXERCISES.md) | Exercises (Bài tập) |
+| [PROJECT.md](./PROJECT.md) | Mini project (Dự án nhỏ) |
+| [SOLUTIONS.md](./SOLUTIONS.md) | Solutions (Đáp án) |
+| [CHEATSHEET.md](./CHEATSHEET.md) | Quick reference (Tra cứu nhanh) |
+
+---
+
+<div align="center">
+
+### 🔗 Module Navigation (Điều hướng Module)
+
+| ← Previous (Trước) | Current (Hiện tại) | Next (Tiếp) → |
+|:------------------:|:------------------:|:-------------:|
+| [2.4 Kubernetes](../2.4_Kubernetes_Core/) | **2.5 Monitoring** | [2.6 Capstone](../2.6_Capstone_Project/) |
+
+---
+
+**Master observability for production systems! 📊**
+
+*Thành thạo khả năng quan sát cho hệ thống production!*
+
+</div>

@@ -1,25 +1,33 @@
 # 🗄️ Module 3.3: Databases for DevOps
 
-> **Database Management** - RDS, NoSQL, Caching, Migrations.
+[![Duration](https://img.shields.io/badge/Duration-1%20week-blue?style=flat-square)](.)
+[![Level](https://img.shields.io/badge/Level-Intermediate-orange?style=flat-square)](.)
+
+> **Database Management** - RDS, NoSQL, Caching, and Migrations.
+>
+> *Quản lý Database - RDS, NoSQL, Caching, và Migrations.*
 
 ---
 
-## 🎯 Learning Objectives
+## 🎯 Learning Objectives (Mục tiêu học tập)
 
-- ✅ RDS management (MySQL, PostgreSQL)
-- ✅ NoSQL databases (DynamoDB, MongoDB)
-- ✅ Caching với Redis/ElastiCache
-- ✅ Database migrations
-- ✅ Backup và recovery
-- ✅ Performance tuning
+After this module, you will (Sau module này, bạn sẽ):
+
+- ✅ Manage RDS (MySQL, PostgreSQL) (Quản lý RDS)
+- ✅ Work with NoSQL databases - DynamoDB, MongoDB (Làm việc với NoSQL)
+- ✅ Implement caching with Redis/ElastiCache (Triển khai caching)
+- ✅ Perform database migrations (Thực hiện migrations)
+- ✅ Configure backup and recovery (Cấu hình backup và recovery)
+- ✅ Tune performance (Tối ưu hiệu suất)
 
 ---
 
-## 📚 Content
+## 📚 Content (Nội dung)
 
 ### 1. RDS
 
 ```bash
+# Create RDS instance (Tạo RDS instance)
 aws rds create-db-instance \
   --db-instance-identifier mydb \
   --db-instance-class db.t3.micro \
@@ -32,10 +40,10 @@ aws rds create-db-instance \
 ### 2. Redis
 
 ```bash
-# Connect
+# Connect (Kết nối)
 redis-cli -h myredis.xxx.cache.amazonaws.com
 
-# Basic commands
+# Basic commands (Lệnh cơ bản)
 SET key "value"
 GET key
 EXPIRE key 3600
@@ -44,15 +52,38 @@ EXPIRE key 3600
 ### 3. Migrations
 
 ```bash
-# Using Flyway
+# Using Flyway (Sử dụng Flyway)
 flyway -url=jdbc:postgresql://host:5432/db migrate
 
-# Using Django
+# Using Django (Sử dụng Django)
 python manage.py migrate
 ```
 
 ---
 
-## 📝 Module Files
+## 📝 Module Files (Các file trong Module)
 
-- [LABS.md](./LABS.md) | [QUIZ.md](./QUIZ.md) | [EXERCISES.md](./EXERCISES.md)
+| File | Description (Mô tả) |
+|------|---------------------|
+| [LABS.md](./LABS.md) | Hands-on labs (Bài thực hành) |
+| [QUIZ.md](./QUIZ.md) | Knowledge check (Kiểm tra kiến thức) |
+| [EXERCISES.md](./EXERCISES.md) | Exercises (Bài tập) |
+| [SOLUTIONS.md](./SOLUTIONS.md) | Solutions (Đáp án) |
+
+---
+
+<div align="center">
+
+### 🔗 Module Navigation (Điều hướng Module)
+
+| ← Previous (Trước) | Current (Hiện tại) | Next (Tiếp) → |
+|:------------------:|:------------------:|:-------------:|
+| [3.2 AWS Core](../3.2_AWS_Core_Services/) | **3.3 Databases** | [3.4 Ansible](../3.4_Config_Management_Ansible/) |
+
+---
+
+**Master database management! 🗄️**
+
+*Thành thạo quản lý database!*
+
+</div>

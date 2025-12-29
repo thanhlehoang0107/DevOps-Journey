@@ -1,20 +1,24 @@
 # 🏆 Module 3.7: Capstone Project
 
 > **Production AWS Infrastructure**
+>
+> *Hạ tầng AWS Production*
 
 ---
 
-## 🎯 Project Overview
+## 🎯 Project Overview (Tổng quan dự án)
 
-Deploy production-ready infrastructure trên AWS với multi-AZ, auto scaling, và monitoring.
+Deploy production-ready infrastructure on AWS with multi-AZ, auto scaling, and monitoring.
+
+*Deploy hạ tầng production-ready trên AWS với multi-AZ, auto scaling, và monitoring.*
 
 ---
 
-## 📋 Requirements
+## 📋 Requirements (Yêu cầu)
 
-### Architecture
+### Architecture (Kiến trúc)
 
-- VPC với public/private subnets (2 AZs)
+- VPC with public/private subnets - 2 AZs (VPC với subnets - 2 AZs)
 - ALB + Auto Scaling Group
 - RDS Multi-AZ
 - ElastiCache Redis
@@ -26,39 +30,49 @@ Deploy production-ready infrastructure trên AWS với multi-AZ, auto scaling, v
 - Ansible playbooks
 - CI/CD pipeline
 
-### Monitoring
+### Monitoring (Giám sát)
 
 - CloudWatch dashboards
-- Alerting
+- Alerting (Cảnh báo)
 - Logging
 
 ---
 
-## ✅ Deliverables
+## ✅ Deliverables (Sản phẩm bàn giao)
 
 - [ ] Terraform code
 - [ ] Ansible playbooks
-- [ ] Architecture diagram
-- [ ] DR plan
-- [ ] Cost estimation
-- [ ] Documentation
+- [ ] Architecture diagram (Sơ đồ kiến trúc)
+- [ ] DR plan (Kế hoạch DR)
+- [ ] Cost estimation (Ước tính chi phí)
+- [ ] Documentation (Tài liệu)
 
 ---
 
-## 📊 Evaluation
+## 📊 Evaluation (Đánh giá)
 
-| Criteria | Weight |
-|----------|--------|
-| Architecture | 25% |
-| IaC quality | 25% |
-| Security | 20% |
-| Documentation | 15% |
-| Monitoring | 15% |
+| Criteria (Tiêu chí) | Weight (Trọng số) |
+|---------------------|-------------------|
+| Architecture (Kiến trúc) | 25% |
+| IaC quality (Chất lượng IaC) | 25% |
+| Security (Bảo mật) | 20% |
+| Documentation (Tài liệu) | 15% |
+| Monitoring (Giám sát) | 15% |
+
+---
+
+<div align="center">
+
+### 🔗 Module Navigation (Điều hướng Module)
+
+| ← Previous (Trước) | Current (Hiện tại) | Next (Tiếp) → |
+|:------------------:|:------------------:|:-------------:|
+| [3.6 System Design](../3.6_System_Design_Reliability/) | **3.7 Capstone** | [Track 4](../../Track4_DevSecOps/) |
 
 ---
 
 **Good luck! 🚀**
 
----
+*Chúc may mắn!*
 
-**[← Back to Track 3](../README.md)** | **[Next: Track 4 →](../../Track4_DevSecOps/)**
+</div>

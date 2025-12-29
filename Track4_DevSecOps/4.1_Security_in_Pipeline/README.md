@@ -1,23 +1,30 @@
 # 🔐 Module 4.1: Security in Pipeline
 
-> **Shift-Left Security** - Tích hợp security vào CI/CD pipeline.
+[![Duration](https://img.shields.io/badge/Duration-1%20week-blue?style=flat-square)](.)
+[![Level](https://img.shields.io/badge/Level-Intermediate-orange?style=flat-square)](.)
+
+> **Shift-Left Security** - Integrate security into CI/CD pipeline.
+>
+> *Bảo mật Shift-Left - Tích hợp bảo mật vào CI/CD pipeline.*
 
 ---
 
-## 🎯 Learning Objectives
+## 🎯 Learning Objectives (Mục tiêu học tập)
 
-- ✅ SAST (Static Application Security Testing)
-- ✅ DAST (Dynamic Application Security Testing)
-- ✅ SCA (Software Composition Analysis)
-- ✅ Secret scanning
-- ✅ Container security
-- ✅ Policy as Code
+After this module, you will (Sau module này, bạn sẽ):
+
+- ✅ Implement SAST - Static Application Security Testing (Triển khai SAST)
+- ✅ Use DAST - Dynamic Application Security Testing (Sử dụng DAST)
+- ✅ Perform SCA - Software Composition Analysis (Thực hiện SCA)
+- ✅ Configure secret scanning (Cấu hình quét secrets)
+- ✅ Secure containers (Bảo mật container)
+- ✅ Apply Policy as Code (Áp dụng Policy as Code)
 
 ---
 
-## 📚 Content
+## 📚 Content (Nội dung)
 
-### 1. SAST Tools
+### 1. SAST Tools (Công cụ SAST)
 
 ```yaml
 # GitHub Actions - CodeQL
@@ -31,10 +38,10 @@ sonar-scanner \
   -Dsonar.host.url=http://sonarqube:9000
 ```
 
-### 2. Dependency Scanning
+### 2. Dependency Scanning (Quét dependencies)
 
 ```bash
-# npm audit
+# npm audit (Kiểm tra npm)
 npm audit
 
 # Snyk
@@ -44,18 +51,18 @@ snyk test
 dependency-check --project myapp --scan ./
 ```
 
-### 3. Secret Scanning
+### 3. Secret Scanning (Quét secrets)
 
 ```yaml
 # Gitleaks
-- name: Scan for secrets
+- name: Scan for secrets (Quét secrets)
   uses: gitleaks/gitleaks-action@v2
 
 # TruffleHog
 trufflehog git https://github.com/user/repo
 ```
 
-### 4. Container Scanning
+### 4. Container Scanning (Quét container)
 
 ```bash
 # Trivy
@@ -80,6 +87,29 @@ deny[msg] {
 
 ---
 
-## 📝 Module Files
+## 📝 Module Files (Các file trong Module)
 
-- [LABS.md](./LABS.md) | [QUIZ.md](./QUIZ.md) | [EXERCISES.md](./EXERCISES.md)
+| File | Description (Mô tả) |
+|------|---------------------|
+| [LABS.md](./LABS.md) | Hands-on labs (Bài thực hành) |
+| [QUIZ.md](./QUIZ.md) | Knowledge check (Kiểm tra kiến thức) |
+| [EXERCISES.md](./EXERCISES.md) | Exercises (Bài tập) |
+| [SOLUTIONS.md](./SOLUTIONS.md) | Solutions (Đáp án) |
+
+---
+
+<div align="center">
+
+### 🔗 Module Navigation (Điều hướng Module)
+
+| ← Previous (Trước) | Current (Hiện tại) | Next (Tiếp) → |
+|:------------------:|:------------------:|:-------------:|
+| [Track 3 Capstone](../../Track3_Cloud_Network_Design/3.7_Capstone_Project/) | **4.1 Security Pipeline** | [4.2 Infra Security](../4.2_Infra_Security/) |
+
+---
+
+**Secure your pipeline! 🔐**
+
+*Bảo mật pipeline của bạn!*
+
+</div>
