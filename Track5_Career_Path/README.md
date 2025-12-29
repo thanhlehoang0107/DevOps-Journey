@@ -4,20 +4,22 @@
 [![Level](https://img.shields.io/badge/Level-All%20Levels-purple?style=flat-square)](.)
 [![Prerequisites](https://img.shields.io/badge/Prerequisites-Track%201--4-green?style=flat-square)](../Track4_DevSecOps/)
 
-> **Launch Your DevOps Career** - Certifications, Interview Prep, Portfolio và Grand Capstone Project.
+> **Launch Your DevOps Career** - Certifications, Interview Prep, Portfolio, and Grand Capstone Project.
+>
+> *Khởi động sự nghiệp DevOps - Chứng chỉ, Chuẩn bị phỏng vấn, Portfolio và Dự án tổng hợp.*
 
 ---
 
-## 🎯 Mục Tiêu Track
+## 🎯 Track Objectives (Mục Tiêu)
 
-Sau khi hoàn thành Track 5, bạn sẽ có:
+After completing Track 5, you will have (Sau khi hoàn thành Track 5, bạn sẽ có):
 
-- ✅ Lộ trình certification rõ ràng
-- ✅ Kỹ năng interview cho DevOps/SRE positions
-- ✅ Portfolio GitHub ấn tượng
-- ✅ Resume và LinkedIn profile chuyên nghiệp
-- ✅ **Production-ready infrastructure project** để showcase
-- ✅ **Sẵn sàng apply DevOps Engineer positions**
+- ✅ Clear certification roadmap (Lộ trình certification rõ ràng)
+- ✅ Interview skills for DevOps/SRE positions (Kỹ năng phỏng vấn)
+- ✅ Impressive GitHub portfolio (Portfolio GitHub ấn tượng)
+- ✅ Professional resume and LinkedIn profile (Resume và LinkedIn chuyên nghiệp)
+- ✅ **Production-ready infrastructure project** to showcase (Dự án để giới thiệu)
+- ✅ **Ready to apply for DevOps Engineer positions** (Sẵn sàng apply)
 
 ---
 

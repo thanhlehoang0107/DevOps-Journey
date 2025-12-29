@@ -1,22 +1,26 @@
 ﻿# 🛠️ Setup Environment
 
-> **Hướng dẫn cài đặt môi trường phát triển** cho DevOps Journey.
+[![Prerequisites](https://img.shields.io/badge/Prerequisites-None-green?style=flat-square)](.)
+
+> **Development Environment Setup Guide** for DevOps Journey.
+>
+> *Hướng dẫn cài đặt môi trường phát triển cho DevOps Journey.*
 
 ---
 
-## 📋 Mục Lục
+## 📋 Table of Contents (Mục Lục)
 
-- [Yêu Cầu Hệ Thống](#-yêu-cầu-hệ-thống)
-- [Cài Đặt Theo OS](#-cài-đặt-theo-os)
+- [System Requirements](#-system-requirements-yêu-cầu-hệ-thống)
+- [Installation by OS](#-installation-by-os-cài-đặt-theo-os)
 - [Tools Overview](#-tools-overview)
 - [Verification](#-verification)
 - [Troubleshooting](#-troubleshooting)
 
 ---
 
-## 💻 Yêu Cầu Hệ Thống
+## 💻 System Requirements (Yêu Cầu Hệ Thống)
 
-### Hardware Requirements
+### Hardware Requirements (Yêu cầu phần cứng)
 
 | Component | Minimum | Recommended |
 |-----------|---------|-------------|
@@ -25,15 +29,15 @@
 | **CPU** | 4 cores | 8 cores |
 | **Network** | Stable internet | Stable internet |
 
-### Supported Operating Systems
+### Supported Operating Systems (Hệ điều hành hỗ trợ)
 
-- ✅ **Windows 10/11** (với WSL2)
-- ✅ **macOS** (Monterey trở lên)
+- ✅ **Windows 10/11** (with WSL2)
+- ✅ **macOS** (Monterey or later)
 - ✅ **Linux** (Ubuntu 20.04+, Fedora 35+)
 
 ---
 
-## 🔧 Cài Đặt Theo OS
+## 🔧 Installation by OS (Cài Đặt Theo OS)
 
 ### Windows 10/11
 
@@ -315,6 +319,8 @@ Xem tất cả commands quan trọng → **[CHEATSHEET.md](./CHEATSHEET.md)**
 
 <div align="center">
 
-**Sau khi cài đặt xong, hãy bắt đầu với [Track 1 →](../Track1_Foundation_StaticWeb/)**
+**After setup is complete, start with [Track 1 →](../Track1_Foundation_StaticWeb/)! 🚀**
+
+*Sau khi cài đặt xong, hãy bắt đầu với Track 1!*
 
 </div>

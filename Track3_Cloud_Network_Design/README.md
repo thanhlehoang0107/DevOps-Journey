@@ -4,21 +4,23 @@
 [![Level](https://img.shields.io/badge/Level-Intermediate--Advanced-red?style=flat-square)](.)
 [![Prerequisites](https://img.shields.io/badge/Prerequisites-Track%201%20%26%202-green?style=flat-square)](../Track2_Orchestration_Automation/)
 
-> **Master Cloud Infrastructure** - AWS, Terraform, Ansible và System Design cho high availability.
+> **Master Cloud Infrastructure** - AWS, Terraform, Ansible, and System Design for high availability.
+>
+> *Thành thạo Cloud Infrastructure - AWS, Terraform, Ansible và System Design cho high availability.*
 
 ---
 
-## 🎯 Mục Tiêu Track
+## 🎯 Track Objectives (Mục Tiêu)
 
-Sau khi hoàn thành Track 3, bạn sẽ có khả năng:
+After completing Track 3, you will (Sau khi hoàn thành Track 3, bạn sẽ):
 
-- ✅ Thiết kế và triển khai VPC, subnets, security groups
-- ✅ Sử dụng AWS core services (EC2, S3, RDS, IAM)
-- ✅ Quản lý databases cho DevOps (MySQL, PostgreSQL, Redis, MongoDB)
-- ✅ Configuration management với Ansible
-- ✅ Infrastructure as Code với Terraform
-- ✅ Thiết kế hệ thống high availability và scalable
-- ✅ **Xây dựng full AWS infrastructure với Terraform**
+- ✅ Design and deploy VPC, subnets, security groups (Thiết kế và triển khai VPC)
+- ✅ Use AWS core services - EC2, S3, RDS, IAM (Sử dụng dịch vụ AWS)
+- ✅ Manage databases for DevOps - MySQL, PostgreSQL, Redis (Quản lý databases)
+- ✅ Configuration management with Ansible (Quản lý cấu hình với Ansible)
+- ✅ Infrastructure as Code with Terraform (IaC với Terraform)
+- ✅ Design high availability and scalable systems (Thiết kế hệ thống HA)
+- ✅ **Build full AWS infrastructure with Terraform** (Xây dựng hạ tầng AWS)
 
 ---
 

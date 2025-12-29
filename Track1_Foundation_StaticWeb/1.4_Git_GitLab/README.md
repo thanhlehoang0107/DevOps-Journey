@@ -11,11 +11,11 @@
 
 ## 🎯 Learning Objectives (Mục tiêu học tập)
 
-- [ ] Understand what Git is and why we need it (Hiểu Git là gì và tại sao cần dùng)
-- [ ] Basic operations: init, add, commit, push, pull (Thao tác cơ bản)
-- [ ] Branching and merging (Phân nhánh và hợp nhất)
-- [ ] Handle conflicts (Xử lý xung đột)
-- [ ] Work with GitHub/GitLab (Làm việc với GitHub/GitLab)
+- ✅ Understand what Git is and why we need it (Hiểu Git là gì và tại sao cần dùng)
+- ✅ Basic operations: init, add, commit, push, pull (Thao tác cơ bản)
+- ✅ Branching and merging (Phân nhánh và hợp nhất)
+- ✅ Handle conflicts (Xử lý xung đột)
+- ✅ Work with GitHub/GitLab (Làm việc với GitHub/GitLab)
 
 ---
 

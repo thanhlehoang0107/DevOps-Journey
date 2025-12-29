@@ -3,47 +3,50 @@
 [![GitHub](https://img.shields.io/badge/GitHub-DevOps--Journey-blue?style=flat-square&logo=github)](https://github.com/thanhlehoang0107/DevOps-Journey)
 [![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
 
-> **Hành trình từ Zero đến DevOps Engineer** - Lộ trình học tập toàn diện với hands-on labs, projects thực tế và best practices từ industry.
+> **From Zero to DevOps Engineer** - Comprehensive learning path with hands-on labs, real projects, and industry best practices.
+>
+> *Hành trình từ Zero đến DevOps Engineer - Lộ trình học tập toàn diện với labs thực hành, projects thực tế và best practices.*
 
 ---
 
-## 📋 Mục Lục
+## 📋 Table of Contents (Mục Lục)
 
-- [Giới Thiệu](#-giới-thiệu)
-- [Yêu Cầu Tiên Quyết](#-yêu-cầu-tiên-quyết)
-- [Cấu Trúc Lộ Trình](#-cấu-trúc-lộ-trình)
-- [Hướng Dẫn Sử Dụng](#-hướng-dẫn-sử-dụng)
-- [Tiến Độ Học Tập](#-tiến-độ-học-tập)
-- [Đóng Góp](#-đóng-góp)
-- [Liên Hệ](#-liên-hệ)
+- [Introduction](#-introduction-giới-thiệu)
+- [Prerequisites](#-prerequisites-yêu-cầu)
+- [Roadmap Structure](#-roadmap-structure-cấu-trúc)
+- [Tracks Overview](#-tracks-overview-tổng-quan)
+- [Quick Start](#-quick-start)
+- [Contributing](#-contributing-đóng-góp)
 
 ---
 
-## 🎯 Giới Thiệu
+## 🎯 Introduction (Giới Thiệu)
 
-**DevOps Journey** là lộ trình học tập DevOps toàn diện, được thiết kế cho:
+**DevOps Journey** is a comprehensive DevOps learning path, designed for:
 
-- 🌱 **Người mới bắt đầu** - Chưa có kinh nghiệm IT
-- 💻 **Developer** - Muốn chuyển sang DevOps
-- 🔧 **SysAdmin** - Muốn nâng cao kỹ năng automation
-- 📈 **DevOps Engineer** - Muốn củng cố kiến thức
+*Lộ trình học tập DevOps toàn diện, được thiết kế cho:*
 
-### ✨ Điểm Nổi Bật
+- 🌱 **Beginners** - No IT experience (Người mới bắt đầu)
+- 💻 **Developers** - Want to transition to DevOps (Developer muốn chuyển sang DevOps)
+- 🔧 **SysAdmins** - Want to improve automation skills (SysAdmin muốn nâng cao kỹ năng)
+- 📈 **DevOps Engineers** - Want to strengthen knowledge (Muốn củng cố kiến thức)
 
-| Feature | Mô Tả |
-|---------|-------|
-| 📚 **5 Tracks** | Từ Foundation đến Career Path |
-| 🔬 **Hands-on Labs** | Bài thực hành chi tiết từng bước |
-| 🎯 **Capstone Projects** | Dự án tổng hợp cuối mỗi Track |
-| 📝 **Quizzes** | Kiểm tra kiến thức sau mỗi module |
-| 📖 **Cheatsheets** | Tài liệu tham khảo nhanh |
+### ✨ Key Features (Điểm Nổi Bật)
+
+| Feature | Description |
+|---------|-------------|
+| 📚 **5 Tracks** | From Foundation to Career Path (Từ nền tảng đến sự nghiệp) |
+| 🔬 **Hands-on Labs** | Step-by-step practical exercises (Bài thực hành chi tiết) |
+| 🎯 **Capstone Projects** | Real-world projects per Track (Dự án tổng hợp) |
+| 📝 **Quizzes** | Knowledge checks (Kiểm tra kiến thức) |
+| 📖 **Cheatsheets** | Quick reference guides (Tài liệu tra cứu nhanh) |
 | 🛠️ **Real-world Tools** | Docker, Kubernetes, Terraform, AWS... |
 
 ---
 
-## 📋 Yêu Cầu Tiên Quyết
+## 📋 Prerequisites (Yêu Cầu Tiên Quyết)
 
-Trước khi bắt đầu, bạn cần chuẩn bị:
+Before starting, you need to prepare (Trước khi bắt đầu, bạn cần chuẩn bị):
 
 ### Phần Cứng
 

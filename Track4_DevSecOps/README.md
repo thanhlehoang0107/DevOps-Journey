@@ -4,21 +4,23 @@
 [![Level](https://img.shields.io/badge/Level-Advanced-red?style=flat-square)](.)
 [![Prerequisites](https://img.shields.io/badge/Prerequisites-Track%201--3-green?style=flat-square)](../Track3_Cloud_Network_Design/)
 
-> **Security-First DevOps** - Tích hợp security vào mọi giai đoạn của CI/CD pipeline.
+> **Security-First DevOps** - Integrate security into every stage of CI/CD pipeline.
+>
+> *DevOps bảo mật - Tích hợp security vào mọi giai đoạn của CI/CD pipeline.*
 
 ---
 
-## 🎯 Mục Tiêu Track
+## 🎯 Track Objectives (Mục Tiêu)
 
-Sau khi hoàn thành Track 4, bạn sẽ có khả năng:
+After completing Track 4, you will (Sau khi hoàn thành Track 4, bạn sẽ):
 
-- ✅ Implement SAST (Static Application Security Testing)
-- ✅ Implement DAST (Dynamic Application Security Testing)
-- ✅ Container image scanning và vulnerability management
-- ✅ Secrets management với HashiCorp Vault
-- ✅ Infrastructure security hardening
-- ✅ Compliance as Code
-- ✅ **Xây dựng Secure CI/CD Pipeline end-to-end**
+- ✅ Implement SAST - Static Application Security Testing (Triển khai SAST)
+- ✅ Implement DAST - Dynamic Application Security Testing (Triển khai DAST)
+- ✅ Container image scanning and vulnerability management (Quét container và quản lý lỗ hổng)
+- ✅ Secrets management with HashiCorp Vault (Quản lý secrets với Vault)
+- ✅ Infrastructure security hardening (Bảo mật hạ tầng)
+- ✅ Compliance as Code (Tuân thủ dạng code)
+- ✅ **Build Secure CI/CD Pipeline end-to-end** (Xây dựng pipeline bảo mật)
 
 ---
 

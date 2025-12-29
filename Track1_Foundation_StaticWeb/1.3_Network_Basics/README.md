@@ -11,11 +11,11 @@
 
 ## 🎯 Learning Objectives (Mục tiêu học tập)
 
-- [ ] Understand OSI and TCP/IP models (Hiểu mô hình OSI và TCP/IP)
-- [ ] Understand IP addressing and subnetting (Hiểu địa chỉ IP và chia subnet)
-- [ ] Understand DNS and how it works (Hiểu DNS và cách hoạt động)
-- [ ] Use network troubleshooting tools (Sử dụng các công cụ khắc phục sự cố mạng)
-- [ ] Understand HTTP/HTTPS protocol (Hiểu giao thức HTTP/HTTPS)
+- ✅ Understand OSI and TCP/IP models (Hiểu mô hình OSI và TCP/IP)
+- ✅ Understand IP addressing and subnetting (Hiểu địa chỉ IP và chia subnet)
+- ✅ Understand DNS and how it works (Hiểu DNS và cách hoạt động)
+- ✅ Use network troubleshooting tools (Sử dụng các công cụ khắc phục sự cố mạng)
+- ✅ Understand HTTP/HTTPS protocol (Hiểu giao thức HTTP/HTTPS)
 
 ---
 

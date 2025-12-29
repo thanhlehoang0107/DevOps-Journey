@@ -4,21 +4,23 @@
 [![Level](https://img.shields.io/badge/Level-Intermediate-orange?style=flat-square)](.)
 [![Prerequisites](https://img.shields.io/badge/Prerequisites-Track%201-green?style=flat-square)](../Track1_Foundation_StaticWeb/)
 
-> **Nâng cao kỹ năng DevOps** - Master Docker Compose, Kubernetes, Jenkins và Monitoring stack.
+> **Level Up DevOps Skills** - Master Docker Compose, Kubernetes, Jenkins, and Monitoring stack.
+>
+> *Nâng cao kỹ năng DevOps - Thành thạo Docker Compose, Kubernetes, Jenkins và Monitoring.*
 
 ---
 
-## 🎯 Mục Tiêu Track
+## 🎯 Track Objectives (Mục Tiêu)
 
-Sau khi hoàn thành Track 2, bạn sẽ có khả năng:
+After completing Track 2, you will (Sau khi hoàn thành Track 2, bạn sẽ):
 
-- ✅ Xây dựng multi-container applications với Docker Compose
-- ✅ Tối ưu hóa Docker images (multi-stage builds, caching)
-- ✅ Thiết lập CI/CD pipelines với Jenkins
-- ✅ Deploy và quản lý applications trên Kubernetes
-- ✅ Implement monitoring với Prometheus & Grafana
-- ✅ Centralized logging với ELK Stack
-- ✅ **Deploy microservices architecture trên Kubernetes cluster**
+- ✅ Build multi-container applications with Docker Compose (Xây dựng ứng dụng đa container)
+- ✅ Optimize Docker images - multi-stage builds, caching (Tối ưu Docker images)
+- ✅ Set up CI/CD pipelines with Jenkins (Thiết lập CI/CD với Jenkins)
+- ✅ Deploy and manage applications on Kubernetes (Deploy ứng dụng trên K8s)
+- ✅ Implement monitoring with Prometheus & Grafana (Triển khai monitoring)
+- ✅ Centralized logging with ELK Stack (Logging tập trung với ELK)
+- ✅ **Deploy microservices architecture on Kubernetes cluster** (Deploy microservices trên K8s)
 
 ---
 

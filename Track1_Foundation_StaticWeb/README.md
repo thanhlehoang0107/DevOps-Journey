@@ -3,22 +3,24 @@
 [![Duration](https://img.shields.io/badge/Duration-4--6%20weeks-blue?style=flat-square)](.)
 [![Level](https://img.shields.io/badge/Level-Beginner-green?style=flat-square)](.)
 
-> **Xây dựng nền tảng vững chắc** - Từ zero đến deploy website tĩnh với CI/CD pipeline.
+> **Build a solid foundation** - From zero to deploying a static website with CI/CD pipeline.
+>
+> *Xây dựng nền tảng vững chắc - Từ zero đến deploy website tĩnh với CI/CD pipeline.*
 
 ---
 
-## 🎯 Mục Tiêu Track
+## 🎯 Track Objectives (Mục Tiêu)
 
-Sau khi hoàn thành Track 1, bạn sẽ có khả năng:
+After completing Track 1, you will (Sau khi hoàn thành Track 1, bạn sẽ):
 
-- ✅ Làm việc thoải mái với Linux command line và Bash scripting
-- ✅ Viết Python scripts cho automation tasks
-- ✅ Hiểu networking fundamentals (TCP/IP, DNS, HTTP)
-- ✅ Sử dụng Git & GitHub hiệu quả
-- ✅ Containerize ứng dụng với Docker
-- ✅ Cấu hình NGINX web server
-- ✅ Thiết lập CI/CD pipeline với GitHub Actions
-- ✅ **Deploy một website tĩnh hoàn chỉnh với automated pipeline**
+- ✅ Work comfortably with Linux command line and Bash scripting (Làm việc thoải mái với Linux)
+- ✅ Write Python scripts for automation tasks (Viết Python scripts tự động hóa)
+- ✅ Understand networking fundamentals - TCP/IP, DNS, HTTP (Hiểu networking cơ bản)
+- ✅ Use Git & GitHub effectively (Sử dụng Git hiệu quả)
+- ✅ Containerize applications with Docker (Container hóa ứng dụng với Docker)
+- ✅ Configure NGINX web server (Cấu hình NGINX)
+- ✅ Set up CI/CD pipeline with GitHub Actions (Thiết lập CI/CD pipeline)
+- ✅ **Deploy a complete static website with automated pipeline** (Deploy website hoàn chỉnh)
 
 ---
 
