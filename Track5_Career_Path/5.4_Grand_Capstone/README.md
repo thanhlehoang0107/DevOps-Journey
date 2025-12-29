@@ -1,14 +1,107 @@
-# Module 5.4: Grand Capstone Project
->
-> 🏆 End-to-End DevOps System - Tích hợp toàn bộ kiến thức
+# 🏆 Module 5.4: Grand Capstone Project
 
-## Mục tiêu
+> **Enterprise DevOps Platform**
 
-Xây dựng một hệ thống hoàn chỉnh tích hợp toàn bộ kiến thức từ Track 1-4.
+---
 
-## Yêu cầu
+## 🎯 Project Overview
 
-- Infrastructure as Code (Terraform)
-- CI/CD Pipeline với security scanning
-- Kubernetes deployment
-- Monitoring & Observability
+Xây dựng complete DevOps platform tổng hợp tất cả kiến thức từ 5 tracks.
+
+---
+
+## 📋 Requirements
+
+### Architecture
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                    Enterprise DevOps Platform                    │
+├─────────────────────────────────────────────────────────────────┤
+│  ┌─────────────┐ ┌─────────────┐ ┌─────────────┐               │
+│  │   GitLab    │ │   Jenkins   │ │   ArgoCD    │  CI/CD        │
+│  └─────────────┘ └─────────────┘ └─────────────┘               │
+├─────────────────────────────────────────────────────────────────┤
+│  ┌─────────────┐ ┌─────────────┐ ┌─────────────┐               │
+│  │ Kubernetes  │ │   Istio     │ │   Vault     │  Platform     │
+│  └─────────────┘ └─────────────┘ └─────────────┘               │
+├─────────────────────────────────────────────────────────────────┤
+│  ┌─────────────┐ ┌─────────────┐ ┌─────────────┐               │
+│  │ Prometheus  │ │  Grafana    │ │    Loki     │  Observability│
+│  └─────────────┘ └─────────────┘ └─────────────┘               │
+├─────────────────────────────────────────────────────────────────┤
+│  ┌─────────────┐ ┌─────────────┐ ┌─────────────┐               │
+│  │  Terraform  │ │   Ansible   │ │   Pulumi    │  IaC          │
+│  └─────────────┘ └─────────────┘ └─────────────┘               │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+### Components
+
+1. **Infrastructure (Track 3)**
+   - Multi-AZ AWS infrastructure
+   - Terraform modules
+   - Network design
+
+2. **Platform (Track 2)**
+   - Kubernetes cluster
+   - Service mesh
+   - Container registry
+
+3. **CI/CD (Track 1 & 2)**
+   - Multi-environment pipeline
+   - GitOps deployment
+   - Automated testing
+
+4. **Security (Track 4)**
+   - Secrets management
+   - Security scanning
+   - Compliance
+
+5. **Observability (Track 2)**
+   - Metrics, logs, traces
+   - Dashboards
+   - Alerting
+
+---
+
+## ✅ Deliverables
+
+- [ ] Complete infrastructure code
+- [ ] Working Kubernetes cluster
+- [ ] CI/CD pipelines
+- [ ] Security controls
+- [ ] Monitoring stack
+- [ ] Architecture documentation
+- [ ] Runbooks
+- [ ] Presentation deck
+
+---
+
+## 📊 Evaluation
+
+| Criteria | Weight |
+|----------|--------|
+| Architecture design | 20% |
+| Implementation quality | 25% |
+| Security | 15% |
+| Automation level | 15% |
+| Documentation | 15% |
+| Presentation | 10% |
+
+---
+
+## 🎓 Completion
+
+Upon completing this project, you have demonstrated:
+
+- End-to-end DevOps skills
+- Production-ready infrastructure
+- Security best practices
+- Clear documentation
+
+**Congratulations! You are ready for a DevOps role! 🚀**
+
+---
+
+**[← Back to Track 5](../README.md)** | **[Back to Home →](../../README.md)**
