@@ -1,6 +1,8 @@
 # 🧪 Labs - Linux & Bash
 
-> Bài thực hành hands-on để củng cố kiến thức
+> **Hands-on Labs to Strengthen Your Knowledge**
+>
+> *Bài thực hành hands-on để củng cố kiến thức*
 
 ---
 

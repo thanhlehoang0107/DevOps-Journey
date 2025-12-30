@@ -1,6 +1,8 @@
 # 📝 Quiz - Linux & Bash
 
-> Kiểm tra kiến thức về Linux và Bash scripting
+> **Knowledge Check for Linux and Bash Scripting**
+>
+> *Kiểm tra kiến thức về Linux và Bash scripting*
 
 ---
 
