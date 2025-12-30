@@ -1,6 +1,8 @@
 # ❓ Quiz: Network Basics
 
-> Kiểm tra kiến thức Networking. Chọn đáp án đúng nhất.
+> **Knowledge Check for Networking**
+>
+> *Kiểm tra kiến thức Networking. Chọn đáp án đúng nhất.*
 
 ---
 

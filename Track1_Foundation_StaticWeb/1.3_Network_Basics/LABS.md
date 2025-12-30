@@ -1,6 +1,8 @@
 # 🔬 Labs: Network Basics
 
-> Bài thực hành về networking cho DevOps.
+> **Hands-on Labs for DevOps Networking**
+>
+> *Bài thực hành về networking cho DevOps.*
 
 ---
 

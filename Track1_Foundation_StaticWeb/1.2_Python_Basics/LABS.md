@@ -1,6 +1,8 @@
 # 🔬 Labs: Python Basics
 
-> Bài thực hành Python cho DevOps automation.
+> **Hands-on Labs for Python DevOps Automation**
+>
+> *Bài thực hành Python cho DevOps automation.*
 
 ---
 

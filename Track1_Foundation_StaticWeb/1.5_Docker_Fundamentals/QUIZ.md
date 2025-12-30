@@ -1,6 +1,8 @@
 # ❓ Quiz: Docker Fundamentals
 
-> 20 câu hỏi về Docker.
+> **Knowledge Check for Docker (20 Questions)**
+>
+> *Kiểm tra kiến thức Docker (20 câu hỏi).*
 
 ---
 

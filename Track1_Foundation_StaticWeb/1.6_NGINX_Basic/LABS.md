@@ -1,6 +1,8 @@
 # 🔬 Labs: NGINX Basic
 
-> Bài thực hành NGINX cơ bản.
+> **Hands-on Labs for NGINX Configuration**
+>
+> *Bài thực hành NGINX cơ bản.*
 
 ---
 

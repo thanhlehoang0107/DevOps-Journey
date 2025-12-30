@@ -1,5 +1,9 @@
 # ❓ Quiz: Kubernetes Core
 
+> **Knowledge Check for Kubernetes Fundamentals**
+>
+> *Kiểm tra kiến thức Kubernetes cơ bản.*
+
 ---
 
 ### Q1

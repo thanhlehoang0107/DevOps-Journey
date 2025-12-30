@@ -1,6 +1,8 @@
 # ❓ Quiz: Python Basics
 
-> Kiểm tra kiến thức Python cho DevOps. Chọn đáp án đúng nhất.
+> **Knowledge Check for Python in DevOps**
+>
+> *Kiểm tra kiến thức Python cho DevOps. Chọn đáp án đúng nhất.*
 
 ---
 

@@ -1,5 +1,9 @@
 # 🔬 Labs: Kubernetes Core
 
+> **Hands-on Labs for Kubernetes**
+>
+> *Bài thực hành Kubernetes.*
+
 ---
 
 ## 🔬 Lab 1: Minikube Setup

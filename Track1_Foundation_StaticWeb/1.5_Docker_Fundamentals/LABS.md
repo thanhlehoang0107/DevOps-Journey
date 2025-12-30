@@ -1,6 +1,8 @@
 # 🔬 Labs: Docker Fundamentals
 
-> Bài thực hành Docker cơ bản.
+> **Hands-on Labs for Docker Basics**
+>
+> *Bài thực hành Docker cơ bản.*
 
 ---
 

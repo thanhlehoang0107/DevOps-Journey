@@ -1,6 +1,8 @@
 # 🔬 Labs: Docker Advanced
 
-> Bài thực hành Docker nâng cao.
+> **Hands-on Labs for Advanced Docker**
+>
+> *Bài thực hành Docker nâng cao.*
 
 ---
 

@@ -1,6 +1,8 @@
 # ❓ Quiz: Docker Advanced
 
-> 20 câu hỏi về Docker nâng cao.
+> **Knowledge Check for Advanced Docker (20 Questions)**
+>
+> *Kiểm tra kiến thức Docker nâng cao (20 câu hỏi).*
 
 ---
 

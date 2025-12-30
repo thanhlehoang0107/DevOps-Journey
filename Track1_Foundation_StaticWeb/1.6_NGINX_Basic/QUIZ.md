@@ -1,6 +1,8 @@
 # ❓ Quiz: NGINX Basic
 
-> 15 câu hỏi về NGINX.
+> **Knowledge Check for NGINX (15 Questions)**
+>
+> *Kiểm tra kiến thức NGINX (15 câu hỏi).*
 
 ---
 

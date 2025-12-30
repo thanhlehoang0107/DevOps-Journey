@@ -46,10 +46,10 @@
 
 ### Q5: What is Trivy used for? (Trivy dùng để làm gì?)
 
-- A) Build Docker images
-- B) Scan container vulnerabilities ✓
-- C) Deploy applications
-- D) Monitor systems
+- A) Build Docker images (Tạo Docker image)
+- B) Scan container vulnerabilities (Quét lỗ hổng an toàn trong container) ✓
+- C) Deploy applications (Deploy ứng dụng)
+- D) Monitor systems (Theo dõi hệ thống)
 
 ---
 
