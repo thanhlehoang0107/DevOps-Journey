@@ -1,6 +1,8 @@
 # 📋 Cheatsheet: Python Basics
 
-> Tham khảo nhanh các syntax và functions Python cho DevOps.
+> **Quick Reference for Python in DevOps**
+>
+> *Tra cứu nhanh Python cho DevOps*
 
 ---
 

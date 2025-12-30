@@ -1,6 +1,8 @@
 # 📋 Cheatsheet: Network Basics
 
-> Tham khảo nhanh các khái niệm và commands networking.
+> **Quick Reference for Networking Concepts & Commands**
+>
+> *Tra cứu nhanh khái niệm và lệnh mạng*
 
 ---
 

@@ -4,7 +4,7 @@
 
 ---
 
-## Track 1 Setup
+## Track 1 Setup 
 
 ### Cách 1: Tự động (Khuyến nghị)
 
