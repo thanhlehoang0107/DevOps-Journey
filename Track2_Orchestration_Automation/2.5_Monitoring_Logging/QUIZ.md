@@ -1,5 +1,9 @@
 # ❓ Quiz: Monitoring & Logging
 
+> **Knowledge Check for Prometheus, Grafana & Logging**
+>
+> *Kiểm tra kiến thức Prometheus, Grafana và Logging.*
+
 ---
 
 ### Q1

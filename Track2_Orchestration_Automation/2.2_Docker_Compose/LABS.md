@@ -1,6 +1,8 @@
 # 🔬 Labs: Docker Compose
 
-> Bài thực hành Docker Compose.
+> **Hands-on Labs for Docker Compose**
+>
+> *Bài thực hành Docker Compose.*
 
 ---
 

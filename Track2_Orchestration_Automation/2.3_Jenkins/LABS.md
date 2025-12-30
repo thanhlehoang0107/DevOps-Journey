@@ -1,5 +1,11 @@
 # 🔬 Labs: Jenkins
 
+> **Hands-on Labs for Jenkins Pipelines**
+>
+> *Bài thực hành Jenkins Pipelines.*
+>
+> 💡 Note: GitLab CI is the primary CI/CD platform. Jenkins is taught as an enterprise alternative.
+
 ---
 
 ## 🔬 Lab 1: Jenkins Setup

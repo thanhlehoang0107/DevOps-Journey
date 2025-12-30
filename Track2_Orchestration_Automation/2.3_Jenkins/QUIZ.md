@@ -1,5 +1,11 @@
 # ❓ Quiz: Jenkins
 
+> **Knowledge Check for Jenkins Pipelines**
+>
+> *Kiểm tra kiến thức Jenkins Pipelines.*
+>
+> 💡 Note: GitLab CI is the primary CI/CD platform. Jenkins is taught as an enterprise alternative.
+
 ---
 
 ### Q1

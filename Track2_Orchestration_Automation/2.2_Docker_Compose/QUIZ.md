@@ -1,6 +1,8 @@
 # ❓ Quiz: Docker Compose
 
-> 15 câu hỏi về Docker Compose.
+> **Knowledge Check for Docker Compose (15 Questions)**
+>
+> *Kiểm tra kiến thức Docker Compose (15 câu hỏi).*
 
 ---
 

@@ -1,5 +1,9 @@
 # 🔬 Labs: Monitoring & Logging
 
+> **Hands-on Labs for Prometheus, Grafana & Logging**
+>
+> *Bài thực hành Prometheus, Grafana và Logging.*
+
 ---
 
 ## 🔬 Lab 1: Prometheus Setup
