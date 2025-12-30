@@ -16,37 +16,37 @@ After completing Track 5, you will have (Sau khi hoàn thành Track 5, bạn s�
 
 - ✅ Clear certification roadmap (Lộ trình certification rõ ràng)
 - ✅ Interview skills for DevOps/SRE positions (Kỹ năng phỏng vấn)
-- ✅ Impressive GitHub portfolio (Portfolio GitHub ấn tượng)
+- ✅ Impressive GitHub/GitLab portfolio (Portfolio ấn tượng)
 - ✅ Professional resume and LinkedIn profile (Resume và LinkedIn chuyên nghiệp)
 - ✅ **Production-ready infrastructure project** to showcase (Dự án để giới thiệu)
 - ✅ **Ready to apply for DevOps Engineer positions** (Sẵn sàng apply)
 
 ---
 
-## 📋 Prerequisites
+## 📋 Prerequisites (Điều kiện tiên quyết)
 
-Trước khi bắt đầu Track 5:
+Before starting Track 5 (Trước khi bắt đầu Track 5):
 
-- ✅ **Hoàn thành Track 1-4** (hoặc tương đương)
-- ✅ Có GitHub profile với projects
-- ✅ Có hands-on experience với DevOps tools
+- ✅ **Complete Track 1-4** or equivalent (Hoàn thành Track 1-4 hoặc tương đương)
+- ✅ Have GitHub/GitLab profile with projects (Có profile với các projects)
+- ✅ Have hands-on experience with DevOps tools (Có kinh nghiệm thực hành)
 
 ---
 
-## 📚 Danh Sách Modules
+## 📚 Module List (Danh Sách Modules)
 
-| # | Module | Thời Gian | Mô Tả |
-|---|--------|-----------|-------|
+| # | Module | Duration (Thời gian) | Description (Mô tả) |
+|---|--------|----------------------|---------------------|
 | 5.1 | [Certifications](./5.1_Certifications/) | Ongoing | AWS, CKA/CKS, Terraform Associate |
-| 5.2 | [Interview Prep](./5.2_Interview_Prep/) | 2 tuần | Technical interview, system design |
-| 5.3 | [Portfolio Launch](./5.3_Portfolio_Launch/) | 1 tuần | GitHub profile, resume, LinkedIn |
-| 5.4 | [**Grand Capstone**](./5.4_Grand_Capstone/) | 2-3 tuần | 🎯 Production Infrastructure |
+| 5.2 | [Interview Prep](./5.2_Interview_Prep/) | 2 weeks | Technical interview, system design |
+| 5.3 | [Portfolio Launch](./5.3_Portfolio_Launch/) | 1 week | GitHub profile, resume, LinkedIn |
+| 5.4 | [**Grand Capstone**](./5.4_Grand_Capstone/) | 2-3 weeks | 🎯 Production Infrastructure |
 
 ---
 
-## 🗓️ Lịch Trình Đề Xuất
+## 🗓️ Suggested Schedule (Lịch Trình Đề Xuất)
 
-### Tuần 1-2: Interview Preparation
+### Week 1-2: Interview Preparation
 
 ```
 Week 1:
@@ -60,16 +60,16 @@ Week 2:
 - Day 5-7: System design interviews
 ```
 
-### Tuần 3: Portfolio Launch
+### Week 3: Portfolio Launch
 
 ```
-Day 1-2: GitHub profile optimization
+Day 1-2: GitHub/GitLab profile optimization
 Day 3-4: Project documentation
 Day 5-6: Resume & cover letter
 Day 7: LinkedIn profile update
 ```
 
-### Tuần 4-6: Grand Capstone
+### Week 4-6: Grand Capstone
 
 ```
 Week 4: Architecture & planning
@@ -86,9 +86,9 @@ Schedule exams strategically
 
 ---
 
-## 📜 Certification Roadmap
+## 📜 Certification Roadmap (Lộ trình chứng chỉ)
 
-### Entry Level (0-1 year)
+### Entry Level (0-1 year experience)
 
 | Certification | Provider | Difficulty | Prep Time |
 |--------------|----------|------------|-----------|
@@ -96,7 +96,7 @@ Schedule exams strategically
 | **CompTIA Linux+** | CompTIA | ⭐⭐ | 4-6 weeks |
 | **Docker Certified Associate** | Docker | ⭐⭐ | 4 weeks |
 
-### Intermediate (1-2 years)
+### Intermediate (1-2 years experience)
 
 | Certification | Provider | Difficulty | Prep Time |
 |--------------|----------|------------|-----------|
@@ -104,7 +104,7 @@ Schedule exams strategically
 | **Terraform Associate** | HashiCorp | ⭐⭐ | 4 weeks |
 | **CKA** (Kubernetes Admin) | CNCF | ⭐⭐⭐ | 8-10 weeks |
 
-### Advanced (2+ years)
+### Advanced (2+ years experience)
 
 | Certification | Provider | Difficulty | Prep Time |
 |--------------|----------|------------|-----------|
@@ -112,7 +112,7 @@ Schedule exams strategically
 | **CKS** (Kubernetes Security) | CNCF | ⭐⭐⭐⭐ | 6-8 weeks |
 | **AWS DevOps Engineer Professional** | AWS | ⭐⭐⭐⭐ | 8-10 weeks |
 
-### Recommended Order
+### Recommended Order (Thứ tự khuyến nghị)
 
 ```
 1. AWS Cloud Practitioner ─────────┐
@@ -126,13 +126,13 @@ Schedule exams strategically
 5. AWS Professional certs ─────────── Advanced
 ```
 
-👉 **[Chi tiết Certification Guide →](./5.1_Certifications/)**
+👉 **[View Certification Guide →](./5.1_Certifications/)** | **[Xem chi tiết →](./5.1_Certifications/)**
 
 ---
 
-## 💼 Interview Preparation
+## 💼 Interview Preparation (Chuẩn bị phỏng vấn)
 
-### Technical Topics
+### Technical Topics (Chủ đề kỹ thuật)
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -161,7 +161,7 @@ Schedule exams strategically
 │                                                             │
 │  🔄 CI/CD                                                   │
 │     • Pipeline design & optimization                        │
-│     • Jenkins, GitHub Actions, GitLab CI                    │
+│     • GitLab CI, Jenkins, GitHub Actions                    │
 │     • Deployment strategies                                 │
 │                                                             │
 │  ☁️ Cloud & IaC                                             │
@@ -182,7 +182,7 @@ Schedule exams strategically
 └─────────────────────────────────────────────────────────────┘
 ```
 
-### Common Interview Types
+### Common Interview Types (Các loại phỏng vấn phổ biến)
 
 | Type | Duration | Focus |
 |------|----------|-------|
@@ -192,41 +192,41 @@ Schedule exams strategically
 | **Behavioral** | 30-45 min | Experience, soft skills |
 | **Take-home Project** | 2-7 days | Practical implementation |
 
-👉 **[Chi tiết Interview Guide →](./5.2_Interview_Prep/)**
+👉 **[View Interview Guide →](./5.2_Interview_Prep/)** | **[Xem chi tiết →](./5.2_Interview_Prep/)**
 
 ---
 
-## 📁 Portfolio Requirements
+## 📁 Portfolio Requirements (Yêu cầu Portfolio)
 
-### GitHub Profile Essentials
+### GitHub/GitLab Profile Essentials
 
 ```
-Your GitHub Profile
+Your Profile (Profile của bạn)
 ├── 📝 Profile README (with stats & badges)
 ├── 📌 Pinned repositories (6 best projects)
 ├── 🔗 Working links & demos
 └── 📊 Contribution graph (stay green!)
 ```
 
-### Recommended Projects to Showcase
+### Recommended Projects to Showcase (Dự án nên có)
 
-| Project | Skills Demonstrated |
-|---------|---------------------|
+| Project | Skills Demonstrated (Kỹ năng thể hiện) |
+|---------|----------------------------------------|
 | **IaC Project** | Terraform, AWS, networking |
 | **K8s Deployment** | Kubernetes, Helm, container |
-| **CI/CD Pipeline** | Jenkins/GHA, automation |
+| **CI/CD Pipeline** | GitLab CI/Jenkins, automation |
 | **Monitoring Stack** | Prometheus, Grafana |
 | **DevSecOps Pipeline** | Security tools, scanning |
 
-### Documentation Standards
+### Documentation Standards (Tiêu chuẩn tài liệu)
 
-- ✅ Clear README with architecture diagram
-- ✅ Prerequisites & setup instructions
-- ✅ Configuration options explained
-- ✅ Troubleshooting section
+- ✅ Clear README with architecture diagram (README rõ ràng với sơ đồ)
+- ✅ Prerequisites & setup instructions (Hướng dẫn cài đặt)
+- ✅ Configuration options explained (Giải thích các tùy chọn)
+- ✅ Troubleshooting section (Phần xử lý lỗi)
 - ✅ License file
 
-👉 **[Chi tiết Portfolio Guide →](./5.3_Portfolio_Launch/)**
+👉 **[View Portfolio Guide →](./5.3_Portfolio_Launch/)** | **[Xem chi tiết →](./5.3_Portfolio_Launch/)**
 
 ---
 
@@ -234,23 +234,23 @@ Your GitHub Profile
 
 ### **Production-Ready Microservices Platform**
 
-Dự Án cuối cùng tổng hợp tất cả kiến thức:
+The final project combines all knowledge (Dự án cuối tổng hợp tất cả kiến thức):
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
 │                    Grand Capstone Architecture                       │
 │                                                                     │
 │  ┌───────────────────────────────────────────────────────────────┐ │
-│  │                    GitHub Repository                          │ │
+│  │                    GitLab Repository                          │ │
 │  │  • Application code (microservices)                          │ │
 │  │  • Terraform configurations                                   │ │
 │  │  • Kubernetes manifests                                       │ │
-│  │  • CI/CD workflows                                            │ │
+│  │  • CI/CD workflows (.gitlab-ci.yml)                          │ │
 │  └───────────────────────────────────────────────────────────────┘ │
 │                               │                                     │
 │                               ▼                                     │
 │  ┌───────────────────────────────────────────────────────────────┐ │
-│  │                 CI/CD Pipeline (GitHub Actions)               │ │
+│  │                 CI/CD Pipeline (GitLab CI)                    │ │
 │  │  Build → Test → Scan → Deploy → Verify                       │ │
 │  └───────────────────────────────────────────────────────────────┘ │
 │                               │                                     │
@@ -283,41 +283,41 @@ Dự Án cuối cùng tổng hợp tất cả kiến thức:
 └─────────────────────────────────────────────────────────────────────┘
 ```
 
-### Capstone Requirements
+### Capstone Requirements (Yêu cầu Capstone)
 
 | Component | Requirement |
 |-----------|-------------|
 | **Infrastructure** | AWS via Terraform (VPC, EKS, RDS) |
 | **Application** | 3+ microservices on Kubernetes |
-| **CI/CD** | Full pipeline với security scanning |
+| **CI/CD** | Full pipeline with security scanning (Pipeline đầy đủ với quét bảo mật) |
 | **Monitoring** | Prometheus + Grafana dashboards |
-| **Documentation** | Complete README, architecture diagram |
-| **Security** | Secrets management, scanning |
+| **Documentation** | Complete README, architecture diagram (README đầy đủ, sơ đồ kiến trúc) |
+| **Security** | Secrets management, scanning (Quản lý secrets, quét bảo mật) |
 
-### Evaluation Criteria
+### Evaluation Criteria (Tiêu chí đánh giá)
 
-- ✅ Code quality & best practices
-- ✅ Security implementation
-- ✅ Documentation quality
-- ✅ Working demo
-- ✅ Presentation skills
+- ✅ Code quality & best practices (Chất lượng code & best practices)
+- ✅ Security implementation (Triển khai bảo mật)
+- ✅ Documentation quality (Chất lượng tài liệu)
+- ✅ Working demo (Demo hoạt động)
+- ✅ Presentation skills (Kỹ năng trình bày)
 
-👉 **[Chi tiết Grand Capstone →](./5.4_Grand_Capstone/)**
+👉 **[View Grand Capstone →](./5.4_Grand_Capstone/)** | **[Xem chi tiết →](./5.4_Grand_Capstone/)**
 
 ---
 
-## 💼 Career Outcomes
+## 💼 Career Outcomes (Kết quả nghề nghiệp)
 
 ### DevOps Engineer Roles
 
-| Role | YoE | Salary Range (US) |
-|------|-----|-------------------|
+| Role | Years of Experience | Salary Range (US) |
+|------|---------------------|-------------------|
 | **Junior DevOps** | 0-2 | $70k - $100k |
 | **DevOps Engineer** | 2-5 | $100k - $150k |
 | **Senior DevOps** | 5-8 | $140k - $180k |
 | **Staff/Principal** | 8+ | $170k - $250k+ |
 
-### Related Roles
+### Related Roles (Các vị trí liên quan)
 
 - Site Reliability Engineer (SRE)
 - Platform Engineer
@@ -335,20 +335,22 @@ Dự Án cuối cùng tổng hợp tất cả kiến thức:
 
 ---
 
-## 📖 Bắt Đầu
+## 📖 Getting Started (Bắt Đầu)
 
 ```bash
-# Bắt đầu với Certifications
+# Start with Certifications (Bắt đầu với Certifications)
 cd 5.1_Certifications
 cat README.md
 ```
 
-**📚 Bắt đầu học:** [5.1 Certifications →](./5.1_Certifications/)
+**📚 Start learning:** [5.1 Certifications →](./5.1_Certifications/)
 
 ---
 
 <div align="center">
 
 **🎓 Your DevOps Journey Ends Here, Your Career Begins! 🚀**
+
+*Hành trình DevOps của bạn kết thúc ở đây, sự nghiệp bắt đầu!*
 
 </div>

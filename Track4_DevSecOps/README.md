@@ -24,30 +24,30 @@ After completing Track 4, you will (Sau khi hoàn thành Track 4, bạn sẽ):
 
 ---
 
-## 📋 Prerequisites
+## 📋 Prerequisites (Điều kiện tiên quyết)
 
-Trước khi bắt đầu Track 4, bạn cần hoàn thành:
+Before starting Track 4, you should complete (Trước khi bắt đầu Track 4, bạn cần hoàn thành):
 
 - ✅ **Track 1, 2 & 3**
-- ✅ Có kinh nghiệm với CI/CD pipelines
-- ✅ Hiểu container security basics
-- ✅ Familiar với cloud security concepts
+- ✅ Have experience with CI/CD pipelines (Có kinh nghiệm với CI/CD)
+- ✅ Understand container security basics (Hiểu container security cơ bản)
+- ✅ Familiar with cloud security concepts (Quen với cloud security)
 
 ---
 
-## 📚 Danh Sách Modules
+## 📚 Module List (Danh Sách Modules)
 
-| # | Module | Thời Gian | Mô Tả |
-|---|--------|-----------|-------|
-| 4.1 | [Security in Pipeline](./4.1_Security_in_Pipeline/) | 2 tuần | SAST, DAST, SCA, Container Scanning |
-| 4.2 | [Infrastructure Security](./4.2_Infra_Security/) | 2 tuần | Secrets Management, Hardening, Compliance |
-| 4.3 | [**Capstone Project**](./4.3_Capstone_Project/) | 1-2 tuần | 🎯 Secure CI/CD Pipeline |
+| # | Module | Duration (Thời gian) | Description (Mô tả) |
+|---|--------|----------------------|---------------------|
+| 4.1 | [Security in Pipeline](./4.1_Security_in_Pipeline/) | 2 weeks | SAST, DAST, SCA, Container Scanning |
+| 4.2 | [Infrastructure Security](./4.2_Infra_Security/) | 2 weeks | Secrets Management, Hardening, Compliance |
+| 4.3 | [**Capstone Project**](./4.3_Capstone_Project/) | 1-2 weeks | 🎯 Secure CI/CD Pipeline |
 
 ---
 
-## 🗓️ Lịch Trình Đề Xuất
+## 🗓️ Suggested Schedule (Lịch Trình Đề Xuất)
 
-### Tuần 1-2: Security in Pipeline
+### Week 1-2: Security in Pipeline
 
 ```
 Week 1:
@@ -61,7 +61,7 @@ Week 2:
 - Day 6-7: Integrating security gates in CI/CD
 ```
 
-### Tuần 3-4: Infrastructure Security
+### Week 3-4: Infrastructure Security
 
 ```
 Week 3:
@@ -75,7 +75,7 @@ Week 4:
 - Day 6-7: Incident response basics
 ```
 
-### Tuần 5-6: Capstone Project
+### Week 5-6: Capstone Project
 
 ```
 Week 5:
@@ -91,43 +91,43 @@ Week 6:
 
 ---
 
-## 🛠️ Tools Sử Dụng
+## 🛠️ Tools Used (Công cụ sử dụng)
 
 ### Static Analysis (SAST)
 
-| Tool | Mục Đích | Documentation |
-|------|----------|---------------|
+| Tool | Purpose (Mục đích) | Documentation |
+|------|-------------------|---------------|
 | **SonarQube** | Code quality & security | [sonarqube.org](https://docs.sonarqube.org/) |
 | **Semgrep** | Static analysis | [semgrep.dev](https://semgrep.dev/docs/) |
 | **Bandit** | Python security | [bandit.readthedocs.io](https://bandit.readthedocs.io/) |
 
 ### Dynamic Analysis (DAST)
 
-| Tool | Mục Đích | Documentation |
-|------|----------|---------------|
+| Tool | Purpose (Mục đích) | Documentation |
+|------|-------------------|---------------|
 | **OWASP ZAP** | Web app security testing | [zaproxy.org](https://www.zaproxy.org/docs/) |
 | **Nuclei** | Vulnerability scanning | [nuclei.projectdiscovery.io](https://nuclei.projectdiscovery.io/) |
 
 ### Container Security
 
-| Tool | Mục Đích | Documentation |
-|------|----------|---------------|
+| Tool | Purpose (Mục đích) | Documentation |
+|------|-------------------|---------------|
 | **Trivy** | Container scanning | [aquasecurity.github.io/trivy](https://aquasecurity.github.io/trivy/) |
 | **Grype** | Vulnerability scanner | [github.com/anchore/grype](https://github.com/anchore/grype) |
 | **Falco** | Runtime security | [falco.org](https://falco.org/docs/) |
 
 ### Secrets Management
 
-| Tool | Mục Đích | Documentation |
-|------|----------|---------------|
+| Tool | Purpose (Mục đích) | Documentation |
+|------|-------------------|---------------|
 | **HashiCorp Vault** | Secrets management | [vaultproject.io](https://www.vaultproject.io/docs) |
 | **AWS Secrets Manager** | AWS secrets | [aws.amazon.com](https://docs.aws.amazon.com/secretsmanager/) |
 | **GitLeaks** | Git secret scanning | [gitleaks.io](https://github.com/gitleaks/gitleaks) |
 
 ### Compliance & Policy
 
-| Tool | Mục Đích | Documentation |
-|------|----------|---------------|
+| Tool | Purpose (Mục đích) | Documentation |
+|------|-------------------|---------------|
 | **Checkov** | IaC scanning | [checkov.io](https://www.checkov.io/1.Welcome/Quick%20Start.html) |
 | **OPA/Gatekeeper** | Policy as Code | [openpolicyagent.org](https://www.openpolicyagent.org/docs/) |
 | **tfsec** | Terraform security | [tfsec.dev](https://aquasecurity.github.io/tfsec/) |
@@ -149,12 +149,12 @@ Week 6:
 9. Using Components with Known Vulnerabilities
 10. Insufficient Logging & Monitoring
 
-### DevSecOps Practices
+### DevSecOps Practices (Thực hành DevSecOps)
 
-- **Shift Left** - Security early in SDLC
-- **Automation** - Automated security testing
-- **Continuous** - Security in every pipeline run
-- **Collaboration** - Dev, Sec, Ops working together
+- **Shift Left** - Security early in SDLC (Bảo mật sớm trong vòng đời phát triển)
+- **Automation** - Automated security testing (Kiểm thử bảo mật tự động)
+- **Continuous** - Security in every pipeline run (Bảo mật trong mọi lần chạy pipeline)
+- **Collaboration** - Dev, Sec, Ops working together (Làm việc cùng nhau)
 
 ---
 
@@ -162,7 +162,7 @@ Week 6:
 
 ### **Secure CI/CD Pipeline Implementation**
 
-Bạn sẽ xây dựng:
+You will build (Bạn sẽ xây dựng):
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
@@ -198,40 +198,40 @@ Bạn sẽ xây dựng:
 └─────────────────────────────────────────────────────────────────────┘
 ```
 
-### Security Gates
+### Security Gates (Các cổng bảo mật)
 
-- ⛔ **Pre-commit**: Secret scanning
-- ⛔ **Build**: SAST, SCA, Container scan
-- ⛔ **Test**: DAST, Integration tests
-- ⛔ **Deploy**: Policy compliance check
-- ⛔ **Runtime**: Continuous monitoring
+- ⛔ **Pre-commit**: Secret scanning (Quét secrets)
+- ⛔ **Build**: SAST, SCA, Container scan (Quét code, dependencies, container)
+- ⛔ **Test**: DAST, Integration tests (Kiểm thử động)
+- ⛔ **Deploy**: Policy compliance check (Kiểm tra tuân thủ)
+- ⛔ **Runtime**: Continuous monitoring (Giám sát liên tục)
 
-### Deliverables
+### Deliverables (Sản phẩm bàn giao)
 
-- 🔄 Complete CI/CD pipeline với security gates
-- 📊 Security dashboard với metrics
-- 📝 Security policies documented
-- 🔐 Vault integration cho secrets
-- 📋 Compliance reports
+- 🔄 Complete CI/CD pipeline with security gates (Pipeline hoàn chỉnh với security gates)
+- 📊 Security dashboard with metrics (Dashboard bảo mật)
+- 📝 Security policies documented (Tài liệu chính sách)
+- 🔐 Vault integration for secrets (Tích hợp Vault)
+- 📋 Compliance reports (Báo cáo tuân thủ)
 
-👉 **[Xem chi tiết Capstone Project →](./4.3_Capstone_Project/)**
+👉 **[View Capstone Details →](./4.3_Capstone_Project/)** | **[Xem chi tiết →](./4.3_Capstone_Project/)**
 
 ---
 
-## 📊 Đánh Giá
+## 📊 Evaluation (Đánh Giá)
 
-### Tiêu Chí Hoàn Thành Track
+### Track Completion Criteria (Tiêu chí hoàn thành Track)
 
-- ✅ Hoàn thành tất cả 2 modules
+- ✅ Complete all 2 modules (Hoàn thành tất cả 2 modules)
 - ✅ Submit Capstone Project
-- ✅ Pass security audit của pipeline
+- ✅ Pass security audit of pipeline (Qua kiểm tra bảo mật pipeline)
 - ✅ Demo working security gates
 
 ---
 
-## 📚 Certifications Related
+## 📚 Certifications Related (Chứng chỉ liên quan)
 
-Sau Track này, bạn có thể chuẩn bị cho:
+After this Track, you can prepare for (Sau Track này, bạn có thể chuẩn bị cho):
 
 | Certification | Provider | Level |
 |--------------|----------|-------|
@@ -250,20 +250,22 @@ Sau Track này, bạn có thể chuẩn bị cho:
 
 ---
 
-## 📖 Bắt Đầu
+## 📖 Getting Started (Bắt Đầu)
 
 ```bash
-# Bắt đầu với Module 4.1
+# Start with Module 4.1 (Bắt đầu với Module 4.1)
 cd 4.1_Security_in_Pipeline
 cat README.md
 ```
 
-**📚 Bắt đầu học:** [4.1 Security in Pipeline →](./4.1_Security_in_Pipeline/)
+**📚 Start learning:** [4.1 Security in Pipeline →](./4.1_Security_in_Pipeline/)
 
 ---
 
 <div align="center">
 
 **🔐 Security is Everyone's Responsibility! 🔐**
+
+*Bảo mật là trách nhiệm của tất cả mọi người!*
 
 </div>

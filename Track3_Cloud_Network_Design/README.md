@@ -24,48 +24,48 @@ After completing Track 3, you will (Sau khi hoàn thành Track 3, bạn sẽ):
 
 ---
 
-## 📋 Prerequisites
+## 📋 Prerequisites (Điều kiện tiên quyết)
 
-Trước khi bắt đầu Track 3, bạn cần hoàn thành:
+Before starting Track 3, you should complete (Trước khi bắt đầu Track 3, bạn cần hoàn thành):
 
 - ✅ **Track 1 & Track 2**
-- ✅ Có AWS Free Tier account
-- ✅ Hiểu Kubernetes basics
-- ✅ Familiar với YAML configuration
+- ✅ Have AWS Free Tier account (Có tài khoản AWS Free Tier)
+- ✅ Understand Kubernetes basics (Hiểu K8s cơ bản)
+- ✅ Familiar with YAML configuration (Quen thuộc với YAML)
 
 ---
 
-## 📚 Danh Sách Modules
+## 📚 Module List (Danh Sách Modules)
 
-| # | Module | Thời Gian | Mô Tả |
-|---|--------|-----------|-------|
-| 3.1 | [Network Advanced](./3.1_Network_Advanced/) | 1-2 tuần | VPC, Subnets, NAT, Load Balancing |
-| 3.2 | [AWS Core Services](./3.2_AWS_Core_Services/) | 2 tuần | EC2, S3, RDS, IAM, CloudWatch |
-| 3.3 | [Databases for DevOps](./3.3_Databases_for_DevOps/) | 1-2 tuần | MySQL, PostgreSQL, Redis, MongoDB |
-| 3.4 | [Ansible](./3.4_Config_Management_Ansible/) | 1-2 tuần | Playbooks, Roles, Inventory |
-| 3.5 | [Terraform](./3.5_Terraform_IaC/) | 2 tuần | HCL, Modules, State, Workspaces |
-| 3.6 | [System Design & Reliability](./3.6_System_Design_Reliability/) | 1 tuần | HA, Scalability, Disaster Recovery |
-| 3.7 | [**Capstone Project**](./3.7_Capstone_Project/) | 1-2 tuần | 🎯 Production AWS Infrastructure |
+| # | Module | Duration (Thời gian) | Description (Mô tả) |
+|---|--------|----------------------|---------------------|
+| 3.1 | [Network Advanced](./3.1_Network_Advanced/) | 1-2 weeks | VPC, Subnets, NAT, Load Balancing |
+| 3.2 | [AWS Core Services](./3.2_AWS_Core_Services/) | 2 weeks | EC2, S3, RDS, IAM, CloudWatch |
+| 3.3 | [Databases for DevOps](./3.3_Databases_for_DevOps/) | 1-2 weeks | MySQL, PostgreSQL, Redis, MongoDB |
+| 3.4 | [Ansible](./3.4_Config_Management_Ansible/) | 1-2 weeks | Playbooks, Roles, Inventory |
+| 3.5 | [Terraform](./3.5_Terraform_IaC/) | 2 weeks | HCL, Modules, State, Workspaces |
+| 3.6 | [System Design & Reliability](./3.6_System_Design_Reliability/) | 1 week | HA, Scalability, Disaster Recovery |
+| 3.7 | [**Capstone Project**](./3.7_Capstone_Project/) | 1-2 weeks | 🎯 Production AWS Infrastructure |
 
 ---
 
-## 🗓️ Lịch Trình Đề Xuất
+## 🗓️ Suggested Schedule (Lịch Trình Đề Xuất)
 
-### Tuần 1-2: Network Advanced
+### Week 1-2: Network Advanced
 
 ```
 Week 1: VPC fundamentals, subnets, route tables
 Week 2: NAT Gateway, VPN, VPC Peering, Load Balancers
 ```
 
-### Tuần 3-4: AWS Core Services
+### Week 3-4: AWS Core Services
 
 ```
 Week 3: EC2, AMI, Auto Scaling Groups
 Week 4: S3, RDS, IAM policies, CloudWatch
 ```
 
-### Tuần 5: Databases for DevOps
+### Week 5: Databases for DevOps
 
 ```
 Day 1-2: MySQL/PostgreSQL administration
@@ -73,21 +73,21 @@ Day 3-4: Redis caching strategies
 Day 5-7: MongoDB for application data
 ```
 
-### Tuần 6-7: Ansible
+### Week 6-7: Ansible
 
 ```
 Week 6: Ansible basics, playbooks, modules
 Week 7: Roles, variables, templates, vault
 ```
 
-### Tuần 8-9: Terraform
+### Week 8-9: Terraform
 
 ```
 Week 8: Terraform fundamentals, resources, providers
 Week 9: Modules, state management, workspaces
 ```
 
-### Tuần 10: System Design + Capstone
+### Week 10: System Design + Capstone
 
 ```
 Day 1-3: HA patterns, scalability, DR strategies
@@ -96,10 +96,10 @@ Day 4-7: Capstone implementation
 
 ---
 
-## 🛠️ Tools Sử Dụng
+## 🛠️ Tools Used (Công cụ sử dụng)
 
-| Tool | Mục Đích | Documentation |
-|------|----------|---------------|
+| Tool | Purpose (Mục đích) | Documentation |
+|------|-------------------|---------------|
 | **AWS CLI** | AWS command line | [aws.amazon.com/cli](https://aws.amazon.com/cli/) |
 | **Terraform** | Infrastructure as Code | [terraform.io](https://www.terraform.io/docs/) |
 | **Ansible** | Configuration management | [docs.ansible.com](https://docs.ansible.com/) |
@@ -156,7 +156,7 @@ Day 4-7: Capstone implementation
 
 ### **Production-Ready AWS Infrastructure**
 
-Bạn sẽ xây dựng:
+You will build (Bạn sẽ xây dựng):
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
@@ -209,45 +209,45 @@ Bạn sẽ xây dựng:
                     All managed by Terraform + Ansible
 ```
 
-### Deliverables
+### Deliverables (Sản phẩm bàn giao)
 
-- 📁 **Terraform modules** cho VPC, EKS, RDS
-- 📜 **Ansible playbooks** cho configuration
-- 🔐 **IAM policies** với least privilege
+- 📁 **Terraform modules** for VPC, EKS, RDS (cho VPC, EKS, RDS)
+- 📜 **Ansible playbooks** for configuration (cho cấu hình)
+- 🔐 **IAM policies** with least privilege (với quyền tối thiểu)
 - 📊 **CloudWatch dashboards**
-- 📝 **Documentation** và **runbooks**
+- 📝 **Documentation** and **runbooks** (Tài liệu và runbooks)
 
-👉 **[Xem chi tiết Capstone Project →](./3.7_Capstone_Project/)**
+👉 **[View Capstone Details →](./3.7_Capstone_Project/)** | **[Xem chi tiết →](./3.7_Capstone_Project/)**
 
 ---
 
 ## 💰 AWS Cost Considerations
 
-> ⚠️ **Chú ý**: AWS resources có thể phát sinh chi phí
+> ⚠️ **Note (Chú ý)**: AWS resources can incur costs (AWS resources có thể phát sinh chi phí)
 
-### Free Tier Limits
+### Free Tier Limits (Giới hạn Free Tier)
 
 - EC2: 750 hours/month (t2.micro)
 - S3: 5GB storage
 - RDS: 750 hours/month (db.t2.micro)
 
-### Cost Optimization Tips
+### Cost Optimization Tips (Mẹo tối ưu chi phí)
 
-1. Luôn **terminate** resources sau khi thực hành
-2. Sử dụng **Spot Instances** cho testing
-3. Setup **Billing Alerts** trên AWS
-4. Dùng **LocalStack** cho local testing
+1. Always **terminate** resources after practice (Luôn terminate resources sau khi thực hành)
+2. Use **Spot Instances** for testing (Dùng Spot Instances cho testing)
+3. Setup **Billing Alerts** on AWS (Thiết lập Billing Alerts)
+4. Use **LocalStack** for local testing (Dùng LocalStack cho local testing)
 
 ---
 
-## 📊 Đánh Giá
+## 📊 Evaluation (Đánh Giá)
 
-### Tiêu Chí Hoàn Thành Track
+### Track Completion Criteria (Tiêu chí hoàn thành Track)
 
-- ✅ Hoàn thành tất cả 6 modules
-- ✅ Submit Capstone Project với Terraform code
+- ✅ Complete all 6 modules (Hoàn thành tất cả 6 modules)
+- ✅ Submit Capstone Project with Terraform code
 - ✅ Demo working infrastructure on AWS
-- ✅ Pass cost review (resources cleaned up)
+- ✅ Pass cost review - resources cleaned up (Resources đã dọn dẹp)
 
 ---
 
@@ -259,20 +259,22 @@ Bạn sẽ xây dựng:
 
 ---
 
-## 📖 Bắt Đầu
+## 📖 Getting Started (Bắt Đầu)
 
 ```bash
-# Bắt đầu với Module 3.1
+# Start with Module 3.1 (Bắt đầu với Module 3.1)
 cd 3.1_Network_Advanced
 cat README.md
 ```
 
-**📚 Bắt đầu học:** [3.1 Network Advanced →](./3.1_Network_Advanced/)
+**📚 Start learning:** [3.1 Network Advanced →](./3.1_Network_Advanced/)
 
 ---
 
 <div align="center">
 
 **☁️ Welcome to the Cloud! ☁️**
+
+*Chào mừng đến với Cloud!*
 
 </div>

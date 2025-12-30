@@ -1,4 +1,4 @@
-# 💪 Exercises: Git & GitHub
+# 💪 Exercises: Git & GitLab
 
 > Bài tập tự luyện Git.
 

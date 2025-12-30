@@ -1,4 +1,4 @@
-# ✅ Solutions: Git & GitHub
+# ✅ Solutions: Git & GitLab
 
 > Đáp án cho Exercises.
 

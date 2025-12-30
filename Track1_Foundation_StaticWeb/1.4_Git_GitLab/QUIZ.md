@@ -1,4 +1,4 @@
-# ❓ Quiz: Git & GitHub
+# ❓ Quiz: Git & GitLab
 
 > 20 câu hỏi về Git.
 

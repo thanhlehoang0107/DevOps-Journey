@@ -30,28 +30,30 @@ Combine all Track 2 knowledge to deploy a production-ready microservices platfor
 │                                              │                │
 │                    ┌─────────────────────────┼───────┐       │
 │                    │                         │       │       │
-│              ┌─────▼─────┐  ┌───────────┐  ┌─▼───┐   │       │
-│              │ PostgreSQL│  │   Redis   │  │ RabbitMQ│       │
-│              └───────────┘  └───────────┘  └─────┘   │       │
-│                                                      │       │
-│  ┌─────────────────────────────────────────────────┐│       │
-│  │              Monitoring Stack                    ││       │
-│  │  Prometheus │ Grafana │ Loki │ Alertmanager     ││       │
-│  └─────────────────────────────────────────────────┘│       │
-└──────────────────────────────────────────────────────┘       │
-                              │                                 │
-                    ┌─────────▼─────────┐                      │
-                    │    Jenkins CI/CD   │                      │
-                    └───────────────────┘                      │
+│              ┌─────▼─────┐  ┌───────────┐  ┌─▼───┐          │
+│              │ PostgreSQL│  │   Redis   │  │ RabbitMQ       │
+│              └───────────┘  └───────────┘  └─────┘          │
+│                                                              │
+│  ┌─────────────────────────────────────────────────────┐    │
+│  │              Monitoring Stack                        │    │
+│  │  Prometheus │ Grafana │ Loki │ Alertmanager         │    │
+│  └─────────────────────────────────────────────────────┘    │
+└──────────────────────────────────────────────────────────────┘
+                               │
+                     ┌─────────▼─────────┐
+                     │  GitLab CI / Jenkins │
+                     └───────────────────┘
 ```
+
+---
 
 ### Deliverables (Sản phẩm bàn giao)
 
 #### 1. Application - Docker Images (Ứng dụng)
 
-- [ ] Frontend container (< 50MB)
+- [ ] Frontend container (< 50MB) - multi-stage build
 - [ ] Backend services with multi-stage builds (Backend với multi-stage builds)
-- [ ] All images pushed to registry (Tất cả images đã push lên registry)
+- [ ] All images pushed to GitLab Container Registry (Tất cả images đã push lên registry)
 
 #### 2. Kubernetes Manifests
 
@@ -60,21 +62,80 @@ Combine all Track 2 knowledge to deploy a production-ready microservices platfor
 - [ ] ConfigMaps & Secrets
 - [ ] PersistentVolumeClaims
 - [ ] HorizontalPodAutoscaler
+- [ ] Ingress configuration (Cấu hình Ingress)
 
 #### 3. CI/CD Pipeline
 
-- [ ] Jenkins/GitHub Actions pipeline
+> Choose GitLab CI (recommended) or Jenkins (Chọn GitLab CI (khuyến nghị) hoặc Jenkins)
+
+**GitLab CI Example:**
+
+```yaml
+# .gitlab-ci.yml
+stages:
+  - test
+  - build
+  - deploy
+
+variables:
+  REGISTRY: $CI_REGISTRY
+  IMAGE_TAG: $CI_COMMIT_SHORT_SHA
+
+test:
+  stage: test
+  image: node:18
+  script:
+    - npm ci
+    - npm test
+
+build:
+  stage: build
+  image: docker:latest
+  services:
+    - docker:dind
+  script:
+    - docker build -t $REGISTRY/frontend:$IMAGE_TAG ./apps/frontend
+    - docker push $REGISTRY/frontend:$IMAGE_TAG
+
+deploy-staging:
+  stage: deploy
+  image: bitnami/kubectl:latest
+  script:
+    - kubectl apply -k k8s/staging/
+  environment:
+    name: staging
+  only:
+    - develop
+
+deploy-production:
+  stage: deploy
+  image: bitnami/kubectl:latest
+  script:
+    - kubectl apply -k k8s/production/
+  environment:
+    name: production
+  when: manual
+  only:
+    - main
+```
+
+**Requirements (Yêu cầu CI/CD):**
+
 - [ ] Automated testing (Test tự động)
-- [ ] Docker build & push
-- [ ] Kubernetes deployment
+- [ ] Docker build & push (Build và push Docker)
+- [ ] Kubernetes deployment (Deploy lên Kubernetes)
+- [ ] Staging/Production environments (Môi trường Staging/Production)
 - [ ] Rollback capability (Khả năng rollback)
 
 #### 4. Monitoring (Giám sát)
 
 - [ ] Prometheus scraping all services
-- [ ] Grafana dashboards (minimum 3) (Tối thiểu 3 dashboard)
+- [ ] Grafana dashboards (minimum 3) (Tối thiểu 3 dashboard):
+  - Kubernetes cluster overview
+  - Application metrics (Request rate, latency, errors)
+  - Infrastructure metrics (CPU, Memory, Disk)
 - [ ] Alert rules configured (Đã cấu hình cảnh báo)
-- [ ] Logging with Loki (Logging với Loki)
+- [ ] Logging with Loki or ELK (Logging với Loki hoặc ELK)
 
 ---
 
@@ -98,14 +159,18 @@ capstone-project/
 │   │   ├── services/
 │   │   └── kustomization.yaml
 │   ├── staging/
+│   │   └── kustomization.yaml
 │   └── production/
+│       └── kustomization.yaml
 ├── monitoring/
 │   ├── prometheus/
+│   │   └── prometheus.yml
 │   ├── grafana/
-│   └── docker-compose.yml
-├── ci/
-│   ├── Jenkinsfile
-│   └── .github/workflows/
+│   │   └── dashboards/
+│   └── alertmanager/
+│       └── alertmanager.yml
+├── .gitlab-ci.yml          # GitLab CI (Primary)
+├── Jenkinsfile             # Jenkins (Alternative)
 └── README.md
 ```
 
@@ -137,11 +202,20 @@ capstone-project/
 ## 🚀 Getting Started (Bắt đầu)
 
 1. Setup Kubernetes cluster - minikube/kind (Thiết lập cluster Kubernetes)
-2. Deploy base infrastructure (Deploy hạ tầng cơ bản)
-3. Build and deploy applications (Build và deploy ứng dụng)
-4. Setup CI/CD (Thiết lập CI/CD)
-5. Configure monitoring (Cấu hình giám sát)
-6. Document everything (Viết tài liệu)
+2. Create GitLab project with Container Registry enabled (Tạo project GitLab với Container Registry)
+3. Deploy base infrastructure - databases, queues (Deploy hạ tầng cơ bản)
+4. Build and deploy applications (Build và deploy ứng dụng)
+5. Setup CI/CD pipeline (Thiết lập pipeline CI/CD)
+6. Configure monitoring stack (Cấu hình stack giám sát)
+7. Document everything (Viết tài liệu)
+
+---
+
+## 📖 Resources (Tài liệu tham khảo)
+
+- [Kubernetes Documentation](https://kubernetes.io/docs/)
+- [GitLab CI/CD Documentation](https://docs.gitlab.com/ee/ci/)
+- [Prometheus + Grafana Setup](https://prometheus.io/docs/)
 
 ---
 

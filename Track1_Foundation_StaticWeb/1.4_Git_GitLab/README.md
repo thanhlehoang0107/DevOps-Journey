@@ -11,11 +11,13 @@
 
 ## 🎯 Learning Objectives (Mục tiêu học tập)
 
+After this module, you will (Sau module này, bạn sẽ):
+
 - ✅ Understand what Git is and why we need it (Hiểu Git là gì và tại sao cần dùng)
 - ✅ Basic operations: init, add, commit, push, pull (Thao tác cơ bản)
 - ✅ Branching and merging (Phân nhánh và hợp nhất)
 - ✅ Handle conflicts (Xử lý xung đột)
-- ✅ Work with GitHub/GitLab (Làm việc với GitHub/GitLab)
+- ✅ Work with GitLab and GitHub (Làm việc với GitLab và GitHub)
 
 ---
 
@@ -42,7 +44,7 @@
 │  Directory    Area          Repository    Repository        │
 │                                                              │
 │    Files   →  git add   →  git commit  →  git push   →     │
-│  (modified)   (staged)     (committed)   (pushed)  GitHub  │
+│  (modified)   (staged)     (committed)   (pushed)  GitLab  │
 │                                                              │
 │              ←  git restore --staged                         │
 │    ←─────────────────────────  git pull  ←─────────────     │
@@ -62,6 +64,9 @@ git config --global user.email "your.email@example.com"
 # Check configuration (Kiểm tra cấu hình)
 git config --list
 
+# Default branch (Branch mặc định)
+git config --global init.defaultBranch main
+
 # Configure editor - optional (Cấu hình editor - tùy chọn)
 git config --global core.editor "code --wait"
 
@@ -80,7 +85,11 @@ git config --global core.autocrlf input  # Linux/macOS
 # Create new repo (Tạo repo mới)
 git init
 
-# Clone repo from remote (Clone repo từ remote)
+# Clone repo from GitLab (Clone repo từ GitLab)
+git clone https://gitlab.com/user/repo.git
+git clone git@gitlab.com:user/repo.git
+
+# Clone repo from GitHub (Clone repo từ GitHub)
 git clone https://github.com/user/repo.git
 git clone git@github.com:user/repo.git
 ```
@@ -182,7 +191,8 @@ git commit -m "Add validation"
 # 4. Push branch (Push branch)
 git push origin feature/login-page
 
-# 5. Create Pull Request on GitHub (Tạo Pull Request trên GitHub)
+# 5. Create Merge Request on GitLab (Tạo Merge Request trên GitLab)
+#    Or Pull Request on GitHub (Hoặc Pull Request trên GitHub)
 
 # 6. After merge, delete branch (Sau khi merge, xóa branch)
 git checkout main
@@ -267,20 +277,62 @@ logs/
 
 ---
 
-### 9. SSH Keys for GitHub (SSH Keys cho GitHub)
+### 9. SSH Keys Setup (Cấu hình SSH Keys)
+
+> This course supports both **GitLab** (primary) and **GitHub**.
+>
+> *Khóa học hỗ trợ cả **GitLab** (chính) và **GitHub**.*
+
+#### Generate SSH Key (Tạo SSH key)
 
 ```bash
 # Generate SSH key (Tạo SSH key)
 ssh-keygen -t ed25519 -C "your.email@example.com"
 
+# Start ssh-agent
+eval "$(ssh-agent -s)"
+
+# Add key (Thêm key)
+ssh-add ~/.ssh/id_ed25519
+
 # Copy public key (Copy public key)
 cat ~/.ssh/id_ed25519.pub
-# Paste into GitHub → Settings → SSH Keys
-# (Dán vào GitHub → Settings → SSH Keys)
+```
+
+#### For GitLab (Primary - Chính)
+
+```bash
+# Paste key to: GitLab > Preferences > SSH Keys
+# (Dán key vào: GitLab > Preferences > SSH Keys)
+
+# Test connection (Kiểm tra kết nối)
+ssh -T git@gitlab.com
+# Expected: Welcome to GitLab, @username!
+```
+
+#### For GitHub (Alternative - Thay thế)
+
+```bash
+# Paste key to: GitHub > Settings > SSH and GPG Keys
+# (Dán key vào: GitHub > Settings > SSH and GPG Keys)
 
 # Test connection (Kiểm tra kết nối)
 ssh -T git@github.com
+# Expected: Hi username! You've successfully authenticated...
 ```
+
+---
+
+### 10. GitLab vs GitHub Comparison (So sánh)
+
+| Feature | GitLab | GitHub |
+|---------|--------|--------|
+| **Merge Request/Pull Request** | Merge Request (MR) | Pull Request (PR) |
+| **CI/CD Config** | `.gitlab-ci.yml` | `.github/workflows/*.yml` |
+| **Container Registry** | Built-in | GitHub Packages |
+| **Free Private Repos** | ✅ Yes | ✅ Yes |
+| **Self-hosted** | GitLab CE (free) | GitHub Enterprise (paid) |
+| **Issue Tracking** | ✅ Yes | ✅ Yes |
 
 ---
 
@@ -303,7 +355,7 @@ ssh -T git@github.com
 
 | ← Previous | Current | Next → |
 |:------------------:|:------------------:|:-------------:|
-| [1.3 Network](../1.3_Network_Basics/) | **1.4 Git** | [1.5 Docker](../1.5_Docker_Fundamentals/) |
+| [1.3 Network](../1.3_Network_Basics/) | **1.4 Git & GitLab** | [1.5 Docker](../1.5_Docker_Fundamentals/) |
 
 ---
 

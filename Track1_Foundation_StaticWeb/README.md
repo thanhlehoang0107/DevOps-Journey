@@ -19,7 +19,7 @@ After completing Track 1, you will (Sau khi hoàn thành Track 1, bạn sẽ):
 - ✅ Use Git & GitHub effectively (Sử dụng Git hiệu quả)
 - ✅ Containerize applications with Docker (Container hóa ứng dụng với Docker)
 - ✅ Configure NGINX web server (Cấu hình NGINX)
-- ✅ Set up CI/CD pipeline with GitHub Actions (Thiết lập CI/CD pipeline)
+- ✅ Set up CI/CD pipeline with **GitLab CI** (Thiết lập CI/CD pipeline với GitLab CI)
 - ✅ **Deploy a complete static website with automated pipeline** (Deploy website hoàn chỉnh)
 
 ---
@@ -31,10 +31,10 @@ After completing Track 1, you will (Sau khi hoàn thành Track 1, bạn sẽ):
 | 1.1 | [Linux & Bash](./1.1_Linux_Bash/) | 1 week | Linux OS, command line, Bash scripting |
 | 1.2 | [Python Basics](./1.2_Python_Basics/) | 1 week | Python fundamentals for DevOps automation |
 | 1.3 | [Network Basics](./1.3_Network_Basics/) | 3-4 days | TCP/IP, DNS, HTTP, OSI model |
-| 1.4 | [Git & GitHub](./1.4_Git_GitLab/) | 1 week | Version control, branching strategies |
+| 1.4 | [Git & GitLab](./1.4_Git_GitLab/) | 1 week | Version control, branching strategies |
 | 1.5 | [Docker Fundamentals](./1.5_Docker_Fundamentals/) | 1 week | Containers, Dockerfile, Docker images |
 | 1.6 | [NGINX Basic](./1.6_NGINX_Basic/) | 3-4 days | Web server configuration, reverse proxy |
-| 1.7 | [CI/CD Basic](./1.7_CICD_Basic/) | 1 week | GitHub Actions, automated workflows |
+| 1.7 | [CI/CD Basic](./1.7_CICD_Basic/) | 1 week | GitLab CI, automated workflows |
 | 1.8 | [**Capstone Project**](./1.8_Capstone_Project/) | 3-4 days | 🎯 Deploy Static Website with CI/CD |
 
 ---
@@ -76,7 +76,7 @@ Day 6-7: Docker Hub, registries
 
 ```
 Day 1-3: NGINX installation, configuration
-Day 4-7: GitHub Actions, workflows, automation
+Day 4-7: GitLab CI, workflows, automation
 ```
 
 ### Week 6: Capstone Project
@@ -100,7 +100,8 @@ Day 5-7: Testing, documentation, deployment
 | **Docker** | Containerization | [docker.com](https://docker.com) |
 | **NGINX** | Web server | apt/docker |
 | **VS Code** | Code editor | [code.visualstudio.com](https://code.visualstudio.com) |
-| **GitHub** | Code hosting, CI/CD | [github.com](https://github.com) |
+| **GitLab** | Code hosting, CI/CD (Primary) | [gitlab.com](https://gitlab.com) |
+| **GitHub** | Code hosting (Alternative) | [github.com](https://github.com) |
 
 ---
 
@@ -109,7 +110,7 @@ Day 5-7: Testing, documentation, deployment
 Before starting Track 1, make sure you have (Trước khi bắt đầu, hãy đảm bảo):
 
 - [ ] Installed [development environment](../Setup_Environment/README.md) (Đã cài đặt môi trường)
-- [ ] Created GitHub account (Đã tạo tài khoản GitHub)
+- [ ] Created GitLab account (Primary) or GitHub account (Đã tạo tài khoản GitLab hoặc GitHub)
 - [ ] Installed Docker Desktop (Đã cài đặt Docker Desktop)
 - [ ] Installed VS Code with extensions (Đã cài đặt VS Code)
 

@@ -64,7 +64,8 @@ Before starting, you need to prepare (Trước khi bắt đầu, bạn cần chu
 
 ### Accounts (Tài Khoản)
 
-- **GitHub Account**: Created with SSH configured (Đã tạo và cấu hình SSH)
+- **GitLab Account** (Primary): Created with SSH configured (Đã tạo và cấu hình SSH)
+- **GitHub Account** (Optional): Alternative platform (Nền tảng thay thế)
 - **Docker Hub Account**: For push/pull images (Để push/pull images)
 - **AWS Free Tier** (Track 3+): For cloud practice (Để thực hành cloud)
 
@@ -134,10 +135,10 @@ Build solid foundation with Linux, Git, Docker and basic CI/CD.
 | [1.1 Linux & Bash](./Track1_Foundation_StaticWeb/1.1_Linux_Bash/) | Linux OS, Bash scripting | 1 week |
 | [1.2 Python Basics](./Track1_Foundation_StaticWeb/1.2_Python_Basics/) | Python for DevOps automation | 1 week |
 | [1.3 Network Basics](./Track1_Foundation_StaticWeb/1.3_Network_Basics/) | TCP/IP, DNS, HTTP, OSI model | 3-4 days |
-| [1.4 Git & GitHub](./Track1_Foundation_StaticWeb/1.4_Git_GitLab/) | Version control, branching, Git flow | 1 week |
+| [1.4 Git & GitLab](./Track1_Foundation_StaticWeb/1.4_Git_GitLab/) | Version control, branching, Git flow | 1 week |
 | [1.5 Docker Fundamentals](./Track1_Foundation_StaticWeb/1.5_Docker_Fundamentals/) | Container, Dockerfile, Images | 1 week |
 | [1.6 NGINX Basic](./Track1_Foundation_StaticWeb/1.6_NGINX_Basic/) | Web server, reverse proxy | 3-4 days |
-| [1.7 CI/CD Basic](./Track1_Foundation_StaticWeb/1.7_CICD_Basic/) | GitHub Actions fundamentals | 1 week |
+| [1.7 CI/CD Basic](./Track1_Foundation_StaticWeb/1.7_CICD_Basic/) | GitLab CI/CD fundamentals | 1 week |
 | [1.8 Capstone](./Track1_Foundation_StaticWeb/1.8_Capstone_Project/) | Deploy Static Website with CI/CD | 3-4 days |
 
 👉 **[Start Track 1 → (Bắt đầu Track 1)](./Track1_Foundation_StaticWeb/README.md)**
@@ -263,7 +264,7 @@ Use the checklist below to track your progress (Sử dụng checklist dưới đ
 - [ ] 1.1 Linux & Bash
 - [ ] 1.2 Python Basics
 - [ ] 1.3 Network Basics
-- [ ] 1.4 Git & GitHub
+- [ ] 1.4 Git & GitLab
 - [ ] 1.5 Docker Fundamentals
 - [ ] 1.6 NGINX Basic
 - [ ] 1.7 CI/CD Basic

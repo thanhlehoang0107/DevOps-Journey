@@ -1,4 +1,4 @@
-# 🔬 Labs: Git & GitHub
+# 🔬 Labs: Git & GitLab
 
 > Bài thực hành Git và GitHub cho DevOps.
 

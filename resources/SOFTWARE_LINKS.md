@@ -1,280 +1,242 @@
-# 🔧 Software Links – Tài liệu cài đặt công cụ
+# 🔧 Software Links
+
+> **Installation guides for all DevOps tools**
+>
+> *Tài liệu cài đặt tất cả công cụ DevOps*
 
 ---
 
-## Giới thiệu
+## 📋 Overview (Giới thiệu)
 
-Tài liệu này tổng hợp link tải chính thức và hướng dẫn cài đặt các công cụ cần thiết cho khóa học DevOps.
+This document contains official download links and installation guides for tools used in this course.
 
-> ⚠️ **Lưu ý:** Chỉ tải từ nguồn chính thức để đảm bảo an toàn.
+*Tài liệu này tổng hợp link tải chính thức và hướng dẫn cài đặt các công cụ.*
+
+> ⚠️ **Note (Lưu ý):** Only download from official sources for security. (Chỉ tải từ nguồn chính thức để đảm bảo an toàn.)
 
 ---
 
-## 1. Môi trường cơ bản
+## 1. Git Platforms (Nền tảng Git)
 
-### 1.1 Windows Subsystem for Linux (WSL2)
+### 1.1 GitLab (Primary - Chính)
 
-| Thông tin | Link |
-|-----------|------|
-| *Tài liệu* | [Microsoft Docs](https://learn.microsoft.com/en-us/windows/wsl/install) |
-| *Yêu cầu* | Windows 10 version 2004+ hoặc Windows 11 |
+| Info | Link |
+|------|------|
+| **Website** | [gitlab.com](https://gitlab.com) |
+| **Documentation** | [docs.gitlab.com](https://docs.gitlab.com) |
+| **Sign Up** | [gitlab.com/users/sign_up](https://gitlab.com/users/sign_up) |
 
-**Windows**
+### 1.2 GitHub (Alternative - Thay thế)
 
-| Thông tin | GUI Installation | CLI Installation |
-|-----------|------------------|------------------|
-| *Install* | [Download](https://www.docker.com/products/docker-desktop/) | `choco install docker-desktop` |
-| *Uninstall* | - | `choco uninstall docker-desktop` |
+| Info | Link |
+|------|------|
+| **Website** | [github.com](https://github.com) |
+| **Documentation** | [docs.github.com](https://docs.github.com) |
+| **GitHub CLI** | [cli.github.com](https://cli.github.com/) |
 
-**macOS**
+**GitHub CLI Installation:**
 
-| Thông tin | GUI Installation | CLI Installation |
-|-----------|------------------|------------------|
-| *Install* |  |  |
-| *Uninstall* |  |  |
+```bash
+# Windows
+choco install gh
 
-**Linux**
+# macOS
+brew install gh
 
-| Thông tin | GUI Installation | CLI Installation |
-|-----------|------------------|------------------|
-| *Install* |  |  |
-| *Uninstall* |  |  |
+# Linux
+sudo apt install gh
+```
+
+### 1.3 GitLab CLI (glab)
+
+| Info | Link |
+|------|------|
+| **Download** | [gitlab.com/gitlab-org/cli](https://gitlab.com/gitlab-org/cli) |
+| **Documentation** | [glab.readthedocs.io](https://glab.readthedocs.io/) |
+
+**Installation:**
+
+```bash
+# Windows
+choco install glab
+
+# macOS
+brew install glab
+
+# Linux
+sudo apt install glab
+```
+
+---
+
+## 2. Basic Environment (Môi trường cơ bản)
+
+### 2.1 Windows Subsystem for Linux (WSL2)
+
+| Info | Link |
+|------|------|
+| **Documentation** | [Microsoft Docs](https://learn.microsoft.com/en-us/windows/wsl/install) |
+| **Requirements** | Windows 10 version 2004+ or Windows 11 |
+
+**Installation:**
+
+```powershell
+# PowerShell as Administrator
+wsl --install
+```
+
+### 2.2 Docker Desktop
+
+| Info | Link |
+|------|------|
+| **Download** | [docker.com](https://www.docker.com/products/docker-desktop/) |
+| **Documentation** | [docs.docker.com](https://docs.docker.com/desktop/) |
+
+| OS | Installation |
+|----|--------------|
+| Windows | [Download](https://www.docker.com/products/docker-desktop/) or `choco install docker-desktop` |
+| macOS | `brew install --cask docker` |
+| Linux | [Install Docker Engine](https://docs.docker.com/engine/install/) |
 
 **Verify:**
 
-    ```bash
+```bash
+docker --version
+docker compose version
+```
 
-    ```
----
+### 2.3 Git
 
-### 1.2 Docker Desktop
+| Info | Link |
+|------|------|
+| **Download** | [git-scm.com](https://git-scm.com/downloads) |
+| **Documentation** | [git-scm.com/doc](https://git-scm.com/doc) |
 
-| Thông tin | Link |
-|-----------|------|
-| *Tài liệu* | [Docker Docs](https://docs.docker.com/desktop/install/) |
-
-**Windows**
-
-| Thông tin | GUI Installation | CLI Installation |
-|-----------|------------------|------------------|
-| *Install* | [Download](https://www.docker.com/products/docker-desktop/) | `choco install docker-desktop` |
-| *Uninstall* | - | `choco uninstall docker-desktop` |
-
-**macOS**
-
-| Thông tin | GUI Installation | CLI Installation |
-|-----------|------------------|------------------|
-| *Install* |  |  |
-| *Uninstall* |  |  |
-
-**Linux**
-
-| Thông tin | GUI Installation | CLI Installation |
-|-----------|------------------|------------------|
-| *Install* |  |  |
-| *Uninstall* |  |  |
+| OS | Installation |
+|----|--------------|
+| Windows | [Download](https://git-scm.com/download/win) or `winget install Git.Git` |
+| macOS | `brew install git` |
+| Linux | `sudo apt install git` |
 
 **Verify:**
 
-    ```bash
+```bash
+git --version
+```
 
-    ```
 ---
 
-### 1.3 Git
+## 3. Code Editor
 
-| Thông tin | Link |
-|-----------|------|
-| *Tài liệu* |  |
+### 3.1 Visual Studio Code
 
-**Windows**
+| Info | Link |
+|------|------|
+| **Download** | [code.visualstudio.com](https://code.visualstudio.com/) |
+| **Documentation** | [code.visualstudio.com/docs](https://code.visualstudio.com/docs) |
 
-| Thông tin | GUI Installation | CLI Installation |
-|-----------|------------------|------------------|
-| *Install* |  |  |
-| *Uninstall* |  |  |
-
-**macOS**
-
-| Thông tin | GUI Installation | CLI Installation |
-|-----------|------------------|------------------|
-| *Install* |  |  |
-| *Uninstall* |  |  |
-
-**Linux**
-
-| Thông tin | GUI Installation | CLI Installation |
-|-----------|------------------|------------------|
-| *Install* |  |  |
-| *Uninstall* |  |  |
+| OS | Installation |
+|----|--------------|
+| Windows | [Download](https://code.visualstudio.com/Download) or `winget install Microsoft.VisualStudioCode` |
+| macOS | `brew install --cask visual-studio-code` |
+| Linux | `sudo snap install code --classic` |
 
 **Verify:**
 
-    ```bash
+```bash
+code --version
+```
 
-    ```
+### 3.2 Recommended Extensions (Extensions khuyến nghị)
+
+```bash
+# Install via command line (Cài đặt qua command line)
+code --install-extension ms-vscode-remote.remote-wsl
+code --install-extension ms-azuretools.vscode-docker
+code --install-extension ms-python.python
+code --install-extension hashicorp.terraform
+code --install-extension redhat.ansible
+code --install-extension ms-kubernetes-tools.vscode-kubernetes-tools
+code --install-extension gitlab.gitlab-workflow      # GitLab integration
+code --install-extension github.vscode-github-actions # GitHub Actions
+code --install-extension eamodio.gitlens
+code --install-extension redhat.vscode-yaml
+```
+
 ---
 
-## 2. Code Editor
+## 4. Container & Orchestration
 
-### 2.1 Visual Studio Code
+### 4.1 kubectl (Kubernetes CLI)
 
-| Thông tin | Link |
-|-----------|------|
-| *Tài liệu* |  |
+| Info | Link |
+|------|------|
+| **Documentation** | [kubernetes.io](https://kubernetes.io/docs/tasks/tools/) |
 
-**Windows**
-
-| Thông tin | GUI Installation | CLI Installation |
-|-----------|------------------|------------------|
-| *Install* |  |  |
-| *Uninstall* |  |  |
-
-**macOS**
-
-| Thông tin | GUI Installation | CLI Installation |
-|-----------|------------------|------------------|
-| *Install* |  |  |
-| *Uninstall* |  |  |
-
-**Linux**
-
-| Thông tin | GUI Installation | CLI Installation |
-|-----------|------------------|------------------|
-| *Install* |  |  |
-| *Uninstall* |  |  |
+| OS | Installation |
+|----|--------------|
+| Windows | `choco install kubernetes-cli` |
+| macOS | `brew install kubectl` |
+| Linux | See [official docs](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/) |
 
 **Verify:**
 
-    ```bash
+```bash
+kubectl version --client
+```
 
-    ```
+### 4.2 Minikube (Local Kubernetes)
 
-### 2.2 Extensions khuyến nghị
+| Info | Link |
+|------|------|
+| **Download** | [minikube.sigs.k8s.io](https://minikube.sigs.k8s.io/docs/start/) |
 
-- Docker
-- Remote - WSL
-- Remote - SSH
-- GitLens
-- YAML
-- Markdown All in One
-- Mermaid Markdown Syntax Highlighting
-
----
-
-## 3. Container & Orchestration
-
-### 3.1 kubectl (Kubernetes CLI)
-
-| Thông tin | Link |
-|-----------|------|
-| *Tài liệu* |  |
-
-**Windows**
-
-| Thông tin | GUI Installation | CLI Installation |
-|-----------|------------------|------------------|
-| *Install* |  |  |
-| *Uninstall* |  |  |
-
-**macOS**
-
-| Thông tin | GUI Installation | CLI Installation |
-|-----------|------------------|------------------|
-| *Install* |  |  |
-| *Uninstall* |  |  |
-
-**Linux**
-
-| Thông tin | GUI Installation | CLI Installation |
-|-----------|------------------|------------------|
-| *Install* |  |  |
-| *Uninstall* |  |  |
+| OS | Installation |
+|----|--------------|
+| Windows | `choco install minikube` |
+| macOS | `brew install minikube` |
+| Linux | See [official docs](https://minikube.sigs.k8s.io/docs/start/) |
 
 **Verify:**
 
-    ```bash
+```bash
+minikube version
+```
 
-    ```
----
+### 4.3 Helm (Kubernetes Package Manager)
 
-### 3.2 Minikube (Local Kubernetes)
+| Info | Link |
+|------|------|
+| **Download** | [helm.sh](https://helm.sh/docs/intro/install/) |
 
-| Thông tin | Link |
-|-----------|------|
-| *Tài liệu* |  |
-
-**Windows**
-
-| Thông tin | GUI Installation | CLI Installation |
-|-----------|------------------|------------------|
-| *Install* |  |  |
-| *Uninstall* |  |  |
-
-**macOS**
-
-| Thông tin | GUI Installation | CLI Installation |
-|-----------|------------------|------------------|
-| *Install* |  |  |
-| *Uninstall* |  |  |
-
-**Linux**
-
-| Thông tin | GUI Installation | CLI Installation |
-|-----------|------------------|------------------|
-| *Install* |  |  |
-| *Uninstall* |  |  |
+| OS | Installation |
+|----|--------------|
+| Windows | `choco install kubernetes-helm` |
+| macOS | `brew install helm` |
+| Linux | See [official docs](https://helm.sh/docs/intro/install/) |
 
 **Verify:**
 
-    ```bash
+```bash
+helm version
+```
 
-    ```
 ---
 
-### 3.3 Helm (Kubernetes Package Manager)
+## 5. Infrastructure as Code
 
-| Thông tin | Link |
-|-----------|------|
-| *Tài liệu* |  |
+### 5.1 Terraform
 
-**Windows**
-
-| Thông tin | GUI Installation | CLI Installation |
-|-----------|------------------|------------------|
-| *Install* |  |  |
-| *Uninstall* |  |  |
-
-**macOS**
-
-| Thông tin | GUI Installation | CLI Installation |
-|-----------|------------------|------------------|
-| *Install* |  |  |
-| *Uninstall* |  |  |
-
-**Linux**
-
-| Thông tin | GUI Installation | CLI Installation |
-|-----------|------------------|------------------|
-| *Install* |  |  |
-| *Uninstall* |  |  |
-
-**Verify:**
-
-    ```bash
-
-    ```
----
-
-## 4. Infrastructure as Code
-
-### 4.1 Terraform
-
-| Thông tin | Link |
-|-----------|------|
+| Info | Link |
+|------|------|
 | **Download** | [terraform.io](https://developer.hashicorp.com/terraform/downloads) |
-| **Windows** | `choco install terraform` |
-| **macOS** | `brew install terraform` |
+| **Documentation** | [terraform.io/docs](https://developer.hashicorp.com/terraform/docs) |
+
+| OS | Installation |
+|----|--------------|
+| Windows | `choco install terraform` |
+| macOS | `brew install terraform` |
+| Linux | See [official docs](https://developer.hashicorp.com/terraform/downloads) |
 
 **Verify:**
 
@@ -282,60 +244,95 @@ Tài liệu này tổng hợp link tải chính thức và hướng dẫn cài �
 terraform version
 ```
 
----
+### 5.2 Ansible
 
-### 4.2 Ansible
+| Info | Link |
+|------|------|
+| **Documentation** | [docs.ansible.com](https://docs.ansible.com/ansible/latest/installation_guide/index.html) |
 
-| Thông tin | Link |
-|-----------|------|
-| **Tài liệu** | [docs.ansible.com](https://docs.ansible.com/ansible/latest/installation_guide/index.html) |
-| **Install** | `pip install ansible` |
-
----
-
-## 5. CI/CD Tools
-
-### 5.1 Jenkins
-
-| Thông tin | Link |
-|-----------|------|
-| **Download** | [jenkins.io](https://www.jenkins.io/download/) |
-| **Docker** | `docker run -p 8080:8080 jenkins/jenkins:lts` |
-
----
-
-### 5.2 GitHub CLI
-
-| Thông tin | Link |
-|-----------|------|
-| **Download** | [cli.github.com](https://cli.github.com/) |
-| **Windows** | `choco install gh` |
-| **macOS** | `brew install gh` |
-
----
-
-## 6. Monitoring & Logging
-
-### 6.1 Prometheus + Grafana (via Docker)
+**Installation:**
 
 ```bash
-# Prometheus
-docker run -d -p 9090:9090 prom/prometheus
+pip install ansible
+```
 
-# Grafana
-docker run -d -p 3000:3000 grafana/grafana
+**Verify:**
+
+```bash
+ansible --version
 ```
 
 ---
 
-## 7. Cloud CLIs
+## 6. CI/CD Tools
 
-### 7.1 AWS CLI
+### 6.1 Jenkins
 
-| Thông tin | Link |
-|-----------|------|
+| Info | Link |
+|------|------|
+| **Download** | [jenkins.io](https://www.jenkins.io/download/) |
+| **Documentation** | [jenkins.io/doc](https://www.jenkins.io/doc/) |
+
+**Docker Installation:**
+
+```bash
+docker run -d -p 8080:8080 -p 50000:50000 \
+  -v jenkins_home:/var/jenkins_home \
+  --name jenkins \
+  jenkins/jenkins:lts
+```
+
+### 6.2 GitLab Runner
+
+| Info | Link |
+|------|------|
+| **Download** | [docs.gitlab.com](https://docs.gitlab.com/runner/install/) |
+
+**Docker Installation:**
+
+```bash
+docker run -d --name gitlab-runner \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  -v gitlab-runner-config:/etc/gitlab-runner \
+  gitlab/gitlab-runner:latest
+```
+
+---
+
+## 7. Monitoring & Logging
+
+### 7.1 Prometheus + Grafana
+
+**Docker Installation:**
+
+```bash
+# Prometheus
+docker run -d -p 9090:9090 --name prometheus prom/prometheus
+
+# Grafana
+docker run -d -p 3000:3000 --name grafana grafana/grafana
+```
+
+| Tool | Default URL | Default Login |
+|------|-------------|---------------|
+| Prometheus | <http://localhost:9090> | N/A |
+| Grafana | <http://localhost:3000> | admin/admin |
+
+---
+
+## 8. Cloud CLIs
+
+### 8.1 AWS CLI
+
+| Info | Link |
+|------|------|
 | **Download** | [aws.amazon.com/cli](https://aws.amazon.com/cli/) |
-| **Install** | `pip install awscli` |
+
+**Installation:**
+
+```bash
+pip install awscli
+```
 
 **Configure:**
 
@@ -343,73 +340,84 @@ docker run -d -p 3000:3000 grafana/grafana
 aws configure
 ```
 
----
+### 8.2 Azure CLI
 
-### 7.2 Azure CLI
-
-| Thông tin | Link |
-|-----------|------|
+| Info | Link |
+|------|------|
 | **Download** | [docs.microsoft.com](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli) |
 
----
+### 8.3 Google Cloud CLI
 
-### 7.3 Google Cloud CLI
-
-| Thông tin | Link |
-|-----------|------|
+| Info | Link |
+|------|------|
 | **Download** | [cloud.google.com/sdk](https://cloud.google.com/sdk/docs/install) |
 
 ---
 
-## 8. Utilities
+## 9. Utilities
 
-### 8.1 jq (JSON processor)
+### 9.1 jq (JSON processor)
 
 ```bash
+# Windows
+choco install jq
+
 # macOS
 brew install jq
 
 # Linux
 sudo apt install jq
-
-# Windows
-choco install jq
 ```
 
----
-
-### 8.2 yq (YAML processor)
+### 9.2 yq (YAML processor)
 
 ```bash
-# macOS/Linux
-pip install yq
-
-# Hoặc
+# macOS
 brew install yq
+
+# Linux/pip
+pip install yq
 ```
 
----
-
-### 8.3 curl & wget
+### 9.3 curl & wget
 
 ```bash
-# Thường có sẵn trên Linux/macOS
-# Windows: choco install curl wget
+# Usually pre-installed on Linux/macOS
+# Windows
+choco install curl wget
 ```
 
 ---
 
-## Checklist cài đặt
+## ✅ Installation Checklist (Danh sách cần cài đặt)
 
-Trước khi bắt đầu khóa học, đảm bảo đã cài đặt:
+### Track 1 Requirements (Yêu cầu Track 1)
 
 - [ ] WSL2 (Windows only)
 - [ ] Docker Desktop
 - [ ] Git
 - [ ] VS Code + Extensions
-- [ ] kubectl (từ Track 2)
-- [ ] Terraform (từ Track 3)
+- [ ] GitLab/GitHub account (Tài khoản GitLab/GitHub)
+
+### Track 2 Requirements (Yêu cầu Track 2)
+
+- [ ] kubectl
+- [ ] Minikube or Kind
+- [ ] Helm
+
+### Track 3 Requirements (Yêu cầu Track 3)
+
+- [ ] Terraform
+- [ ] Ansible
+- [ ] AWS CLI (with Free Tier account)
+
+### Track 4 Requirements (Yêu cầu Track 4)
+
+- [ ] Trivy (`brew install trivy` or `choco install trivy`)
+- [ ] SonarQube (Docker)
 
 ---
 
-*Cập nhật lần cuối: 2025-12-27*
+*Last Updated: 2025-12-30*
+
+*Cập nhật lần cuối: 2025-12-30*

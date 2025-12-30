@@ -19,66 +19,205 @@ Build a complete DevOps platform combining all knowledge from 5 tracks.
 ### Architecture (Kiến trúc)
 
 ```
-┌─────────────────────────────────────────────────────────────────┐
-│                    Enterprise DevOps Platform                    │
-├─────────────────────────────────────────────────────────────────┤
-│  ┌─────────────┐ ┌─────────────┐ ┌─────────────┐               │
-│  │   GitLab    │ │   Jenkins   │ │   ArgoCD    │  CI/CD        │
-│  └─────────────┘ └─────────────┘ └─────────────┘               │
-├─────────────────────────────────────────────────────────────────┤
-│  ┌─────────────┐ ┌─────────────┐ ┌─────────────┐               │
-│  │ Kubernetes  │ │   Istio     │ │   Vault     │  Platform     │
-│  └─────────────┘ └─────────────┘ └─────────────┘               │
-├─────────────────────────────────────────────────────────────────┤
-│  ┌─────────────┐ ┌─────────────┐ ┌─────────────┐               │
-│  │ Prometheus  │ │  Grafana    │ │    Loki     │  Observability│
-│  └─────────────┘ └─────────────┘ └─────────────┘               │
-├─────────────────────────────────────────────────────────────────┤
-│  ┌─────────────┐ ┌─────────────┐ ┌─────────────┐               │
-│  │  Terraform  │ │   Ansible   │ │   Pulumi    │  IaC          │
-│  └─────────────┘ └─────────────┘ └─────────────┘               │
-└─────────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────────────┐
+│                    Enterprise DevOps Platform                        │
+├─────────────────────────────────────────────────────────────────────┤
+│                                                                      │
+│  ┌─────────────────────────────────────────────────────────────┐    │
+│  │                     GitLab (Primary)                         │    │
+│  │  Repository │ CI/CD │ Registry │ Security Scanning          │    │
+│  └─────────────────────────────────────────────────────────────┘    │
+│                               │                                      │
+│         ┌─────────────────────┼─────────────────────┐               │
+│         ▼                     ▼                     ▼               │
+│  ┌─────────────┐      ┌─────────────┐      ┌─────────────┐         │
+│  │  Terraform  │      │   Ansible   │      │   ArgoCD    │         │
+│  │   (IaC)     │      │  (Config)   │      │   (GitOps)  │         │
+│  └─────────────┘      └─────────────┘      └─────────────┘         │
+│         │                                           │               │
+│         ▼                                           ▼               │
+│  ┌─────────────────────────────────────────────────────────────┐    │
+│  │                    AWS Infrastructure                        │    │
+│  │                                                              │    │
+│  │  ┌─────────┐  ┌─────────┐  ┌─────────┐  ┌─────────┐        │    │
+│  │  │   VPC   │  │   EKS   │  │   RDS   │  │   S3    │        │    │
+│  │  └─────────┘  └─────────┘  └─────────┘  └─────────┘        │    │
+│  │                                                              │    │
+│  │  ┌───────────────────────────────────────────────────────┐  │    │
+│  │  │              Kubernetes Cluster (EKS)                 │  │    │
+│  │  │                                                       │  │    │
+│  │  │  ┌─────────┐  ┌─────────┐  ┌─────────┐              │  │    │
+│  │  │  │ Ingress │  │ Services│  │ Workloads│              │  │    │
+│  │  │  └─────────┘  └─────────┘  └─────────┘              │  │    │
+│  │  │                                                       │  │    │
+│  │  │  ┌─────────────────────────────────────────────────┐│  │    │
+│  │  │  │           Monitoring & Observability            ││  │    │
+│  │  │  │  Prometheus │ Grafana │ Loki │ Alertmanager    ││  │    │
+│  │  │  └─────────────────────────────────────────────────┘│  │    │
+│  │  └───────────────────────────────────────────────────────┘  │    │
+│  │                                                              │    │
+│  └─────────────────────────────────────────────────────────────┘    │
+│                                                                      │
+│  ┌─────────────────────────────────────────────────────────────┐    │
+│  │                    Security Layer                            │    │
+│  │  Vault (Secrets) │ OPA (Policy) │ Falco (Runtime)          │    │
+│  └─────────────────────────────────────────────────────────────┘    │
+│                                                                      │
+└─────────────────────────────────────────────────────────────────────┘
 ```
+
+---
 
 ### Components (Các thành phần)
 
-1. **Infrastructure - Track 3 (Hạ tầng)**
-   - Multi-AZ AWS infrastructure (Hạ tầng AWS nhiều AZ)
-   - Terraform modules
-   - Network design (Thiết kế mạng)
+#### 1. Infrastructure - Track 3 (Hạ tầng)
 
-2. **Platform - Track 2 (Nền tảng)**
-   - Kubernetes cluster
-   - Service mesh
-   - Container registry
+- [ ] Multi-AZ AWS infrastructure (Hạ tầng AWS nhiều AZ)
+- [ ] Terraform modules for VPC, EKS, RDS (Modules Terraform)
+- [ ] Network design with security groups (Thiết kế mạng với security groups)
+- [ ] Cost-optimized resources (Tài nguyên tối ưu chi phí)
 
-3. **CI/CD - Track 1 & 2**
-   - Multi-environment pipeline (Pipeline nhiều môi trường)
-   - GitOps deployment
-   - Automated testing (Kiểm thử tự động)
+#### 2. Platform - Track 2 (Nền tảng)
 
-4. **Security - Track 4 (Bảo mật)**
-   - Secrets management (Quản lý secrets)
-   - Security scanning (Quét bảo mật)
-   - Compliance (Tuân thủ)
+- [ ] EKS Kubernetes cluster (Cluster Kubernetes EKS)
+- [ ] Ingress controller (NGINX/ALB) (Ingress controller)
+- [ ] Container registry (GitLab/ECR) (Registry container)
+- [ ] Service mesh (optional - Istio) (Tùy chọn)
 
-5. **Observability - Track 2 (Khả năng quan sát)**
-   - Metrics, logs, traces
-   - Dashboards
-   - Alerting (Cảnh báo)
+#### 3. CI/CD - Track 1 & 2
+
+> Use **GitLab CI** as the primary CI/CD platform
+> *Sử dụng **GitLab CI** làm nền tảng CI/CD chính*
+
+- [ ] Multi-environment pipeline (Pipeline nhiều môi trường)
+- [ ] GitOps deployment with ArgoCD (Deploy GitOps với ArgoCD)
+- [ ] Automated testing (Kiểm thử tự động)
+- [ ] Blue/Green or Canary deployments (Triển khai Blue/Green hoặc Canary)
+
+**Example `.gitlab-ci.yml`:**
+
+```yaml
+stages:
+  - validate
+  - build
+  - security
+  - deploy-staging
+  - deploy-production
+
+include:
+  - template: Security/SAST.gitlab-ci.yml
+  - template: Security/Container-Scanning.gitlab-ci.yml
+
+terraform-validate:
+  stage: validate
+  image: hashicorp/terraform:latest
+  script:
+    - cd terraform/
+    - terraform init
+    - terraform validate
+    - terraform plan
+
+build:
+  stage: build
+  image: docker:latest
+  services:
+    - docker:dind
+  script:
+    - docker build -t $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA .
+    - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA
+
+deploy-staging:
+  stage: deploy-staging
+  image: bitnami/kubectl
+  script:
+    - kubectl apply -k k8s/overlays/staging/
+  environment:
+    name: staging
+
+deploy-production:
+  stage: deploy-production
+  image: bitnami/kubectl
+  script:
+    - kubectl apply -k k8s/overlays/production/
+  environment:
+    name: production
+  when: manual
+  only:
+    - main
+```
+
+#### 4. Security - Track 4 (Bảo mật)
+
+- [ ] Secrets management with Vault (Quản lý secrets với Vault)
+- [ ] Security scanning in pipeline (Quét bảo mật trong pipeline)
+- [ ] OPA policies for Kubernetes (Chính sách OPA cho Kubernetes)
+- [ ] Compliance checks (Kiểm tra tuân thủ)
+
+#### 5. Observability - Track 2 (Khả năng quan sát)
+
+- [ ] Metrics with Prometheus (Metrics với Prometheus)
+- [ ] Dashboards with Grafana (Dashboard với Grafana)
+- [ ] Logs with Loki or ELK (Logs với Loki hoặc ELK)
+- [ ] Alerting configured (Cảnh báo đã cấu hình)
 
 ---
 
 ## ✅ Deliverables (Sản phẩm bàn giao)
 
-- [ ] Complete infrastructure code (Code hạ tầng hoàn chỉnh)
-- [ ] Working Kubernetes cluster (Cluster Kubernetes hoạt động)
-- [ ] CI/CD pipelines (Pipeline CI/CD)
-- [ ] Security controls (Kiểm soát bảo mật)
-- [ ] Monitoring stack (Stack giám sát)
-- [ ] Architecture documentation (Tài liệu kiến trúc)
-- [ ] Runbooks
-- [ ] Presentation deck (Slide thuyết trình)
+| Deliverable | Description |
+|-------------|-------------|
+| 📁 **Infrastructure Code** | Terraform modules, Ansible playbooks |
+| ☸️ **Kubernetes Cluster** | Working EKS cluster with workloads |
+| 🔄 **CI/CD Pipeline** | GitLab CI with security scanning |
+| 🔐 **Security Controls** | Vault, OPA, scanning |
+| 📊 **Monitoring Stack** | Prometheus, Grafana, Loki |
+| 📝 **Documentation** | Architecture docs, runbooks |
+| 🎤 **Presentation** | Slide deck for demo |
+
+---
+
+## 📁 Project Structure (Cấu trúc dự án)
+
+```
+grand-capstone/
+├── terraform/
+│   ├── modules/
+│   │   ├── vpc/
+│   │   ├── eks/
+│   │   └── rds/
+│   ├── environments/
+│   │   ├── staging/
+│   │   └── production/
+│   └── main.tf
+├── ansible/
+│   ├── playbooks/
+│   └── roles/
+├── k8s/
+│   ├── base/
+│   │   ├── deployments/
+│   │   ├── services/
+│   │   └── kustomization.yaml
+│   └── overlays/
+│       ├── staging/
+│       └── production/
+├── apps/
+│   ├── frontend/
+│   ├── api-gateway/
+│   └── microservices/
+├── monitoring/
+│   ├── prometheus/
+│   ├── grafana/
+│   └── alertmanager/
+├── security/
+│   ├── vault/
+│   └── policies/
+├── docs/
+│   ├── ARCHITECTURE.md
+│   ├── RUNBOOK.md
+│   └── SECURITY.md
+├── .gitlab-ci.yml
+└── README.md
+```
 
 ---
 
@@ -99,10 +238,20 @@ Build a complete DevOps platform combining all knowledge from 5 tracks.
 
 Upon completing this project, you have demonstrated (Khi hoàn thành dự án này, bạn đã chứng minh):
 
-- End-to-end DevOps skills (Kỹ năng DevOps toàn diện)
-- Production-ready infrastructure (Hạ tầng sẵn sàng production)
-- Security best practices (Thực hành bảo mật tốt nhất)
-- Clear documentation (Tài liệu rõ ràng)
+- ✅ End-to-end DevOps skills (Kỹ năng DevOps toàn diện)
+- ✅ Production-ready infrastructure design (Thiết kế hạ tầng production-ready)
+- ✅ Security best practices implementation (Triển khai best practices bảo mật)
+- ✅ Clear documentation and communication (Tài liệu và giao tiếp rõ ràng)
+- ✅ Problem-solving and troubleshooting (Giải quyết vấn đề và khắc phục sự cố)
+
+---
+
+## 📖 Resources (Tài liệu tham khảo)
+
+- [AWS Well-Architected Framework](https://aws.amazon.com/architecture/well-architected/)
+- [GitLab CI/CD Documentation](https://docs.gitlab.com/ee/ci/)
+- [Terraform AWS Provider](https://registry.terraform.io/providers/hashicorp/aws/)
+- [Kubernetes Best Practices](https://kubernetes.io/docs/concepts/configuration/overview/)
 
 ---
 

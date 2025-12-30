@@ -1,94 +1,200 @@
 # 💪 Exercises: CI/CD Basic
 
-> Bài tập tự luyện GitHub Actions.
+> **Self-practice exercises for GitLab CI/CD**
+>
+> *Bài tập tự luyện GitLab CI/CD.*
 
 ---
 
-## Exercise 1: Basic Workflow ⭐
+## 📋 Overview (Tổng quan)
 
-Tạo workflow:
+Complete these exercises to master GitLab CI/CD concepts.
 
-1. Trigger on push to main
-2. Run on ubuntu-latest
-3. Checkout code
-4. Print "Hello CI/CD"
-5. Show git commit info
+*Hoàn thành các bài tập để thành thạo GitLab CI/CD.*
 
 ---
 
-## Exercise 2: Node.js CI ⭐⭐
+## Exercise 1: Basic Pipeline ⭐
 
-Tạo CI workflow cho Node.js app:
+Create a basic GitLab CI pipeline.
 
-1. Install dependencies
-2. Run linting
-3. Run tests
-4. Upload coverage report as artifact
+*Tạo pipeline GitLab CI cơ bản.*
+
+### Requirements (Yêu cầu)
+
+1. Create `.gitlab-ci.yml`
+2. Add a `hello` stage
+3. Print "Hello GitLab CI!" (In "Hello GitLab CI!")
+4. Show current date and time (Hiển thị ngày giờ hiện tại)
+5. Display commit info using CI variables (Hiển thị thông tin commit)
+
+### Expected variables (Biến cần sử dụng)
+
+- `$CI_COMMIT_SHA`
+- `$CI_COMMIT_MESSAGE`
+- `$CI_PROJECT_NAME`
+
+---
+
+## Exercise 2: Node.js CI Pipeline ⭐⭐
+
+Create a CI pipeline for a Node.js application.
+
+*Tạo CI pipeline cho ứng dụng Node.js.*
+
+### Requirements (Yêu cầu)
+
+1. Use `node:18-alpine` image (Sử dụng image `node:18-alpine`)
+2. Install dependencies with `npm ci`
+3. Run linting (Chạy linting)
+4. Run unit tests (Chạy unit tests)
+5. Upload coverage report as artifact (Upload báo cáo coverage)
+6. Set up coverage extraction (Cấu hình extraction coverage)
+
+### Hints (Gợi ý)
+
+- Use `coverage` keyword for regex
+- Use `artifacts.reports.coverage_report`
 
 ---
 
 ## Exercise 3: Docker Build ⭐⭐
 
-Tạo workflow:
+Create a pipeline to build and push Docker images.
 
-1. Build Docker image
-2. Tag với commit SHA
-3. Push to Docker Hub
-4. (Optional) Push to GitHub Container Registry
+*Tạo pipeline để build và push Docker images.*
 
----
+### Requirements (Yêu cầu)
 
-## Exercise 4: Matrix Testing ⭐⭐
+1. Build Docker image (Build Docker image)
+2. Tag with commit SHA (Gắn tag với commit SHA)
+3. Push to GitLab Container Registry (Push lên GitLab Registry)
+4. Add a second tag `latest` for main branch (Thêm tag `latest` cho branch main)
 
-Test trên multiple environments:
+### Hints (Gợi ý)
 
-- OS: ubuntu, windows
-- Node versions: 16, 18, 20
-- Report failures
-
----
-
-## Exercise 5: Deployment Pipeline ⭐⭐⭐
-
-Tạo complete pipeline:
-
-1. Build stage
-2. Test stage
-3. Deploy to staging (manual approval)
-4. Deploy to production (on main only)
+- Use `docker:24` image with `docker:24-dind` service
+- Use `$CI_REGISTRY_IMAGE` for image name
+- Use `rules` or `only/except` for branch conditions
 
 ---
 
-## Exercise 6: Reusable Workflow ⭐⭐⭐
+## Exercise 4: Multi-Stage Pipeline ⭐⭐
 
-Tạo reusable workflow:
+Create a pipeline with multiple stages and dependencies.
 
-1. Create callable workflow
-2. Accept inputs (node-version, environment)
-3. Use from another workflow
-4. Pass secrets properly
+*Tạo pipeline với nhiều stages và dependencies.*
+
+### Requirements (Yêu cầu)
+
+1. Create 4 stages: lint, test, build, deploy (Tạo 4 stages)
+2. Lint job runs first (Lint job chạy đầu tiên)
+3. Test jobs run after lint (Test jobs chạy sau lint)
+4. Build job runs after tests pass (Build job chạy sau khi tests pass)
+5. Deploy job requires manual approval (Deploy job yêu cầu approval thủ công)
+6. Use `needs` for job dependencies (Sử dụng `needs` cho dependencies)
+
+### Hints (Gợi ý)
+
+- Use `needs: ["job-name"]` for dependencies
+- Use `when: manual` for manual trigger
 
 ---
 
-## Exercise 7: Scheduled Jobs ⭐⭐
+## Exercise 5: Environment Deployment ⭐⭐⭐
 
-Tạo scheduled workflow:
+Create a deployment pipeline with environments.
 
-1. Run daily at midnight
-2. Check dependencies for vulnerabilities
-3. Send notification if issues found
+*Tạo pipeline triển khai với environments.*
+
+### Requirements (Yêu cầu)
+
+1. Deploy to staging automatically on main (Tự động deploy staging trên main)
+2. Deploy to production with manual approval (Deploy production với approval)
+3. Configure environment URLs (Cấu hình URLs cho environments)
+4. Use GitLab CI/CD variables for secrets (Dùng variables cho secrets)
+5. Add deployment notification (Thêm thông báo deployment)
+
+### Hints (Gợi ý)
+
+- Use `environment` keyword
+- Configure variables in Settings > CI/CD > Variables
+- Use `after_script` for notifications
 
 ---
 
-## 📝 Checklist
+## Exercise 6: Caching & Optimization ⭐⭐⭐
 
-- [ ] Exercise 1: Basic Workflow
-- [ ] Exercise 2: Node.js CI
-- [ ] Exercise 3: Docker Build
-- [ ] Exercise 4: Matrix Testing
-- [ ] Exercise 5: Deployment Pipeline
-- [ ] Exercise 6: Reusable Workflow
-- [ ] Exercise 7: Scheduled Jobs
+Optimize pipeline performance with caching.
+
+*Tối ưu hiệu suất pipeline với caching.*
+
+### Requirements (Yêu cầu)
+
+1. Cache `node_modules` directory (Cache thư mục `node_modules`)
+2. Cache Docker layers (Cache Docker layers)
+3. Use cache key based on lock file (Dùng cache key dựa trên lock file)
+4. Measure pipeline time improvement (Đo thời gian cải thiện)
+
+### Hints (Gợi ý)
+
+```yaml
+cache:
+  key:
+    files:
+      - package-lock.json
+  paths:
+    - node_modules/
+```
+
+---
+
+## Exercise 7: Scheduled Pipeline ⭐⭐
+
+Create a scheduled pipeline for regular tasks.
+
+*Tạo pipeline theo lịch cho các tác vụ định kỳ.*
+
+### Requirements (Yêu cầu)
+
+1. Create a security scan job (Tạo job quét bảo mật)
+2. Run dependency audit (Chạy kiểm tra dependencies)
+3. Configure schedule in GitLab UI (Cấu hình lịch trong GitLab UI)
+4. Send notification if issues found (Gửi thông báo nếu có vấn đề)
+
+### How to set up schedule (Cách cấu hình lịch)
+
+1. Go to **CI/CD > Schedules** (Vào CI/CD > Schedules)
+2. Click **New schedule** (Click New schedule)
+3. Set cron expression (e.g., `0 0 * * *` for daily)
+4. Select branch and save (Chọn branch và lưu)
+
+### Hints (Gợi ý)
+
+- Use `rules: - if: $CI_PIPELINE_SOURCE == "schedule"`
+- Use `npm audit` for Node.js projects
+
+---
+
+## 📝 Exercise Checklist (Danh sách bài tập)
+
+- [ ] Exercise 1: Basic Pipeline ⭐
+- [ ] Exercise 2: Node.js CI Pipeline ⭐⭐
+- [ ] Exercise 3: Docker Build ⭐⭐
+- [ ] Exercise 4: Multi-Stage Pipeline ⭐⭐
+- [ ] Exercise 5: Environment Deployment ⭐⭐⭐
+- [ ] Exercise 6: Caching & Optimization ⭐⭐⭐
+- [ ] Exercise 7: Scheduled Pipeline ⭐⭐
+
+---
+
+## ⭐ Difficulty Levels (Mức độ khó)
+
+| Level | Description (Mô tả) |
+|-------|---------------------|
+| ⭐ | Beginner - Basic concepts (Cơ bản) |
+| ⭐⭐ | Intermediate - Multiple features (Trung bình) |
+| ⭐⭐⭐ | Advanced - Complex scenarios (Nâng cao) |
 
 ---
 

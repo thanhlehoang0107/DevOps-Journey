@@ -1,10 +1,24 @@
 # 🔬 Labs: Portfolio & Launch
 
+> **Hands-on portfolio building exercises**
+>
+> *Bài thực hành xây dựng portfolio*
+
 ---
 
-## 🔬 Lab 1: GitHub Profile Setup
+## 🔬 Lab 1: GitLab/GitHub Profile Setup (Thiết lập Profile)
 
-### Step 1: Create Profile README
+### Option A: GitLab Profile (Primary - Chính)
+
+1. Go to **Preferences** → **Main Settings**
+2. Update your profile with:
+   - Professional photo (Ảnh chuyên nghiệp)
+   - Bio with DevOps keywords
+   - Location and website
+
+### Option B: GitHub Profile (Alternative - Thay thế)
+
+Create a profile README by creating a repository with your username:
 
 ```bash
 # Create repo with your username
@@ -20,33 +34,37 @@ mkdir username && cd username
 
 I'm passionate about automation, cloud infrastructure, and building reliable systems.
 
-### 🔧 Tech Stack
+*Tôi đam mê về tự động hóa, hạ tầng cloud, và xây dựng hệ thống đáng tin cậy.*
+
+### 🔧 Tech Stack (Công nghệ)
 
 ![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
 ![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=for-the-badge&logo=terraform&logoColor=white)
+![GitLab](https://img.shields.io/badge/GitLab-FC6D26?style=for-the-badge&logo=gitlab&logoColor=white)
 
 ### 📈 GitHub Stats
 
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=yourusername&show_icons=true)
 
-### 📫 Connect
+### 📫 Connect (Kết nối)
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/yourprofile)
+[![GitLab](https://img.shields.io/badge/GitLab-FC6D26?style=for-the-badge&logo=gitlab)](https://gitlab.com/yourprofile)
 ```
 
 ---
 
-## 🔬 Lab 2: Portfolio Projects
+## 🔬 Lab 2: Portfolio Projects (Dự án Portfolio)
 
 ### Project 1: CI/CD Pipeline
 
 ```
 Repository: my-cicd-project
 Contents:
-├── .github/workflows/
-│   └── ci-cd.yml
+├── .gitlab-ci.yml        # GitLab CI (Primary)
+├── .github/workflows/    # GitHub Actions (Alternative)
 ├── app/
 ├── Dockerfile
 ├── README.md (with architecture diagram)
@@ -63,6 +81,7 @@ Contents:
 │   ├── environments/
 │   └── main.tf
 ├── ansible/
+├── .gitlab-ci.yml        # Terraform CI pipeline
 ├── README.md
 └── architecture.png
 ```
@@ -77,44 +96,48 @@ Contents:
 │   ├── services/
 │   └── ingress/
 ├── monitoring/
+├── .gitlab-ci.yml
 ├── README.md
 └── Makefile
 ```
 
 ---
 
-## 🔬 Lab 3: README Best Practices
+## 🔬 Lab 3: README Best Practices (Best Practices README)
 
 ```markdown
 # Project Name
 
 Brief description of what this project does.
 
-## 🏗️ Architecture
+*Mô tả ngắn về dự án.*
+
+## 🏗️ Architecture (Kiến trúc)
 
 ![Architecture](./docs/architecture.png)
 
-## 🚀 Quick Start
+## 🚀 Quick Start (Bắt đầu nhanh)
 
 \`\`\`bash
-git clone https://github.com/user/project
+git clone https://gitlab.com/user/project  # or github.com
 cd project
 make deploy
 \`\`\`
 
-## 📋 Prerequisites
+## 📋 Prerequisites (Điều kiện tiên quyết)
 
 - Docker
 - AWS CLI
 - Terraform
 
-## 🛠️ Technologies
+## 🛠️ Technologies (Công nghệ)
 
 - Kubernetes
 - Prometheus
 - Grafana
+- GitLab CI
 
-## 📖 Documentation
+## 📖 Documentation (Tài liệu)
 
 - [Setup Guide](./docs/setup.md)
 - [Contributing](./CONTRIBUTING.md)
@@ -126,52 +149,56 @@ MIT
 
 ---
 
-## 🔬 Lab 4: LinkedIn Optimization
+## 🔬 Lab 4: LinkedIn Optimization (Tối ưu LinkedIn)
 
-### Profile Sections
+### Profile Sections (Các phần Profile)
 
-1. **Headline**: "DevOps Engineer | AWS | Kubernetes | Terraform"
+1. **Headline**: "DevOps Engineer | AWS | Kubernetes | GitLab CI | Terraform"
 
 2. **About**:
    "DevOps Engineer with experience in cloud infrastructure, CI/CD pipelines, and container orchestration. Passionate about automation and building reliable systems."
 
 3. **Experience**:
-   - Use bullet points
-   - Include metrics (reduced deploy time by 80%)
-   - List technologies used
+   - Use bullet points (Dùng bullet points)
+   - Include metrics (reduced deploy time by 80%) (Bao gồm số liệu)
+   - List technologies used (Liệt kê công nghệ sử dụng)
 
 4. **Skills**:
-   AWS, Docker, Kubernetes, Terraform, Jenkins, Python, Linux
+   AWS, Docker, Kubernetes, Terraform, GitLab CI, Jenkins, Python, Linux
 
 5. **Projects**:
-   Link to GitHub repositories
+   Link to GitLab/GitHub repositories (Link đến repo GitLab/GitHub)
 
 ---
 
-## 🔬 Lab 5: Technical Blog
+## 🔬 Lab 5: Technical Blog (Blog kỹ thuật)
 
-### Platform Options
+### Platform Options (Lựa chọn nền tảng)
 
-- Dev.to
-- Medium
-- Personal website (Hugo/Jekyll)
+| Platform | Pros (Ưu điểm) |
+|----------|----------------|
+| Dev.to | Built-in audience, easy setup |
+| Hashnode | Custom domain, good SEO |
+| Medium | Large audience |
+| Personal blog | Full control (Hugo/Jekyll) |
 
-### Blog Post Ideas
+### Blog Post Ideas (Ý tưởng bài viết)
 
-1. "How I Built a CI/CD Pipeline with GitHub Actions"
+1. "How I Built a CI/CD Pipeline with GitLab CI" (Cách tôi xây dựng pipeline với GitLab CI)
 2. "Kubernetes Deployment Best Practices"
 3. "My AWS Solutions Architect Certification Journey"
-4. "Monitoring Docker Containers with Prometheus"
+4. "Monitoring Docker Containers with Prometheus and Grafana"
+5. "Infrastructure as Code with Terraform - Getting Started"
 
 ---
 
-## ✅ Portfolio Checklist
+## ✅ Portfolio Checklist (Danh sách kiểm tra)
 
-- [ ] GitHub profile README
-- [ ] 3+ portfolio projects
-- [ ] Detailed READMEs
-- [ ] LinkedIn updated
-- [ ] Blog with 2+ posts
+- [ ] GitLab/GitHub profile README (Profile README)
+- [ ] 3+ portfolio projects (3+ dự án portfolio)
+- [ ] Detailed READMEs with bilingual content (README chi tiết song ngữ)
+- [ ] LinkedIn updated (LinkedIn đã cập nhật)
+- [ ] Blog with 2+ posts (Blog với 2+ bài viết)
 
 ---
 

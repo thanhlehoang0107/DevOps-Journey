@@ -24,33 +24,33 @@ After completing Track 2, you will (Sau khi hoàn thành Track 2, bạn sẽ):
 
 ---
 
-## 📋 Prerequisites
+## 📋 Prerequisites (Điều kiện tiên quyết)
 
-Trước khi bắt đầu Track 2, bạn cần hoàn thành:
+Before starting Track 2, you should complete (Trước khi bắt đầu Track 2, bạn cần hoàn thành):
 
 - ✅ **Track 1: Foundation & Static Web**
-- ✅ Hiểu Docker fundamentals
-- ✅ Có kinh nghiệm với GitHub Actions
-- ✅ Familiar với Linux command line
+- ✅ Understand Docker fundamentals (Hiểu Docker cơ bản)
+- ✅ Have experience with GitLab CI/CD (Có kinh nghiệm với GitLab CI/CD)
+- ✅ Familiar with Linux command line (Quen thuộc với Linux)
 
 ---
 
-## 📚 Danh Sách Modules
+## 📚 Module List (Danh Sách Modules)
 
-| # | Module | Thời Gian | Mô Tả |
-|---|--------|-----------|-------|
-| 2.1 | [Docker Advanced](./2.1_Docker_Advanced/) | 1 tuần | Multi-stage builds, optimization, security |
-| 2.2 | [Docker Compose](./2.2_Docker_Compose/) | 1 tuần | Multi-container apps, networking, volumes |
-| 2.3 | [Jenkins](./2.3_Jenkins/) | 1-2 tuần | CI/CD pipelines, Jenkinsfile, plugins |
-| 2.4 | [Kubernetes Core](./2.4_Kubernetes_Core/) | 2 tuần | Pods, Deployments, Services, Ingress |
-| 2.5 | [Monitoring & Logging](./2.5_Monitoring_Logging/) | 1-2 tuần | Prometheus, Grafana, ELK Stack |
-| 2.6 | [**Capstone Project**](./2.6_Capstone_Project/) | 1 tuần | 🎯 Microservices on Kubernetes |
+| # | Module | Duration (Thời gian) | Description (Mô tả) |
+|---|--------|----------------------|---------------------|
+| 2.1 | [Docker Advanced](./2.1_Docker_Advanced/) | 1 week | Multi-stage builds, optimization, security |
+| 2.2 | [Docker Compose](./2.2_Docker_Compose/) | 1 week | Multi-container apps, networking, volumes |
+| 2.3 | [Jenkins](./2.3_Jenkins/) | 1-2 weeks | CI/CD pipelines, Jenkinsfile, plugins |
+| 2.4 | [Kubernetes Core](./2.4_Kubernetes_Core/) | 2 weeks | Pods, Deployments, Services, Ingress |
+| 2.5 | [Monitoring & Logging](./2.5_Monitoring_Logging/) | 1-2 weeks | Prometheus, Grafana, ELK Stack |
+| 2.6 | [**Capstone Project**](./2.6_Capstone_Project/) | 1 week | 🎯 Microservices on Kubernetes |
 
 ---
 
-## 🗓️ Lịch Trình Đề Xuất
+## 🗓️ Suggested Schedule (Lịch Trình Đề Xuất)
 
-### Tuần 1: Docker Advanced
+### Week 1: Docker Advanced
 
 ```
 Day 1-2: Multi-stage builds, build optimization
@@ -58,7 +58,7 @@ Day 3-4: Docker networking deep dive
 Day 5-7: Security best practices, scanning
 ```
 
-### Tuần 2: Docker Compose
+### Week 2: Docker Compose
 
 ```
 Day 1-2: Compose fundamentals, services
@@ -66,21 +66,21 @@ Day 3-4: Networking, volumes, dependencies
 Day 5-7: Environment management, overrides
 ```
 
-### Tuần 3-4: Jenkins
+### Week 3-4: Jenkins
 
 ```
 Week 3: Jenkins setup, basic pipelines
 Week 4: Advanced pipelines, shared libraries, agents
 ```
 
-### Tuần 5-6: Kubernetes Core
+### Week 5-6: Kubernetes Core
 
 ```
 Week 5: K8s architecture, Pods, Deployments
 Week 6: Services, Ingress, ConfigMaps, Secrets
 ```
 
-### Tuần 7: Monitoring & Logging
+### Week 7: Monitoring & Logging
 
 ```
 Day 1-3: Prometheus setup, metrics collection
@@ -88,7 +88,7 @@ Day 4-5: Grafana dashboards
 Day 6-7: ELK Stack, log aggregation
 ```
 
-### Tuần 8: Capstone Project
+### Week 8: Capstone Project
 
 ```
 Day 1-2: Architecture design
@@ -98,10 +98,10 @@ Day 6-7: Testing, documentation
 
 ---
 
-## 🛠️ Tools Sử Dụng
+## 🛠️ Tools Used (Công cụ sử dụng)
 
-| Tool | Mục Đích | Documentation |
-|------|----------|---------------|
+| Tool | Purpose (Mục đích) | Documentation |
+|------|-------------------|---------------|
 | **Docker Compose** | Multi-container orchestration | [docs.docker.com](https://docs.docker.com/compose/) |
 | **Jenkins** | CI/CD automation server | [jenkins.io](https://www.jenkins.io/doc/) |
 | **Kubernetes** | Container orchestration | [kubernetes.io](https://kubernetes.io/docs/) |
@@ -119,7 +119,7 @@ Day 6-7: Testing, documentation
 
 ### **Microservices Deployment on Kubernetes**
 
-Bạn sẽ xây dựng:
+You will build (Bạn sẽ xây dựng):
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
@@ -157,33 +157,33 @@ Bạn sẽ xây dựng:
 └─────────────────────────────────────────────────────────────────────┘
 ```
 
-### Features
+### Features (Tính năng)
 
-- 🔄 **CI/CD Pipeline** với Jenkins
+- 🔄 **CI/CD Pipeline** with Jenkins (với Jenkins)
 - 🐳 **Containerized** microservices
 - ☸️ **Kubernetes** deployment
-- 📊 **Monitoring** với Prometheus & Grafana
-- 📝 **Logging** với ELK Stack
-- 🔐 **Secrets management** với K8s Secrets
+- 📊 **Monitoring** with Prometheus & Grafana (với Prometheus & Grafana)
+- 📝 **Logging** with ELK Stack (với ELK Stack)
+- 🔐 **Secrets management** with K8s Secrets (với K8s Secrets)
 
-👉 **[Xem chi tiết Capstone Project →](./2.6_Capstone_Project/)**
+👉 **[View Capstone Details →](./2.6_Capstone_Project/)** | **[Xem chi tiết →](./2.6_Capstone_Project/)**
 
 ---
 
-## 📊 Đánh Giá
+## 📊 Evaluation (Đánh Giá)
 
-### Tiêu Chí Hoàn Thành Module
+### Module Completion Criteria (Tiêu chí hoàn thành Module)
 
 | Criteria | Requirement |
 |----------|-------------|
-| Labs | Hoàn thành 100% hands-on labs |
-| Quiz | Đạt ≥ 70% điểm quiz |
-| Exercises | Hoàn thành ≥ 80% exercises |
-| Project | Submit và được review |
+| Labs | Complete 100% hands-on labs (Hoàn thành 100% bài thực hành) |
+| Quiz | Score ≥ 70% (Đạt ≥ 70% điểm quiz) |
+| Exercises | Complete ≥ 80% exercises (Hoàn thành ≥ 80% bài tập) |
+| Project | Submit and get reviewed (Submit và được review) |
 
-### Tiêu Chí Hoàn Thành Track
+### Track Completion Criteria (Tiêu chí hoàn thành Track)
 
-- ✅ Hoàn thành tất cả 5 modules
+- ✅ Complete all 5 modules (Hoàn thành tất cả 5 modules)
 - ✅ Submit Capstone Project
 - ✅ Demo microservices running on K8s
 
@@ -197,20 +197,22 @@ Bạn sẽ xây dựng:
 
 ---
 
-## 📖 Bắt Đầu
+## 📖 Getting Started (Bắt Đầu)
 
 ```bash
-# Bắt đầu với Module 2.1
+# Start with Module 2.1 (Bắt đầu với Module 2.1)
 cd 2.1_Docker_Advanced
 cat README.md
 ```
 
-**📚 Bắt đầu học:** [2.1 Docker Advanced →](./2.1_Docker_Advanced/)
+**📚 Start learning:** [2.1 Docker Advanced →](./2.1_Docker_Advanced/)
 
 ---
 
 <div align="center">
 
 **🚀 Level up your DevOps skills! 🚀**
+
+*Nâng cao kỹ năng DevOps của bạn!*
 
 </div>

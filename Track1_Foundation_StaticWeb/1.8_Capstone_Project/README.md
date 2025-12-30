@@ -98,7 +98,6 @@ git init
 # 3. Create directory structure (Tạo cấu trúc thư mục)
 mkdir -p src/{css,js,images}
 mkdir -p nginx
-mkdir -p .github/workflows
 
 # 4. Create .gitignore (Tạo .gitignore)
 cat > .gitignore << 'EOF'
@@ -613,10 +612,10 @@ Add uptime monitoring with UptimeRobot (Thêm tính năng giám sát thời gian
 
 ## 📚 Resources
 
+- [GitLab CI/CD Documentation](https://docs.gitlab.com/ee/ci/)
 - [GitHub Actions Documentation](https://docs.github.com/en/actions)
 - [Docker Best Practices](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
 - [NGINX Documentation](https://nginx.org/en/docs/)
-- [GitHub Pages](https://pages.github.com/)
 
 ---
 

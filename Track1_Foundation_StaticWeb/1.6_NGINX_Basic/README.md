@@ -328,9 +328,9 @@ http {
 
 ---
 
-### 6. Reverse Proxy (1.5 giờ)
+### 6. Reverse Proxy (Proxy ngược) - 1.5 hours
 
-#### 6.1 Khái niệm
+#### 6.1 Concept (Khái niệm)
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -356,7 +356,7 @@ http {
 └─────────────────────────────────────────────────────────────┘
 ```
 
-#### 6.2 Basic Reverse Proxy
+#### 6.2 Basic Reverse Proxy (Cấu hình Reverse Proxy cơ bản)
 
 ```nginx
 server {
@@ -366,7 +366,7 @@ server {
     location / {
         proxy_pass http://backend:3000;
         
-        # Headers quan trọng
+        # Important headers (Headers quan trọng)
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
@@ -375,27 +375,27 @@ server {
 }
 ```
 
-#### 6.3 Multiple Backends
+#### 6.3 Multiple Backends (Nhiều Backend servers)
 
 ```nginx
 server {
     listen 80;
     server_name example.com;
 
-    # Frontend - Static files
+    # Frontend - Static files (Serve file tĩnh)
     location / {
         root /usr/share/nginx/html;
         try_files $uri $uri/ /index.html;
     }
 
-    # API - Proxy to backend
+    # API - Proxy to backend (Chuyển tiếp API)
     location /api/ {
         proxy_pass http://api-server:3000/;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
     }
 
-    # WebSocket support
+    # WebSocket support (Hỗ trợ WebSocket)
     location /ws/ {
         proxy_pass http://ws-server:8080/;
         proxy_http_version 1.1;
@@ -407,9 +407,9 @@ server {
 
 ---
 
-### 7. Load Balancing Basics (1 giờ)
+### 7. Load Balancing Basics (Cân bằng tải cơ bản) - 1 hour
 
-#### 7.1 Round Robin (Default)
+#### 7.1 Round Robin - Default (Luân phiên - Mặc định)
 
 ```nginx
 upstream backend {
@@ -427,7 +427,7 @@ server {
 }
 ```
 
-#### 7.2 Weighted Load Balancing
+#### 7.2 Weighted Load Balancing (Phân tải theo trọng số)
 
 ```nginx
 upstream backend {
@@ -437,24 +437,24 @@ upstream backend {
 }
 ```
 
-#### 7.3 Health Checks
+#### 7.3 Health Checks (Kiểm tra sức khỏe server)
 
 ```nginx
 upstream backend {
     server backend1:3000;
     server backend2:3000;
-    server backend3:3000 backup;  # Only if others fail
+    server backend3:3000 backup;  # Only if others fail (Chỉ dùng khi các server khác fail)
     
-    # Passive health check
+    # Passive health check (Kiểm tra sức khỏe thụ động)
     server backend4:3000 max_fails=3 fail_timeout=30s;
 }
 ```
 
 ---
 
-### 8. NGINX với Docker Compose (1 giờ)
+### 8. NGINX with Docker Compose (NGINX với Docker Compose) - 1 hour
 
-#### 8.1 Full Stack Example
+#### 8.1 Full Stack Example (Ví dụ Full Stack)
 
 **docker-compose.yml:**
 
@@ -495,14 +495,14 @@ server {
     listen 80;
     server_name localhost;
 
-    # Serve static frontend
+    # Serve static frontend (Phục vụ frontend tĩnh)
     location / {
         root /usr/share/nginx/html;
         index index.html;
         try_files $uri $uri/ /index.html;
     }
 
-    # Proxy API requests
+    # Proxy API requests (Chuyển tiếp API requests)
     location /api/ {
         proxy_pass http://api:3000/;
         proxy_set_header Host $host;
@@ -514,9 +514,9 @@ server {
 
 ---
 
-### 9. Debugging và Logging (30 phút)
+### 9. Debugging and Logging (Debug và Xem logs) - 30 min
 
-#### 9.1 Xem logs
+#### 9.1 Viewing Logs (Xem logs)
 
 ```bash
 # Docker
@@ -528,7 +528,7 @@ sudo tail -f /var/log/nginx/access.log
 sudo tail -f /var/log/nginx/error.log
 ```
 
-#### 9.2 Custom log format
+#### 9.2 Custom Log Format (Định dạng log tùy chỉnh)
 
 ```nginx
 http {
@@ -541,42 +541,42 @@ http {
 }
 ```
 
-#### 9.3 Debug tips
+#### 9.3 Debug Tips (Mẹo debug)
 
 ```bash
-# Test config syntax
+# Test config syntax (Kiểm tra cú pháp config)
 nginx -t
 
-# Show full config
+# Show full config (Hiển thị toàn bộ config)
 nginx -T
 
-# Reload config (không downtime)
+# Reload config without downtime (Reload config không downtime)
 nginx -s reload
 
-# Docker
+# Docker commands (Lệnh Docker)
 docker exec nginx nginx -t
 docker exec nginx nginx -s reload
 ```
 
 ---
 
-### 10. Security Best Practices (30 phút)
+### 10. Security Best Practices (Bảo mật tốt nhất) - 30 min
 
 ```nginx
 server {
-    # Hide NGINX version
+    # Hide NGINX version (Ẩn version NGINX)
     server_tokens off;
 
-    # Security headers
+    # Security headers (Headers bảo mật)
     add_header X-Frame-Options "SAMEORIGIN" always;
     add_header X-Content-Type-Options "nosniff" always;
     add_header X-XSS-Protection "1; mode=block" always;
     add_header Referrer-Policy "strict-origin-when-cross-origin" always;
 
-    # Limit request size
+    # Limit request size (Giới hạn kích thước request)
     client_max_body_size 10M;
 
-    # Rate limiting
+    # Rate limiting (Giới hạn tốc độ)
     limit_req_zone $binary_remote_addr zone=mylimit:10m rate=10r/s;
     
     location /api/ {
@@ -584,7 +584,7 @@ server {
         proxy_pass http://backend;
     }
 
-    # Block common attacks
+    # Block common attacks (Chặn các tấn công phổ biến)
     location ~* \.(git|svn|htaccess)$ {
         deny all;
     }
@@ -593,7 +593,7 @@ server {
 
 ---
 
-## 📝 Module Files (Các file trong Module)
+## 📝 Module Files (Các file trong module)
 
 | File | Description |
 |------|-------------|

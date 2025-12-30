@@ -1,33 +1,39 @@
-# 🎯 Project: Git & GitHub
+# 🎯 Project: Git & GitLab
 
-> Mini project: **Team Collaboration Simulation**
+> **Mini Project: Team Collaboration Simulation**
+>
+> *Dự án nhỏ: Mô phỏng cộng tác nhóm*
 
 ---
 
-## 📋 Project Overview
+## 📋 Project Overview (Tổng quan)
 
 ### Project Name: **Git Workflow Implementation**
 
-Simulate team development workflow với Git.
+Simulate team development workflow with Git.
 
-### Duration: 2 ngày
+*Mô phỏng quy trình phát triển nhóm với Git.*
+
+### Duration: 2 days (2 ngày)
 
 ---
 
-## 🎯 Requirements
+## 🎯 Requirements (Yêu cầu)
 
-### Scenario
+### Scenario (Kịch bản)
 
-Bạn là DevOps lead, setup Git workflow cho team 3 người.
+You are a DevOps lead, setting up Git workflow for a team of 3 developers.
 
-### Tasks
+*Bạn là DevOps lead, setup Git workflow cho team 3 người.*
 
-#### 1. Repository Setup
+### Tasks (Các nhiệm vụ)
 
-- Create repository với proper structure
-- Setup branch protection rules
+#### 1. Repository Setup (Thiết lập Repository)
+
+- Create repository with proper structure (Tạo repo với cấu trúc phù hợp)
+- Setup branch protection rules (Thiết lập protection rules)
 - Create CONTRIBUTING.md
-- Setup PR template
+- Setup Merge Request template (GitLab) or PR template (GitHub)
 
 #### 2. Implement Git Flow
 
@@ -43,22 +49,40 @@ main ─────────────────────────
         └── release/1.0.0 ──────────
 ```
 
-#### 3. Collaboration Features
+#### 3. Collaboration Features (Tính năng cộng tác)
 
-- Create and review PRs
-- Handle merge conflicts
-- Use conventional commits
-- Create releases với tags
+- Create and review Merge Requests (GitLab) or Pull Requests (GitHub)
+- Handle merge conflicts (Xử lý xung đột)
+- Use conventional commits (Sử dụng conventional commits)
+- Create releases with tags (Tạo releases với tags)
 
-#### 4. Automation
+#### 4. Automation (Tự động hóa)
 
-- Setup commit hooks
-- Create GitHub Actions for CI
-- Automate changelog generation
+- Setup commit hooks (Thiết lập commit hooks)
+- Create GitLab CI pipeline (Primary) or GitHub Actions workflow (Tạo pipeline CI)
+- Automate changelog generation (Tự động tạo changelog)
 
 ---
 
-## 📁 Project Structure
+## 📁 Project Structure (Cấu trúc dự án)
+
+### For GitLab (Primary - Chính)
+
+```
+team-project/
+├── .gitlab-ci.yml           # GitLab CI pipeline
+├── src/
+├── tests/
+├── docs/
+│   └── git-workflow.md
+├── .gitignore
+├── .gitattributes
+├── CONTRIBUTING.md
+├── CHANGELOG.md
+└── README.md
+```
+
+### For GitHub (Alternative - Thay thế)
 
 ```
 team-project/
@@ -80,15 +104,17 @@ team-project/
 
 ---
 
-## ✅ Deliverables
+## ✅ Deliverables (Sản phẩm bàn giao)
 
-- [ ] Repository với complete setup
-- [ ] Branch protection configured
-- [ ] 3+ merged PRs
-- [ ] Release v1.0.0 với tag
-- [ ] CI workflow running
-- [ ] Documentation complete
+- [ ] Repository with complete setup (Repo với setup hoàn chỉnh)
+- [ ] Branch protection configured (Đã cấu hình branch protection)
+- [ ] 3+ merged MRs/PRs (3+ MR/PR đã merge)
+- [ ] Release v1.0.0 with tag (Release v1.0.0 với tag)
+- [ ] CI pipeline/workflow running (Pipeline/workflow đang chạy)
+- [ ] Documentation complete (Tài liệu hoàn chỉnh)
 
 ---
 
 **Good luck! 🚀**
+
+*Chúc may mắn!*
