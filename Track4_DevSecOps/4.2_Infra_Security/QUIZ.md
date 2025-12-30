@@ -1,5 +1,9 @@
 # ❓ Quiz: Infrastructure Security
 
+> **Knowledge Check for Infrastructure Security**
+>
+> *Kiểm tra kiến thức bảo mật hạ tầng.*
+
 ---
 
 ### Q1

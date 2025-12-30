@@ -1,5 +1,9 @@
 # ❓ Quiz: Security in Pipeline
 
+> **Knowledge Check for DevSecOps**
+>
+> *Kiểm tra kiến thức DevSecOps.*
+
 ---
 
 ### Q1

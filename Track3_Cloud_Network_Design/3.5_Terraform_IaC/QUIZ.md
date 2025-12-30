@@ -1,5 +1,9 @@
 # ❓ Quiz: Terraform
 
+> **Knowledge Check for Infrastructure as Code**
+>
+> *Kiểm tra kiến thức Infrastructure as Code.*
+
 ---
 
 ### Q1
