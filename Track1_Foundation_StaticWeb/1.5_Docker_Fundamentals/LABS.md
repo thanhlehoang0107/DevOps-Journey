@@ -200,4 +200,67 @@ docker pull username/my-app:v1
 
 ---
 
+## ✅ General Verification (Kiểm chứng tổng quát)
+
+Verify Docker is working and you've completed labs:
+
+*(Xác nhận Docker hoạt động và bạn đã hoàn thành labs:)*
+
+```bash
+# Check Docker is running (Kiểm tra Docker đang chạy)
+docker info | head -20
+
+# List all containers (Liệt kê tất cả containers)
+docker ps -a
+
+# List images (Liệt kê images)
+docker images
+
+# List volumes and networks (Liệt kê volumes và networks)
+docker volume ls
+docker network ls
+```
+
+---
+
+## 🔧 General Troubleshooting (Xử lý sự cố chung)
+
+| Issue | Solution |
+|-------|----------|
+| `Cannot connect to the Docker daemon` | Start Docker Desktop or `sudo systemctl start docker` *(Khởi động Docker)* |
+| `permission denied` | Add user to docker group: `sudo usermod -aG docker $USER` *(Thêm user vào docker group)* |
+| `port is already allocated` | Stop conflicting container or use different port *(Dừng container hoặc dùng port khác)* |
+| `no space left on device` | Run `docker system prune -a` *(Dọn dẹp Docker)* |
+| `image not found` | Check image name/tag, try `docker pull` first *(Kiểm tra tên image)* |
+| `COPY failed: file not found` | Check file path relative to Dockerfile *(Kiểm tra đường dẫn file)* |
+
+---
+
+## 🧹 General Cleanup (Dọn dẹp tổng quát)
+
+```bash
+# Stop all containers (Dừng tất cả containers)
+docker stop $(docker ps -q) 2>/dev/null
+
+# Remove all containers (Xóa tất cả containers)
+docker rm $(docker ps -aq) 2>/dev/null
+
+# Remove lab images (Xóa images lab)
+docker rmi my-app:v1 my-app:optimized 2>/dev/null
+
+# Remove volumes and networks (Xóa volumes và networks)
+docker volume rm mydata 2>/dev/null
+docker network rm mynet 2>/dev/null
+
+# Full cleanup (use with caution!) (Dọn dẹp hoàn toàn - cẩn thận!)
+# docker system prune -a --volumes
+```
+
+> ⚠️ **Warning:** `docker system prune -a` removes ALL unused data!
+>
+> *Cảnh báo: Lệnh này xóa TẤT CẢ dữ liệu không sử dụng!*
+
+---
+
 **[← Back to README](./README.md)**
+

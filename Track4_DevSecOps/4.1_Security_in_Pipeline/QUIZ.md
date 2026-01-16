@@ -1,65 +1,83 @@
 # ❓ Quiz: Security in Pipeline
 
-> **Knowledge Check for DevSecOps**
+> **Knowledge Check for DevSecOps (5 Questions)**
 >
-> *Kiểm tra kiến thức DevSecOps.*
+> *Kiểm tra kiến thức DevSecOps (5 câu hỏi).*
 
 ---
 
-### Q1
+### Q1: SAST Scanning
 
-SAST scans gì?
+What does SAST scan?
 
-- a) Running application (Ứng dụng đang chạy)
-- b) Source code (Mã nguồn)
-- c) Network traffic (Lưu lượng mạng)
-- d) Docker images (Ảnh Docker)
+*(SAST scans gì?)*
 
-### Q2
+- a) Running application *(Ứng dụng đang chạy)*
+- b) Source code *(Mã nguồn)*
+- c) Network traffic *(Lưu lượng mạng)*
+- d) Docker images *(Ảnh Docker)*
 
-DAST scans gì?
+---
 
-- a) Source code (Mã nguồn)
-- b) Running application (Ứng dụng đang chạy)
-- c) Dependencies (Các thư viện phụ thuộc)
-- d) Configs (Cấu hình)
+### Q2: DAST Scanning
 
-### Q3
+What does DAST scan?
 
-SCA là viết tắt của?
+*(DAST scans gì?)*
 
-- a) Static Code Analysis (Phân tích mã tĩnh)
-- b) Software Composition Analysis (Phân tích thành phần phần mềm)
-- c) Security Configuration Audit (Kiểm toán cấu hình bảo mật)
-- d) Secure Container Assessment (Đánh giá bảo mật container)
+- a) Source code *(Mã nguồn)*
+- b) Running application *(Ứng dụng đang chạy)*
+- c) Dependencies *(Các thư viện phụ thuộc)*
+- d) Configs *(Cấu hình)*
 
-### Q4
+---
 
-Trivy dùng để scan?
+### Q3: SCA Meaning
 
-- a) Source code (Mã nguồn)
-- b) Container images (Ảnh container)
-- c) Network (Mạng)
-- d) Secrets (Bí mật)
+What does SCA stand for?
 
-### Q5
+*(SCA là viết tắt của?)*
 
-"Shift Left" security có nghĩa?
+- a) Static Code Analysis *(Phân tích mã tĩnh)*
+- b) Software Composition Analysis *(Phân tích thành phần phần mềm)*
+- c) Security Configuration Audit *(Kiểm toán cấu hình bảo mật)*
+- d) Secure Container Assessment *(Đánh giá bảo mật container)*
 
-- a) Move security earlier in pipeline (Đưa bảo mật vào sớm hơn trong quy trình)
-- b) Move security to production (Đưa bảo mật vào production)
-- c) Remove security (Loại bỏ bảo mật)
-- d) Security on left screen (Bảo mật bên màn hình trái)
+---
+
+### Q4: Trivy Purpose
+
+What does Trivy scan?
+
+*(Trivy dùng để scan?)*
+
+- a) Source code *(Mã nguồn)*
+- b) Container images *(Ảnh container)*
+- c) Network *(Mạng)*
+- d) Secrets *(Bí mật)*
+
+---
+
+### Q5: Shift Left Security
+
+What does "Shift Left" security mean?
+
+*("Shift Left" security có nghĩa?)*
+
+- a) Move security earlier in pipeline *(Đưa bảo mật vào sớm hơn trong quy trình)*
+- b) Move security to production *(Đưa bảo mật vào production)*
+- c) Remove security *(Loại bỏ bảo mật)*
+- d) Security on left screen *(Bảo mật bên màn hình trái)*
 
 ---
 
 ## 📝 Answers
 
 <details>
-<summary>Click để xem</summary>
+<summary>Click to view answers / Nhấn để xem đáp án</summary>
 
-| Q | A | Explanation |
-|---|---|-------------|
+| Q | Answer | Explanation |
+|---|--------|-------------|
 | 1 | b | SAST = Static Application Security Testing |
 | 2 | b | DAST = Dynamic testing on running app |
 | 3 | b | Check dependencies for vulnerabilities |

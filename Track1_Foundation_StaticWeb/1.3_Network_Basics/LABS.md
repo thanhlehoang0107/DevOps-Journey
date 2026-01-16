@@ -491,4 +491,69 @@ openssl x509 -in server.crt -text -noout
 
 ---
 
+## ✅ General Verification (Kiểm chứng tổng quát)
+
+After completing all labs, verify you can:
+
+*(Sau khi hoàn thành tất cả labs, xác nhận bạn có thể:)*
+
+```bash
+# 1. View your IP configuration (Xem cấu hình IP)
+ip addr show | grep "inet "
+
+# 2. Resolve DNS names (Phân giải DNS)
+dig +short google.com
+
+# 3. Test connectivity (Kiểm tra kết nối)
+ping -c 2 8.8.8.8 && echo "Connectivity OK"
+
+# 4. Check open ports (Kiểm tra ports đang mở)
+ss -tuln | head -10
+
+# 5. Make HTTP request (Thực hiện HTTP request)
+curl -s -o /dev/null -w "%{http_code}" https://google.com
+```
+
+---
+
+## 🔧 General Troubleshooting (Xử lý sự cố chung)
+
+| Issue | Command to Check | Solution |
+|-------|------------------|----------|
+| **No IP address** | `ip addr show` | Check DHCP or static config *(Kiểm tra DHCP hoặc cấu hình tĩnh)* |
+| **Cannot ping gateway** | `ip route \| grep default` | Check cable/WiFi connection *(Kiểm tra kết nối)* |
+| **DNS not resolving** | `cat /etc/resolv.conf` | Add `nameserver 8.8.8.8` *(Thêm DNS server)* |
+| **Port blocked** | `nc -zv host port` | Check firewall with `sudo ufw status` *(Kiểm tra tường lửa)* |
+| **SSL certificate error** | `openssl s_client -connect host:443` | Check date/time, update CA certificates *(Kiểm tra ngày giờ)* |
+| **Command not found** | `which command` | Install with `sudo apt install package` *(Cài đặt package)* |
+
+---
+
+## 🧹 General Cleanup (Dọn dẹp tổng quát)
+
+Remove any changes made during labs:
+
+*(Xóa bỏ các thay đổi đã thực hiện trong labs:)*
+
+```bash
+# Remove custom /etc/hosts entries (Xóa entry tùy chỉnh)
+sudo sed -i '/myserver/d' /etc/hosts
+
+# Remove generated certificates (Xóa certificates đã tạo)
+rm -f server.key server.crt
+
+# Reset firewall if needed (Reset tường lửa nếu cần)
+# sudo ufw reset
+
+# Remove downloaded files (Xóa files đã tải)
+rm -f response.json
+```
+
+> ⚠️ **Warning:** Be careful when modifying firewall rules. Ensure SSH access is maintained!
+>
+> *Cảnh báo: Cẩn thận khi sửa đổi quy tắc tường lửa. Đảm bảo duy trì truy cập SSH!*
+
+---
+
 **[← Back to README](./README.md)** | **[Go to Quiz →](./QUIZ.md)**
+

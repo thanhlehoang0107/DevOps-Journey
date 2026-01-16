@@ -143,4 +143,60 @@ services:
 
 ---
 
+## ✅ General Verification (Kiểm chứng tổng quát)
+
+Verify monitoring stack is working:
+
+*(Xác nhận monitoring stack hoạt động:)*
+
+```bash
+# Check services running (Kiểm tra services chạy)
+docker compose ps
+
+# Test Prometheus (Kiểm tra Prometheus)
+curl http://localhost:9090/-/healthy
+
+# Test Grafana (Kiểm tra Grafana)
+curl -I http://localhost:3000
+
+# Test Node Exporter metrics (Kiểm tra metrics Node Exporter)
+curl http://localhost:9100/metrics | head -20
+
+# Test Loki (Kiểm tra Loki)
+curl http://localhost:3100/ready
+```
+
+---
+
+## 🔧 General Troubleshooting (Xử lý sự cố chung)
+
+| Issue | Solution |
+|-------|----------|
+| `Prometheus target down` | Check exporter running, firewall rules *(Kiểm tra exporter và firewall)* |
+| `Grafana: no data` | Check data source URL, time range *(Kiểm tra URL và khoảng thời gian)* |
+| `Alert not firing` | Check alert rules, Alertmanager config *(Kiểm tra rules và config)* |
+| `Loki: no logs` | Check promtail config, log paths *(Kiểm tra cấu hình promtail)* |
+| `Port conflict` | Change host ports in docker-compose *(Đổi port)* |
+
+---
+
+## 🧹 General Cleanup (Dọn dẹp tổng quát)
+
+```bash
+# Stop monitoring stack (Dừng monitoring stack)
+docker compose down
+
+# Remove volumes (Xóa volumes)
+docker compose down -v
+
+# Remove config files (Xóa files cấu hình)
+rm -f prometheus.yml alertmanager.yml promtail.yml
+
+# Remove images (Xóa images)
+docker rmi prom/prometheus prom/node-exporter grafana/grafana grafana/loki grafana/promtail
+```
+
+---
+
 **[← Back to README](./README.md)**
+

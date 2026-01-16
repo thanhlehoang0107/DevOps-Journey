@@ -494,4 +494,58 @@ RUN apt-get update && \
 
 ---
 
+## ✅ General Verification (Kiểm chứng tổng quát)
+
+Verify you've completed all labs:
+
+*(Xác nhận bạn đã hoàn thành tất cả labs:)*
+
+```bash
+# Check images created (Kiểm tra images đã tạo)
+docker images | grep -E "app|multi|secure|cached"
+
+# Verify multi-stage size reduction (Xác nhận giảm kích thước)
+docker images app:single --format "{{.Size}}"
+docker images app:multi --format "{{.Size}}"
+
+# Test secure container (Test container bảo mật)
+docker run --rm app:secure whoami  # Should output: appuser
+```
+
+---
+
+## 🔧 General Troubleshooting (Xử lý sự cố chung)
+
+| Issue | Solution |
+|-------|----------|
+| `BuildKit not enabled` | `export DOCKER_BUILDKIT=1` *(Bật BuildKit)* |
+| `OOMKilled` | Increase memory limit `-m 256m` *(Tăng giới hạn RAM)* |
+| `Read-only filesystem` | Add `--tmpfs /tmp` for temp files *(Thêm tmpfs cho file tạm)* |
+| `Permission denied` | Check `USER` directive, file ownership *(Kiểm tra USER và quyền sở hữu)* |
+| `COPY failed` | Check file exists in build context *(Kiểm tra file trong build context)* |
+| `dive: command not found` | Install: `brew install dive` (macOS) *(Cài đặt dive)* |
+
+---
+
+## 🧹 General Cleanup (Dọn dẹp tổng quát)
+
+```bash
+# Stop and remove test containers (Dừng và xóa containers test)
+docker stop secure-app buggy-app mem-test cpu-test 2>/dev/null
+docker rm secure-app buggy-app mem-test cpu-test 2>/dev/null
+
+# Remove lab images (Xóa images lab)
+docker rmi app:single app:multi app:cached app:secure app:secret 2>/dev/null
+docker rmi memory-test debug-image buggy-image 2>/dev/null
+
+# Remove lab directory (Xóa thư mục lab)
+rm -rf docker-advanced-lab
+
+# Prune unused images (Dọn dẹp images không dùng)
+docker image prune -f
+```
+
+---
+
 **[← Back to README](./README.md)** | **[Go to Quiz →](./QUIZ.md)**
+

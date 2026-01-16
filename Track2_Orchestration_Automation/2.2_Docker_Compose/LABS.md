@@ -224,4 +224,61 @@ volumes:
 
 ---
 
+## ✅ General Verification (Kiểm chứng tổng quát)
+
+Verify Docker Compose is working:
+
+*(Xác nhận Docker Compose hoạt động:)*
+
+```bash
+# Check all services running (Kiểm tra tất cả services chạy)
+docker compose ps
+
+# Check logs for errors (Kiểm tra logs có lỗi)
+docker compose logs --tail=20
+
+# Test connectivity (Kiểm tra kết nối)
+curl http://localhost:3000
+curl http://localhost:8080
+
+# Check networks (Kiểm tra networks)
+docker network ls | grep compose
+```
+
+---
+
+## 🔧 General Troubleshooting (Xử lý sự cố chung)
+
+| Issue | Solution |
+|-------|----------|
+| `Service unhealthy` | Check health check command, increase start_period *(Kiểm tra lệnh health check)* |
+| `Volume permission denied` | Check user ID matches, use `user:` directive *(Kiểm tra UID)* |
+| `Port already in use` | Change host port or stop conflicting service *(Đổi port hoặc dừng service khác)* |
+| `Cannot connect to database` | Wait for db healthy, check connection string *(Đợi db healthy)* |
+| `Build failed` | Check Dockerfile, run `docker compose build --no-cache` *(Build lại từ đầu)* |
+
+---
+
+## 🧹 General Cleanup (Dọn dẹp tổng quát)
+
+```bash
+# Stop all services (Dừng tất cả services)
+docker compose down
+
+# Stop and remove volumes (Dừng và xóa volumes)
+docker compose down -v
+
+# Remove all including orphans (Xóa tất cả kể cả orphans)
+docker compose down -v --remove-orphans
+
+# Remove built images (Xóa images đã build)
+docker compose down --rmi local
+
+# Full cleanup (Dọn dẹp hoàn toàn)
+docker compose down -v --rmi all --remove-orphans
+```
+
+---
+
 **[← Back to README](./README.md)**
+

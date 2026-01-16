@@ -155,4 +155,52 @@ chmod +x .git/hooks/pre-commit
 
 ---
 
+## ✅ General Verification (Kiểm chứng tổng quát)
+
+Verify you've completed all labs:
+
+*(Xác nhận bạn đã hoàn thành tất cả labs:)*
+
+```bash
+# Check Git configuration (Kiểm tra cấu hình Git)
+git config --list --global | grep -E "user\.(name|email)"
+
+# Check repository status (Kiểm tra trạng thái repository)
+cd my-project
+git status
+git log --oneline -5
+
+# Verify hooks exist (Xác nhận hooks tồn tại)
+ls -la .git/hooks/pre-commit
+```
+
+---
+
+## 🔧 General Troubleshooting (Xử lý sự cố chung)
+
+| Issue | Solution |
+|-------|----------|
+| `fatal: not a git repository` | Run `git init` or `cd` to correct directory *(Chạy git init hoặc cd đến thư mục đúng)* |
+| `Permission denied (publickey)` | Set up SSH key: `ssh-keygen -t ed25519` *(Thiết lập SSH key)* |
+| `error: failed to push` | Pull first: `git pull --rebase origin main` *(Pull trước)* |
+| `CONFLICT (content)` | Edit file, remove markers, then `git add` *(Sửa file, xóa markers)* |
+| `cannot lock ref` | Delete lock: `rm -f .git/index.lock` *(Xóa file lock)* |
+
+---
+
+## 🧹 General Cleanup (Dọn dẹp tổng quát)
+
+```bash
+# Remove test repository (Xóa repository test)
+cd ~
+rm -rf my-project
+
+# Or keep and clean up branches (Hoặc giữ và dọn dẹp branches)
+git branch -d feature/add-login branch-a 2>/dev/null
+git remote prune origin
+```
+
+---
+
 **[← Back to README](./README.md)**
+

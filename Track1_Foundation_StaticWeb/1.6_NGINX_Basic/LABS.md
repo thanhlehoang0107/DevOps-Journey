@@ -144,4 +144,57 @@ docker run -d -p 8080:80 my-nginx
 
 ---
 
+## ✅ General Verification (Kiểm chứng tổng quát)
+
+Verify NGINX is working:
+
+*(Xác nhận NGINX hoạt động:)*
+
+```bash
+# Check NGINX status (Kiểm tra trạng thái NGINX)
+sudo systemctl status nginx
+
+# Test configuration (Kiểm tra cấu hình)
+sudo nginx -t
+
+# Check NGINX version (Kiểm tra phiên bản)
+nginx -v
+
+# Test HTTP response (Kiểm tra phản hồi HTTP)
+curl -I http://localhost
+```
+
+---
+
+## 🔧 General Troubleshooting (Xử lý sự cố chung)
+
+| Issue | Solution |
+|-------|----------|
+| `nginx: [emerg] bind() to 0.0.0.0:80 failed` | Port 80 in use, stop Apache or change port *(Port 80 đang dùng)* |
+| `nginx: [emerg] unknown directive` | Syntax error in config, check spelling *(Lỗi cú pháp)* |
+| `502 Bad Gateway` | Backend server not running *(Server backend không chạy)* |
+| `403 Forbidden` | Check file permissions: `chmod 755` *(Kiểm tra quyền file)* |
+| `SSL: error` | Check certificate paths and validity *(Kiểm tra đường dẫn certificates)* |
+
+---
+
+## 🧹 General Cleanup (Dọn dẹp tổng quát)
+
+```bash
+# Remove custom site configs (Xóa cấu hình site tùy chỉnh)
+sudo rm /etc/nginx/sites-enabled/mysite 2>/dev/null
+sudo rm /etc/nginx/sites-available/mysite 2>/dev/null
+
+# Reload default config (Reload cấu hình mặc định)
+sudo systemctl reload nginx
+
+# Remove Docker NGINX (Xóa Docker NGINX)
+docker stop $(docker ps -q --filter ancestor=my-nginx) 2>/dev/null
+docker rm $(docker ps -aq --filter ancestor=my-nginx) 2>/dev/null
+docker rmi my-nginx 2>/dev/null
+```
+
+---
+
 **[← Back to README](./README.md)**
+

@@ -87,6 +87,33 @@ pwd
 - [ ] Navigate with `cd`
 - [ ] Understand the purpose of `/`, `/home`, `/etc`, `/var`
 
+### ✅ Verification (Kiểm chứng)
+
+Confirm you've completed this lab successfully:
+
+*(Xác nhận bạn đã hoàn thành lab thành công:)*
+
+```bash
+# Verify you can navigate (Xác nhận bạn có thể điều hướng)
+cd / && pwd && cd ~ && pwd
+
+# Expected: First shows /, then /home/username
+```
+
+### 🔧 Troubleshooting (Xử lý sự cố)
+
+| Error | Solution |
+|-------|----------|
+| `bash: cd: /var/log: Permission denied` | Use `sudo ls /var/log` or switch to root *(Dùng sudo hoặc chuyển sang root)* |
+| `-bash: ls: command not found` | PATH issue, try `/bin/ls` *(Lỗi PATH, thử /bin/ls)* |
+| `No such file or directory` | Check spelling and path *(Kiểm tra chính tả và đường dẫn)* |
+
+### 🧹 Cleanup (Dọn dẹp)
+
+No cleanup needed for this lab - we only explored the filesystem.
+
+*(Không cần dọn dẹp cho lab này - chúng ta chỉ khám phá hệ thống file.)*
+
 ---
 
 ## Lab 2: File and Directory Operations (Thao tác Files và Directories) 📁
@@ -183,6 +210,37 @@ rm -r to_delete
 - [ ] Manage files with `touch` and `echo`
 - [ ] Use `cp` and `mv` correctly
 - [ ] Safely delete with `rm` and `rm -r`
+
+### ✅ Verification (Kiểm chứng)
+
+Confirm your project structure exists:
+
+*(Xác nhận cấu trúc project tồn tại:)*
+
+```bash
+# Verify structure (Xác nhận cấu trúc)
+ls -la ~/devops-lab/project1/
+ls -la ~/devops-lab/project1/src/
+
+# Expected: See README.md, src/, docs/, tests/ directories
+```
+
+### 🔧 Troubleshooting (Xử lý sự cố)
+
+| Error | Solution |
+|-------|----------|
+| `mkdir: cannot create directory: File exists` | Directory already exists - this is OK *(Thư mục đã tồn tại - OK)* |
+| `rm: cannot remove: Is a directory` | Use `rm -r` for directories *(Dùng rm -r cho thư mục)* |
+| `cp: missing destination file operand` | Check syntax: `cp source destination` *(Kiểm tra cú pháp)* |
+
+### 🧹 Cleanup (Dọn dẹp)
+
+```bash
+# Remove lab directory if needed (Xóa thư mục lab nếu cần)
+rm -rf ~/devops-lab/project1
+
+# Or keep for next labs (Hoặc giữ lại cho labs tiếp theo)
+```
 
 ---
 
@@ -426,6 +484,61 @@ chmod +x scripts/system_health.sh
 
 ---
 
+## ✅ General Verification (Kiểm chứng tổng quát)
+
+After completing all labs, verify:
+
+*(Sau khi hoàn thành tất cả labs, xác nhận:)*
+
+```bash
+# 1. Check devops-lab structure exists (Kiểm tra cấu trúc devops-lab)
+ls -la ~/devops-lab/project1/
+
+# 2. Check scripts are executable (Kiểm tra scripts có thể chạy)
+ls -la ~/devops-lab/project1/scripts/
+
+# 3. Run health check script (Chạy script kiểm tra sức khỏe)
+~/devops-lab/project1/scripts/system_health.sh
+
+# Expected: All commands work, scripts run successfully
+```
+
+---
+
+## 🔧 General Troubleshooting (Xử lý sự cố chung)
+
+| Issue | Symptoms | Solution |
+|-------|----------|----------|
+| **Permission Denied** | Cannot execute script | `chmod +x script.sh` *(Thêm quyền thực thi)* |
+| **Command Not Found** | bash: command not found | Check PATH, install package *(Kiểm tra PATH, cài package)* |
+| **No Such File** | File/directory doesn't exist | Verify path with `ls`, create with `mkdir -p` *(Xác nhận đường dẫn)* |
+| **Syntax Error** | Script fails on line X | Check for typos, missing quotes *(Kiểm tra lỗi chính tả)* |
+| **WSL Issues** | Windows-specific errors | Use forward slashes `/`, check file encoding *(Dùng / thay \)* |
+
+---
+
+## 🧹 General Cleanup (Dọn dẹp tổng quát)
+
+Remove all lab files when done:
+
+*(Xóa tất cả files lab khi hoàn thành:)*
+
+```bash
+# Remove entire lab directory (Xóa toàn bộ thư mục lab)
+rm -rf ~/devops-lab
+
+# Or archive for future reference (Hoặc lưu trữ để tham khảo sau)
+cd ~
+tar -czvf devops-lab-backup.tar.gz devops-lab/
+rm -rf devops-lab
+```
+
+> ⚠️ **Warning:** `rm -rf` is permanent! Double-check the path before running.
+>
+> *Cảnh báo: `rm -rf` xóa vĩnh viễn! Kiểm tra kỹ đường dẫn trước khi chạy.*
+
+---
+
 ## 🔗 Navigation (Điều hướng)
 
 [⬅️ README](./README.md) | [CHEATSHEET](./CHEATSHEET.md) | [QUIZ ➡️](./QUIZ.md)
@@ -433,3 +546,4 @@ chmod +x scripts/system_health.sh
 ---
 
 *Last Updated: 2026-01-16*
+

@@ -305,6 +305,54 @@ deploy-production:
 
 ---
 
+## ✅ General Verification (Kiểm chứng tổng quát)
+
+Verify your pipelines work:
+
+*(Xác nhận pipelines hoạt động:)*
+
+1. Go to **CI/CD > Pipelines** in GitLab *(Vào CI/CD > Pipelines)*
+2. Check all jobs passed (green checkmarks) *(Kiểm tra tất cả jobs đã pass)*
+3. View job logs for details *(Xem logs của job để biết chi tiết)*
+
+```bash
+# Check .gitlab-ci.yml syntax locally (Kiểm tra cú pháp .gitlab-ci.yml)
+# Install gitlab-runner first
+gitlab-runner exec docker hello-job
+
+# Or use GitLab CI Lint (Settings > CI/CD > CI Lint)
+```
+
+---
+
+## 🔧 General Troubleshooting (Xử lý sự cố chung)
+
+| Issue | Solution |
+|-------|----------|
+| `This job is stuck` | No available runners - check runner configuration *(Không có runner khả dụng)* |
+| `yaml invalid` | Check YAML syntax, use CI Lint *(Kiểm tra cú pháp YAML)* |
+| `Permission denied` | Check variable permissions in Settings > CI/CD *(Kiểm tra quyền biến)* |
+| `Artifact not found` | Check `artifacts:paths` and job dependencies *(Kiểm tra đường dẫn artifacts)* |
+| `Docker: command not found` | Use `image: docker:24` with `services: docker:dind` *(Dùng docker:dind service)* |
+| `Job failed: exit code 1` | Check script commands and logs *(Kiểm tra lệnh và logs)* |
+
+---
+
+## 🧹 General Cleanup (Dọn dẹp tổng quát)
+
+```bash
+# Clean up local test files (Dọn dẹp files test local)
+rm -rf dist/ node_modules/ coverage/
+
+# Delete old pipelines in GitLab (Xóa pipelines cũ trong GitLab)
+# Go to CI/CD > Pipelines > Clear Runner Caches
+
+# Remove Container Registry images (Xóa images trong Container Registry)
+# Go to Packages & Registries > Container Registry > Delete tags
+```
+
+---
+
 ## 📚 Additional Resources (Tài liệu bổ sung)
 
 - [GitLab CI/CD Documentation](https://docs.gitlab.com/ee/ci/)
@@ -314,3 +362,4 @@ deploy-production:
 ---
 
 **[← Back to README](./README.md)** | **[GitHub Actions Alternative →](./README_GITHUB_ACTIONS.md)**
+

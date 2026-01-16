@@ -148,4 +148,55 @@ pipeline {
 
 ---
 
+## ✅ General Verification (Kiểm chứng tổng quát)
+
+Verify Jenkins is working:
+
+*(Xác nhận Jenkins hoạt động:)*
+
+```bash
+# Check Jenkins container running (Kiểm tra container Jenkins)
+docker ps | grep jenkins
+
+# Access Jenkins UI (Truy cập Jenkins UI)
+curl -I http://localhost:8080
+
+# Check logs (Kiểm tra logs)
+docker logs jenkins --tail=30
+```
+
+---
+
+## 🔧 General Troubleshooting (Xử lý sự cố chung)
+
+| Issue | Solution |
+|-------|----------|
+| `Jenkins stuck at setup` | Wait for plugins, check logs *(Đợi plugins cài xong)* |
+| `Cannot run Docker in pipeline` | Mount docker.sock, install Docker plugin *(Mount docker.sock)* |
+| `Pipeline script error` | Check Groovy syntax, use Pipeline Syntax generator *(Kiểm tra cú pháp Groovy)* |
+| `Git checkout failed` | Add credentials in Jenkins *(Thêm credentials)* |
+| `Agent offline` | Check agent connectivity, restart agent *(Kiểm tra kết nối agent)* |
+
+---
+
+## 🧹 General Cleanup (Dọn dẹp tổng quát)
+
+```bash
+# Stop Jenkins container (Dừng container Jenkins)
+docker stop jenkins
+
+# Remove container (keep data) (Xóa container, giữ data)
+docker rm jenkins
+
+# Full cleanup including data (Dọn dẹp hoàn toàn kể cả data)
+docker rm -f jenkins
+docker volume rm jenkins_home
+
+# Remove Jenkins images (Xóa images Jenkins)
+docker rmi jenkins/jenkins:lts
+```
+
+---
+
 **[← Back to README](./README.md)**
+

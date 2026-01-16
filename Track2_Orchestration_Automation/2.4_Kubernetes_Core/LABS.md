@@ -155,4 +155,64 @@ kubectl rollout undo deployment/web
 
 ---
 
+## ✅ General Verification (Kiểm chứng tổng quát)
+
+Verify Kubernetes is working:
+
+*(Xác nhận Kubernetes hoạt động:)*
+
+```bash
+# Check cluster status (Kiểm tra trạng thái cluster)
+kubectl cluster-info
+kubectl get nodes
+
+# Check all resources (Kiểm tra tất cả resources)
+kubectl get all
+
+# Check deployments are running (Kiểm tra deployments chạy)
+kubectl get deployments
+kubectl get pods -o wide
+
+# Test service connectivity (Kiểm tra kết nối service)
+minikube service web --url
+```
+
+---
+
+## 🔧 General Troubleshooting (Xử lý sự cố chung)
+
+| Issue | Solution |
+|-------|----------|
+| `minikube start failed` | Check Docker/virtualization, try `minikube delete && minikube start` *(Xóa và thử lại)* |
+| `ImagePullBackOff` | Check image name, registry auth *(Kiểm tra tên image và auth)* |
+| `CrashLoopBackOff` | Check logs: `kubectl logs pod-name` *(Kiểm tra logs)* |
+| `Pending pod` | Check resources: `kubectl describe pod` *(Kiểm tra resources)* |
+| `Service unavailable` | Check selector matches, pod labels *(Kiểm tra selector và labels)* |
+| `kubectl: command not found` | Install kubectl or use `minikube kubectl` *(Cài kubectl)* |
+
+---
+
+## 🧹 General Cleanup (Dọn dẹp tổng quát)
+
+```bash
+# Delete lab resources (Xóa resources lab)
+kubectl delete deployment nginx web 2>/dev/null
+kubectl delete service nginx web 2>/dev/null
+kubectl delete configmap app-config 2>/dev/null
+kubectl delete secret app-secret 2>/dev/null
+kubectl delete pod app 2>/dev/null
+
+# Delete all in namespace (Xóa tất cả trong namespace)
+kubectl delete all --all
+
+# Stop minikube (Dừng minikube)
+minikube stop
+
+# Full cleanup (Dọn dẹp hoàn toàn)
+minikube delete
+```
+
+---
+
 **[← Back to README](./README.md)**
+
