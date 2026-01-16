@@ -504,13 +504,237 @@ command [options] <arguments>
 
 ## 4. 📝 Writing Style (Phong cách Viết)
 
+### ⚠️ CRITICAL: Detailed, Textbook-style Explanations
+
+**Content MUST be detailed enough for self-learning. Long files are GOOD, not bad!**
+
+*Nội dung PHẢI đủ chi tiết để học sinh tự học được. File dài là TỐT, không phải xấu!*
+
+---
+
 ### 4.1 Zero-Background Friendly
 
 - Explain concepts as if reader has NO IT background
 - Use simple words before technical terms
 - Provide real-world analogies
+- **Always explain WHY, not just WHAT**
 
-### 4.2 Analogies (Phép ẩn dụ)
+*Luôn giải thích TẠI SAO, không chỉ CÁI GÌ*
+
+---
+
+### 4.2 Real-world Scenarios (Tình huống thực tế) - REQUIRED
+
+**Every major concept MUST start with a real-world scenario that explains WHY we need it.**
+
+*Mỗi khái niệm quan trọng PHẢI bắt đầu bằng tình huống thực tế giải thích TẠI SAO cần nó.*
+
+✅ **Required format:**
+
+```markdown
+> 📖 **Real-world Scenario (Tình huống thực tế):**
+>
+> [Describe a problem that happens WITHOUT the technology]
+> [Mô tả vấn đề xảy ra khi KHÔNG CÓ công nghệ này]
+>
+> *[Vietnamese translation of the problem]*
+>
+> **[How the technology solves it]**
+>
+> *[Vietnamese translation of the solution]*
+```
+
+✅ **Good example:**
+
+```markdown
+> 📖 **Real-world Scenario (Tình huống thực tế):**
+>
+> Your company runs 50 microservices in Docker containers. One day, a 
+> container crashes at 3 AM. Who restarts it? Traffic spikes 10x during 
+> Black Friday. How to scale quickly?
+>
+> *Công ty bạn chạy 50 microservices trong Docker. Container crash lúc 
+> 3 giờ sáng. Ai sẽ restart? Traffic tăng 10 lần ngày Black Friday. 
+> Làm sao scale nhanh?*
+>
+> **Kubernetes solves ALL these problems automatically!**
+>
+> *Kubernetes giải quyết TẤT CẢ các vấn đề này tự động!*
+```
+
+❌ **Bad - No scenario, just definition:**
+
+```markdown
+Kubernetes is a container orchestration platform.
+```
+
+---
+
+### 4.3 Before vs After Comparisons (So sánh Trước/Sau) - REQUIRED for tools
+
+**When introducing a tool, MUST show what life was like WITHOUT it vs WITH it.**
+
+*Khi giới thiệu công cụ, PHẢI cho thấy cuộc sống như thế nào khi KHÔNG CÓ vs CÓ nó.*
+
+✅ **Required format:**
+
+```markdown
+| Before [Tool] | After [Tool] |
+|---------------|--------------|
+| ❌ Problem 1 *(Vấn đề 1)* | ✅ Solution 1 *(Giải pháp 1)* |
+| ❌ Problem 2 *(Vấn đề 2)* | ✅ Solution 2 *(Giải pháp 2)* |
+```
+
+✅ **Good example:**
+
+```markdown
+| Before CI/CD | After CI/CD |
+|--------------|-------------|
+| ❌ Deploy manually, takes 4 hours *(Deploy thủ công, mất 4 tiếng)* | ✅ Deploy automatically in 10 minutes *(Deploy tự động trong 10 phút)* |
+| ❌ Forget steps, cause errors *(Quên bước, gây lỗi)* | ✅ Consistent process, no errors *(Quy trình nhất quán, không lỗi)* |
+| ❌ Deploy once a week *(Deploy 1 lần/tuần)* | ✅ Deploy dozens of times per day *(Deploy hàng chục lần/ngày)* |
+```
+
+---
+
+### 4.4 Common Mistakes Section (Lỗi thường gặp) - REQUIRED
+
+**Every module MUST have a "Common Mistakes" section before the footer.**
+
+*Mỗi module PHẢI có phần "Lỗi thường gặp" trước footer.*
+
+✅ **Required format:**
+
+```markdown
+### X. Common Mistakes (Lỗi thường gặp)
+
+> ⚠️ **Mistakes beginners often make (Lỗi người mới hay mắc):**
+>
+> | Mistake | Problem | Solution |
+> |---------|---------|----------|
+> | [What they do wrong] | [What happens] *(Vietnamese)* | [How to fix] *(Vietnamese)* |
+```
+
+✅ **Good example:**
+
+```markdown
+### 10. Common Mistakes (Lỗi thường gặp)
+
+> ⚠️ **Docker mistakes beginners often make (Lỗi Docker người mới hay mắc):**
+>
+> | Mistake | Problem | Solution |
+> |---------|---------|----------|
+> | Running as root | Security risk *(Rủi ro bảo mật)* | Add `USER node` *(Thêm user không phải root)* |
+> | Using `latest` tag | Unpredictable *(Không ổn định)* | Specify version: `nginx:1.25.3` *(Chỉ định version)* |
+> | No `.dockerignore` | Large images *(Image lớn)* | Create `.dockerignore` *(Tạo .dockerignore)* |
+```
+
+---
+
+### 4.5 Checkpoint Questions (Câu hỏi tự kiểm tra) - REQUIRED
+
+**Every module MUST have a "Checkpoint" section before Module Files.**
+
+*Mỗi module PHẢI có phần "Checkpoint" trước Module Files.*
+
+✅ **Required format:**
+
+```markdown
+> ✅ **Checkpoint - Before continuing, make sure you can answer:**
+> *(Trước khi tiếp tục, hãy chắc bạn có thể trả lời:)*
+>
+> - [ ] Question 1? *(Câu hỏi 1?)*
+> - [ ] Question 2? *(Câu hỏi 2?)*
+> - [ ] Question 3? *(Câu hỏi 3?)*
+> - [ ] Question 4? *(Câu hỏi 4?)*
+>
+> *If you can't answer, please re-read the sections above!*
+```
+
+**Guidelines for checkpoint questions:**
+
+- 4-5 questions per module
+- Questions should test UNDERSTANDING, not just memory
+- Cover the most important concepts
+- Mix "what", "how", and "why" questions
+
+---
+
+### 4.6 Quiz Answer Explanations (Giải thích đáp án Quiz) - REQUIRED
+
+**Every QUIZ.md MUST have explanations for ALL answers, not just the answer letter.**
+
+*Mỗi QUIZ.md PHẢI có giải thích cho TẤT CẢ đáp án, không chỉ chữ cái.*
+
+✅ **Required format:**
+
+```markdown
+<details>
+<summary>Click để xem đáp án và giải thích</summary>
+
+### Answers with Explanations (Đáp án và giải thích)
+
+| Q | Answer | Explanation (Giải thích) |
+|---|--------|--------------------------|
+| 1 | **b** | [Why this is correct] *(Vietnamese explanation)* |
+| 2 | **c** | [Why this is correct] *(Vietnamese explanation)* |
+
+> 💡 **Pro Tip:** [Pattern observation about the answers]
+>
+> *[Vietnamese translation]*
+
+</details>
+```
+
+❌ **Bad - Just answers without explanation:**
+
+```markdown
+| Q | A |
+|---|---|
+| 1 | b |
+| 2 | c |
+```
+
+---
+
+### 4.7 Code Block Explanations (Giải thích Code Block)
+
+**Every code block longer than 3 lines MUST have:**
+
+1. Comment explaining each significant line
+2. Explanation paragraph after the block (for complex code)
+
+✅ **Good example:**
+
+```markdown
+```yaml
+# .gitlab-ci.yml
+stages:                    # Define order of stages (Định nghĩa thứ tự stages)
+  - build                  # Run first (Chạy đầu tiên)
+  - test                   # Run after build (Chạy sau build)
+  - deploy                 # Run last (Chạy cuối cùng)
+
+build-job:
+  stage: build
+  script:
+    - npm install          # Install dependencies (Cài đặt dependencies)
+    - npm run build        # Build the application (Build ứng dụng)
+  artifacts:
+    paths:
+      - dist/              # Save build output for next stages (Lưu output cho stages sau)
+```
+
+**Explanation (Giải thích):**
+
+- `stages`: Defines the order in which stages run. Build → Test → Deploy.
+- `artifacts`: Files that are passed to the next stage. Without this, `dist/` would be lost.
+
+*(stages: Định nghĩa thứ tự chạy các giai đoạn. artifacts: Files được truyền sang stage tiếp theo.)*
+```
+
+---
+
+### 4.8 Analogies (Phép ẩn dụ)
 
 ```markdown
 **Docker Container** is like a shipping container - it packages everything 
@@ -520,7 +744,9 @@ needed to run an application, and works the same everywhere.
 để chạy ứng dụng, và hoạt động giống nhau ở mọi nơi.*
 ```
 
-### 4.3 Pro-tips and Notes
+---
+
+### 4.9 Pro-tips, Warnings, and Notes
 
 ```markdown
 > 💡 **Pro-tip:** Always explanation here.
@@ -535,6 +761,22 @@ needed to run an application, and works the same everywhere.
 >
 > *Thông tin bổ sung.*
 ```
+
+---
+
+### 4.10 Content Length Guidelines (Hướng dẫn độ dài nội dung)
+
+| File | Minimum Lines | Target Lines | Notes |
+|------|---------------|--------------|-------|
+| `README.md` | 300 | 500-800 | More is better for complex topics *(Càng nhiều càng tốt cho topic phức tạp)* |
+| `LABS.md` | 200 | 400-600 | Step-by-step needs detail *(Từng bước cần chi tiết)* |
+| `QUIZ.md` | 150 | 250-350 | Include explanations *(Bao gồm giải thích)* |
+| `EXERCISES.md` | 100 | 150-250 | Include hints for hard ones *(Bao gồm gợi ý cho bài khó)* |
+| `CHEATSHEET.md` | 100 | 150-200 | Quick reference *(Tra cứu nhanh)* |
+
+**⚠️ IMPORTANT: Long files are GOOD if content is useful. Never sacrifice clarity for brevity!**
+
+*File dài là TỐT nếu nội dung hữu ích. Không bao giờ hy sinh sự rõ ràng vì ngắn gọn!*
 
 ---
 
