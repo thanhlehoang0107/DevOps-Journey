@@ -22,29 +22,31 @@ After this module, you will (Sau module này, bạn sẽ):
 
 ## 🤔 Why Certifications Matter? (Tại sao chứng chỉ quan trọng?)
 
-### Lợi ích của Chứng chỉ (Benefits)
+### Benefits of Certifications (Lợi ích của Chứng chỉ)
 
-| Lợi ích | Giải thích |
-|---------|------------|
-| 💰 **Tăng lương** | Chứng chỉ AWS, CKA có thể tăng 10-20% lương |
-| 🎯 **Vượt qua ATS** | Nhiều công ty lọc CV theo certifications |
-| 📚 **Học có hệ thống** | Buộc bạn học đầy đủ, không bỏ sót kiến thức |
-| 🤝 **Chứng minh năng lực** | Khách quan hơn việc tự claim "biết AWS" |
-| 🌐 **Toàn cầu công nhận** | AWS, CKA được công nhận worldwide |
+| Benefit (Lợi ích) | Explanation (Giải thích) |
+|-------------------|--------------------------|
+| 💰 **Salary increase** | AWS, CKA certs can increase salary by 10-20% *(Tăng 10-20% lương)* |
+| 🎯 **Pass ATS** | Many companies filter CVs by certifications *(Nhiều công ty lọc CV theo chứng chỉ)* |
+| 📚 **Systematic learning** | Forces you to learn completely, without gaps *(Học đầy đủ, không bỏ sót)* |
+| 🤝 **Prove competence** | More objective than claiming "I know AWS" *(Khách quan hơn tự claim)* |
+| 🌐 **Globally recognized** | AWS, CKA are recognized worldwide *(Được công nhận toàn cầu)* |
 
-### Khi nào NÊN và KHÔNG NÊN thi chứng chỉ?
+### When SHOULD and SHOULD NOT take certifications? (Khi nào NÊN và KHÔNG NÊN thi?)
 
-**NÊN thi khi:**
+**SHOULD take when:**
 
-- Bạn đã có kinh nghiệm thực hành (ít nhất 3-6 tháng với công cụ đó)
-- Công ty/job bạn nhắm đến yêu cầu chứng chỉ
-- Bạn muốn học một cách có hệ thống
+- You have hands-on experience (at least 3-6 months with that tool) *(Bạn đã có kinh nghiệm thực hành)*
+- The company/job you're targeting requires certifications *(Công ty/job bạn nhắm đến yêu cầu chứng chỉ)*
+- You want to learn systematically *(Bạn muốn học một cách có hệ thống)*
 
-**KHÔNG NÊN thi khi:**
+**SHOULD NOT take when:**
 
-- Chỉ vì "có càng nhiều càng tốt" (cert collector)
-- Chưa có kinh nghiệm thực hành nào
-- Không có kế hoạch sử dụng kiến thức đó
+- Just because "the more the better" (cert collector) *(Chỉ vì "có càng nhiều càng tốt")*
+- You have no hands-on experience yet *(Chưa có kinh nghiệm thực hành nào)*
+- You have no plans to use that knowledge *(Không có kế hoạch sử dụng kiến thức đó)*
+
+*Certifications are most valuable when combined with real-world experience!*
 
 *Chứng chỉ có giá trị nhất khi kết hợp với kinh nghiệm thực tế!*
 

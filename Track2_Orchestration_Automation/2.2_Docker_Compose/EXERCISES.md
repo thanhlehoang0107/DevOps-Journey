@@ -1,13 +1,19 @@
 # 💪 Exercises: Docker Compose
 
+> **Self-practice exercises for Docker Compose.**
+>
+> *Bài tập tự luyện Docker Compose.*
+
 ---
 
 ## Exercise 1: WordPress Stack ⭐
 
-Deploy WordPress với MySQL:
+Deploy WordPress with MySQL:
+
+*(Deploy WordPress với MySQL:)*
 
 - WordPress on port 8080
-- MySQL với persistent volume
+- MySQL with persistent volume *(MySQL với persistent volume)*
 - Proper environment variables
 - Health checks
 
@@ -15,9 +21,11 @@ Deploy WordPress với MySQL:
 
 ## Exercise 2: Development Environment ⭐⭐
 
-Tạo dev environment cho Node.js app:
+Create a dev environment for Node.js app:
 
-- Hot reload với volume mount
+*(Tạo dev environment cho Node.js app:)*
+
+- Hot reload with volume mount *(Hot reload với volume mount)*
 - Debug port exposed
 - Database + cache services
 - Adminer for DB management
@@ -37,11 +45,13 @@ Build 3-tier application:
 
 ## Exercise 4: Production Configuration ⭐⭐⭐
 
-Tạo production-ready compose:
+Create production-ready compose:
+
+*(Tạo production-ready compose:)*
 
 - Resource limits
 - Logging configuration
-- Health checks với depends_on conditions
+- Health checks with depends_on conditions
 - Restart policies
 - Multiple environments (dev, staging, prod)
 

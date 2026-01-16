@@ -1,14 +1,16 @@
 # 💪 Exercises: Python Basics
 
-> Bài tập tự luyện Python cho DevOps.
+> **Self-practice exercises for Python DevOps.**
+>
+> *Bài tập tự luyện Python cho DevOps.*
 
 ---
 
-## 📋 Hướng Dẫn
+## 📋 Instructions (Hướng dẫn)
 
-- Làm bài tập sau khi hoàn thành Labs
+- Complete exercises after finishing Labs *(Làm bài tập sau khi hoàn thành Labs)*
 - Difficulty: ⭐ Easy, ⭐⭐ Medium, ⭐⭐⭐ Hard
-- Xem Solutions sau khi thử tự làm
+- Check Solutions after trying yourself *(Xem Solutions sau khi thử tự làm)*
 
 ---
 
@@ -16,12 +18,12 @@
 
 ### Tasks
 
-1. Tạo list `servers` chứa 5 server names
-2. Thêm 2 servers mới vào cuối list
-3. Xóa server thứ 3
-4. Sắp xếp list theo alphabet
-5. Tạo dictionary `server_info` mapping server name → IP address
-6. In ra tất cả servers có IP bắt đầu bằng "192"
+1. Create a list `servers` containing 5 server names *(Tạo list `servers` chứa 5 server names)*
+2. Add 2 new servers to the end of the list *(Thêm 2 servers mới vào cuối list)*
+3. Remove the 3rd server *(Xóa server thứ 3)*
+4. Sort the list alphabetically *(Sắp xếp list theo alphabet)*
+5. Create dictionary `server_info` mapping server name → IP address *(Tạo dictionary mapping server name → IP)*
+6. Print all servers with IP starting with "192" *(In ra tất cả servers có IP bắt đầu bằng "192")*
 
 ---
 
@@ -29,7 +31,9 @@
 
 ### Task
 
-Viết function `parse_log_line(line)` phân tích log line:
+Write function `parse_log_line(line)` to parse a log line:
+
+*(Viết function `parse_log_line(line)` phân tích log line:)*
 
 Input:
 
@@ -54,12 +58,14 @@ Output:
 
 ### Task
 
-Viết script đọc file `/etc/passwd` (hoặc tạo file giả) và:
+Write a script to read file `/etc/passwd` (or create a mock file) and:
 
-1. Đếm số users
-2. Liệt kê users có shell là `/bin/bash`
-3. Tìm users có UID >= 1000
-4. Export kết quả ra JSON file
+*(Viết script đọc file `/etc/passwd` (hoặc tạo file giả) và:)*
+
+1. Count number of users *(Đếm số users)*
+2. List users with shell `/bin/bash` *(Liệt kê users có shell là `/bin/bash`)*
+3. Find users with UID >= 1000 *(Tìm users có UID >= 1000)*
+4. Export results to JSON file *(Export kết quả ra JSON file)*
 
 ---
 
@@ -67,7 +73,9 @@ Viết script đọc file `/etc/passwd` (hoặc tạo file giả) và:
 
 ### Task
 
-Viết class `GitHubClient` với methods:
+Write class `GitHubClient` with methods:
+
+*(Viết class `GitHubClient` với methods:)*
 
 ```python
 class GitHubClient:
@@ -84,7 +92,7 @@ class GitHubClient:
         pass
 ```
 
-Test với real GitHub API.
+Test with real GitHub API.
 
 ---
 
@@ -92,7 +100,9 @@ Test với real GitHub API.
 
 ### Task
 
-Viết function đọc config từ nhiều sources với priority:
+Write a function to read config from multiple sources with priority:
+
+*(Viết function đọc config từ nhiều sources với priority:)*
 
 1. Default values (lowest)
 2. Config file (YAML)
@@ -113,15 +123,17 @@ def load_config(config_file, cli_args) -> dict:
 
 ### Task
 
-Viết script phân tích multiple log files:
+Write a script to analyze multiple log files:
+
+*(Viết script phân tích multiple log files:)*
 
 Features:
 
-- Đọc tất cả `.log` files trong folder
+- Read all `.log` files in a folder *(Đọc tất cả `.log` files trong folder)*
 - Aggregate errors by type
-- Generate HTML report với:
-  - Pie chart (text-based) của error types
-  - Timeline của errors
+- Generate HTML report with:
+  - Pie chart (text-based) of error types
+  - Timeline of errors
   - Top 10 frequent errors
 
 ---
@@ -130,7 +142,9 @@ Features:
 
 ### Task
 
-Viết class `ServerMonitor`:
+Write class `ServerMonitor`:
+
+*(Viết class `ServerMonitor`:)*
 
 ```python
 class ServerMonitor:
@@ -164,7 +178,9 @@ class ServerMonitor:
 
 ### Task
 
-Viết CLI tool tạo secure passwords:
+Write a CLI tool to create secure passwords:
+
+*(Viết CLI tool tạo secure passwords:)*
 
 ```bash
 python password_gen.py --length 16 --uppercase --lowercase --digits --special
@@ -183,7 +199,9 @@ Features:
 
 ### Task
 
-Viết backup script với features:
+Write a backup script with features:
+
+*(Viết backup script với features:)*
 
 ```python
 def backup_directory(
@@ -208,7 +226,9 @@ def backup_directory(
 
 ### Task
 
-Viết deployment automation:
+Write deployment automation:
+
+*(Viết deployment automation:)*
 
 ```python
 class Deployer:

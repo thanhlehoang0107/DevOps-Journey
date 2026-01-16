@@ -26,21 +26,21 @@ After this module, you will (Sau module này, bạn sẽ):
 
 ### 1. What is Observability? (Khả năng quan sát là gì?)
 
-**Observability** (Khả năng quan sát) là khả năng hiểu trạng thái bên trong của một hệ thống chỉ bằng cách xem các đầu ra của nó. Trong DevOps, đây là kỹ năng cực kỳ quan trọng để:
+**Observability** is the ability to understand the internal state of a system by examining its outputs. In DevOps, this is an extremely important skill to:
 
-*Observability is the ability to understand the internal state of a system by examining its outputs. In DevOps, this is an extremely important skill to:*
+*Observability (Khả năng quan sát) là khả năng hiểu trạng thái bên trong của một hệ thống chỉ bằng cách xem các đầu ra của nó. Trong DevOps, đây là kỹ năng cực kỳ quan trọng để:*
 
-- **Phát hiện sự cố nhanh chóng** (Detect incidents quickly).
-- **Hiểu nguyên nhân gốc rễ** (Understand root causes).
-- **Đảm bảo hiệu năng và độ tin cậy** (Ensure performance and reliability).
+- **Detect incidents quickly** *(Phát hiện sự cố nhanh chóng)*
+- **Understand root causes** *(Hiểu nguyên nhân gốc rễ)*
+- **Ensure performance and reliability** *(Đảm bảo hiệu năng và độ tin cậy)*
 
-#### Ba trụ cột của Observability (The Three Pillars)
+#### The Three Pillars of Observability (Ba trụ cột của Observability)
 
-| Trụ cột | Mô tả | Công cụ ví dụ |
-|---------|-------|---------------|
-| 📈 **Metrics (Số liệu)** | Dữ liệu định lượng theo thời gian (CPU, RAM, request count) | Prometheus, Datadog |
-| 📜 **Logs (Nhật ký)** | Bản ghi sự kiện xảy ra trong hệ thống | Loki, ELK Stack |
-| 🔗 **Traces (Dấu vết)** | Theo dõi một request đi qua nhiều services | Jaeger, Zipkin |
+| Pillar (Trụ cột) | Description (Mô tả) | Example Tools (Công cụ ví dụ) |
+|------------------|---------------------|-------------------------------|
+| 📈 **Metrics (Số liệu)** | Quantitative data over time (CPU, RAM, request count) *(Dữ liệu định lượng theo thời gian)* | Prometheus, Datadog |
+| 📜 **Logs (Nhật ký)** | Records of events in the system *(Bản ghi sự kiện xảy ra trong hệ thống)* | Loki, ELK Stack |
+| 🔗 **Traces (Dấu vết)** | Track a request across multiple services *(Theo dõi một request đi qua nhiều services)* | Jaeger, Zipkin |
 
 ---
 

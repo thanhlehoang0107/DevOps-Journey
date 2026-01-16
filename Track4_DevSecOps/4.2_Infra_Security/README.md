@@ -50,46 +50,48 @@ After this module, you will (Sau module này, bạn sẽ):
 *Vault là công cụ quản lý secrets phổ biến nhất. Nó cung cấp **dynamic secrets** (tạo credentials tạm thời cho mỗi request).*
 
 ```bash
-# Lưu secret vào Vault
+# Store secret in Vault (Lưu secret vào Vault)
 vault kv put secret/myapp db_password=secret123 api_key=abc123
 
-# Đọc secret từ Vault
+# Read secret from Vault (Đọc secret từ Vault)
 vault kv get secret/myapp
 
-# Đọc chỉ 1 field
+# Read only 1 field (Đọc chỉ 1 field)
 vault kv get -field=db_password secret/myapp
 ```
 
-**Giải thích:**
+**Explanation:** *(Giải thích:)*
 
-- `secret/myapp`: Path lưu trữ (có thể phân quyền theo path)
+- `secret/myapp`: Storage path (can set permissions per path) *(Path lưu trữ - có thể phân quyền theo path)*
 - `db_password=secret123`: Key-value pair
-- Secrets được mã hóa at-rest và in-transit
+- Secrets are encrypted at-rest and in-transit *(Secrets được mã hóa at-rest và in-transit)*
 
 ---
 
 ### 3. AWS Secrets Manager
 
-Nếu bạn dùng AWS, **Secrets Manager** tích hợp sẵn với RDS, Lambda, ECS.
+If you use AWS, **Secrets Manager** integrates with RDS, Lambda, ECS out of the box.
+
+*Nếu bạn dùng AWS, **Secrets Manager** tích hợp sẵn với RDS, Lambda, ECS.*
 
 ```bash
-# Tạo secret mới
+# Create new secret (Tạo secret mới)
 aws secretsmanager create-secret \
   --name prod/myapp/db \
   --secret-string '{"username":"admin","password":"secret123"}'
 
-# Đọc secret
+# Read secret (Đọc secret)
 aws secretsmanager get-secret-value --secret-id prod/myapp/db
 
-# Rotate secret tự động (cho RDS)
+# Rotate secret automatically for RDS (Rotate secret tự động cho RDS)
 aws secretsmanager rotate-secret --secret-id prod/myapp/db
 ```
 
-**Lợi ích so với Vault:**
+**Benefits compared to Vault:** *(Lợi ích so với Vault:)*
 
-- Không cần quản lý server
-- Tích hợp sẵn với AWS services
-- Automatic rotation cho RDS
+- No server management needed *(Không cần quản lý server)*
+- Built-in integration with AWS services *(Tích hợp sẵn với AWS services)*
+- Automatic rotation for RDS *(Automatic rotation cho RDS)*
 
 ---
 
@@ -97,10 +99,10 @@ aws secretsmanager rotate-secret --secret-id prod/myapp/db
 
 ### 5. CIS Benchmarks
 
-- OS hardening (Hardening hệ điều hành)
-- SSH configuration (Cấu hình SSH)
-- Firewall rules (Quy tắc tường lửa)
-- Audit logging (Ghi nhật ký kiểm toán)
+- OS hardening *(Hardening hệ điều hành)*
+- SSH configuration *(Cấu hình SSH)*
+- Firewall rules *(Quy tắc tường lửa)*
+- Audit logging *(Ghi nhật ký kiểm toán)*
 
 ### 6. Compliance (Tuân thủ)
 

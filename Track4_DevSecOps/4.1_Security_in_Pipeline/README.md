@@ -80,13 +80,13 @@ Traditionally, security was checked at the **end** of development, before releas
 
 #### Types of Security Testing (Các loại Security Testing)
 
-| Loại | Thời điểm | Công cụ | Phát hiện gì |
-|------|-----------|---------|--------------|
-| **SAST** (Static) | Code commit | SonarQube, CodeQL | SQL Injection, XSS trong code |
-| **SCA** (Composition) | Build | Snyk, npm audit | Vulnerabilities trong dependencies |
-| **Container Scan** | Build image | Trivy, Docker Scout | CVE trong base image |
-| **Secret Scan** | Commit | Gitleaks, TruffleHog | API keys, passwords trong code |
-| **DAST** (Dynamic) | Staging | OWASP ZAP, Nuclei | Vulnerabilities khi app chạy |
+| Type (Loại) | When (Thời điểm) | Tools (Công cụ) | Detects (Phát hiện) |
+|-------------|------------------|-----------------|---------------------|
+| **SAST** (Static) | Code commit | SonarQube, CodeQL | SQL Injection, XSS in code *(Trong code)* |
+| **SCA** (Composition) | Build | Snyk, npm audit | Vulnerabilities in dependencies *(Trong dependencies)* |
+| **Container Scan** | Build image | Trivy, Docker Scout | CVE in base image *(Trong base image)* |
+| **Secret Scan** | Commit | Gitleaks, TruffleHog | API keys, passwords in code *(Trong code)* |
+| **DAST** (Dynamic) | Staging | OWASP ZAP, Nuclei | Vulnerabilities when app runs *(Khi app chạy)* |
 
 ---
 

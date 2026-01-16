@@ -1,15 +1,19 @@
 # ❓ Quiz: Git & GitLab
 
-> 20 câu hỏi về Git.
+> **Knowledge Check for Git (20 Questions)**
+>
+> *Kiểm tra kiến thức Git (20 câu hỏi).*
 
 ---
 
 ### Q1: Git Init
 
-`git init` làm gì?
+What does `git init` do?
+
+*(`git init` làm gì?)*
 
 - a) Clone repository
-- b) Tạo mới repository
+- b) Create new repository *(Tạo mới repository)*
 - c) Delete repository
 - d) Update repository  
 
@@ -17,7 +21,9 @@
 
 ### Q2: Staging Area
 
-Lệnh nào add file vào staging area?
+Which command adds file to staging area?
+
+*(Lệnh nào add file vào staging area?)*
 
 - a) `git commit`
 - b) `git add`
@@ -28,7 +34,9 @@ Lệnh nào add file vào staging area?
 
 ### Q3: Commit
 
-Lệnh nào tạo commit?
+Which command creates a commit?
+
+*(Lệnh nào tạo commit?)*
 
 - a) `git add -m "message"`
 - b) `git commit -m "message"`
@@ -39,7 +47,9 @@ Lệnh nào tạo commit?
 
 ### Q4: Branching
 
-Lệnh nào tạo và switch branch?
+Which command creates and switches to a branch?
+
+*(Lệnh nào tạo và switch branch?)*
 
 - a) `git branch new-branch`
 - b) `git checkout new-branch`
@@ -50,7 +60,9 @@ Lệnh nào tạo và switch branch?
 
 ### Q5: Merge
 
-Để merge branch `feature` vào `main`:
+To merge branch `feature` into `main`:
+
+*(Để merge branch `feature` vào `main`:)*
 
 - a) `git checkout feature && git merge main`
 - b) `git checkout main && git merge feature`
@@ -61,7 +73,9 @@ Lệnh nào tạo và switch branch?
 
 ### Q6: Remote
 
-Lệnh xem remote repositories?
+Which command shows remote repositories?
+
+*(Lệnh xem remote repositories?)*
 
 - a) `git remote -v`
 - b) `git remote list`
@@ -72,18 +86,22 @@ Lệnh xem remote repositories?
 
 ### Q7: Pull vs Fetch
 
-`git pull` khác `git fetch` như thế nào?
+How is `git pull` different from `git fetch`?
 
-- a) Pull chỉ download, fetch còn merge
-- b) Fetch chỉ download, pull còn merge
-- c) Không khác nhau
-- d) Fetch dùng cho tags  
+*(`git pull` khác `git fetch` như thế nào?)*
+
+- a) Pull only downloads, fetch also merges *(Pull chỉ download, fetch còn merge)*
+- b) Fetch only downloads, pull also merges *(Fetch chỉ download, pull còn merge)*
+- c) No difference *(Không khác nhau)*
+- d) Fetch is for tags *(Fetch dùng cho tags)*  
 
 ---
 
 ### Q8: Revert
 
-Lệnh nào tạo commit mới để undo commit trước?
+Which command creates a new commit to undo the previous commit?
+
+*(Lệnh nào tạo commit mới để undo commit trước?)*
 
 - a) `git reset`
 - b) `git revert`
@@ -94,18 +112,22 @@ Lệnh nào tạo commit mới để undo commit trước?
 
 ### Q9: Stash
 
-`git stash` dùng để làm gì?
+What is `git stash` used for?
 
-- a) Delete changes (Xóa thay đổi)
-- b) Commit changes (Commit thay đổi)
-- c) Temporarily save changes (Lưu tạm thời thay đổi)
-- d) Push changes (Đẩy thay đổi)  
+*(`git stash` dùng để làm gì?)*
+
+- a) Delete changes *(Xóa thay đổi)*
+- b) Commit changes *(Commit thay đổi)*
+- c) Temporarily save changes *(Lưu tạm thời thay đổi)*
+- d) Push changes *(Đẩy thay đổi)*  
 
 ---
 
 ### Q10: Log
 
-Lệnh xem commit history ngắn gọn?
+Which command shows commit history in short format?
+
+*(Lệnh xem commit history ngắn gọn?)*
 
 - a) `git log -1`
 - b) `git log --oneline`
@@ -116,21 +138,25 @@ Lệnh xem commit history ngắn gọn?
 
 ### Q11: Reset
 
-`git reset --hard HEAD~1` làm gì?
+What does `git reset --hard HEAD~1` do?
 
-- a) Xóa commit cuối, giữ changes
-- b) Xóa commit cuối, xóa changes
-- c) Xóa 2 commits cuối
-- d) Không làm gì  
+*(`git reset --hard HEAD~1` làm gì?)*
+
+- a) Delete last commit, keep changes *(Xóa commit cuối, giữ changes)*
+- b) Delete last commit, delete changes *(Xóa commit cuối, xóa changes)*
+- c) Delete last 2 commits *(Xóa 2 commits cuối)*
+- d) Does nothing *(Không làm gì)*  
 
 ---
 
 ### Q12: Cherry-pick
 
-`git cherry-pick` dùng để?
+What is `git cherry-pick` used for?
 
-- a) Xóa commit
-- b) Apply specific commit từ branch khác (Áp dụng commit cụ thể từ branch khác)
+*(`git cherry-pick` dùng để?)*
+
+- a) Delete commit *(Xóa commit)*
+- b) Apply specific commit from another branch *(Áp dụng commit cụ thể từ branch khác)*
 - c) Create branch
 - d) Merge branches  
 
@@ -138,29 +164,35 @@ Lệnh xem commit history ngắn gọn?
 
 ### Q13: Rebase
 
-`git rebase` khác `git merge` như thế nào?
+How is `git rebase` different from `git merge`?
 
-- a) Rebase tạo merge commit
-- b) Rebase rewrite history, merge không (Rebase viết lại lịch sử, merge thì không)
-- c) Không khác nhau
-- d) Merge rewrite history  
+*(`git rebase` khác `git merge` như thế nào?)*
+
+- a) Rebase creates merge commit *(Rebase tạo merge commit)*
+- b) Rebase rewrites history, merge doesn't *(Rebase viết lại lịch sử, merge thì không)*
+- c) No difference *(Không khác nhau)*
+- d) Merge rewrites history  
 
 ---
 
 ### Q14: .gitignore
 
-File nào không bị track nếu có `.gitignore` chứa `*.log`?
+Which file will NOT be tracked if `.gitignore` contains `*.log`?
+
+*(File nào không bị track nếu có `.gitignore` chứa `*.log`?)*
 
 - a) debug.log
 - b) app.log
 - c) logs/error.log
-- d) Tất cả  
+- d) All of the above *(Tất cả)*  
 
 ---
 
 ### Q15: Tag
 
-Lệnh tạo annotated tag?
+Which command creates an annotated tag?
+
+*(Lệnh tạo annotated tag?)*
 
 - a) `git tag v1.0`
 - b) `git tag -a v1.0 -m "Release"`
@@ -171,43 +203,51 @@ Lệnh tạo annotated tag?
 
 ### Q16: Diff
 
-`git diff --staged` hiển thị gì?
+What does `git diff --staged` show?
 
-- a) Changes not staged (Các thay đổi chưa stage)
-- b) Changes staged but not committed (Các thay đổi đã stage nhưng chưa commit)
-- c) All changes (Tất cả thay đổi)
-- d) Committed changes (Các thay đổi đã commit)  
+*(`git diff --staged` hiển thị gì?)*
+
+- a) Changes not staged *(Các thay đổi chưa stage)*
+- b) Changes staged but not committed *(Các thay đổi đã stage nhưng chưa commit)*
+- c) All changes *(Tất cả thay đổi)*
+- d) Committed changes *(Các thay đổi đã commit)*  
 
 ---
 
 ### Q17: Clone
 
-`git clone --depth 1` làm gì?
+What does `git clone --depth 1` do?
 
-- a) Clone tất cả history
-- b) Clone chỉ latest commit (shallow)
-- c) Clone branch specific
+*(`git clone --depth 1` làm gì?)*
+
+- a) Clone all history *(Clone tất cả history)*
+- b) Clone only latest commit (shallow) *(Clone chỉ latest commit)*
+- c) Clone specific branch *(Clone branch specific)*
 - d) Clone without files  
 
 ---
 
 ### Q18: Blame
 
-`git blame file.txt` hiển thị gì?
+What does `git blame file.txt` show?
 
-- a) Who modified each line (Ai đã sửa từng dòng)
-- b) File history (Lịch sử file)
+*(`git blame file.txt` hiển thị gì?)*
+
+- a) Who modified each line *(Ai đã sửa từng dòng)*
+- b) File history *(Lịch sử file)*
 - c) Diff
-- d) Errors (Lỗi)  
+- d) Errors *(Lỗi)*  
 
 ---
 
 ### Q19: Submodule
 
-Git submodule dùng để?
+What is Git submodule used for?
+
+*(Git submodule dùng để?)*
 
 - a) Delete repositories
-- b) Include other repos as subdirectory (Bao gồm repo khác như thư mục con)
+- b) Include other repos as subdirectory *(Bao gồm repo khác như thư mục con)*
 - c) Create branches
 - d) Merge repos  
 
@@ -215,19 +255,21 @@ Git submodule dùng để?
 
 ### Q20: Hook
 
-Pre-commit hook chạy khi nào?
+When does pre-commit hook run?
 
-- a) Before push (Trước khi push)
-- b) Before commit is created (Trước khi commit được tạo)
-- c) After commit (Sau khi commit)
-- d) After push (Sau khi push)  
+*(Pre-commit hook chạy khi nào?)*
+
+- a) Before push *(Trước khi push)*
+- b) Before commit is created *(Trước khi commit được tạo)*
+- c) After commit *(Sau khi commit)*
+- d) After push *(Sau khi push)*  
 
 ---
 
 ## 📝 Answers
 
 <details>
-<summary>Click để xem đáp án</summary>
+<summary>Click to view answers / Nhấn để xem đáp án</summary>
 
 | Q | A | Q | A |
 |---|---|---|---|

@@ -1,12 +1,16 @@
 # 💪 Exercises: Docker Advanced
 
-> Bài tập tự luyện Docker nâng cao.
+> **Self-practice exercises for Advanced Docker.**
+>
+> *Bài tập tự luyện Docker nâng cao.*
 
 ---
 
 ## Exercise 1: Multi-stage Optimization ⭐⭐
 
-Có Dockerfile sau:
+Given the following Dockerfile:
+
+*(Có Dockerfile sau:)*
 
 ```dockerfile
 FROM node:18
@@ -16,7 +20,9 @@ RUN npm install
 CMD ["node", "server.js"]
 ```
 
-**Task**: Viết lại với:
+**Task**: Rewrite with:
+
+*(Viết lại với:)*
 
 1. Multi-stage build
 2. Alpine base
@@ -28,18 +34,22 @@ CMD ["node", "server.js"]
 
 ## Exercise 2: BuildKit Advanced ⭐⭐
 
-Tạo Dockerfile sử dụng:
+Create a Dockerfile using:
 
-1. Cache mount cho npm
-2. Secret mount cho private npm registry
-3. Build args cho version
+*(Tạo Dockerfile sử dụng:)*
+
+1. Cache mount for npm *(Cache mount cho npm)*
+2. Secret mount for private npm registry *(Secret mount cho private npm registry)*
+3. Build args for version *(Build args cho version)*
 4. Multiple build targets (dev, test, prod)
 
 ---
 
 ## Exercise 3: Security Audit ⭐⭐⭐
 
-Cho image sau, tìm và fix security issues:
+Given the following image, find and fix security issues:
+
+*(Cho image sau, tìm và fix security issues:)*
 
 ```dockerfile
 FROM ubuntu:latest
@@ -56,7 +66,9 @@ CMD ["npm", "start"]
 
 ## Exercise 4: Image Size Challenge ⭐⭐⭐
 
-Có Go application:
+Given this Go application:
+
+*(Có Go application sau:)*
 
 ```go
 package main
@@ -66,26 +78,32 @@ func main() {
 }
 ```
 
-**Task**: Tạo Docker image với size < 10MB
+**Task**: Create a Docker image with size < 10MB
+
+*(Tạo Docker image với size < 10MB)*
 
 ---
 
 ## Exercise 5: Layer Analysis ⭐⭐
 
-Phân tích image layers:
+Analyze image layers:
 
-1. Sử dụng `docker history`
-2. Cài đặt và sử dụng `dive`
+*(Phân tích image layers:)*
+
+1. Use `docker history` *(Sử dụng `docker history`)*
+2. Install and use `dive` *(Cài đặt và sử dụng `dive`)*
 3. Identify wasted space
-4. Optimize và compare
+4. Optimize and compare *(Optimize và compare)*
 
 ---
 
 ## Exercise 6: Resource Management ⭐⭐⭐
 
-Viết docker-compose.yml với:
+Write docker-compose.yml with:
 
-1. Memory limits cho mỗi service
+*(Viết docker-compose.yml với:)*
+
+1. Memory limits for each service *(Memory limits cho mỗi service)*
 2. CPU limits
 3. Restart policies
 4. Health checks

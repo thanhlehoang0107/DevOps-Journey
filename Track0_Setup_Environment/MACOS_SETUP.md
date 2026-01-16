@@ -1,27 +1,29 @@
 ﻿# macOS Setup Guide
 
-> 🍎 Hướng dẫn thiết lập môi trường DevOps trên macOS
+> 🍎 Guide to set up DevOps environment on macOS
+>
+> *Hướng dẫn thiết lập môi trường DevOps trên macOS*
 
 ---
 
 ## Track 1 Setup
 
-### Cách 1: Tự động (Khuyến nghị)
+### Method 1: Automatic (Recommended) - Cách 1: Tự động (Khuyến nghị)
 
 ```bash
 chmod +x ./scripts/macos/setup_track1.sh
 ./scripts/macos/setup_track1.sh
 ```
 
-### Cách 2: Thủ công
+### Method 2: Manual (Cách 2: Thủ công)
 
-#### Bước 1: Cài đặt Homebrew
+#### Step 1: Install Homebrew (Bước 1: Cài đặt Homebrew)
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-#### Bước 2: Cài đặt các tools
+#### Step 2: Install tools (Bước 2: Cài đặt các tools)
 
 ```bash
 brew install git

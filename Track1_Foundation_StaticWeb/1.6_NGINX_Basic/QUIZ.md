@@ -8,10 +8,12 @@
 
 ### Q1
 
-NGINX chủ yếu được sử dụng cho?
+What is NGINX mainly used for?
+
+*(NGINX chủ yếu được sử dụng cho?)*
 
 - a) Database
-- b) Web server & reverse proxy (Máy chủ web & reverse proxy)
+- b) Web server & reverse proxy *(Máy chủ web & reverse proxy)*
 - c) Container runtime
 - d) Version control  
 
@@ -19,7 +21,9 @@ NGINX chủ yếu được sử dụng cho?
 
 ### Q2
 
-File config chính của NGINX?
+What is the main config file of NGINX?
+
+*(File config chính của NGINX?)*
 
 - a) /etc/nginx/nginx.config
 - b) /etc/nginx/nginx.conf
@@ -30,7 +34,9 @@ File config chính của NGINX?
 
 ### Q3
 
-Lệnh test config NGINX?
+Which command tests NGINX config?
+
+*(Lệnh test config NGINX?)*
 
 - a) `nginx -c`
 - b) `nginx -t`
@@ -41,29 +47,35 @@ Lệnh test config NGINX?
 
 ### Q4
 
-Directive `listen 80` có nghĩa gì?
+What does the directive `listen 80` mean?
 
-- a) Listen on port 80 (Lắng nghe trên cổng 80)
-- b) Forward to port 80 (Chuyển tiếp đến cổng 80)
-- c) Block port 80 (Chặn cổng 80)
-- d) Log port 80 (Ghi log cổng 80)  
+*(Directive `listen 80` có nghĩa gì?)*
+
+- a) Listen on port 80 *(Lắng nghe trên cổng 80)*
+- b) Forward to port 80 *(Chuyển tiếp đến cổng 80)*
+- c) Block port 80 *(Chặn cổng 80)*
+- d) Log port 80 *(Ghi log cổng 80)*  
 
 ---
 
 ### Q5
 
-`proxy_pass` dùng để?
+What is `proxy_pass` used for?
 
-- a) Pass files (Truyền file)
-- b) Forward requests to backend (Chuyển tiếp request đến backend)
-- c) Pass variables (Truyền biến)
-- d) Pass headers (Truyền header)  
+*(`proxy_pass` dùng để?)*
+
+- a) Pass files *(Truyền file)*
+- b) Forward requests to backend *(Chuyển tiếp request đến backend)*
+- c) Pass variables *(Truyền biến)*
+- d) Pass headers *(Truyền header)*  
 
 ---
 
 ### Q6
 
-Reload NGINX không downtime?
+How to reload NGINX without downtime?
+
+*(Reload NGINX không downtime?)*
 
 - a) `nginx -s restart`
 - b) `nginx -s reload`
@@ -74,10 +86,12 @@ Reload NGINX không downtime?
 
 ### Q7
 
-`upstream` block dùng để?
+What is the `upstream` block used for?
 
-- a) Define log format (Định nghĩa định dạng log)
-- b) Define backend servers (Định nghĩa server backend)
+*(`upstream` block dùng để?)*
+
+- a) Define log format *(Định nghĩa định dạng log)*
+- b) Define backend servers *(Định nghĩa server backend)*
 - c) Define SSL
 - d) Define locations  
 
@@ -85,29 +99,35 @@ Reload NGINX không downtime?
 
 ### Q8
 
-`try_files` directive làm gì?
+What does the `try_files` directive do?
 
-- a) Try different servers (Thử các server khác nhau)
-- b) Check files exist in order (Kiểm tra file tồn tại theo thứ tự)
-- c) Try connections (Thử kết nối)
-- d) Retry requests (Thử lại request)  
+*(`try_files` directive làm gì?)*
+
+- a) Try different servers *(Thử các server khác nhau)*
+- b) Check files exist in order *(Kiểm tra file tồn tại theo thứ tự)*
+- c) Try connections *(Thử kết nối)*
+- d) Retry requests *(Thử lại request)*  
 
 ---
 
 ### Q9
 
-Return 301 redirect dùng khi?
+When to use 301 redirect?
 
-- a) Temporary redirect (Chuyển hướng tạm thời)
-- b) Permanent redirect (Chuyển hướng vĩnh viễn)
-- c) Error redirect (Chuyển hướng lỗi)
-- d) Internal redirect (Chuyển hướng nội bộ)  
+*(Return 301 redirect dùng khi?)*
+
+- a) Temporary redirect *(Chuyển hướng tạm thời)*
+- b) Permanent redirect *(Chuyển hướng vĩnh viễn)*
+- c) Error redirect *(Chuyển hướng lỗi)*
+- d) Internal redirect *(Chuyển hướng nội bộ)*  
 
 ---
 
 ### Q10
 
-Gzip compression enable bằng?
+How to enable gzip compression?
+
+*(Gzip compression enable bằng?)*
 
 - a) `compression on`
 - b) `gzip on`
@@ -118,18 +138,22 @@ Gzip compression enable bằng?
 
 ### Q11
 
-Location block `location ~` có nghĩa gì?
+What does location block `location ~` mean?
 
-- a) Exact match (Khớp chính xác)
-- b) Prefix match (Khớp tiền tố)
-- c) Regex match (Khớp biểu thức chính quy)
-- d) Default match (Khớp mặc định)  
+*(Location block `location ~` có nghĩa gì?)*
+
+- a) Exact match *(Khớp chính xác)*
+- b) Prefix match *(Khớp tiền tố)*
+- c) Regex match *(Khớp biểu thức chính quy)*
+- d) Default match *(Khớp mặc định)*  
 
 ---
 
 ### Q12
 
-SSL certificate được khai báo bằng?
+How is the SSL certificate declared?
+
+*(SSL certificate được khai báo bằng?)*
 
 - a) `ssl_cert`
 - b) `ssl_certificate`
@@ -140,7 +164,9 @@ SSL certificate được khai báo bằng?
 
 ### Q13
 
-Default root directory của NGINX?
+What is the default root directory of NGINX?
+
+*(Default root directory của NGINX?)*
 
 - a) /var/www/html
 - b) /usr/share/nginx/html
@@ -151,18 +177,22 @@ Default root directory của NGINX?
 
 ### Q14
 
-`worker_processes auto` có nghĩa gì?
+What does `worker_processes auto` mean?
+
+*(`worker_processes auto` có nghĩa gì?)*
 
 - a) 1 worker
 - b) Max workers
-- c) Match CPU cores (Khớp số nhân CPU)
+- c) Match CPU cores *(Khớp số nhân CPU)*
 - d) No workers  
 
 ---
 
 ### Q15
 
-Access log format default là?
+What is the default access log format?
+
+*(Access log format default là?)*
 
 - a) combined
 - b) common
@@ -174,7 +204,7 @@ Access log format default là?
 ## 📝 Answers
 
 <details>
-<summary>Click để xem đáp án</summary>
+<summary>Click to view / Nhấn để xem đáp án</summary>
 
 | Q | A | Q | A |
 |---|---|---|---|

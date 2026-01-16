@@ -20,7 +20,7 @@
 ### Practice
 
 ```bash
-# Hands-on với AWS Free Tier
+# Hands-on with AWS Free Tier (Hands-on với AWS Free Tier)
 # Create: EC2, S3, Lambda, RDS
 # Explore: IAM, VPC, CloudWatch
 ```

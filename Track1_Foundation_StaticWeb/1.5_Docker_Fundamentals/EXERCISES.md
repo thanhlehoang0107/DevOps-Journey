@@ -1,14 +1,16 @@
 # 💪 Exercises: Docker Fundamentals
 
-> Bài tập tự luyện Docker.
+> **Self-practice exercises for Docker.**
+>
+> *Bài tập tự luyện Docker.*
 
 ---
 
 ## Exercise 1: Container Basics ⭐
 
-1. Run nginx container với custom name
-2. Exec vào container và check nginx version
-3. Copy file từ container ra host
+1. Run nginx container with custom name *(với custom name)*
+2. Exec into container and check nginx version *(Exec vào container và check nginx version)*
+3. Copy file from container to host *(Copy file từ container ra host)*
 4. View container logs
 5. Stop, start, restart container
 6. Remove container
@@ -17,7 +19,9 @@
 
 ## Exercise 2: Dockerfile ⭐⭐
 
-Viết Dockerfile cho Node.js app:
+Write Dockerfile for Node.js app:
+
+*(Viết Dockerfile cho Node.js app:)*
 
 Requirements:
 
@@ -27,13 +31,15 @@ Requirements:
 - Install dependencies
 - Copy source code
 - Expose port 3000
-- Run với non-root user
+- Run with non-root user *(Chạy với non-root user)*
 
 ---
 
 ## Exercise 3: Multi-stage Build ⭐⭐
 
-Viết multi-stage Dockerfile cho React app:
+Write multi-stage Dockerfile for React app:
+
+*(Viết multi-stage Dockerfile cho React app:)*
 
 Stage 1: Build
 
@@ -54,10 +60,10 @@ Target: Final image < 50MB
 ## Exercise 4: Volumes ⭐⭐
 
 1. Create named volume `mydata`
-2. Run MySQL container với volume cho /var/lib/mysql
+2. Run MySQL container with volume for /var/lib/mysql *(với volume cho /var/lib/mysql)*
 3. Insert some data
-4. Stop và remove container
-5. Run new container với same volume
+4. Stop and remove container *(Stop và remove container)*
+5. Run new container with same volume *(với same volume)*
 6. Verify data persisted
 
 ---
@@ -75,12 +81,14 @@ Target: Final image < 50MB
 
 ## Exercise 6: Docker Compose (Preview) ⭐⭐⭐
 
-Viết docker-compose.yml cho:
+Write docker-compose.yml for:
+
+*(Viết docker-compose.yml cho:)*
 
 - Frontend (nginx)
 - Backend (node)
 - Database (postgres)
-- Với networks và volumes
+- With networks and volumes *(Với networks và volumes)*
 
 ---
 

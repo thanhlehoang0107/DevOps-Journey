@@ -8,7 +8,9 @@
 
 ### Q1
 
-STAR method là gì? (What is the STAR method?)
+What is the STAR method?
+
+*(STAR method là gì?)*
 
 - a) System Testing And Reporting
 - b) Situation, Task, Action, Result
@@ -19,29 +21,35 @@ STAR method là gì? (What is the STAR method?)
 
 ### Q2
 
-"Tell me about yourself" nên trả lời như thế nào? (How to answer "Tell me about yourself"?)
+How should you answer "Tell me about yourself"?
 
-- a) Personal life details (Chi tiết đời tư)
-- b) Professional summary + relevant experience (Tóm tắt chuyên môn + kinh nghiệm liên quan)
-- c) Just read resume (Chỉ đọc lại CV)
-- d) Skip the question (Bỏ qua câu hỏi)  
+*("Tell me about yourself" nên trả lời như thế nào?)*
+
+- a) Personal life details *(Chi tiết đời tư)*
+- b) Professional summary + relevant experience *(Tóm tắt chuyên môn + kinh nghiệm liên quan)*
+- c) Just read resume *(Chỉ đọc lại CV)*
+- d) Skip the question *(Bỏ qua câu hỏi)*  
 
 ---
 
 ### Q3
 
-Khi không biết câu trả lời, nên? (When you don't know the answer?)
+When you don't know the answer, you should?
 
-- a) Make something up (Bịa ra câu trả lời)
-- b) Be honest, explain how you'd find the answer (Trung thực, giải thích cách tìm câu trả lời)
-- c) Blame previous company (Đổ lỗi công ty cũ)
-- d) Leave the interview (Rời buổi phỏng vấn)  
+*(Khi không biết câu trả lời, nên?)*
+
+- a) Make something up *(Bịa ra câu trả lời)*
+- b) Be honest, explain how you'd find the answer *(Trung thực, giải thích cách tìm câu trả lời)*
+- c) Blame previous company *(Đổ lỗi công ty cũ)*
+- d) Leave the interview *(Rời buổi phỏng vấn)*  
 
 ---
 
 ### Q4
 
-CI/CD là gì? (What is CI/CD?)
+What is CI/CD?
+
+*(CI/CD là gì?)*
 
 - a) Code Integration / Code Deployment
 - b) Continuous Integration / Continuous Delivery or Deployment
@@ -52,12 +60,14 @@ CI/CD là gì? (What is CI/CD?)
 
 ### Q5
 
-Blue-green deployment là gì? (What is blue-green deployment?)
+What is blue-green deployment?
 
-- a) Color-based coding (Code dựa trên màu sắc)
-- b) Two identical environments with traffic switching (Hai môi trường giống hệt nhau với chuyển đổi traffic)
-- c) Development environment only (Chỉ môi trường phát triển)
-- d) Database replication (Sao chép cơ sở dữ liệu)  
+*(Blue-green deployment là gì?)*
+
+- a) Color-based coding *(Code dựa trên màu sắc)*
+- b) Two identical environments with traffic switching *(Hai môi trường giống hệt nhau với chuyển đổi traffic)*
+- c) Development environment only *(Chỉ môi trường phát triển)*
+- d) Database replication *(Sao chép cơ sở dữ liệu)*  
 
 ---
 

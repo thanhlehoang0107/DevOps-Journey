@@ -1,8 +1,8 @@
 # 🔒 Branch Protection Guide
 
-> **Hướng dẫn thiết lập Branch Protection** trên GitLab và GitHub.
+> **Guide to setting up Branch Protection** on GitLab and GitHub.
 >
-> *Guide to setting up Branch Protection on GitLab and GitHub.*
+> *Hướng dẫn thiết lập Branch Protection trên GitLab và GitHub.*
 
 ---
 

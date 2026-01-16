@@ -1,6 +1,8 @@
 # ✅ Solutions: Network Basics
 
-> Đáp án cho Exercises.
+> **Solutions for Exercises. Try to solve it yourself first!**
+>
+> *Đáp án cho Exercises. Hãy thử tự giải trước!*
 
 ---
 

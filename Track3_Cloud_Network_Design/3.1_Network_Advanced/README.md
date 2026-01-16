@@ -30,12 +30,12 @@ In cloud environments, DevOps engineers must design networking correctly **from 
 
 *Trong môi trường cloud, DevOps engineer phải thiết kế network đúng **từ đầu** - vì thay đổi sau này rất tốn kém.*
 
-| Sai lầm Network | Hậu quả |
-|-----------------|---------|
-| Subnet quá nhỏ | Không thể mở rộng (hết IP) |
-| Public subnet cho DB | Bị tấn công |
-| Single AZ | Mất toàn bộ khi AZ down |
-| Không có NAT Gateway | Private instances không thể update |
+| Network Mistake | Consequence |
+|-----------------|-------------|
+| Subnet too small | Cannot scale (run out of IPs) *(Không thể mở rộng - hết IP)* |
+| Public subnet for DB | Gets attacked *(Bị tấn công)* |
+| Single AZ | Lose everything when AZ goes down *(Mất toàn bộ khi AZ down)* |
+| No NAT Gateway | Private instances cannot update *(Private instances không thể update)* |
 
 ---
 

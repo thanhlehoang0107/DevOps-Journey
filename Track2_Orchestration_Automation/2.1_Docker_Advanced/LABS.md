@@ -10,11 +10,13 @@
 
 ### Objective
 
-Tạo optimized Docker image với multi-stage build (Tối ưu Docker image với build đa tầng).
+Create optimized Docker image with multi-stage build.
+
+*(Tạo optimized Docker image với multi-stage build.)*
 
 ### Steps
 
-#### Step 1: Create Node.js App (Tạo ứng dụng Node.js)
+#### Step 1: Create Node.js App
 
 ```bash
 mkdir docker-advanced-lab && cd docker-advanced-lab
@@ -35,7 +37,9 @@ server.listen(3000, () => {
 });
 ```
 
-#### Step 2: Create Single-stage Dockerfile (Tạo Dockerfile đơn tầng - để so sánh)
+#### Step 2: Create Single-stage Dockerfile (for comparison)
+
+*(Tạo Dockerfile đơn tầng - để so sánh)*
 
 ```dockerfile
 # Dockerfile.single
@@ -49,7 +53,9 @@ EXPOSE 3000
 CMD ["node", "server.js"]
 ```
 
-#### Step 3: Create Multi-stage Dockerfile (Tạo Dockerfile đa tầng)
+#### Step 3: Create Multi-stage Dockerfile
+
+*(Tạo Dockerfile đa tầng)*
 
 ```dockerfile
 # Dockerfile.multi
@@ -79,7 +85,9 @@ HEALTHCHECK --interval=30s --timeout=3s \
 CMD ["node", "server.js"]
 ```
 
-#### Step 4: Build and Compare (Build và so sánh)
+#### Step 4: Build and Compare
+
+*(Build và so sánh)*
 
 ```bash
 # Build both images
@@ -92,7 +100,9 @@ docker images | grep app
 # app   multi    ~180MB
 ```
 
-#### Step 5: Test (Kiểm tra)
+#### Step 5: Test
+
+*(Kiểm tra)*
 
 ```bash
 docker run -d -p 3000:3000 --name test-app app:multi
@@ -106,17 +116,23 @@ docker stop test-app && docker rm test-app
 
 ### Objective
 
-Sử dụng BuildKit cache mounts và secret mounts (Sử dụng tính năng cache và secret của BuildKit).
+Use BuildKit cache mounts and secret mounts.
+
+*(Sử dụng tính năng cache và secret của BuildKit.)*
 
 ### Steps
 
-#### Step 1: Enable BuildKit (Bật BuildKit)
+#### Step 1: Enable BuildKit
+
+*(Bật BuildKit)*
 
 ```bash
 export DOCKER_BUILDKIT=1
 ```
 
-#### Step 2: Create Dockerfile with Cache Mount (Tạo Dockerfile với Cache Mount)
+#### Step 2: Create Dockerfile with Cache Mount
+
+*(Tạo Dockerfile với Cache Mount)*
 
 ```dockerfile
 # Dockerfile.buildkit
@@ -137,7 +153,9 @@ COPY . .
 CMD ["node", "server.js"]
 ```
 
-#### Step 3: Build with Cache (Build với Cache)
+#### Step 3: Build with Cache
+
+*(Build với Cache)*
 
 ```bash
 # First build
@@ -150,7 +168,9 @@ echo '{"version": "1.0.1"}' > package.json
 docker build -f Dockerfile.buildkit -t app:cached .
 ```
 
-#### Step 4: Secret Mount Example (Ví dụ Secret Mount)
+#### Step 4: Secret Mount Example
+
+*(Ví dụ Secret Mount)*
 
 ```dockerfile
 # Dockerfile.secret
@@ -185,11 +205,15 @@ docker history app:secret
 
 ### Objective
 
-Apply security best practices to Docker image (Áp dụng các thực hành bảo mật tốt nhất cho Docker image).
+Apply security best practices to Docker image.
+
+*(Áp dụng các thực hành bảo mật tốt nhất cho Docker image.)*
 
 ### Steps
 
-#### Step 1: Create Secure Dockerfile (Tạo Dockerfile bảo mật)
+#### Step 1: Create Secure Dockerfile
+
+*(Tạo Dockerfile bảo mật)*
 
 ```dockerfile
 # Dockerfile.secure
@@ -221,7 +245,9 @@ HEALTHCHECK --interval=30s --timeout=3s --retries=3 \
 CMD ["node", "server.js"]
 ```
 
-#### Step 2: Run with Security Options (Chạy với các tùy chọn bảo mật)
+#### Step 2: Run with Security Options
+
+*(Chạy với các tùy chọn bảo mật)*
 
 ```bash
 # Build
@@ -245,7 +271,9 @@ docker exec secure-app whoami
 docker exec secure-app touch /test 2>&1 || echo "Read-only filesystem working"
 ```
 
-#### Step 3: Scan for Vulnerabilities (Quét lỗ hổng bảo mật)
+#### Step 3: Scan for Vulnerabilities
+
+*(Quét lỗ hổng bảo mật)*
 
 ```bash
 # Using Docker Scout
@@ -261,11 +289,15 @@ trivy image app:secure
 
 ### Objective
 
-Set và test resource limits (Thiết lập và kiểm tra giới hạn tài nguyên).
+Set and test resource limits.
+
+*(Thiết lập và kiểm tra giới hạn tài nguyên.)*
 
 ### Steps
 
-#### Step 1: Create Memory-intensive Script (Tạo script ngốn RAM)
+#### Step 1: Create Memory-intensive Script
+
+*(Tạo script ngốn RAM)*
 
 ```javascript
 // memory-test.js
@@ -280,7 +312,9 @@ setInterval(() => {
 }, 1000);
 ```
 
-#### Step 2: Run with Memory Limit (Chạy với giới hạn RAM)
+#### Step 2: Run with Memory Limit
+
+*(Chạy với giới hạn RAM)*
 
 ```bash
 # Build image
@@ -293,7 +327,9 @@ docker run --name mem-test -m 100m memory-test
 docker logs -f mem-test
 ```
 
-#### Step 3: CPU Limits (Giới hạn CPU)
+#### Step 3: CPU Limits
+
+*(Giới hạn CPU)*
 
 ```bash
 # Run with half CPU
@@ -309,11 +345,15 @@ docker stats cpu-test
 
 ### Objective
 
-Debug containers và troubleshoot issues (Gỡ lỗi container và xử lý sự cố).
+Debug containers and troubleshoot issues.
+
+*(Gỡ lỗi container và xử lý sự cố.)*
 
 ### Steps
 
-#### Step 1: Create Buggy Application (Tạo ứng dụng lỗi)
+#### Step 1: Create Buggy Application
+
+*(Tạo ứng dụng lỗi)*
 
 ```javascript
 // buggy.js
@@ -330,7 +370,9 @@ server.listen(3000);
 console.log('Buggy server started');
 ```
 
-#### Step 2: Debug Running Container (Debug container đang chạy)
+#### Step 2: Debug Running Container
+
+*(Debug container đang chạy)*
 
 ```bash
 docker run -d --name buggy-app buggy-image
@@ -348,7 +390,9 @@ docker top buggy-app
 docker inspect buggy-app | jq '.[0].State'
 ```
 
-#### Step 3: Debug Crashed Container (Debug container bị crash)
+#### Step 3: Debug Crashed Container
+
+*(Debug container bị crash)*
 
 ```bash
 # Trigger crash
@@ -368,7 +412,9 @@ ls -la
 cat /app/buggy.js
 ```
 
-#### Step 4: Use Docker Events (Sử dụng Docker Events)
+#### Step 4: Use Docker Events
+
+*(Sử dụng Docker Events)*
 
 ```bash
 # In terminal 1 - watch events
@@ -385,11 +431,15 @@ docker run --rm alpine exit 1
 
 ### Objective
 
-Analyze và optimize image layers (Phân tích và tối ưu hóa các lớp Docker images).
+Analyze and optimize image layers.
+
+*(Phân tích và tối ưu hóa các lớp Docker images.)*
 
 ### Steps
 
-#### Step 1: View Image History (Xem lịch sử image)
+#### Step 1: View Image History
+
+*(Xem lịch sử image)*
 
 ```bash
 docker history myimage:tag
@@ -398,7 +448,9 @@ docker history myimage:tag
 docker history --no-trunc myimage:tag
 ```
 
-#### Step 2: Use Dive Tool (Sử dụng công cụ Dive)
+#### Step 2: Use Dive Tool
+
+*(Sử dụng công cụ Dive)*
 
 ```bash
 # Install dive
@@ -409,7 +461,9 @@ docker history --no-trunc myimage:tag
 dive myimage:tag
 ```
 
-#### Step 3: Optimize Layers (Tối ưu hóa các lớp)
+#### Step 3: Optimize Layers
+
+*(Tối ưu hóa các lớp)*
 
 ```dockerfile
 # Before: 5 layers for apt

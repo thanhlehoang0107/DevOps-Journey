@@ -8,18 +8,22 @@
 
 ### Q1: Container vs VM
 
-Container khác VM như thế nào?
+How is a container different from a VM?
 
-- a) Container có OS riêng
-- b) Container share host kernel (Container chia sẻ kernel của host)
-- c) VM nhẹ hơn container
-- d) Không khác nhau  
+*(Container khác VM như thế nào?)*
+
+- a) Container has its own OS *(Container có OS riêng)*
+- b) Container shares host kernel *(Container chia sẻ kernel của host)*
+- c) VM is lighter than container *(VM nhẹ hơn container)*
+- d) No difference *(Không khác nhau)*
 
 ---
 
 ### Q2: Docker Image
 
-Docker image là gì?
+What is a Docker image?
+
+*(Docker image là gì?)*
 
 - a) Running container (Container đang chạy)
 - b) Read-only template (Mẫu chỉ đọc)
@@ -30,7 +34,9 @@ Docker image là gì?
 
 ### Q3: Dockerfile CMD
 
-Lệnh `CMD` trong Dockerfile dùng để?
+What is the `CMD` instruction in Dockerfile used for?
+
+*(Lệnh `CMD` trong Dockerfile dùng để?)*
 
 - a) Run command during build (Chạy lệnh trong quá trình build)
 - b) Set default command khi container start (Thiết lập lệnh mặc định khi container chạy)
@@ -41,7 +47,9 @@ Lệnh `CMD` trong Dockerfile dùng để?
 
 ### Q4: EXPOSE
 
-`EXPOSE 80` trong Dockerfile làm gì?
+What does `EXPOSE 80` do in Dockerfile?
+
+*(`EXPOSE 80` trong Dockerfile làm gì?)*
 
 - a) Publish port 80 (Công khai port 80)
 - b) Document port 80 (Khai báo port 80)
@@ -52,7 +60,9 @@ Lệnh `CMD` trong Dockerfile dùng để?
 
 ### Q5: Volume
 
-Docker volume dùng để?
+What is Docker volume used for?
+
+*(Docker volume dùng để?)*
 
 - a) Increase container size (Tăng kích thước container)
 - b) Persist data (Lưu trữ dữ liệu bền vững)
@@ -63,7 +73,9 @@ Docker volume dùng để?
 
 ### Q6: Port Mapping
 
-`docker run -p 8080:80` có nghĩa gì?
+What does `docker run -p 8080:80` mean?
+
+*(`docker run -p 8080:80` có nghĩa gì?)*
 
 - a) Container 8080 maps to host 80
 - b) Host 8080 maps to container 80
@@ -74,7 +86,9 @@ Docker volume dùng để?
 
 ### Q7: Detached Mode
 
-Flag `-d` trong `docker run -d` có nghĩa gì?
+What does the `-d` flag in `docker run -d` mean?
+
+*(Flag `-d` trong `docker run -d` có nghĩa gì?)*
 
 - a) Debug mode (Chế độ gỡ lỗi)
 - b) Detached (background) (Chạy ngầm)
@@ -85,7 +99,9 @@ Flag `-d` trong `docker run -d` có nghĩa gì?
 
 ### Q8: Docker Network
 
-Network type default của Docker là gì?
+What is the default Docker network type?
+
+*(Network type default của Docker là gì?)*
 
 - a) host
 - b) bridge

@@ -76,13 +76,13 @@ docker run -d --network myapp --name web --link api -p 80:80 nginx:alpine
 
 **Key benefits (Lợi ích chính):**
 
-| Lợi ích | Mô tả |
-|---------|-------|
-| **Single configuration** | Define app stack in one `docker-compose.yml` |
-| **One command** | `docker compose up` starts everything |
-| **Isolated environments** | Creates isolated networks for each project |
-| **Reproducible** | Ai cũng có thể chạy giống nhau với cùng 1 file |
-| **Environment parity** | Dev/Staging/Production dùng cùng config |
+| Benefit (Lợi ích) | Description (Mô tả) |
+|-------------------|---------------------|
+| **Single configuration** | Define app stack in one `docker-compose.yml` *(Định nghĩa app trong 1 file)* |
+| **One command** | `docker compose up` starts everything *(1 lệnh khởi động tất cả)* |
+| **Isolated environments** | Creates isolated networks for each project *(Tạo mạng cách ly cho mỗi project)* |
+| **Reproducible** | Anyone can run the same with the same file *(Ai cũng có thể chạy giống nhau)* |
+| **Environment parity** | Dev/Staging/Production use same config *(Dev/Staging/Prod dùng cùng config)* |
 
 ---
 

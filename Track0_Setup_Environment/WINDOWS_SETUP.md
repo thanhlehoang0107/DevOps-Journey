@@ -1,47 +1,49 @@
 ﻿# Windows Setup Guide
 
-> 🪟 Hướng dẫn thiết lập môi trường DevOps trên Windows 10/11
+> 🪟 Guide to set up DevOps environment on Windows 10/11
+>
+> *Hướng dẫn thiết lập môi trường DevOps trên Windows 10/11*
 
 ---
 
 ## Track 1 Setup
 
-### Cách 1: Tự động (Khuyến nghị)
+### Method 1: Automatic (Recommended) - Cách 1: Tự động (Khuyến nghị)
 
 ```powershell
-# Mở PowerShell với quyền Administrator
+# Open PowerShell as Administrator (Mở PowerShell với quyền Administrator)
 Set-ExecutionPolicy Bypass -Scope Process -Force
 .\scripts\windows\setup_track1.ps1
 ```
 
-### Cách 2: Thủ công
+### Method 2: Manual (Cách 2: Thủ công)
 
-#### Bước 1: Cài đặt WSL2
+#### Step 1: Install WSL2 (Bước 1: Cài đặt WSL2)
 
-1. Mở PowerShell với quyền Administrator
-2. Chạy lệnh:
+1. Open PowerShell as Administrator *(Mở PowerShell với quyền Administrator)*
+2. Run the command *(Chạy lệnh)*:
 
    ```powershell
    wsl --install
    ```
 
-3. Khởi động lại máy tính
+3. Restart your computer *(Khởi động lại máy tính)*
 
-#### Bước 2: Cài đặt Docker Desktop
+#### Step 2: Install Docker Desktop (Bước 2: Cài đặt Docker Desktop)
 
-1. Tải từ [Docker Desktop](https://www.docker.com/products/docker-desktop/)
-2. Chạy installer
-3. Khởi động Docker Desktop
+1. Download from [Docker Desktop](https://www.docker.com/products/docker-desktop/) *(Tải từ Docker Desktop)*
+2. Run the installer *(Chạy installer)*
+3. Start Docker Desktop *(Khởi động Docker Desktop)*
 
-#### Bước 3: Cài đặt Git
+#### Step 3: Install Git (Bước 3: Cài đặt Git)
 
-1. Tải từ [Git SCM](https://git-scm.com/download/win)
-2. Chạy installer với default options
+1. Download from [Git SCM](https://git-scm.com/download/win) *(Tải từ Git SCM)*
+2. Run installer with default options *(Chạy installer với default options)*
 
-#### Bước 4: Cài đặt VS Code
+#### Step 4: Install VS Code (Bước 4: Cài đặt VS Code)
 
-1. Tải từ [VS Code](https://code.visualstudio.com/)
-2. Cài đặt extensions: Docker, Remote WSL
+1. Download from [VS Code](https://code.visualstudio.com/) *(Tải từ VS Code)*
+2. Install extensions: Docker, Remote WSL *(Cài đặt extensions: Docker, Remote WSL)*
 
 ### Verify Track 1
 
@@ -53,19 +55,19 @@ Set-ExecutionPolicy Bypass -Scope Process -Force
 
 ## Track 2 Setup
 
-*(Nội dung sẽ được bổ sung)*
+*(Content will be added / Nội dung sẽ được bổ sung)*
 
 ---
 
 ## Track 3 Setup
 
-*(Nội dung sẽ được bổ sung)*
+*(Content will be added / Nội dung sẽ được bổ sung)*
 
 ---
 
 ## Track 4 Setup
 
-*(Nội dung sẽ được bổ sung)*
+*(Content will be added / Nội dung sẽ được bổ sung)*
 
 ---
 

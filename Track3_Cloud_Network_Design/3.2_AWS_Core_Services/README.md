@@ -35,12 +35,12 @@ After this module, you will (Sau module này, bạn sẽ):
 
 #### Why DevOps needs AWS? (Tại sao DevOps cần học AWS?)
 
-| Lý do | Giải thích |
-|-------|------------|
-| **Thị trường việc làm** | AWS chiếm ~33% thị phần cloud, hầu hết doanh nghiệp dùng AWS |
-| **Tự động hóa** | Mọi thứ trên AWS đều có thể tự động hóa qua CLI/API |
-| **Infrastructure as Code** | Terraform, CloudFormation giúp quản lý hạ tầng bằng code |
-| **Scalability** | Tự động mở rộng/thu hẹp theo nhu cầu |
+| Reason (Lý do) | Explanation (Giải thích) |
+|----------------|--------------------------|
+| **Job market** | AWS holds ~33% cloud market share, most companies use AWS *(AWS chiếm ~33% thị phần cloud)* |
+| **Automation** | Everything on AWS can be automated via CLI/API *(Mọi thứ đều có thể tự động hóa)* |
+| **Infrastructure as Code** | Terraform, CloudFormation help manage infrastructure as code *(Quản lý hạ tầng bằng code)* |
+| **Scalability** | Auto scale up/down based on demand *(Tự động mở rộng/thu hẹp theo nhu cầu)* |
 
 ---
 
@@ -54,9 +54,9 @@ After this module, you will (Sau module này, bạn sẽ):
 
 #### When to use EC2? (Khi nào dùng EC2?)
 
-- Chạy web server, API server
-- Host ứng dụng cần cấu hình tùy chỉnh
-- Môi trường development/staging
+- Run web server, API server *(Chạy web server, API server)*
+- Host applications needing custom configuration *(Host ứng dụng cần cấu hình tùy chỉnh)*
+- Development/staging environments *(Môi trường development/staging)*
 
 #### How to create EC2 instance (Cách tạo EC2 instance)
 
@@ -73,13 +73,13 @@ aws ec2 run-instances \
   --subnet-id subnet-0123456789abcdef0
 ```
 
-**Giải thích từng tham số:**
+**Parameter explanation:** *(Giải thích từng tham số:)*
 
-- `--image-id`: AMI (Amazon Machine Image) - hệ điều hành base (Ubuntu, Amazon Linux...)
-- `--instance-type`: Cấu hình máy (t3.micro = 2 vCPU, 1GB RAM - miễn phí trong Free Tier)
-- `--key-name`: SSH key để truy cập server
-- `--security-group-ids`: Firewall rules (mở port nào, cho IP nào truy cập)
-- `--subnet-id`: Mạng con trong VPC để đặt instance
+- `--image-id`: AMI (Amazon Machine Image) - base OS (Ubuntu, Amazon Linux...) *(hệ điều hành base)*
+- `--instance-type`: Machine config (t3.micro = 2 vCPU, 1GB RAM - free in Free Tier) *(Cấu hình máy - miễn phí trong Free Tier)*
+- `--key-name`: SSH key to access server *(SSH key để truy cập server)*
+- `--security-group-ids`: Firewall rules (open ports, allowed IPs) *(mở port nào, cho IP nào truy cập)*
+- `--subnet-id`: Subnet in VPC to place instance *(Mạng con trong VPC để đặt instance)*
 
 ---
 
@@ -93,21 +93,23 @@ aws ec2 run-instances \
 
 #### Common Use Cases (Các trường hợp sử dụng phổ biến)
 
-- **Static website hosting** - Host website tĩnh (HTML, CSS, JS)
-- **Backup và archive** - Lưu trữ backup, log files
-- **Data lake** - Kho dữ liệu cho analytics
-- **CI/CD artifacts** - Lưu build outputs, Docker images
+- **Static website hosting** - Host static website (HTML, CSS, JS) *(Host website tĩnh)*
+- **Backup and archive** - Store backups, log files *(Lưu trữ backup, log files)*
+- **Data lake** - Data warehouse for analytics *(Kho dữ liệu cho analytics)*
+- **CI/CD artifacts** - Store build outputs, Docker images *(Lưu build outputs, Docker images)*
 
 #### Working with S3 (Thao tác với S3)
 
 ```bash
-# 1. Tạo bucket (kho chứa) - tên bucket phải unique toàn cầu
+# 1. Create bucket - bucket name must be globally unique
+# (Tạo bucket - tên bucket phải unique toàn cầu)
 aws s3 mb s3://my-company-devops-bucket-2026
 
-# 2. Upload một file
+# 2. Upload a file (Upload một file)
 aws s3 cp myfile.txt s3://my-company-devops-bucket-2026/
 
-# 3. Đồng bộ toàn bộ thư mục (như rsync)
+# 3. Sync entire directory (like rsync)
+# (Đồng bộ toàn bộ thư mục)
 aws s3 sync ./build s3://my-company-devops-bucket-2026/website
 
 # 4. Download file
@@ -126,12 +128,12 @@ aws s3 cp s3://my-company-devops-bucket-2026/myfile.txt ./downloaded.txt
 
 #### IAM Components (Các thành phần IAM)
 
-| Thành phần | Mô tả | Ví dụ |
-|------------|-------|-------|
-| **User** | Một người hoặc ứng dụng | developer-john, ci-cd-bot |
-| **Group** | Nhóm users có cùng quyền | developers, admins |
-| **Role** | Quyền tạm thời cho services | EC2 cần đọc S3 |
-| **Policy** | Document JSON định nghĩa quyền | Cho phép đọc/ghi S3 |
+| Component (Thành phần) | Description (Mô tả) | Example (Ví dụ) |
+|------------------------|---------------------|-----------------|
+| **User** | A person or application *(Một người hoặc ứng dụng)* | developer-john, ci-cd-bot |
+| **Group** | Users with same permissions *(Nhóm users có cùng quyền)* | developers, admins |
+| **Role** | Temporary permissions for services *(Quyền tạm thời cho services)* | EC2 needs to read S3 |
+| **Policy** | JSON document defining permissions *(Document JSON định nghĩa quyền)* | Allow read/write to S3 |
 
 #### IAM Policy Example (Ví dụ IAM Policy)
 
@@ -155,11 +157,11 @@ The policy below allows reading and writing to a specific S3 bucket:
 }
 ```
 
-**Giải thích:**
+**Explanation:** *(Giải thích:)*
 
-- `Effect`: Allow hoặc Deny
-- `Action`: Hành động được phép (s3:GetObject = download, s3:PutObject = upload)
-- `Resource`: Tài nguyên áp dụng (ARN của bucket)
+- `Effect`: Allow or Deny *(Allow hoặc Deny)*
+- `Action`: Allowed actions (s3:GetObject = download, s3:PutObject = upload) *(Hành động được phép)*
+- `Resource`: Resource to apply (ARN of bucket) *(Tài nguyên áp dụng - ARN của bucket)*
 
 ---
 
@@ -173,10 +175,10 @@ The policy below allows reading and writing to a specific S3 bucket:
 
 #### When to Use Lambda? (Khi nào dùng Lambda?)
 
-- **API endpoints** - Xử lý HTTP requests
-- **Event processing** - Xử lý khi có file mới upload lên S3
-- **Scheduled tasks** - Chạy cron jobs (dọn dẹp, báo cáo)
-- **Webhooks** - Nhận notifications từ external services
+- **API endpoints** - Handle HTTP requests *(Xử lý HTTP requests)*
+- **Event processing** - Process when new file is uploaded to S3 *(Xử lý khi có file mới upload lên S3)*
+- **Scheduled tasks** - Run cron jobs (cleanup, reports) *(Chạy cron jobs - dọn dẹp, báo cáo)*
+- **Webhooks** - Receive notifications from external services *(Nhận notifications từ external services)*
 
 #### Lambda Function Example (Ví dụ Lambda function)
 
@@ -186,9 +188,9 @@ import json
 
 def lambda_handler(event, context):
     """
-    Handler được gọi mỗi khi Lambda được trigger.
-    - event: Dữ liệu đầu vào (HTTP request, S3 event...)
-    - context: Metadata về lần chạy (memory, timeout...)
+    Handler called every time Lambda is triggered.
+    - event: Input data (HTTP request, S3 event...)
+    - context: Metadata about the execution (memory, timeout...)
     """
     name = event.get('name', 'World')
     
@@ -198,13 +200,13 @@ def lambda_handler(event, context):
     }
 ```
 
-**Cách deploy Lambda:**
+**How to deploy Lambda:** *(Cách deploy Lambda:)*
 
 ```bash
-# Đóng gói code
+# Package code (Đóng gói code)
 zip function.zip lambda_function.py
 
-# Tạo function trên AWS
+# Create function on AWS (Tạo function trên AWS)
 aws lambda create-function \
   --function-name hello-world \
   --runtime python3.9 \

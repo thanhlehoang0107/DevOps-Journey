@@ -1,12 +1,16 @@
-# 📖 DevOps Glossary – Từ điển thuật ngữ
+# 📖 DevOps Glossary (Từ điển thuật ngữ)
 
 ---
 
-## Giới thiệu
+## Introduction (Giới thiệu)
 
-Tài liệu này tổng hợp các thuật ngữ thường gặp trong DevOps. Mỗi thuật ngữ được giữ nguyên tiếng Anh kèm giải thích tiếng Việt.
+This document compiles common DevOps terminology. Each term is kept in English with Vietnamese explanation.
 
-> 💡 **Quy tắc:** Thuật ngữ chuyên ngành **KHÔNG** được dịch sang tiếng Việt để tránh nhầm lẫn và phù hợp với tài liệu quốc tế.
+*Tài liệu này tổng hợp các thuật ngữ thường gặp trong DevOps. Mỗi thuật ngữ được giữ nguyên tiếng Anh kèm giải thích tiếng Việt.*
+
+> 💡 **Rule:** Technical terms are **NOT** translated to Vietnamese to avoid confusion and to align with international documentation.
+>
+> *Thuật ngữ chuyên ngành **KHÔNG** được dịch sang tiếng Việt để tránh nhầm lẫn và phù hợp với tài liệu quốc tế.*
 
 ---
 
