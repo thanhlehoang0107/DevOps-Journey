@@ -34,6 +34,16 @@ After this module, you will (Sau module này, bạn sẽ):
 
 ### 1. What is DevSecOps and Shift-Left Security? (DevSecOps và Shift-Left Security là gì?)
 
+> 📖 **Real-world Scenario (Tình huống thực tế):**
+>
+> Your team releases a new feature to production. 2 weeks later, a security researcher finds a critical SQL injection vulnerability and posts it on Twitter. Your company is on the news. Customers lose trust. The fix takes 2 hours, but the reputation damage takes months to recover.
+>
+> *Team của bạn release tính năng mới lên production. 2 tuần sau, một security researcher tìm thấy lỗ hổng SQL injection nghiêm trọng và đăng lên Twitter. Công ty bạn lên báo. Khách hàng mất niềm tin. Việc sửa lỗi mất 2 tiếng, nhưng phục hồi uy tín mất hàng tháng.*
+>
+> **With DevSecOps, that SQL injection would have been caught by SAST scanner BEFORE it reached production!**
+>
+> *Với DevSecOps, lỗ hổng SQL injection đó đã bị SAST scanner bắt TRƯỚC KHI đến production!*
+
 #### The Traditional Problem (Vấn đề truyền thống)
 
 Traditionally, security was checked at the **end** of development, before release. This led to:

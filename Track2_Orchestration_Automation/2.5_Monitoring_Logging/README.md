@@ -26,6 +26,16 @@ After this module, you will (Sau module này, bạn sẽ):
 
 ### 1. What is Observability? (Khả năng quan sát là gì?)
 
+> 📖 **Real-world Scenario (Tình huống thực tế):**
+>
+> It's Friday 5 PM. Users start complaining: "The app is slow!" You check the server - CPU is 30%, RAM is 50%. Everything looks fine. But WHERE is the problem? Without monitoring, you're blind. Is it the database? The API? The network? You spend 4 hours debugging instead of going home.
+>
+> *Thứ 6, 5h chiều. Người dùng bắt đầu phàn nàn: "App chậm quá!" Bạn kiểm tra server - CPU 30%, RAM 50%. Mọi thứ trông bình thường. Nhưng vấn đề Ở ĐÂU? Không có monitoring, bạn như mù. Là database? API? Network? Bạn mất 4 tiếng debug thay vì về nhà.*
+>
+> **With proper observability, you would see: "Database query latency spiked to 5 seconds at 4:55 PM" - problem found in 2 minutes!**
+>
+> *Với observability đúng cách, bạn sẽ thấy: "Database query latency tăng lên 5 giây lúc 4:55 PM" - tìm ra vấn đề trong 2 phút!*
+
 **Observability** is the ability to understand the internal state of a system by examining its outputs. In DevOps, this is an extremely important skill to:
 
 *Observability (Khả năng quan sát) là khả năng hiểu trạng thái bên trong của một hệ thống chỉ bằng cách xem các đầu ra của nó. Trong DevOps, đây là kỹ năng cực kỳ quan trọng để:*
@@ -179,6 +189,16 @@ schema_config:
 ```
 
 ---
+
+> ✅ **Checkpoint - Before continuing, make sure you can answer:**
+> *(Trước khi tiếp tục, hãy chắc bạn có thể trả lời:)*
+>
+> - [ ] What are the three pillars of observability? *(Ba trụ cột của observability là gì?)*
+> - [ ] How does Prometheus collect metrics? *(Prometheus thu thập metrics như thế nào?)*
+> - [ ] What is PromQL used for? *(PromQL dùng để làm gì?)*
+> - [ ] When would you use Loki vs ELK Stack? *(Khi nào dùng Loki vs ELK Stack?)*
+>
+> *If you can't answer, please re-read the sections above!*
 
 ## 📝 Module Files (Các file trong Module)
 
