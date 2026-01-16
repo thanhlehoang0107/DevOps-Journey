@@ -28,6 +28,16 @@ After this module, you will (Sau module này, bạn sẽ):
 
 #### 1.1 Introduction (Giới thiệu)
 
+> 📖 **Real-world Scenario (Tình huống thực tế):**
+>
+> You've built a beautiful website. Now users need to access it. But your Node.js/Python app can only handle 100 concurrent connections and crashes under load. How do major websites serve millions of users?
+>
+> *Bạn đã xây dựng một website đẹp. Giờ người dùng cần truy cập. Nhưng app Node.js/Python của bạn chỉ xử lý được 100 kết nối đồng thời và crash khi quá tải. Làm sao các website lớn phục vụ hàng triệu người dùng?*
+>
+> **NGINX sits in front:** It handles 10,000+ concurrent connections, serves static files lightning-fast, and distributes traffic to multiple backend servers. That's why Netflix, Dropbox, and Airbnb all use NGINX!
+>
+> *NGINX đứng trước: Nó xử lý 10,000+ kết nối đồng thời, serve file tĩnh cực nhanh, và phân phối traffic đến nhiều backend servers. Đó là lý do Netflix, Dropbox, Airbnb đều dùng NGINX!*
+
 **NGINX** (pronounced "engine-x") is a high-performance HTTP web server, reverse proxy, content cache, load balancer, TCP/UDP proxy server, and mail proxy server.
 
 *NGINX (đọc là "engine-x") là một HTTP web server hiệu năng cao, kiêm reverse proxy, content cache, cân bằng tải, TCP/UDP proxy server, và mail proxy server.*
@@ -665,6 +675,18 @@ server {
 }
 
 ```
+
+---
+
+> ✅ **Checkpoint - Before continuing, make sure you can answer:**
+> *(Trước khi tiếp tục, hãy chắc bạn có thể trả lời:)*
+>
+> - [ ] What's the difference between a web server and a reverse proxy? *(Web server và reverse proxy khác nhau như thế nào?)*
+> - [ ] How to configure NGINX to serve a static website? *(Làm sao cấu hình NGINX serve static website?)*
+> - [ ] What does `proxy_pass` do? *(proxy_pass làm gì?)*
+> - [ ] How to reload NGINX config without downtime? *(Làm sao reload config NGINX không downtime?)*
+>
+> *If you can't answer, please re-read the sections above!*
 
 ---
 

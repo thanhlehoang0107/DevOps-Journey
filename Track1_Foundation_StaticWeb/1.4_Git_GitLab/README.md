@@ -31,6 +31,16 @@ After this module, you will (Sau module này, bạn sẽ):
 
 ### 1. What is Git? (Git là gì?)
 
+> 📖 **Real-world Scenario (Tình huống thực tế):**
+>
+> You're working on a project with 3 teammates. Everyone edits the same files. On deadline day, you try to merge everything - **DISASTER!** Conflicts everywhere, someone's code overwrote someone else's work, and no one knows which version is correct. You spend 6 hours fixing instead of presenting.
+>
+> *Bạn đang làm dự án với 3 người trong team. Mọi người cùng sửa những file giống nhau. Ngày deadline, bạn cố gắng ghép lại - **THẢM HỌa!** Xung đột khắp nơi, code của người này ghi đè lên của người khác, không ai biết phiên bản nào đúng. Bạn mất 6 tiếng sửa thay vì thuyết trình.*
+>
+> **With Git:** Everyone works on their own branch. Merge conflicts are caught early. You can see who changed what, when, and why. Problem solved in minutes!
+>
+> *Với Git: Mỗi người làm việc trên branch riêng. Xung đột được phát hiện sớm. Bạn thấy ai thay đổi gì, khi nào, và tại sao. Vấn đề giải quyết trong vài phút!*
+
 **Git** is a Distributed Version Control System (DVCS). It tracks changes in source code during software development.
 
 *Git là Hệ thống Quản lý Phiên bản Phân tán. Nó theo dõi các thay đổi trong mã nguồn trong quá trình phát triển phần mềm.*
@@ -341,6 +351,16 @@ ssh -T git@github.com
 | **Issue Tracking** | ✅ Yes | ✅ Yes |
 
 ---
+
+> ✅ **Checkpoint - Before continuing, make sure you can answer:**
+> *(Trước khi tiếp tục, hãy chắc bạn có thể trả lời:)*
+>
+> - [ ] What's the difference between `git add` and `git commit`? *(git add và git commit khác nhau như thế nào?)*
+> - [ ] How to create a new branch and switch to it? *(Làm sao tạo branch mới và chuyển sang nó?)*
+> - [ ] How to resolve a merge conflict? *(Làm sao giải quyết xung đột khi merge?)*
+> - [ ] What should be in `.gitignore`? *(Những gì nên đưa vào .gitignore?)*
+>
+> *If you can't answer, please re-read the sections above!*
 
 ## 📝 Module Files (Các file trong Module)
 

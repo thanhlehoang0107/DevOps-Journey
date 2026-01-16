@@ -245,20 +245,36 @@ Build context là gì?
 ## 📝 Answers
 
 <details>
-<summary>Click để xem đáp án</summary>
+<summary>Click để xem đáp án và giải thích</summary>
 
-| Q | A | Q | A |
-|---|---|---|---|
-| 1 | b | 11 | b |
-| 2 | b | 12 | b |
-| 3 | b | 13 | b |
-| 4 | b | 14 | b |
-| 5 | b | 15 | c |
-| 6 | b | 16 | d |
-| 7 | b | 17 | b |
-| 8 | b | 18 | c |
-| 9 | b | 19 | b |
-| 10 | b | 20 | b |
+### Answers with Explanations (Đáp án và giải thích)
+
+| Q | Answer | Explanation (Giải thích) |
+|---|--------|--------------------------|
+| 1 | **b** | Container shares host kernel, VM has separate OS *(Container chia sẻ kernel host, VM có OS riêng)* |
+| 2 | **b** | Image is a read-only template; container is running instance *(Image là template read-only; container là instance đang chạy)* |
+| 3 | **b** | `CMD` sets default command at runtime; `RUN` executes at build time *(CMD đặt lệnh mặc định khi chạy; RUN thực thi khi build)* |
+| 4 | **b** | `EXPOSE` only documents the port, doesn't publish it *(EXPOSE chỉ khai báo, không mở port)* |
+| 5 | **b** | Volume persists data even when container is deleted *(Volume lưu data ngay cả khi container bị xóa)* |
+| 6 | **b** | `-p 8080:80` = Host port 8080 maps to Container port 80 *(Host:Container)* |
+| 7 | **b** | `-d` = Detached mode, runs in background *(Chế độ chạy ngầm)* |
+| 8 | **b** | Default network is `bridge` - isolated network for containers *(Mạng mặc định là bridge - mạng cô lập cho containers)* |
+| 9 | **b** | `RUN` executes during build (creates layer); `CMD` executes at runtime *(RUN khi build (tạo layer); CMD khi chạy)* |
+| 10 | **b** | `ADD` can extract tar and download from URL; `COPY` only copies files *(ADD giải nén và download được; COPY chỉ copy)* |
+| 11 | **b** | Each instruction creates a new image layer *(Mỗi instruction tạo một layer mới)* |
+| 12 | **b** | `prune` removes unused data (stopped containers, dangling images) *(Xóa dữ liệu không dùng)* |
+| 13 | **b** | `CMD` provides default args that append to `ENTRYPOINT` *(CMD cung cấp args mặc định nối vào ENTRYPOINT)* |
+| 14 | **b** | Multi-stage builds separate build tools from final image → smaller size *(Multi-stage tách build tools khỏi image cuối → nhỏ hơn)* |
+| 15 | **c** | Default tag is `latest` if not specified *(Tag mặc định là latest nếu không chỉ định)* |
+| 16 | **d** | Both `docker logs` and `docker container logs` work *(Cả hai cú pháp đều hoạt động)* |
+| 17 | **b** | `HEALTHCHECK` defines how to check if container is healthy *(Định nghĩa cách kiểm tra sức khỏe container)* |
+| 18 | **c** | `-m` or `--memory` limits container memory *(Giới hạn bộ nhớ container)* |
+| 19 | **b** | Docker Hub is a public container registry *(Docker Hub là kho chứa container công cộng)* |
+| 20 | **b** | Build context is files sent to daemon for building image *(Build context là files gửi đến daemon để build image)* |
+
+> 💡 **Pro Tip:** Most answers are about understanding Docker's layered architecture and the difference between build-time vs runtime!
+>
+> *Hầu hết đáp án liên quan đến hiểu kiến trúc phân lớp của Docker và sự khác biệt giữa build-time vs runtime!*
 
 </details>
 
