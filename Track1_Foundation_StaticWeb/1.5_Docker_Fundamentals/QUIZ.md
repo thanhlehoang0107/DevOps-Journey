@@ -10,10 +10,10 @@
 
 Container khác VM như thế nào?
 
-a) Container có OS riêng  
-b) Container share host kernel  
-c) VM nhẹ hơn container  
-d) Không khác nhau  
+- a) Container có OS riêng
+- b) Container share host kernel (Container chia sẻ kernel của host)
+- c) VM nhẹ hơn container
+- d) Không khác nhau  
 
 ---
 
@@ -21,10 +21,10 @@ d) Không khác nhau
 
 Docker image là gì?
 
-a) Running container  
-b) Read-only template  
-c) Docker configuration  
-d) Virtual machine  
+- a) Running container (Container đang chạy)
+- b) Read-only template (Mẫu chỉ đọc)
+- c) Docker configuration (Cấu hình Docker)
+- d) Virtual machine (Máy ảo)  
 
 ---
 
@@ -32,10 +32,10 @@ d) Virtual machine
 
 Lệnh `CMD` trong Dockerfile dùng để?
 
-a) Run command during build  
-b) Set default command khi container start  
-c) Copy files  
-d) Set environment  
+- a) Run command during build (Chạy lệnh trong quá trình build)
+- b) Set default command khi container start (Thiết lập lệnh mặc định khi container chạy)
+- c) Copy files (Sao chép tệp)
+- d) Set environment (Thiết lập môi trường)  
 
 ---
 
@@ -43,10 +43,10 @@ d) Set environment
 
 `EXPOSE 80` trong Dockerfile làm gì?
 
-a) Publish port 80  
-b) Document port 80  
-c) Block port 80  
-d) Forward port 80  
+- a) Publish port 80 (Công khai port 80)
+- b) Document port 80 (Khai báo port 80)
+- c) Block port 80 (Chặn port 80)
+- d) Forward port 80 (Chuyển tiếp port 80)  
 
 ---
 
@@ -54,10 +54,10 @@ d) Forward port 80
 
 Docker volume dùng để?
 
-a) Increase container size  
-b) Persist data  
-c) Network containers  
-d) Build images  
+- a) Increase container size (Tăng kích thước container)
+- b) Persist data (Lưu trữ dữ liệu bền vững)
+- c) Network containers (Kết nối mạng container)
+- d) Build images (Xây dựng image)  
 
 ---
 
@@ -65,10 +65,10 @@ d) Build images
 
 `docker run -p 8080:80` có nghĩa gì?
 
-a) Container 8080 maps to host 80  
-b) Host 8080 maps to container 80  
-c) Both ports 8080  
-d) No mapping  
+- a) Container 8080 maps to host 80
+- b) Host 8080 maps to container 80
+- c) Both ports 8080 (Cả hai port 8080)
+- d) No mapping (Không map)  
 
 ---
 
@@ -76,10 +76,10 @@ d) No mapping
 
 Flag `-d` trong `docker run -d` có nghĩa gì?
 
-a) Debug mode  
-b) Detached (background)  
-c) Delete after run  
-d) Disk mode  
+- a) Debug mode (Chế độ gỡ lỗi)
+- b) Detached (background) (Chạy ngầm)
+- c) Delete after run (Xóa sau khi chạy)
+- d) Disk mode (Chế độ đĩa)  
 
 ---
 
@@ -87,10 +87,10 @@ d) Disk mode
 
 Network type default của Docker là gì?
 
-a) host  
-b) bridge  
-c) none  
-d) overlay  
+- a) host
+- b) bridge
+- c) none
+- d) overlay  
 
 ---
 
@@ -98,10 +98,10 @@ d) overlay
 
 `RUN` khác `CMD` như thế nào?
 
-a) RUN execute at runtime, CMD at build  
-b) RUN execute at build, CMD at runtime  
-c) Same thing  
-d) RUN for files, CMD for commands  
+- a) RUN execute at runtime, CMD at build
+- b) RUN execute at build, CMD at runtime (RUN chạy khi build, CMD chạy khi runtime)
+- c) Same thing (Giống nhau)
+- d) RUN for files, CMD for commands (RUN cho file, CMD cho lệnh)  
 
 ---
 
@@ -109,10 +109,10 @@ d) RUN for files, CMD for commands
 
 `COPY` khác `ADD` như thế nào?
 
-a) Không khác  
-b) ADD can extract archives and URL  
-c) COPY can extract archives  
-d) ADD không copy được  
+- a) Không khác
+- b) ADD can extract archives and URL (ADD có thể giải nén và tải URL)
+- c) COPY can extract archives (COPY có thể giải nén)
+- d) ADD không copy được  
 
 ---
 
@@ -120,10 +120,10 @@ d) ADD không copy được
 
 Mỗi instruction trong Dockerfile tạo gì?
 
-a) Container  
-b) Image layer  
-c) Volume  
-d) Network  
+- a) Container
+- b) Image layer
+- c) Volume
+- d) Network  
 
 ---
 
@@ -131,10 +131,10 @@ d) Network
 
 `docker system prune` làm gì?
 
-a) Delete all containers and images  
-b) Remove unused data  
-c) Restart Docker  
-d) Update Docker  
+- a) Delete all containers and images (Xóa tất cả container và images)
+- b) Remove unused data (Xóa dữ liệu không sử dụng)
+- c) Restart Docker (Khởi động lại Docker)
+- d) Update Docker (Cập nhật Docker)  
 
 ---
 
@@ -142,10 +142,10 @@ d) Update Docker
 
 `ENTRYPOINT` khác `CMD` như thế nào?
 
-a) ENTRYPOINT can be overridden easily  
-b) CMD appends to ENTRYPOINT  
-c) Same thing  
-d) ENTRYPOINT for files only  
+- a) ENTRYPOINT can be overridden easily (ENTRYPOINT dễ bị ghi đè)
+- b) CMD appends to ENTRYPOINT (CMD nối vào ENTRYPOINT)
+- c) Same thing (Giống nhau)
+- d) ENTRYPOINT for files only (ENTRYPOINT chỉ cho file)  
 
 ---
 
@@ -153,10 +153,10 @@ d) ENTRYPOINT for files only
 
 Multi-stage build dùng để?
 
-a) Build multiple apps  
-b) Reduce final image size  
-c) Run multiple containers  
-d) Create multiple networks  
+- a) Build multiple apps (Build nhiều app)
+- b) Reduce final image size (Giảm kích thước image cuối cùng)
+- c) Run multiple containers (Chạy nhiều container)
+- d) Create multiple networks (Tạo nhiều mạng)  
 
 ---
 
@@ -164,10 +164,10 @@ d) Create multiple networks
 
 Nếu không specify tag, default tag là gì?
 
-a) v1  
-b) default  
-c) latest  
-d) none  
+- a) v1
+- b) default
+- c) latest
+- d) none  
 
 ---
 
@@ -175,10 +175,10 @@ d) none
 
 Lệnh xem logs của container running?
 
-a) `docker logs container_name`  
-b) `docker show logs`  
-c) `docker container logs`  
-d) a và c đều đúng  
+- a) `docker logs container_name`
+- b) `docker show logs`
+- c) `docker container logs`
+- d) a và c đều đúng  
 
 ---
 
@@ -186,10 +186,10 @@ d) a và c đều đúng
 
 `HEALTHCHECK` instruction dùng để?
 
-a) Check Docker health  
-b) Define container health check  
-c) Check host health  
-d) Monitor resources  
+- a) Check Docker health (Kiểm tra sức khỏe Docker)
+- b) Define container health check (Định nghĩa kiểm tra sức khỏe container)
+- c) Check host health (Kiểm tra sức khỏe host)
+- d) Monitor resources (Giám sát tài nguyên)  
 
 ---
 
@@ -197,10 +197,10 @@ d) Monitor resources
 
 Flag nào giới hạn memory?
 
-a) `--memory-limit`  
-b) `--mem`  
-c) `-m` or `--memory`  
-d) `--ram`  
+- a) `--memory-limit`
+- b) `--mem`
+- c) `-m` or `--memory`
+- d) `--ram`  
 
 ---
 
@@ -208,10 +208,10 @@ d) `--ram`
 
 Docker Hub là gì?
 
-a) Docker documentation  
-b) Public container registry  
-c) Docker CLI  
-d) Docker desktop  
+- a) Docker documentation (Tài liệu Docker)
+- b) Public container registry (Kho lưu trữ container công cộng)
+- c) Docker CLI
+- d) Docker desktop  
 
 ---
 
@@ -219,10 +219,10 @@ d) Docker desktop
 
 Build context là gì?
 
-a) Docker daemon  
-b) Files sent to daemon for build  
-c) Dockerfile location  
-d) Environment variables  
+- a) Docker daemon
+- b) Files sent to daemon for build (Các file được gửi tới daemon để build)
+- c) Dockerfile location (Vị trí Dockerfile)
+- d) Environment variables (Biến môi trường)  
 
 ---
 

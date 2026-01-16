@@ -99,8 +99,8 @@ withCredentials([usernamePassword(credentialsId: 'docker-hub',
 |---------|---------|-----------|
 | Config file | `Jenkinsfile` | `.gitlab-ci.yml` |
 | Syntax | Groovy | YAML |
-| Hosting | Self-hosted | SaaS or Self-hosted |
-| Docker | Plugin required | Built-in |
+| Hosting | Self-hosted (Tự host) | SaaS or Self-hosted (SaaS hoặc Tự host) |
+| Docker | Plugin required (Cần Plugin) | Built-in (Tích hợp sẵn) |
 
 ---
 

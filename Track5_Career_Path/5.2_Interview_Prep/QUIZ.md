@@ -10,10 +10,10 @@
 
 STAR method là gì? (What is the STAR method?)
 
-a) System Testing And Reporting  
-b) Situation, Task, Action, Result  
-c) Start, Train, Apply, Review  
-d) Simple Task Automation Rules  
+- a) System Testing And Reporting
+- b) Situation, Task, Action, Result
+- c) Start, Train, Apply, Review
+- d) Simple Task Automation Rules  
 
 ---
 
@@ -21,10 +21,10 @@ d) Simple Task Automation Rules
 
 "Tell me about yourself" nên trả lời như thế nào? (How to answer "Tell me about yourself"?)
 
-a) Personal life details  
-b) Professional summary + relevant experience  
-c) Just read resume  
-d) Skip the question  
+- a) Personal life details (Chi tiết đời tư)
+- b) Professional summary + relevant experience (Tóm tắt chuyên môn + kinh nghiệm liên quan)
+- c) Just read resume (Chỉ đọc lại CV)
+- d) Skip the question (Bỏ qua câu hỏi)  
 
 ---
 
@@ -32,10 +32,10 @@ d) Skip the question
 
 Khi không biết câu trả lời, nên? (When you don't know the answer?)
 
-a) Make something up  
-b) Be honest, explain how you'd find the answer  
-c) Blame previous company  
-d) Leave the interview  
+- a) Make something up (Bịa ra câu trả lời)
+- b) Be honest, explain how you'd find the answer (Trung thực, giải thích cách tìm câu trả lời)
+- c) Blame previous company (Đổ lỗi công ty cũ)
+- d) Leave the interview (Rời buổi phỏng vấn)  
 
 ---
 
@@ -43,10 +43,10 @@ d) Leave the interview
 
 CI/CD là gì? (What is CI/CD?)
 
-a) Code Integration / Code Deployment  
-b) Continuous Integration / Continuous Delivery or Deployment  
-c) Complete Integration / Complete Delivery  
-d) Container Integration / Container Delivery  
+- a) Code Integration / Code Deployment
+- b) Continuous Integration / Continuous Delivery or Deployment
+- c) Complete Integration / Complete Delivery
+- d) Container Integration / Container Delivery  
 
 ---
 
@@ -54,10 +54,10 @@ d) Container Integration / Container Delivery
 
 Blue-green deployment là gì? (What is blue-green deployment?)
 
-a) Color-based coding  
-b) Two identical environments with traffic switching  
-c) Development environment only  
-d) Database replication  
+- a) Color-based coding (Code dựa trên màu sắc)
+- b) Two identical environments with traffic switching (Hai môi trường giống hệt nhau với chuyển đổi traffic)
+- c) Development environment only (Chỉ môi trường phát triển)
+- d) Database replication (Sao chép cơ sở dữ liệu)  
 
 ---
 

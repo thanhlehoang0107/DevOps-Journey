@@ -33,7 +33,64 @@ After this module, you will (Sau module này, bạn sẽ):
 
 ## 📚 Content (Nội dung)
 
-### 1. Basic Structure (Cấu trúc cơ bản)
+### 1. What is Terraform? (Terraform là gì?)
+
+**Terraform** is an Infrastructure as Code (IaC) tool that allows you to build, change, and version infrastructure safely and efficiently.
+
+*Terraform là công cụ Infrastructure as Code (IaC) cho phép bạn xây dựng, thay đổi và quản lý phiên bản hạ tầng một cách an toàn và hiệu quả.*
+
+#### Why Terraform? (Tại sao Terraform?)
+
+**Problem:** Creating infrastructure manually (clicking console) cannot be tracked, rolled back, or verified.
+
+*Tạo infrastructure bằng tay (click console) không thể tracking, không thể rollback, dễ sai.*
+
+| Manual (Click Console) | Terraform (IaC) |
+|------------------------|-----------------|
+| ❌ Không có version history | ✅ Git versioning |
+| ❌ Mỗi người làm một kiểu | ✅ Consistent, reproducible |
+| ❌ Không biết đã thay đổi gì | ✅ `terraform plan` xem trước thay đổi |
+| ❌ Rollback = làm lại từ đầu | ✅ `terraform apply` phiên bản cũ |
+| ❌ Không thể review | ✅ Code review như application code |
+
+#### Terraform Workflow
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    TERRAFORM WORKFLOW                        │
+├─────────────────────────────────────────────────────────────┤
+│                                                              │
+│   1. WRITE          2. PLAN           3. APPLY              │
+│   ┌─────────┐      ┌─────────┐       ┌─────────┐           │
+│   │  .tf    │ ───► │terraform│ ───── │terraform│ ───►      │
+│   │  files  │      │  plan   │       │  apply  │           │
+│   └─────────┘      └─────────┘       └─────────┘           │
+│                         │                   │               │
+│                         ▼                   ▼               │
+│                    Preview             Create/Update        │
+│                    changes             resources            │
+│                                             │               │
+│                                             ▼               │
+│                                      ┌─────────────┐       │
+│                                      │   State     │       │
+│                                      │   (.tfstate)│       │
+│                                      └─────────────┘       │
+│                                                              │
+└─────────────────────────────────────────────────────────────┘
+```
+
+**Key concepts (Khái niệm chính):**
+
+- **Infrastructure as Code**: Define infrastructure in config files (Định nghĩa hạ tầng bằng code).
+- **Execution Plans**: Preview changes before applying (Xem trước thay đổi trước khi áp dụng).
+- **Resource Graph**: Builds dependency graph (Xây dựng đồ thị phụ thuộc).
+- **State**: Terraform lưu trạng thái thực tế của infrastructure để so sánh với code.
+
+### 2. Basic Structure (Cấu trúc cơ bản)
+
+A typical Terraform project has these main blocks. Here's a complete example:
+
+*Một project Terraform điển hình có các blocks chính sau. Dưới đây là ví dụ đầy đủ:*
 
 ```hcl
 # main.tf
@@ -78,7 +135,7 @@ resource "aws_instance" "web" {
 
 ---
 
-### 2. Variables (Biến)
+### 3. Variables (Biến)
 
 ```hcl
 # variables.tf
@@ -118,7 +175,7 @@ ami_id      = "ami-xxx"
 
 ---
 
-### 3. Outputs (Đầu ra)
+### 4. Outputs (Đầu ra)
 
 ```hcl
 # outputs.tf
@@ -140,7 +197,7 @@ output "instance_dns" {
 
 ---
 
-### 4. Commands (Các lệnh)
+### 5. Commands (Các lệnh)
 
 ```bash
 # Initialize (Khởi tạo)
@@ -172,7 +229,7 @@ terraform state rm <resource> # Remove from state
 
 ---
 
-### 5. Modules
+### 6. Modules
 
 #### Using Public Modules (Sử dụng modules công khai)
 
@@ -230,7 +287,7 @@ module "web_server" {
 
 ---
 
-### 6. Terraform with GitLab CI (Terraform với GitLab CI)
+### 7. Terraform with GitLab CI (Terraform với GitLab CI)
 
 ```yaml
 # .gitlab-ci.yml
@@ -276,18 +333,18 @@ apply:
 
 ---
 
-### 7. Best Practices (Best Practices)
+### 8. Best Practices (Best Practices)
 
 | Practice | Description (Mô tả) |
 |----------|---------------------|
-| **Remote State** | Store state in S3/GCS, not locally (Lưu state trên S3, không local) |
-| **State Locking** | Use DynamoDB for state locking (Dùng DynamoDB cho state locking) |
+| **Remote State** | Store state in S3/GCS, not locally (Lưu state trên S3/GCS, không lưu local) |
+| **State Locking** | Use DynamoDB for state locking (Dùng DynamoDB để khóa state) |
 | **Modules** | Create reusable modules (Tạo modules tái sử dụng) |
-| **Workspaces** | Separate environments (Phân tách môi trường) |
+| **Workspaces** | Separate environments via workspaces (Phân tách môi trường qua workspaces) |
 | **Variables** | Never hardcode values (Không hardcode giá trị) |
-| **Outputs** | Export useful values (Xuất giá trị hữu ích) |
-| **Formatting** | Run `terraform fmt` before commit (Chạy `terraform fmt` trước khi commit) |
-| **Validation** | Run in CI pipeline (Chạy trong CI pipeline) |
+| **Outputs** | Export useful values (Xuất các giá trị hữu ích) |
+| **Formatting** | Run `terraform fmt` before commit (Chạy lệnh fmt trước khi commit) |
+| **Validation** | Run in CI pipeline (Chạy validate trong CI pipeline) |
 
 ---
 

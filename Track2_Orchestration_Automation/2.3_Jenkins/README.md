@@ -49,7 +49,21 @@ After this module, you will (Sau module này, bạn sẽ):
 
 ## 📚 Content (Nội dung)
 
-### 1. Jenkins Installation (Cài đặt Jenkins)
+### 1. What is Jenkins? (Jenkins là gì?)
+
+**Jenkins** is the leading open-source automation server. Built with Java, it provides hundreds of plugins to support building, deploying, and automating any project.
+
+*Jenkins là máy chủ tự động hóa mã nguồn mở hàng đầu. Được xây dựng bằng Java, nó cung cấp hàng trăm plugin hỗ trợ xây dựng, triển khai và tự động hóa bất kỳ dự án nào.*
+
+**Key features (Tính năng chính):**
+
+- **Continuous Integration/Continuous Delivery (CI/CD)**: Automate the software development lifecycle (Tự động hóa quy trình phát triển phần mềm).
+- **Extensible (Có thể mở rộng)**: Over 1800+ plugins available (Hơn 1800+ plugin có sẵn).
+- **Distributed (Phân tán)**: Distribute work across multiple machines (Phân phối công việc trên nhiều máy).
+
+### 2. Jenkins Installation (Cài đặt Jenkins)
+
+- Run the following command to start Jenkins (Chạy lệnh sau để khởi động Jenkins):
 
 ```bash
 # Docker (Recommended - Khuyến nghị)
@@ -71,7 +85,7 @@ docker exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword
 
 ---
 
-### 2. Pipeline Basics (Pipeline cơ bản)
+### 3. Pipeline Basics (Pipeline cơ bản)
 
 #### Declarative Pipeline (Khai báo)
 
@@ -138,7 +152,7 @@ pipeline {
 
 ---
 
-### 3. Declarative vs Scripted (Khai báo vs Script)
+### 4. Declarative vs Scripted (Khai báo vs Script)
 
 ```groovy
 // Declarative Pipeline (Recommended - Khuyến nghị)
@@ -163,7 +177,7 @@ node {
 
 ---
 
-### 4. Docker Integration (Tích hợp Docker)
+### 5. Docker Integration (Tích hợp Docker)
 
 ```groovy
 pipeline {
@@ -215,7 +229,7 @@ pipeline {
 
 ---
 
-### 5. Parallel Stages (Chạy song song)
+### 6. Parallel Stages (Chạy song song)
 
 ```groovy
 pipeline {
@@ -247,7 +261,7 @@ pipeline {
 
 ---
 
-### 6. Credentials Management (Quản lý credentials)
+### 7. Credentials Management (Quản lý credentials)
 
 ```groovy
 pipeline {
@@ -273,7 +287,7 @@ pipeline {
 
 ---
 
-### 7. Shared Libraries (Thư viện chia sẻ)
+### 8. Shared Libraries (Thư viện chia sẻ)
 
 ```groovy
 // vars/standardPipeline.groovy

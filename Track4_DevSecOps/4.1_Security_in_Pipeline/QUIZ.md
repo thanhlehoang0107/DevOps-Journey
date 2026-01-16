@@ -9,42 +9,47 @@
 ### Q1
 
 SAST scans gì?
-a) Running application  
-b) Source code  
-c) Network traffic  
-d) Docker images  
+
+- a) Running application (Ứng dụng đang chạy)
+- b) Source code (Mã nguồn)
+- c) Network traffic (Lưu lượng mạng)
+- d) Docker images (Ảnh Docker)
 
 ### Q2
 
 DAST scans gì?
-a) Source code  
-b) Running application  
-c) Dependencies  
-d) Configs  
+
+- a) Source code (Mã nguồn)
+- b) Running application (Ứng dụng đang chạy)
+- c) Dependencies (Các thư viện phụ thuộc)
+- d) Configs (Cấu hình)
 
 ### Q3
 
 SCA là viết tắt của?
-a) Static Code Analysis  
-b) Software Composition Analysis  
-c) Security Configuration Audit  
-d) Secure Container Assessment  
+
+- a) Static Code Analysis (Phân tích mã tĩnh)
+- b) Software Composition Analysis (Phân tích thành phần phần mềm)
+- c) Security Configuration Audit (Kiểm toán cấu hình bảo mật)
+- d) Secure Container Assessment (Đánh giá bảo mật container)
 
 ### Q4
 
 Trivy dùng để scan?
-a) Source code  
-b) Container images  
-c) Network  
-d) Secrets  
+
+- a) Source code (Mã nguồn)
+- b) Container images (Ảnh container)
+- c) Network (Mạng)
+- d) Secrets (Bí mật)
 
 ### Q5
 
 "Shift Left" security có nghĩa?
-a) Move security earlier in pipeline  
-b) Move security to production  
-c) Remove security  
-d) Security on left screen  
+
+- a) Move security earlier in pipeline (Đưa bảo mật vào sớm hơn trong quy trình)
+- b) Move security to production (Đưa bảo mật vào production)
+- c) Remove security (Loại bỏ bảo mật)
+- d) Security on left screen (Bảo mật bên màn hình trái)
 
 ---
 

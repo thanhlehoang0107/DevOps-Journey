@@ -25,46 +25,119 @@ After this module, you will (Sau module này, bạn sẽ):
 
 ## 📚 Content (Nội dung)
 
-### 1. EC2
+### 1. AWS Introduction (Giới thiệu AWS)
+
+#### What is AWS? (AWS là gì?)
+
+**Amazon Web Services (AWS)** is the world's largest cloud computing platform, offering over 200 services from data centers around the globe. Instead of buying physical servers, you "rent" computing resources on demand.
+
+*AWS là nền tảng điện toán đám mây lớn nhất thế giới, cung cấp hơn 200 dịch vụ từ các trung tâm dữ liệu toàn cầu. Thay vì mua server vật lý, bạn "thuê" tài nguyên tính toán theo nhu cầu.*
+
+#### Why DevOps needs AWS? (Tại sao DevOps cần học AWS?)
+
+| Lý do | Giải thích |
+|-------|------------|
+| **Thị trường việc làm** | AWS chiếm ~33% thị phần cloud, hầu hết doanh nghiệp dùng AWS |
+| **Tự động hóa** | Mọi thứ trên AWS đều có thể tự động hóa qua CLI/API |
+| **Infrastructure as Code** | Terraform, CloudFormation giúp quản lý hạ tầng bằng code |
+| **Scalability** | Tự động mở rộng/thu hẹp theo nhu cầu |
+
+---
+
+### 2. EC2 - Elastic Compute Cloud
+
+#### What is EC2? (EC2 là gì?)
+
+**EC2** allows you to create virtual servers on the cloud. You choose the CPU, RAM, storage configuration and only pay for the time you use.
+
+*EC2 là dịch vụ cho phép bạn tạo máy chủ ảo (virtual server) trên cloud. Bạn có thể chọn cấu hình CPU, RAM, storage và chỉ trả tiền cho thời gian sử dụng.*
+
+#### When to use EC2? (Khi nào dùng EC2?)
+
+- Chạy web server, API server
+- Host ứng dụng cần cấu hình tùy chỉnh
+- Môi trường development/staging
+
+#### How to create EC2 instance (Cách tạo EC2 instance)
+
+The command below creates an EC2 instance with basic configuration:
+
+*Lệnh dưới đây tạo một EC2 instance với cấu hình cơ bản:*
 
 ```bash
-# Launch EC2 (Khởi chạy EC2)
 aws ec2 run-instances \
-  --image-id ami-xxx \
+  --image-id ami-0abcdef1234567890 \
   --instance-type t3.micro \
   --key-name mykey \
-  --security-group-ids sg-xxx \
-  --subnet-id subnet-xxx
-
-# Auto Scaling (Tự động mở rộng)
-aws autoscaling create-auto-scaling-group \
-  --auto-scaling-group-name my-asg \
-  --launch-template LaunchTemplateId=lt-xxx \
-  --min-size 1 \
-  --max-size 5 \
-  --desired-capacity 2 \
-  --vpc-zone-identifier "subnet-a,subnet-b"
+  --security-group-ids sg-0123456789abcdef0 \
+  --subnet-id subnet-0123456789abcdef0
 ```
 
-### 2. S3
+**Giải thích từng tham số:**
+
+- `--image-id`: AMI (Amazon Machine Image) - hệ điều hành base (Ubuntu, Amazon Linux...)
+- `--instance-type`: Cấu hình máy (t3.micro = 2 vCPU, 1GB RAM - miễn phí trong Free Tier)
+- `--key-name`: SSH key để truy cập server
+- `--security-group-ids`: Firewall rules (mở port nào, cho IP nào truy cập)
+- `--subnet-id`: Mạng con trong VPC để đặt instance
+
+---
+
+### 3. S3 - Simple Storage Service
+
+#### What is S3? (S3 là gì?)
+
+**S3** is an object storage service with 99.999999999% durability. You can store unlimited data and access it from anywhere via HTTP.
+
+*S3 là dịch vụ lưu trữ object (file) với độ bền 99.999999999% (11 số 9). Bạn có thể lưu trữ không giới hạn dung lượng, truy cập từ bất kỳ đâu qua HTTP.*
+
+#### Common Use Cases (Các trường hợp sử dụng phổ biến)
+
+- **Static website hosting** - Host website tĩnh (HTML, CSS, JS)
+- **Backup và archive** - Lưu trữ backup, log files
+- **Data lake** - Kho dữ liệu cho analytics
+- **CI/CD artifacts** - Lưu build outputs, Docker images
+
+#### Working with S3 (Thao tác với S3)
 
 ```bash
-# Create bucket (Tạo bucket)
-aws s3 mb s3://my-bucket
+# 1. Tạo bucket (kho chứa) - tên bucket phải unique toàn cầu
+aws s3 mb s3://my-company-devops-bucket-2026
 
-# Upload (Tải lên)
-aws s3 cp file.txt s3://my-bucket/
+# 2. Upload một file
+aws s3 cp myfile.txt s3://my-company-devops-bucket-2026/
 
-# Sync (Đồng bộ)
-aws s3 sync ./folder s3://my-bucket/folder
+# 3. Đồng bộ toàn bộ thư mục (như rsync)
+aws s3 sync ./build s3://my-company-devops-bucket-2026/website
 
-# Bucket policy (Chính sách bucket)
-aws s3api put-bucket-policy \
-  --bucket my-bucket \
-  --policy file://policy.json
+# 4. Download file
+aws s3 cp s3://my-company-devops-bucket-2026/myfile.txt ./downloaded.txt
 ```
 
-### 3. IAM
+---
+
+### 4. IAM - Identity and Access Management
+
+#### What is IAM? (IAM là gì?)
+
+**IAM** controls who is allowed to do what on AWS. It's the "security guard" of your entire AWS account, critical for security.
+
+*IAM kiểm soát ai được phép làm gì trên AWS. Đây là "bảo vệ" của toàn bộ tài khoản AWS, cực kỳ quan trọng cho bảo mật.*
+
+#### IAM Components (Các thành phần IAM)
+
+| Thành phần | Mô tả | Ví dụ |
+|------------|-------|-------|
+| **User** | Một người hoặc ứng dụng | developer-john, ci-cd-bot |
+| **Group** | Nhóm users có cùng quyền | developers, admins |
+| **Role** | Quyền tạm thời cho services | EC2 cần đọc S3 |
+| **Policy** | Document JSON định nghĩa quyền | Cho phép đọc/ghi S3 |
+
+#### IAM Policy Example (Ví dụ IAM Policy)
+
+The policy below allows reading and writing to a specific S3 bucket:
+
+*Policy dưới đây cho phép đọc và ghi vào một S3 bucket cụ thể:*
 
 ```json
 {
@@ -82,25 +155,60 @@ aws s3api put-bucket-policy \
 }
 ```
 
-### 4. Lambda
+**Giải thích:**
+
+- `Effect`: Allow hoặc Deny
+- `Action`: Hành động được phép (s3:GetObject = download, s3:PutObject = upload)
+- `Resource`: Tài nguyên áp dụng (ARN của bucket)
+
+---
+
+### 5. Lambda - Serverless Functions
+
+#### What is Lambda? (Lambda là gì?)
+
+**Lambda** lets you run code without managing servers. You only pay when your code actually runs (billed per millisecond).
+
+*Lambda cho phép bạn chạy code mà không cần quản lý server. Bạn chỉ trả tiền khi code thực sự chạy (tính theo millisecond).*
+
+#### When to Use Lambda? (Khi nào dùng Lambda?)
+
+- **API endpoints** - Xử lý HTTP requests
+- **Event processing** - Xử lý khi có file mới upload lên S3
+- **Scheduled tasks** - Chạy cron jobs (dọn dẹp, báo cáo)
+- **Webhooks** - Nhận notifications từ external services
+
+#### Lambda Function Example (Ví dụ Lambda function)
 
 ```python
 # lambda_function.py
 import json
 
 def lambda_handler(event, context):
+    """
+    Handler được gọi mỗi khi Lambda được trigger.
+    - event: Dữ liệu đầu vào (HTTP request, S3 event...)
+    - context: Metadata về lần chạy (memory, timeout...)
+    """
+    name = event.get('name', 'World')
+    
     return {
         'statusCode': 200,
-        'body': json.dumps('Hello from Lambda!')
+        'body': json.dumps(f'Hello, {name}!')
     }
 ```
 
+**Cách deploy Lambda:**
+
 ```bash
-# Create function (Tạo hàm)
+# Đóng gói code
+zip function.zip lambda_function.py
+
+# Tạo function trên AWS
 aws lambda create-function \
-  --function-name my-function \
+  --function-name hello-world \
   --runtime python3.9 \
-  --role arn:aws:iam::xxx:role/lambda-role \
+  --role arn:aws:iam::123456789:role/lambda-execution-role \
   --handler lambda_function.lambda_handler \
   --zip-file fileb://function.zip
 ```

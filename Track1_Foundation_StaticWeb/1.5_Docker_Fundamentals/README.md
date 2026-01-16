@@ -17,16 +17,22 @@ After this module, you will (Sau module này, bạn sẽ):
 - ✅ Learn Docker architecture - daemon, client, registry (Hiểu kiến trúc Docker)
 - ✅ Write Dockerfiles to build images (Viết Dockerfile để build images)
 - ✅ Run and manage containers (Chạy và quản lý containers)
-- ✅ Use Docker volumes and networks (Sử dụng volumes và networks)
+- ✅ Use Docker volumes and networks (Sử dụng ổ đĩa và mạng Docker)
 - ✅ Push images to Docker Hub (Đẩy images lên Docker Hub)
 
 ---
 
-## 📖 Content (Nội dung)
+## 📚 Content (Nội dung)
 
-### 1. Container vs Virtual Machine - 1 hour
+### 1. Introduction to Docker & Containers (Giới thiệu về Docker & Containers) - 1 hour
 
-#### 1.1 Virtual Machine
+#### 1.1 What is Docker? (Docker là gì?)
+
+**Docker** is an open platform for developing, shipping, and running applications. Docker enables you to separate your applications from your infrastructure so you can deliver software quickly.
+
+*Docker là một nền tảng mở để phát triển, vận chuyển và chạy các ứng dụng. Docker cho phép bạn tách biệt ứng dụng khỏi hạ tầng để chuyển giao phần mềm nhanh chóng.*
+
+#### 1.2 Virtual Machine
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -51,12 +57,12 @@ After this module, you will (Sau module này, bạn sẽ):
 
 **VM Characteristics (Đặc điểm VM):**
 
-- ✅ Complete isolation (Isolation hoàn toàn)
+- ✅ Complete isolation (Cách ly hoàn toàn)
 - ❌ Heavy - GBs per VM (Nặng - GB mỗi VM)
-- ❌ Slow startup - minutes (Khởi động chậm - phút)
+- ❌ Slow startup - minutes (Khởi động chậm - hằng phút)
 - ❌ Resource intensive (Tốn tài nguyên)
 
-#### 1.2 Container
+#### 1.3 Container
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -83,14 +89,14 @@ After this module, you will (Sau module này, bạn sẽ):
 - ✅ Share kernel with host (Chia sẻ kernel với host)
 - ✅ Portable - runs anywhere (Chạy ở đâu cũng được)
 
-#### 1.3 Comparison (So sánh)
+#### 1.4 Comparison (So sánh)
 
 | Criteria | VM | Container |
 |----------|-----|-----------|
 | **Size** | GB | MB |
-| **Startup** | Minutes | Seconds |
-| **Isolation** | Complete | Process level |
-| **OS** | Separate | Shared kernel |
+| **Startup** | Minutes (Hằng phút) | Seconds (Hằng giây) |
+| **Isolation** | Complete (Hoàn toàn) | Process level (Mức tiến trình) |
+| **OS** | Separate (OS riêng biệt) | Shared kernel (Chia sẻ kernel) |
 | **Density** | Few VMs/host | Many containers/host |
 | **Use case** | Multi-tenant, legacy | Microservices, CI/CD |
 
@@ -140,11 +146,11 @@ After this module, you will (Sau module này, bạn sẽ):
 
 | Component | Description |
 |-----------|-------------|
-| **Docker Client** | CLI you use - `docker run`, `docker build` |
-| **Docker Daemon** | Background service managing containers |
-| **Docker Image** | Read-only template with app + dependencies |
-| **Docker Container** | Running instance of an image |
-| **Docker Registry** | Image storage - Docker Hub, etc. |
+| **Docker Client** | CLI you use - `docker run`, `docker build` (Giao diện dòng lệnh bạn dùng) |
+| **Docker Daemon** | Background service managing containers (Dịch vụ nền quản lý container) |
+| **Docker Image** | Read-only template with app + dependencies (Bản mẫu chỉ đọc chứa app và thư viện) |
+| **Docker Container** | Running instance of an image (Bản thể đang chạy của image) |
+| **Docker Registry** | Image storage - Docker Hub, etc. (Nơi lưu trữ image) |
 
 ---
 
@@ -372,18 +378,18 @@ CMD ["executable"]       # Default command when run (Lệnh mặc định khi ch
 
 | Instruction | Description | Example |
 |-------------|-------------|---------|
-| `FROM` | Base image | `FROM node:18-alpine` |
-| `WORKDIR` | Set working directory | `WORKDIR /app` |
-| `COPY` | Copy files from host | `COPY . .` |
-| `ADD` | Copy + extract archives | `ADD app.tar.gz /app` |
-| `RUN` | Run command (build time) | `RUN npm install` |
-| `CMD` | Default command (run time) | `CMD ["node", "app.js"]` |
-| `ENTRYPOINT` | Fixed command | `ENTRYPOINT ["python"]` |
-| `EXPOSE` | Document port | `EXPOSE 3000` |
-| `ENV` | Environment variable | `ENV NODE_ENV=production` |
-| `ARG` | Build-time variable | `ARG VERSION=1.0` |
-| `VOLUME` | Mount point | `VOLUME /data` |
-| `USER` | Set user | `USER node` |
+| `FROM` | Base image (Image nển) | `FROM node:18-alpine` |
+| `WORKDIR` | Set working directory (Thiết lập thư mục làm việc) | `WORKDIR /app` |
+| `COPY` | Copy files from host (Chép file từ máy chủ) | `COPY . .` |
+| `ADD` | Copy + extract archives (Chép + giải nén) | `ADD app.tar.gz /app` |
+| `RUN` | Run command in build time (Chạy lệnh khi build) | `RUN npm install` |
+| `CMD` | Default command in run time (Lệnh mặc định khi chạy) | `CMD ["node", "app.js"]` |
+| `ENTRYPOINT` | Fixed command (Lệnh cố định) | `ENTRYPOINT ["python"]` |
+| `EXPOSE` | Document port (Khai báo cổng) | `EXPOSE 3000` |
+| `ENV` | Environment variable (Biến môi trường) | `ENV NODE_ENV=production` |
+| `ARG` | Build-time variable (Biến khi build) | `ARG VERSION=1.0` |
+| `VOLUME` | Mount point (Điểm gắn kết ổ đĩa) | `VOLUME /data` |
+| `USER` | Set user (Thiết lập người dùng) | `USER node` |
 
 #### 5.4 Ví dụ: Node.js Application
 
@@ -535,7 +541,7 @@ Dockerfile
 │  2. BIND MOUNTS (Host path)                                  │
 │     /home/user/data → /app/data                             │
 │                                                              │
-│  3. TMPFS (Memory only)                                      │
+│  3. TMPFS (Memory only) (Chỉ RAM)                            │
 │     RAM → /app/cache                                         │
 │                                                              │
 └─────────────────────────────────────────────────────────────┘
@@ -591,11 +597,11 @@ docker run -d \
 
 | Use case | Mount type | Example |
 |----------|------------|---------|
-| Database data | Volume | MySQL, PostgreSQL data |
-| Development | Bind mount | Live reload code |
-| Config files | Bind mount (ro) | nginx.conf |
-| Logs | Volume or Bind | Application logs |
-| Secrets | tmpfs | Passwords, tokens |
+| Database data | Volume | MySQL, PostgreSQL data (Dữ liệu DB) |
+| Development | Bind mount | Live reload code (Tự động tải lại code) |
+| Config files | Bind mount (ro) | nginx.conf (Cấu hình máy chủ) |
+| Logs | Volume or Bind | Application logs (Nhật ký ứng dụng) |
+| Secrets | tmpfs | Passwords, tokens (Mật khẩu, tokens) |
 
 ---
 
@@ -605,10 +611,10 @@ docker run -d \
 
 | Driver | Description | Use case |
 |--------|-------------|----------|
-| **bridge** | Default, isolated network | Single host, dev |
-| **host** | Use host network directly | Performance |
-| **none** | No networking | Security |
-| **overlay** | Multi-host network | Swarm, K8s |
+| **bridge** | Default, isolated network (Mặc định, mạng cô lập) | Single host, dev (Máy đơn, phát triển) |
+| **host** | Use host network directly (Dùng trực tiếp mạng host) | Performance (Hiệu suất cao) |
+| **none** | No networking (Không kết nối mạng) | Security (Bảo mật tối đa) |
+| **overlay** | Multi-host network (Mạng đa máy chủ) | Swarm, K8s (Hệ thống phân tán) |
 
 #### 7.2 Bridge Network (Default)
 
@@ -749,6 +755,8 @@ CMD ["nginx", "-g", "daemon off;"]
 ```
 
 #### Build and Run (Build và Chạy)
+
+- Run the following commands to build and run the container (Chạy các lệnh sau để build và chạy container):
 
 ```bash
 # Build

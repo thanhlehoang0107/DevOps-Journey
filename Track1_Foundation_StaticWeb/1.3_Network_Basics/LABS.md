@@ -6,12 +6,12 @@
 
 ---
 
-## 🔬 Lab 1: IP Configuration
+## 🔬 Lab 1: IP Configuration (Cấu hình IP)
 
-### Objectives
+### Objectives (Mục tiêu)
 
-- Xem và hiểu IP configuration
-- Làm việc với network interfaces
+- View and understand IP configuration (Xem và hiểu cấu hình IP)
+- Work with network interfaces (Làm việc với giao diện mạng)
 
 ### Steps
 
@@ -54,12 +54,12 @@ ip route show
 
 ---
 
-## 🔬 Lab 2: DNS Resolution
+## 🔬 Lab 2: DNS Resolution (Phân giải DNS)
 
-### Objectives
+### Objectives (Mục tiêu)
 
-- Hiểu DNS resolution
-- Sử dụng các công cụ DNS
+- Understand DNS resolution (Hiểu phân giải DNS)
+- Use DNS tools (Sử dụng các công cụ DNS)
 
 ### Steps
 
@@ -114,12 +114,12 @@ echo "192.168.1.100 myserver" | sudo tee -a /etc/hosts
 
 ---
 
-## 🔬 Lab 3: Connectivity Testing
+## 🔬 Lab 3: Connectivity Testing (Kiểm tra kết nối)
 
-### Objectives
+### Objectives (Mục tiêu)
 
-- Test network connectivity
-- Diagnose network issues
+- Test network connectivity (Kiểm tra kết nối mạng)
+- Diagnose network issues (Chẩn đoán sự cố mạng)
 
 ### Steps
 
@@ -171,12 +171,12 @@ mtr -r -c 10 google.com
 
 ---
 
-## 🔬 Lab 4: Port Scanning and Testing
+## 🔬 Lab 4: Port Scanning and Testing (Kiểm tra và quét cổng)
 
-### Objectives
+### Objectives (Mục tiêu)
 
-- Check open ports
-- Test port connectivity
+- Check open ports (Kiểm tra các cổng mở)
+- Test port connectivity (Kiểm tra kết nối cổng)
 
 ### Steps
 
@@ -231,12 +231,12 @@ nmap -sV localhost
 
 ---
 
-## 🔬 Lab 5: HTTP Testing with cURL
+## 🔬 Lab 5: HTTP Testing with cURL (Kiểm tra HTTP với cURL)
 
-### Objectives
+### Objectives (Mục tiêu)
 
-- Make HTTP requests
-- Understand HTTP headers và responses
+- Make HTTP requests (Thực hiện yêu cầu HTTP)
+- Understand HTTP headers and responses (Hiểu tiêu đề và phản hồi HTTP)
 
 ### Steps
 
@@ -289,12 +289,12 @@ curl -o response.json https://httpbin.org/get
 
 ---
 
-## 🔬 Lab 6: Firewall Configuration
+## 🔬 Lab 6: Firewall Configuration (Cấu hình tường lửa)
 
-### Objectives
+### Objectives (Mục tiêu)
 
-- Configure firewall rules
-- Understand traffic filtering
+- Configure firewall rules (Cấu hình quy tắc tường lửa)
+- Understand traffic filtering (Hiểu lọc lưu lượng mạng)
 
 ### Steps (UFW - Ubuntu)
 
@@ -351,12 +351,12 @@ sudo ufw reset
 
 ---
 
-## 🔬 Lab 7: Network Troubleshooting
+## 🔬 Lab 7: Network Troubleshooting (Xử lý sự cố mạng)
 
-### Objectives
+### Objectives (Mục tiêu)
 
-- Diagnose network problems
-- Apply troubleshooting methodology
+- Diagnose network problems (Chẩn đoán sự cố mạng)
+- Apply troubleshooting methodology (Áp dụng phương pháp xử lý sự cố)
 
 ### Scenario
 
@@ -427,12 +427,12 @@ sudo iptables -L -n
 
 ---
 
-## 🔬 Lab 8: SSL/TLS Certificates
+## 🔬 Lab 8: SSL/TLS Certificates (Chứng chỉ SSL/TLS)
 
-### Objectives
+### Objectives (Mục tiêu)
 
-- Understand SSL certificates
-- Check and verify certificates
+- Understand SSL certificates (Hiểu chứng chỉ SSL)
+- Check and verify certificates (Kiểm tra và xác minh chứng chỉ)
 
 ### Steps
 

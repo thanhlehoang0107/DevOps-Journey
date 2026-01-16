@@ -10,10 +10,10 @@
 
 Multi-stage build giúp gì?
 
-a) Tăng tốc build  
-b) Giảm kích thước final image  
-c) Tăng security  
-d) Cả b và c  
+- a) Tăng tốc build
+- b) Giảm kích thước final image
+- c) Tăng security
+- d) Cả b và c  
 
 ---
 
@@ -21,10 +21,10 @@ d) Cả b và c
 
 `COPY --from=builder` làm gì?
 
-a) Copy từ host  
-b) Copy từ stage trước  
-c) Copy từ remote  
-d) Copy từ volume  
+- a) Copy từ host
+- b) Copy từ stage trước
+- c) Copy từ remote
+- d) Copy từ volume  
 
 ---
 
@@ -32,10 +32,10 @@ d) Copy từ volume
 
 Image nào nhỏ nhất?
 
-a) node:18  
-b) node:18-slim  
-c) node:18-alpine  
-d) node:18-buster  
+- a) node:18
+- b) node:18-slim
+- c) node:18-alpine
+- d) node:18-buster  
 
 ---
 
@@ -43,10 +43,10 @@ d) node:18-buster
 
 Tại sao nên chạy container với non-root user?
 
-a) Tăng performance  
-b) Giảm attack surface  
-c) Tiết kiệm memory  
-d) Tăng tốc build  
+- a) Tăng performance
+- b) Giảm attack surface
+- c) Tiết kiệm memory
+- d) Tăng tốc build  
 
 ---
 
@@ -54,10 +54,10 @@ d) Tăng tốc build
 
 Cách enable BuildKit?
 
-a) `DOCKER_BUILDKIT=1`  
-b) `--buildkit`  
-c) `--enable-buildkit`  
-d) Không cần enable  
+- a) `DOCKER_BUILDKIT=1`
+- b) `--buildkit`
+- c) `--enable-buildkit`
+- d) Không cần enable  
 
 ---
 
@@ -65,10 +65,10 @@ d) Không cần enable
 
 `RUN --mount=type=cache` dùng để?
 
-a) Mount volume  
-b) Cache build dependencies  
-c) Mount secrets  
-d) Mount SSH keys  
+- a) Mount volume
+- b) Cache build dependencies
+- c) Mount secrets
+- d) Mount SSH keys  
 
 ---
 
@@ -76,10 +76,10 @@ d) Mount SSH keys
 
 Secret mount trong BuildKit?
 
-a) Store secret in image  
-b) Mount secret only during build  
-c) Environment variable  
-d) ARG instruction  
+- a) Store secret in image (Lưu secret trong image)
+- b) Mount secret only during build (Chỉ mount secret khi build)
+- c) Environment variable
+- d) ARG instruction  
 
 ---
 
@@ -87,10 +87,10 @@ d) ARG instruction
 
 .dockerignore giúp gì?
 
-a) Ignore containers  
-b) Reduce build context size  
-c) Ignore images  
-d) Ignore volumes  
+- a) Ignore containers
+- b) Reduce build context size (Giảm kích thước build context)
+- c) Ignore images
+- d) Ignore volumes  
 
 ---
 
@@ -98,10 +98,10 @@ d) Ignore volumes
 
 `HEALTHCHECK` interval default?
 
-a) 10s  
-b) 30s  
-c) 60s  
-d) No default  
+- a) 10s
+- b) 30s
+- c) 60s
+- d) No default  
 
 ---
 
@@ -109,10 +109,10 @@ d) No default
 
 Flag giới hạn memory?
 
-a) `--mem`  
-b) `-m`  
-c) `--memory`  
-d) b và c đều đúng  
+- a) `--mem`
+- b) `-m`
+- c) `--memory`
+- d) b và c đều đúng  
 
 ---
 
@@ -120,10 +120,10 @@ d) b và c đều đúng
 
 `--read-only` flag làm gì?
 
-a) Read-only volume  
-b) Container filesystem read-only  
-c) Image read-only  
-d) host read-only  
+- a) Read-only volume
+- b) Container filesystem read-only
+- c) Image read-only
+- d) host read-only  
 
 ---
 
@@ -131,10 +131,10 @@ d) host read-only
 
 Layer nào nên đặt trước trong Dockerfile?
 
-a) Thay đổi thường xuyên  
-b) Thay đổi ít  
-c) Không quan trọng  
-d) Tùy vào image  
+- a) Thay đổi thường xuyên
+- b) Thay đổi ít
+- c) Không quan trọng
+- d) Tùy vào image  
 
 ---
 
@@ -142,10 +142,10 @@ d) Tùy vào image
 
 Distroless image là gì?
 
-a) No Linux distribution  
-b) Minimal image without package manager  
-c) Empty image  
-d) Alpine variant  
+- a) No Linux distribution (Không có bản phân phối Linux)
+- b) Minimal image without package manager (Image tối thiểu không có trình quản lý gói)
+- c) Empty image
+- d) Alpine variant  
 
 ---
 
@@ -153,10 +153,10 @@ d) Alpine variant
 
 `FROM scratch` dùng khi nào?
 
-a) Mọi application  
-b) Statically compiled binaries  
-c) Node.js apps  
-d) Python apps  
+- a) Mọi application
+- b) Statically compiled binaries
+- c) Node.js apps
+- d) Python apps  
 
 ---
 
@@ -164,10 +164,10 @@ d) Python apps
 
 Lệnh exec vào running container?
 
-a) `docker enter`  
-b) `docker exec -it`  
-c) `docker attach`  
-d) `docker shell`  
+- a) `docker enter`
+- b) `docker exec -it`
+- c) `docker attach`
+- d) `docker shell`  
 
 ---
 
@@ -175,10 +175,10 @@ d) `docker shell`
 
 Container bị OOM killed khi?
 
-a) CPU limit exceeded  
-b) Memory limit exceeded  
-c) Disk limit exceeded  
-d) Network limit exceeded  
+- a) CPU limit exceeded
+- b) Memory limit exceeded
+- c) Disk limit exceeded
+- d) Network limit exceeded  
 
 ---
 
@@ -186,10 +186,10 @@ d) Network limit exceeded
 
 Cách tốt nhất để giảm layers?
 
-a) Combine RUN commands  
-b) Use multistage  
-c) Remove with separate RUN  
-d) Use ADD instead of COPY  
+- a) Combine RUN commands (Kết hợp lệnh RUN)
+- b) Use multistage
+- c) Remove with separate RUN
+- d) Use ADD instead of COPY  
 
 ---
 
@@ -197,10 +197,10 @@ d) Use ADD instead of COPY
 
 Tool nào scan Docker vulnerabilities?
 
-a) Trivy  
-b) Docker Scout  
-c) Snyk  
-d) Tất cả  
+- a) Trivy
+- b) Docker Scout
+- c) Snyk
+- d) Tất cả  
 
 ---
 
@@ -208,10 +208,10 @@ d) Tất cả
 
 `docker stats` hiển thị gì?
 
-a) Image info  
-b) Container resource usage  
-c) Network stats  
-d) Disk usage  
+- a) Image info
+- b) Container resource usage (Mức sử dụng tài nguyên container)
+- c) Network stats
+- d) Disk usage  
 
 ---
 
@@ -219,10 +219,10 @@ d) Disk usage
 
 `docker build --target` dùng để?
 
-a) Build specific stage  
-b) Set target platform  
-c) Set output target  
-d) Set registry  
+- a) Build specific stage (Build stage cụ thể)
+- b) Set target platform
+- c) Set output target
+- d) Set registry  
 
 ---
 

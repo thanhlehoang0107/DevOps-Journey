@@ -22,13 +22,13 @@ pip3 --version
 
 ---
 
-## 🔬 Lab 1: Python Environment Setup
+## 🔬 Lab 1: Python Environment Setup (Cài đặt môi trường Python)
 
 ### Objectives
 
-- Cài đặt Python environment
-- Tạo virtual environment
-- Cài đặt packages
+- Install Python environment (Cài đặt môi trường Python)
+- Create virtual environment (Tạo môi trường ảo)
+- Install packages (Cài đặt các gói)
 
 ### Steps
 
@@ -91,13 +91,13 @@ python hello.py
 
 ---
 
-## 🔬 Lab 2: Working with Files
+## 🔬 Lab 2: Working with Files (Làm việc với File)
 
 ### Objectives
 
-- Đọc và ghi files
-- Xử lý text files
-- Làm việc với JSON và YAML
+- Read and write files (Đọc và ghi files)
+- Process text files (Xử lý text files)
+- Work with JSON and YAML (Làm việc với JSON và YAML)
 
 ### Steps
 
@@ -243,13 +243,13 @@ if __name__ == "__main__":
 
 ---
 
-## 🔬 Lab 3: System Information Script
+## 🔬 Lab 3: System Information Script (Script thông tin hệ thống)
 
 ### Objectives
 
-- Sử dụng os và platform modules
-- Collect system information
-- Format output
+- Use os and platform modules (Sử dụng os và platform modules)
+- Collect system information (Thu thập thông tin hệ thống)
+- Format output (Định dạng đầu ra)
 
 ### Steps
 
@@ -327,13 +327,13 @@ if __name__ == "__main__":
 
 ---
 
-## 🔬 Lab 4: Working with APIs
+## 🔬 Lab 4: Working with APIs (Làm việc với APIs)
 
 ### Objectives
 
-- Sử dụng requests library
-- Parse JSON responses
-- Error handling
+- Use requests library (Sử dụng thư viện requests)
+- Parse JSON responses (Phân tích phản hồi JSON)
+- Error handling (Xử lý lỗi)
 
 ### Steps
 
@@ -451,13 +451,13 @@ if __name__ == "__main__":
 
 ---
 
-## 🔬 Lab 5: Subprocess and Command Execution
+## 🔬 Lab 5: Subprocess and Command Execution (Subprocess và thực thi lệnh)
 
 ### Objectives
 
-- Chạy system commands từ Python
-- Capture output
-- Handle errors
+- Run system commands from Python (Chạy lệnh hệ thống từ Python)
+- Capture output (Bắt đầu ra)
+- Handle errors (Xử lý lỗi)
 
 ### Steps
 
@@ -538,13 +538,13 @@ if __name__ == "__main__":
 
 ---
 
-## 🔬 Lab 6: Configuration Management
+## 🔬 Lab 6: Configuration Management (Quản lý cấu hình)
 
 ### Objectives
 
-- Đọc config từ multiple sources
-- Environment variables
-- Command line arguments
+- Read config from multiple sources (Đọc config từ nhiều nguồn)
+- Environment variables (Biến môi trường)
+- Command line arguments (Tham số dòng lệnh)
 
 ### Steps
 
@@ -663,13 +663,13 @@ if __name__ == "__main__":
 
 ---
 
-## 🔬 Lab 7: Automation Script - Server Provisioner
+## 🔬 Lab 7: Automation Script - Server Provisioner (Script tự động hóa - Server Provisioner)
 
 ### Objectives
 
-- Combine all skills
-- Create automation script
-- Error handling và logging
+- Combine all skills (Kết hợp tất cả kỹ năng)
+- Create automation script (Tạo script tự động hóa)
+- Error handling and logging (Xử lý lỗi và ghi log)
 
 ### Steps
 

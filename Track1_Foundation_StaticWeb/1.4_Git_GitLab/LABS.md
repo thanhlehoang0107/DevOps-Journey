@@ -1,10 +1,10 @@
 # 🔬 Labs: Git & GitLab
 
-> Bài thực hành Git và GitHub cho DevOps.
+> Hands-on Git and GitHub Labs for DevOps (Bài thực hành Git và GitHub cho DevOps).
 
 ---
 
-## 🔬 Lab 1: Git Setup & Basics
+## 🔬 Lab 1: Git Setup & Basics (Cài đặt & Cơ bản về Git)
 
 ### Steps
 
@@ -32,7 +32,7 @@ git log --oneline
 
 ---
 
-## 🔬 Lab 2: Branching & Merging
+## 🔬 Lab 2: Branching & Merging (Tạo nhánh & Gộp nhánh)
 
 ```bash
 # Create feature branch
@@ -55,7 +55,7 @@ git branch -d feature/add-login
 
 ---
 
-## 🔬 Lab 3: Remote Repository
+## 🔬 Lab 3: Remote Repository (Kho chứa từ xa)
 
 ```bash
 # Add remote
@@ -74,7 +74,7 @@ git pull origin main
 
 ---
 
-## 🔬 Lab 4: Resolving Conflicts
+## 🔬 Lab 4: Resolving Conflicts (Giải quyết xung đột)
 
 ```bash
 # Create conflict situation
@@ -96,7 +96,7 @@ git commit -m "Resolve merge conflict"
 
 ---
 
-## 🔬 Lab 5: Git Flow Workflow
+## 🔬 Lab 5: Git Flow Workflow (Quy trình Git Flow)
 
 ```bash
 # Create branches

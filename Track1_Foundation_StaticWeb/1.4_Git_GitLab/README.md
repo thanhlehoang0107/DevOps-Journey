@@ -31,9 +31,15 @@ After this module, you will (Sau module này, bạn sẽ):
 
 ### 1. What is Git? (Git là gì?)
 
-**Git** = Distributed Version Control System (DVCS)
+**Git** is a Distributed Version Control System (DVCS). It tracks changes in source code during software development.
 
-*Hệ thống quản lý phiên bản phân tán*
+*Git là Hệ thống Quản lý Phiên bản Phân tán. Nó theo dõi các thay đổi trong mã nguồn trong quá trình phát triển phần mềm.*
+
+**Key features (Tính năng chính):**
+
+- **Distributed (Phân tán)**: Every developer has a full backup of the repository (Mỗi developer đều có bản backup đầy đủ của kho chứa).
+- **Performance (Hiệu năng)**: Branching and merging are incredibly fast (Tạo nhánh và gộp nhánh cực nhanh).
+- **Collaboration (Hợp tác)**: Multiple people can work on the same project simultaneously (Nhiều người có thể cùng làm việc trên một dự án).
 
 ```
 ┌─────────────────────────────────────────────────────────────┐

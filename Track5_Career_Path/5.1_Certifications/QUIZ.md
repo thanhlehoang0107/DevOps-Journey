@@ -10,10 +10,10 @@
 
 AWS Cloud Practitioner phù hợp cho ai? (Who is AWS Cloud Practitioner for?)
 
-a) Advanced engineers  
-b) Beginners to cloud  
-c) Security specialists  
-d) DBAs only  
+- a) Advanced engineers (Kỹ sư cao cấp)
+- b) Beginners to cloud (Người mới bắt đầu với cloud)
+- c) Security specialists (Chuyên gia bảo mật)
+- d) DBAs only (Chỉ dành cho DBA)  
 
 ---
 
@@ -21,10 +21,10 @@ d) DBAs only
 
 CKA chứng chỉ gì? (What is CKA certification?)
 
-a) Certified Kubernetes Administrator  
-b) Certified Kubernetes Architect  
-c) Cloud Kubernetes Associate  
-d) Certified K8s Analyst  
+- a) Certified Kubernetes Administrator
+- b) Certified Kubernetes Architect
+- c) Cloud Kubernetes Associate
+- d) Certified K8s Analyst  
 
 ---
 
@@ -32,10 +32,10 @@ d) Certified K8s Analyst
 
 Terraform Associate cần bao lâu để học? (How long to prepare for Terraform Associate?)
 
-a) 1 week  
-b) 1-2 months  
-c) 6 months  
-d) 1 year  
+- a) 1 week (1 tuần)
+- b) 1-2 months (1-2 tháng)
+- c) 6 months (6 tháng)
+- d) 1 year (1 năm)  
 
 ---
 
@@ -43,10 +43,10 @@ d) 1 year
 
 Chứng chỉ nào free? (Which certification is free?)
 
-a) AWS SAA  
-b) CKA  
-c) Linux Essentials  
-d) None are free  
+- a) AWS SAA
+- b) CKA
+- c) Linux Essentials
+- d) None are free (Không có chứng chỉ nào miễn phí)  
 
 ---
 
@@ -54,10 +54,10 @@ d) None are free
 
 Nguồn học tốt nhất cho AWS? (Best resource for AWS learning?)
 
-a) Random YouTube  
-b) AWS Skill Builder  
-c) Unofficial PDFs  
-d) No preparation needed  
+- a) Random YouTube
+- b) AWS Skill Builder
+- c) Unofficial PDFs
+- d) No preparation needed (Không cần chuẩn bị)  
 
 ---
 

@@ -1,6 +1,8 @@
 # ✅ Solutions: Python Basics
 
-> Đáp án cho Exercises. **Thử tự làm trước khi xem!**
+> Solutions for Exercises. **Try to solve it yourself first!**
+>
+> *Đáp án cho Exercises. **Thử tự làm trước khi xem!***
 
 ---
 
@@ -489,9 +491,9 @@ if __name__ == "__main__":
 
 ## Notes
 
-- Solutions trên là **một trong nhiều cách** để giải quyết
-- Luôn có thể optimize hoặc viết khác đi
-- Quan trọng là hiểu logic và error handling
+- The above solutions are **one of many ways** to solve (Solutions trên là **một trong nhiều cách** để giải quyết)
+- Always possible to optimize or write differently (Luôn có thể optimize hoặc viết khác đi)
+- Important to understand logic and error handling (Quan trọng là hiểu logic và error handling)
 
 ---
 

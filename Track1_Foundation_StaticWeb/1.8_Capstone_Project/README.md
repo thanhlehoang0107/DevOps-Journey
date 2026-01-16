@@ -8,10 +8,10 @@
 
 ## 🔀 Platform Options (Lựa chọn nền tảng)
 
-| Platform | Status | Notes |
+| Platform (Nền tảng) | Status (Trạng thái) | Notes (Ghi chú) |
 |----------|--------|-------|
-| **GitLab CI/CD** | ⭐ Primary (Chính) | This guide uses GitLab |
-| GitHub Actions | Alternative | See [1.7 CI/CD GitHub guide](../1.7_CICD_Basic/README_GITHUB_ACTIONS.md) |
+| **GitLab CI/CD** | ⭐ Primary (Chính) | This guide uses GitLab (Hướng dẫn này sử dụng GitLab) |
+| GitHub Actions | Alternative (Thay thế) | See [1.7 CI/CD GitHub guide](../1.7_CICD_Basic/README_GITHUB_ACTIONS.md) (Xem hướng dẫn GitHub Actions 1.7) |
 
 ---
 
@@ -31,17 +31,17 @@ Build a **static portfolio website** with (Xây dựng portfolio website tĩnh v
 
 ### 1. Functional Requirements (Yêu cầu chức năng)
 
-| # | Requirement | Description |
+| # | Requirement (Yêu cầu) | Description (Mô tả) |
 |---|-------------|-------------|
 | FR-01 | Homepage | Introduction page (Trang giới thiệu) |
-| FR-02 | About page | Skills & experience details (Chi tiết kỹ năng) |
+| FR-02 | About page | Skills & experience details (Chi tiết kỹ năng & kinh nghiệm) |
 | FR-03 | Projects page | Showcase projects (Trưng bày dự án) |
-| FR-04 | Contact form | Contact form - UI only (Form liên hệ) |
-| FR-05 | Responsive | Display well on mobile/tablet/desktop |
+| FR-04 | Contact form | Contact form - UI only (Form liên hệ - chỉ UI) |
+| FR-05 | Responsive | Display well on mobile/tablet/desktop (Hiển thị tốt trên di động/tablet/desktop) |
 
 ### 2. Technical Requirements (Yêu cầu kỹ thuật)
 
-| # | Requirement | Description |
+| # | Requirement (Yêu cầu) | Description (Mô tả) |
 |---|-------------|-------------|
 | TR-01 | Git | Manage code with Git, .gitignore (Quản lý code với Git) |
 | TR-02 | Docker | Dockerfile to build image (File Docker để build image) |
@@ -577,14 +577,14 @@ git push -u origin main
 
 ## ✅ Assessment Criteria (Tiêu chí đánh giá)
 
-| # | Criteria | Points | Description |
+| # | Criteria (Tiêu chí) | Points (Điểm) | Description (Mô tả) |
 |---|----------|--------|-------------|
-| 1 | **Website** | 20% | HTML/CSS standards, responsive |
-| 2 | **Git** | 10% | Clear commit messages, .gitignore |
-| 3 | **Dockerfile** | 20% | Builds successfully, optimized layers |
-| 4 | **NGINX** | 15% | Correct config, security headers |
-| 5 | **CI/CD** | 25% | Pipeline runs successfully |
-| 6 | **README** | 10% | Complete documentation |
+| 1 | **Website** | 20% | HTML/CSS standards, responsive (Chuẩn HTML/CSS, thích ứng tốt) |
+| 2 | **Git** | 10% | Clear commit messages, .gitignore (Thông điệp commit rõ ràng, có .gitignore) |
+| 3 | **Dockerfile** | 20% | Builds successfully, optimized layers (Build thành công, tối ưu layers) |
+| 4 | **NGINX** | 15% | Correct config, security headers (Cấu hình đúng, có headers bảo mật) |
+| 5 | **CI/CD** | 25% | Pipeline runs successfully (Pipeline chạy thành công) |
+| 6 | **README** | 10% | Complete documentation (Tài liệu đầy đủ) |
 
 ---
 
@@ -594,7 +594,7 @@ After completing the basic requirements, try the following challenges (Sau khi h
 
 ### Challenge 1: Multi-stage Build (Xây dựng nhiều giai đoạn) ⭐
 
-Thêm build step cho CSS/JS minification (Thêm bước biên dịch để thu nhỏ CSS/JS)
+Add build step for CSS/JS minification (Thêm bước build để tối ưu hóa CSS/JS)
 
 ### Challenge 2: Custom Domain (Tên miền tùy chỉnh) ⭐⭐
 

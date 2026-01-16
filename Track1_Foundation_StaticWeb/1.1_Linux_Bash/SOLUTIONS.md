@@ -1,38 +1,41 @@
 # ✅ Solutions: Linux & Bash
 
-> Đáp án cho Exercises và Project. **Hãy thử tự làm trước khi xem!**
+> Solutions for Exercises and Project. **Try to solve it yourself first!**
+>
+> *Đáp án cho Exercises và Project. **Hãy thử tự làm trước khi xem!***
 
 ---
 
-## 🗂️ Exercise 1: File System Navigation
+## 🗂️ Exercise 1: File System Navigation (Bài tập 1: Điều hướng File System)
 
 ```bash
-# 1. Tạo cấu trúc thư mục
+# 1. Create directory structure (Tạo cấu trúc thư mục)
 mkdir -p ~/devops-practice/{projects/{web-app/{src,tests,docs},api-server/{src,tests}},scripts,logs}
 
-# 2. Tạo README.md trong mỗi src/
+# 2. Create README.md in each src/ (Tạo README.md trong mỗi src/)
 touch ~/devops-practice/projects/web-app/src/README.md
 touch ~/devops-practice/projects/api-server/src/README.md
 
-# 3. Tạo 5 log files
+# 3. Create 5 dummy log files (Tạo 5 files log giả)
+# Option 1: Using curly braces (Cách 1: Dùng ngoặc nhọn)
 touch ~/devops-practice/logs/app-0{1,2,3,4,5}.log
-# hoặc
+# Option 2: Using for loop (Cách 2: Dùng vòng lặp for)
 for i in {1..5}; do touch ~/devops-practice/logs/app-0$i.log; done
 
-# 4. Di chuyển logs vào archive
-mkdir ~/devops-practice/logs/archive
+# 4. Move logs to archive (Di chuyển logs vào archive)
+mkdir -p ~/devops-practice/logs/archive
 mv ~/devops-practice/logs/*.log ~/devops-practice/logs/archive/
 
-# 5. Xóa thư mục trống
+# 5. Delete empty directory (Xóa thư mục trống)
 rmdir ~/devops-practice/projects/api-server/tests/
 ```
 
 ---
 
-## 🔐 Exercise 2: Permissions Management
+## 🔐 Exercise 2: Permissions Management (Bài tập 2: Quản lý quyền hạn)
 
 ```bash
-# 1-3. Tạo files
+# 1-3. Create files (Tạo files)
 echo "This is confidential" > secret.txt
 echo "This is public" > public.txt
 cat << 'EOF' > deploy.sh
@@ -40,100 +43,94 @@ cat << 'EOF' > deploy.sh
 echo "Deploying application..."
 EOF
 
-# 4. Thiết lập permissions
-chmod 400 secret.txt    # -r--------
-chmod 644 public.txt    # -rw-r--r--
-chmod 711 deploy.sh     # -rwx--x--x
+# 4. Set permissions (Thiết lập các quyền hạn)
+chmod 400 secret.txt    # -r-------- (Owner Read only)
+chmod 644 public.txt    # -rw-r--r-- (Standard text file)
+chmod 711 deploy.sh     # -rwx--x--x (Owner full, Others execute)
 
-# 5. Tạo group và thêm user
+# 5. Create group and add user (Tạo group và thêm user)
 sudo groupadd devteam
 sudo usermod -aG devteam $USER
 
-# 6. Thay đổi group owner
+# 6. Change group owner (Thay đổi nhóm sở hữu)
 sudo chgrp devteam deploy.sh
 ```
 
 ---
 
-## 🔍 Exercise 3: Text Processing
+## 🔍 Exercise 3: Text Processing (Bài tập 3: Xử lý văn bản)
 
 ```bash
-# Setup file đã có trong đề
-
-# 1. Đếm số dòng ERROR
+# 1. Count ERROR lines (Đếm số dòng ERROR)
 grep -c "ERROR" server.log
-# Output: 3
+# Expected Output: 3
 
-# 2. Liệt kê unique users đã login
+# 2. List unique users who logged in (Liệt kê unique users đã login)
 grep "User login" server.log | awk '{print $NF}' | sort | uniq
-# Output: 
-# admin
-# john
+# Output: admin, john
 
-# 3. Hiển thị timestamp và message của WARNING
+# 3. Display timestamp and message for WARNING (Hiển thị WARNING)
 grep "WARNING" server.log | awk '{print $1, $2, $4, $5, $6, $7}'
-# Hoặc đơn giản hơn:
+# Or simply:
 grep "WARNING" server.log
 
-# 4. Tìm dòng cuối cùng chứa "admin"
+# 4. Find the last line containing "admin" (Tìm dòng cuối cùng chứa "admin")
 grep "admin" server.log | tail -1
-# Output: 2024-01-15 08:30:00 INFO User login: admin
 
-# 5. Thay thế INFO thành [INFO]
+# 5. Replace INFO with [INFO] (Thay thế INFO thành [INFO])
 sed 's/INFO/[INFO]/g' server.log > server_new.log
 
-# 6. Hiển thị 5 dòng đầu tiên
+# 6. Display first 5 lines (Hiển thị 5 dòng đầu tiên)
 head -5 server.log
 
-# 7. Đếm số lần "connection" xuất hiện (case-insensitive)
+# 7. Count "connection" occurrences (case-insensitive) (Đếm số lần xuất hiện "connection")
 grep -i -c "connection" server.log
-# Output: 3
-# Hoặc đếm tất cả occurrences:
+# To count ALL occurrences across lines:
 grep -io "connection" server.log | wc -l
 ```
 
 ---
 
-## 📊 Exercise 4: Process Management
+## 📊 Exercise 4: Process Management (Bài tập 4: Quản lý tiến trình)
 
 ```bash
-# 1. Top 5 processes by CPU
+# 1. Top 5 processes by CPU (Top 5 tiến trình dùng nhiều CPU nhất)
 ps aux --sort=-%cpu | head -6
 
-# 2. Top 5 processes by RAM
+# 2. Top 5 processes by RAM (Top 5 tiến trình dùng nhiều RAM nhất)
 ps aux --sort=-%mem | head -6
 
-# 3. Processes của user hiện tại
+# 3. Processes of the current user (Các tiến trình của người dùng hiện tại)
 ps -u $USER
 
-# 4. Chạy sleep trong background
+# 4. Run sleep in the background (Chạy sleep trong background)
 sleep 300 &
 
-# 5. Tìm PID của sleep
+# 5. Find the PID of the sleep process (Tìm PID của tiến trình sleep)
 pgrep sleep
-# hoặc
+# Or (Hoặc)
 ps aux | grep sleep
 
-# 6. Kill process
+# 6. Kill the process (Dừng tiến trình)
 kill $(pgrep sleep)
-# hoặc với PID cụ thể
-kill 12345
+# Or with a specific PID (Hoặc với PID cụ thể)
+# kill 12345
 
-# Bonus: Kill tất cả processes tên chứa "sleep"
+# Bonus: Kill all processes with "sleep" in name (Dừng tất cả tiến trình tên "sleep")
 pkill sleep
-# hoặc
+# Or (Hoặc)
 killall sleep
 ```
 
 ---
 
-## 🔧 Exercise 5: Bash Scripting Basics
+## 🔧 Exercise 5: Bash Scripting Basics (Bài tập 5: Cơ bản về Bash Scripting)
 
-### Task 1: sysinfo.sh
+### Task 1: sysinfo.sh (Báo cáo thông tin hệ thống)
 
 ```bash
 #!/bin/bash
-# System Information Script
+# System Information Script (Script lấy thông tin hệ thống)
 
 echo "=========================================="
 echo "         SYSTEM INFORMATION"
@@ -151,13 +148,13 @@ echo ""
 echo "=========================================="
 ```
 
-### Task 2: greet.sh
+### Task 2: greet.sh (Script gửi lời chào)
 
 ```bash
 #!/bin/bash
-# Greeting Script
+# Greeting Script based on time (Script chào hỏi theo thời gian)
 
-echo -n "Enter your name: "
+echo -n "Enter your name (Nhập tên bạn): "
 read name
 
 hour=$(date +%H)
@@ -175,24 +172,25 @@ fi
 echo "$greeting, $name!"
 ```
 
-### Task 3: counter.sh
+### Task 3: counter.sh (Bộ đếm file)
 
 ```bash
 #!/bin/bash
-# File Counter Script
+# File Counter Script (Script đếm tệp tin)
 
 if [ -z "$1" ]; then
-    echo "Usage: $0 <directory>"
+    echo "Usage (Cách dùng): $0 <directory>"
     exit 1
 fi
 
 dir="$1"
 
 if [ ! -d "$dir" ]; then
-    echo "Error: $dir is not a directory"
+    echo "Error: $dir is not a directory (Lỗi: $dir không phải thư mục)"
     exit 1
 fi
 
+# Count files, dirs, and hidden items (Đếm file, thư mục và các mục ẩn)
 files=$(find "$dir" -maxdepth 1 -type f ! -name ".*" | wc -l)
 dirs=$(find "$dir" -maxdepth 1 -type d ! -name ".*" ! -path "$dir" | wc -l)
 hidden=$(ls -la "$dir" | grep "^\." | wc -l)
@@ -205,35 +203,35 @@ echo "Hidden items: $hidden"
 
 ---
 
-## 🔄 Exercise 6: Loops and Conditions
+## 🔄 Exercise 6: Loops and Conditions (Bài tập 6: Vòng lặp và Điều kiện)
 
-### Task 1: backup.sh
+### Task 1: backup.sh (Tự động sao lưu)
 
 ```bash
 #!/bin/bash
-# Backup Script
+# Backup Script with validation (Script sao lưu có kiểm tra lỗi)
 
 source_dir="$1"
 backup_base="$2"
 
-# Validate arguments
+# Validate arguments (Kiểm tra đối số)
 if [ -z "$source_dir" ] || [ -z "$backup_base" ]; then
-    echo "Usage: $0 <source_dir> <backup_dir>"
+    echo "Usage (Sử dụng): $0 <source_dir> <backup_dir>"
     exit 1
 fi
 
-# Check source exists
+# Check source exists (Kiểm tra nguồn tồn tại)
 if [ ! -d "$source_dir" ]; then
-    echo "Error: Source directory does not exist"
+    echo "Error: Source directory does not exist (Lỗi: Thư mục nguồn không tồn tại)"
     exit 1
 fi
 
-# Create backup directory with timestamp
+# Create backup directory with timestamp (Tạo thư mục backup với dấu thời gian)
 timestamp=$(date +%Y%m%d_%H%M%S)
 backup_dir="${backup_base}/backup_${timestamp}"
 mkdir -p "$backup_dir"
 
-# Copy files
+# Copy files (Sao chép tệp tin)
 count=0
 for file in "$source_dir"/*; do
     if [ -f "$file" ]; then
@@ -242,30 +240,31 @@ for file in "$source_dir"/*; do
     fi
 done
 
-echo "Backup completed!"
+echo "Backup completed! (Sao lưu hoàn tất!)"
 echo "Location: $backup_dir"
 echo "Files copied: $count"
 ```
 
-### Task 2: rotate.sh
+### Task 2: rotate.sh (Script luân chuyển log)
 
 ```bash
 #!/bin/bash
-# Log Rotation Script
+# Log Rotation Script (Script quản lý tập tin log)
 
 log_dir="$1"
 
 if [ -z "$log_dir" ] || [ ! -d "$log_dir" ]; then
-    echo "Usage: $0 <log_directory>"
+    echo "Usage (Sử dụng): $0 <log_directory>"
     exit 1
 fi
 
 compressed=0
 deleted=0
 
-# Compress large log files
+# Compress large log files (Nén các file log lớn)
 for file in "$log_dir"/*.log; do
     [ -f "$file" ] || continue
+    # Cross-platform way to get file size (Cách lấy size file trên nhiều OS)
     size=$(stat -f%z "$file" 2>/dev/null || stat -c%s "$file")
     
     if [ $size -gt 1048576 ]; then  # > 1MB
@@ -275,23 +274,22 @@ for file in "$log_dir"/*.log; do
     fi
 done
 
-# Delete old compressed files
+# Delete old compressed files (Xóa các file nén đã cũ)
 find "$log_dir" -name "*.gz" -mtime +7 -delete -print | while read file; do
     echo "Deleted: $file"
     ((deleted++))
 done
 
-echo ""
-echo "Summary:"
+echo "Summary (Tổng kết):"
 echo "  Compressed: $compressed files"
 echo "  Deleted: $deleted files"
 ```
 
-### Task 3: check_services.sh
+### Task 3: check_services.sh (Kiểm tra dịch vụ)
 
 ```bash
 #!/bin/bash
-# Service Checker Script
+# Service Status Checker with colors (Script kiểm tra dịch vụ kèm màu sắc)
 
 services=("nginx" "docker" "ssh")
 failed=0
@@ -314,129 +312,129 @@ done
 echo "=================================="
 
 if [ $failed -gt 0 ]; then
-    echo "Warning: $failed service(s) not running"
+    echo "Warning (Cảnh báo): $failed service(s) not running"
     exit 1
 else
-    echo "All services running"
+    echo "All services running (Tất cả dịch vụ đang hoạt động)"
     exit 0
 fi
 ```
 
 ---
 
-## 🌐 Exercise 7: Networking Commands
+## 🌐 Exercise 7: Networking Commands (Bài tập 7: Các lệnh mạng)
 
 ```bash
-# 1. IP addresses của tất cả interfaces
+# 1. IP addresses of all interfaces (Xem IP của tất cả interfaces)
 ip addr show | grep "inet " | awk '{print $2}'
-# hoặc
+# Or (Hoặc)
 hostname -I
 
-# 2. Kiểm tra port 80 đang listen
+# 2. Check if port 80 is listening (Kiểm tra port 80 đang mở)
 ss -tuln | grep :80
-# hoặc
+# Or (Hoặc)
 netstat -tuln | grep :80
 
-# 3. Kiểm tra connectivity đến google.com
+# 3. Check connectivity to google.com (Kiểm tra kết nối)
 ping -c 3 google.com
 
-# 4. Trace route đến 8.8.8.8
+# 4. Trace route to 8.8.8.8 (Dò tìm đường truyền)
 traceroute 8.8.8.8
-# hoặc (Ubuntu)
+# Or on Ubuntu (Hoặc trên Ubuntu)
 tracepath 8.8.8.8
 
-# 5. Connections đang ESTABLISHED
+# 5. Established connections (Các kết nối đang hoạt động)
 ss -t state established
-# hoặc
+# Or (Hoặc)
 netstat -tn | grep ESTABLISHED
 
-# 6. Process sử dụng port 22
+# 6. Process using port 22 (Process sử dụng port 22)
 sudo ss -tulnp | grep :22
-# hoặc
+# Or (Hoặc)
 sudo lsof -i :22
 
-# Bonus: Connectivity checker script
+# Bonus: Connectivity checker script (Script kiểm tra kết nối hàng loạt)
 #!/bin/bash
 hosts=("google.com" "github.com" "8.8.8.8")
 
 for host in "${hosts[@]}"; do
     if ping -c 1 -W 2 "$host" &>/dev/null; then
-        echo "[OK] $host is reachable"
+        echo "[OK] $host is reachable (Có thể kết nối)"
     else
-        echo "[FAIL] $host is not reachable"
+        echo "[FAIL] $host is not reachable (Không thể kết nối)"
     fi
 done
 ```
 
 ---
 
-## 📦 Exercise 8: Package Management
+## 📦 Exercise 8: Package Management (Bài tập 8: Quản lý gói)
 
 ### Ubuntu/Debian
 
 ```bash
-# 1. Update package list
+# 1. Update package list (Cập nhật danh sách gói)
 sudo apt update
 
-# 2. Tìm kiếm nginx
+# 2. Search for nginx (Tìm kiếm nginx)
 apt search nginx
 
-# 3. Thông tin về curl
+# 3. Show info for curl (Xem thông tin gói curl)
 apt show curl
 
-# 4. Liệt kê packages có "python"
+# 4. List packages containing "python" (Liệt kê các gói có python)
 dpkg -l | grep python
 
-# 5. Kiểm tra git đã cài chưa
+# 5. Check if git is installed (Kiểm tra git đã cài chưa)
 dpkg -l | grep git
-# hoặc
+# Or (Hoặc)
 which git && echo "Git is installed"
 ```
 
 ### RHEL/CentOS
 
 ```bash
-# 1. Update
+# 1. Update (Cập nhật)
 sudo yum update
-# hoặc
+# Or (Hoặc)
 sudo dnf update
 
-# 2. Tìm kiếm
+# 2. Search (Tìm kiếm)
 yum search nginx
 
-# 3. Thông tin
+# 3. Information (Thông tin)
 yum info curl
 
-# 4. Liệt kê
+# 4. List (Liệt kê)
 rpm -qa | grep python
 
-# 5. Kiểm tra
+# 5. Verify (Xác minh)
 rpm -q git
 ```
 
 ---
 
-## 🔐 Exercise 9: SSH & Remote Operations
+## 🔐 Exercise 9: SSH & Remote Operations (Bài tập 9: SSH và Thao tác từ xa)
 
 ```bash
-# 1. Generate SSH key
+# 1. Generate SSH key (Tạo cặp khóa SSH)
 ssh-keygen -t ed25519 -C "your_email@example.com"
 
-# 2. Copy public key
+# 2. Copy public key to remote (Sao chép khóa tới server từ xa)
 ssh-copy-id user@remote-server
-# hoặc thủ công
-cat ~/.ssh/id_ed25519.pub | ssh user@remote-server "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"
+# Or manual way (Hoặc làm thủ công)
+# cat ~/.ssh/id_ed25519.pub | ssh user@remote-server "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"
 
-# 3. SSH và chạy command
+# 3. SSH and run remote command (SSH và chạy lệnh từ xa)
 ssh user@remote-server "uptime"
 
-# 4. Copy file local -> remote
+# 4. Copy file local -> remote (Chép tệp local lên remote)
 scp local-file.txt user@remote-server:/path/to/destination/
 
-# 5. Copy thư mục remote -> local
+# 5. Copy directory remote -> local (Chép thư mục từ remote về local)
 scp -r user@remote-server:/remote/path/ /local/path/
 
-# 6. SSH config entry
+# 6. SSH config entry (Cấu hình SSH config để đăng nhập nhanh)
 cat << 'EOF' >> ~/.ssh/config
 Host myserver
     HostName 192.168.1.100
@@ -445,7 +443,7 @@ Host myserver
     Port 22
 EOF
 
-# Bonus: Simple deploy script
+# Bonus: Simple deploy script (Script triển khai đơn giản)
 #!/bin/bash
 SERVER="user@remote-server"
 APP_DIR="/opt/myapp"
@@ -456,12 +454,12 @@ git pull origin main
 sudo systemctl restart myapp
 ENDSSH
 
-echo "Deployment completed!"
+echo "Deployment completed! (Triển khai hoàn tất!)"
 ```
 
 ---
 
-## 🎯 Exercise 10: Comprehensive Challenge
+## 🎯 Exercise 10: Comprehensive Challenge (Thử thách tổng hợp)
 
 ### server_setup.sh (Example Solution)
 
@@ -692,9 +690,9 @@ main
 
 ## 📝 Notes
 
-- Các solutions trên là **một trong nhiều cách** để giải quyết vấn đề
-- Luôn có thể optimize hoặc viết khác đi
-- Quan trọng là hiểu **logic** và **tại sao** nó hoạt động
+- The above solutions are **one of many ways** to solve the problem (Các solutions trên là **một trong nhiều cách** để giải quyết vấn đề)
+- Always possible to optimize or write differently (Luôn có thể optimize hoặc viết khác đi)
+- Important to understand **logic** and **why** it works (Quan trọng là hiểu **logic** và **tại sao** nó hoạt động)
 
 ---
 

@@ -5,6 +5,8 @@
 > *Bài thực hành Jenkins Pipelines.*
 >
 > 💡 Note: GitLab CI is the primary CI/CD platform. Jenkins is taught as an enterprise alternative.
+>
+> *Lưu ý: GitLab CI là nền tảng CI/CD chính. Jenkins được dạy như một giải pháp thay thế cho doanh nghiệp.*
 
 ---
 
@@ -138,11 +140,11 @@ pipeline {
 
 ## ✅ Checklist
 
-- [ ] Lab 1: Jenkins Setup
-- [ ] Lab 2: First Pipeline
-- [ ] Lab 3: Build and Test
-- [ ] Lab 4: Docker Pipeline
-- [ ] Lab 5: Multi-branch
+- [ ] Lab 1: Jenkins Setup (Cài đặt Jenkins)
+- [ ] Lab 2: First Pipeline (Pipeline đầu tiên)
+- [ ] Lab 3: Build and Test (Build và Test)
+- [ ] Lab 4: Docker Pipeline (Pipeline với Docker)
+- [ ] Lab 5: Multi-branch (Đa nhánh)
 
 ---
 

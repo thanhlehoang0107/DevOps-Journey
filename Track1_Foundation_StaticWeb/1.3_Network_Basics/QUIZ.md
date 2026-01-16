@@ -20,10 +20,10 @@
 
 Layer nào của OSI model chịu trách nhiệm cho routing?
 
-a) Data Link Layer (2)  
-b) Network Layer (3)  
-c) Transport Layer (4)  
-d) Session Layer (5)  
+- a) Data Link Layer (2) (Lớp liên kết dữ liệu)
+- b) Network Layer (3) (Lớp mạng)
+- c) Transport Layer (4) (Lớp giao vận)
+- d) Session Layer (5) (Lớp phiên)  
 
 ---
 
@@ -31,10 +31,10 @@ d) Session Layer (5)
 
 Protocol nào đảm bảo delivery và thứ tự của packets?
 
-a) UDP  
-b) TCP  
-c) ICMP  
-d) IP  
+- a) UDP
+- b) TCP
+- c) ICMP
+- d) IP  
 
 ---
 
@@ -42,10 +42,10 @@ d) IP
 
 Port nào được sử dụng cho SSH?
 
-a) 21  
-b) 22  
-c) 23  
-d) 25  
+- a) 21
+- b) 22
+- c) 23
+- d) 25  
 
 ---
 
@@ -53,10 +53,10 @@ d) 25
 
 Status code 404 có nghĩa là gì?
 
-a) Server Error  
-b) Unauthorized  
-c) Not Found  
-d) Bad Request  
+- a) Server Error (Lỗi máy chủ)
+- b) Unauthorized (Không được phép)
+- c) Not Found (Không tìm thấy)
+- d) Bad Request (Yêu cầu không hợp lệ)  
 
 ---
 
@@ -64,10 +64,10 @@ d) Bad Request
 
 IP address `172.16.5.10` thuộc class nào?
 
-a) Class A  
-b) Class B  
-c) Class C  
-d) Class D  
+- a) Class A
+- b) Class B
+- c) Class C
+- d) Class D  
 
 ---
 
@@ -75,10 +75,10 @@ d) Class D
 
 CIDR `/24` tương đương với subnet mask nào?
 
-a) 255.0.0.0  
-b) 255.255.0.0  
-c) 255.255.255.0  
-d) 255.255.255.255  
+- a) 255.0.0.0
+- b) 255.255.0.0
+- c) 255.255.255.0
+- d) 255.255.255.255  
 
 ---
 
@@ -86,10 +86,10 @@ d) 255.255.255.255
 
 DNS chủ yếu sử dụng port nào?
 
-a) 22  
-b) 53  
-c) 80  
-d) 443  
+- a) 22
+- b) 53
+- c) 80
+- d) 443  
 
 ---
 
@@ -97,10 +97,10 @@ d) 443
 
 Range nào KHÔNG phải private IP?
 
-a) 10.0.0.0/8  
-b) 172.16.0.0/12  
-c) 192.168.0.0/16  
-d) 169.254.0.0/16  
+- a) 10.0.0.0/8
+- b) 172.16.0.0/12
+- c) 192.168.0.0/16
+- d) 169.254.0.0/16  
 
 ---
 
@@ -108,10 +108,10 @@ d) 169.254.0.0/16
 
 HTTP method nào là idempotent?
 
-a) POST  
-b) GET  
-c) PATCH  
-d) Cả b và c  
+- a) POST
+- b) GET
+- c) PATCH
+- d) Cả b và c  
 
 ---
 
@@ -119,10 +119,10 @@ d) Cả b và c
 
 Lệnh nào hiển thị routing table trên Linux?
 
-a) route -n  
-b) ip route  
-c) netstat -r  
-d) Tất cả đều đúng  
+- a) route -n
+- b) ip route
+- c) netstat -r
+- d) Tất cả đều đúng  
 
 ---
 
@@ -130,10 +130,10 @@ d) Tất cả đều đúng
 
 Port mặc định cho HTTPS là gì?
 
-a) 80  
-b) 443  
-c) 8080  
-d) 8443  
+- a) 80
+- b) 443
+- c) 8080
+- d) 8443  
 
 ---
 
@@ -141,10 +141,10 @@ d) 8443
 
 Lệnh UFW nào cho phép incoming SSH?
 
-a) `ufw allow 22`  
-b) `ufw enable ssh`  
-c) `ufw open ssh`  
-d) `ufw permit 22`  
+- a) `ufw allow 22`
+- b) `ufw enable ssh`
+- c) `ufw open ssh`
+- d) `ufw permit 22`  
 
 ---
 
@@ -152,10 +152,10 @@ d) `ufw permit 22`
 
 Record type nào map domain name to IPv4 address?
 
-a) AAAA  
-b) A  
-c) CNAME  
-d) MX  
+- a) AAAA
+- b) A
+- c) CNAME
+- d) MX  
 
 ---
 
@@ -163,10 +163,10 @@ d) MX
 
 TCP 3-way handshake bao gồm những bước nào?
 
-a) SYN, ACK, FIN  
-b) SYN, SYN-ACK, ACK  
-c) ACK, SYN, FIN  
-d) SYN, FIN, ACK  
+- a) SYN, ACK, FIN
+- b) SYN, SYN-ACK, ACK
+- c) ACK, SYN, FIN
+- d) SYN, FIN, ACK  
 
 ---
 
@@ -174,10 +174,10 @@ d) SYN, FIN, ACK
 
 Lệnh nào hiển thị các ports đang listening?
 
-a) `ss -tuln`  
-b) `netstat -plant`  
-c) `lsof -i`  
-d) Tất cả đều đúng  
+- a) `ss -tuln`
+- b) `netstat -plant`
+- c) `lsof -i`
+- d) Tất cả đều đúng  
 
 ---
 
@@ -185,10 +185,10 @@ d) Tất cả đều đúng
 
 Một network `/26` có thể chứa bao nhiêu usable hosts?
 
-a) 64  
-b) 62  
-c) 32  
-d) 30  
+- a) 64
+- b) 62
+- c) 32
+- d) 30  
 
 ---
 
@@ -196,10 +196,10 @@ d) 30
 
 ARP protocol làm gì?
 
-a) Map hostname to IP  
-b) Map IP to MAC address  
-c) Route packets  
-d) Encrypt traffic  
+- a) Map hostname to IP (Ánh xạ hostname sang IP)
+- b) Map IP to MAC address (Ánh xạ IP sang MAC)
+- c) Route packets (Định tuyến gói tin)
+- d) Encrypt traffic (Mã hóa lưu lượng)  
 
 ---
 
@@ -207,10 +207,10 @@ d) Encrypt traffic
 
 Status code nào cho biết request thành công?
 
-a) 100-199  
-b) 200-299  
-c) 300-399  
-d) 400-499  
+- a) 100-199
+- b) 200-299
+- c) 300-399
+- d) 400-499  
 
 ---
 
@@ -218,10 +218,10 @@ d) 400-499
 
 Tool nào kết hợp ping và traceroute?
 
-a) netstat  
-b) mtr  
-c) nmap  
-d) tcpdump  
+- a) netstat
+- b) mtr
+- c) nmap
+- d) tcpdump  
 
 ---
 
@@ -229,10 +229,10 @@ d) tcpdump
 
 Layer 7 load balancer có thể route dựa trên?
 
-a) IP address  
-b) Port number  
-c) HTTP headers  
-d) Tất cả đều đúng  
+- a) IP address (Địa chỉ IP)
+- b) Port number (Số cổng)
+- c) HTTP headers
+- d) Tất cả đều đúng  
 
 ---
 

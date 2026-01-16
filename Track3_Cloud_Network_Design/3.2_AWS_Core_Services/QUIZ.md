@@ -9,30 +9,47 @@
 ### Q1
 
 EC2 instance type t3.micro có bao nhiêu vCPU?
-a) 1  b) 2  c) 4  d) 8
+
+- a) 1
+- b) 2
+- c) 4
+- d) 8
 
 ### Q2
 
 S3 storage class nào rẻ nhất cho infrequent access?
-a) Standard  b) S3-IA  c) Glacier  d) One Zone-IA
+
+- a) Standard
+- b) S3-IA
+- c) Glacier
+- d) One Zone-IA
 
 ### Q3
 
 IAM Role khác IAM User như thế nào?
-a) Role dùng cho services  b) Role dùng cho users  
-c) Không khác  d) Role có password
+
+- a) Role dùng cho services (Role dùng cho dịch vụ)
+- b) Role dùng cho users (Role dùng cho người dùng)
+- c) Không khác
+- d) Role có password
 
 ### Q4
 
 RDS Multi-AZ dùng để?
-a) Read scaling  b) High availability  
-c) Cost saving  d) Performance
+
+- a) Read scaling (Mở rộng khả năng đọc)
+- b) High availability (Tính sẵn sàng cao)
+- c) Cost saving (Tiết kiệm chi phí)
+- d) Performance (Hiệu năng)
 
 ### Q5
 
-Lambda pricing based on?
-a) Running time only  b) Memory only
-c) Requests + duration  d) Storage
+Lambda pricing based on? (Chi phí Lambda dựa trên?)
+
+- a) Running time only (Chỉ thời gian chạy)
+- b) Memory only (Chỉ bộ nhớ)
+- c) Requests + duration (Số lượng request + thời gian chạy)
+- d) Storage (Lưu trữ)
 
 ---
 

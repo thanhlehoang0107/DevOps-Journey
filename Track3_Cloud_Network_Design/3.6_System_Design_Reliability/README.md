@@ -24,7 +24,32 @@ After this module, you will (Sau module này, bạn sẽ):
 
 ## 📚 Content (Nội dung)
 
-### 1. HA Patterns (Mẫu High Availability)
+### 1. Why Reliability Matters? (Tại sao Reliability quan trọng?)
+
+In DevOps, you don't just deploy applications - you must ensure they are **always available** when users need them.
+
+*Trong DevOps, bạn không chỉ deploy ứng dụng - bạn phải đảm bảo nó **luôn hoạt động** khi người dùng cần.*
+
+#### Cost of Downtime (Chi phí của Downtime)
+
+| System Type | Cost per minute | Example |
+|-------------|-----------------|----------|
+| Large E-commerce | $100,000+ | Amazon loses ~$13 million/min |
+| Banking | $10,000+ | Transactions interrupted |
+| SaaS B2B | $1,000+ | Customer churn |
+| Internal tools | $100+ | Productivity loss |
+
+**Conclusion:** Investing in reliability is not a cost - it's saving costs!
+
+*Kết luận: Đầu tư vào reliability không phải là chi phí - nó là tiết kiệm chi phí!*
+
+---
+
+### 2. HA Patterns (Mẫu High Availability)
+
+**High Availability (HA)** ensures the system continues operating when components fail. Principle: **Eliminate Single Points of Failure**.
+
+*HA đảm bảo hệ thống tiếp tục hoạt động khi có thành phần bị lỗi. Nguyên tắc: Loại bỏ điểm lỗi đơn lẻ.*
 
 ```
 ┌─────────────────────────────────────────┐
@@ -39,13 +64,21 @@ After this module, you will (Sau module này, bạn sẽ):
 └───────┘    └───────┘    └───────┘
 ```
 
-### 2. Scaling (Mở rộng)
+**Giải thích:** Nếu App 1 hoặc toàn bộ AZ-a chết, Load Balancer tự động chuyển traffic sang App 2 và 3.
 
-- **Vertical (Theo chiều dọc)**: Bigger instance (Instance lớn hơn)
-- **Horizontal (Theo chiều ngang)**: More instances (Nhiều instances hơn)
-- **Auto Scaling (Tự động mở rộng)**: Based on metrics (Dựa trên metrics)
+---
 
-### 3. DR Strategies (Chiến lược DR)
+### 3. Scaling (Mở rộng)
+
+| Loại | Mô tả | Ưu điểm | Nhược điểm |
+|------|-------|---------|------------|
+| **Vertical** | Máy mạnh hơn (upgrade CPU/RAM) | Đơn giản | Có giới hạn, downtime khi upgrade |
+| **Horizontal** | Nhiều máy hơn | Vô tận, không downtime | Phức tạp hơn (stateless required) |
+| **Auto Scaling** | Tự động thêm/bớt theo metrics | Tiết kiệm chi phí | Cần tune cẩn thận |
+
+---
+
+### 4. DR Strategies (Chiến lược Disaster Recovery)
 
 | Strategy (Chiến lược) | RTO | RPO | Cost (Chi phí) |
 |-----------------------|-----|-----|----------------|
@@ -54,7 +87,7 @@ After this module, you will (Sau module này, bạn sẽ):
 | Warm Standby | Minutes (Phút) | Seconds (Giây) | $$$ |
 | Active-Active | Zero (Không) | Zero (Không) | $$$$ |
 
-### 4. SRE Metrics
+### 5. SRE Metrics
 
 - **SLA**: Service Level Agreement - Thỏa thuận cấp độ dịch vụ (99.9%)
 - **SLO**: Service Level Objective - Mục tiêu (target)

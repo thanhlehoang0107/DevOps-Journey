@@ -34,10 +34,27 @@ After this module, you will (Sau module này, bạn sẽ):
 
 ### 1. Multi-stage Builds
 
+#### Why Multi-stage Builds? (Tại sao cần Multi-stage Builds?)
+
+In reality, an application needs many dependencies to **build** (e.g., compiler, build tools), but doesn't need them to **run**. Multi-stage builds allow you to:
+
+*Trong thực tế, một ứng dụng cần nhiều dependencies để **build** (ví dụ: compiler, build tools), nhưng không cần chúng để **chạy**. Multi-stage builds cho phép bạn:*
+
+| Problem | Multi-stage Solution |
+|---------|---------------------|
+| Image too large due to build tools | Only copy needed artifacts to final image *(Chỉ copy artifacts cần thiết sang image cuối)* |
+| Poor security due to source code | Production image doesn't contain source code *(Image production không chứa source code)* |
+| Complex build process | Split into clear stages *(Chia thành các stages rõ ràng)* |
+
 #### Basic Multi-stage
 
+Below is an example of a Dockerfile with 2 stages. The first stage builds the application, the second stage only contains the build output.
+
+*Dưới đây là ví dụ một Dockerfile với 2 stages. Stage đầu tiên build ứng dụng, stage thứ hai chỉ chứa kết quả build.*
+
 ```dockerfile
-# Stage 1: Build
+# Stage 1: Build (Giai đoạn build)
+# Sử dụng image đầy đủ với npm, node để build
 FROM node:18 AS builder
 WORKDIR /app
 COPY package*.json ./
@@ -45,7 +62,8 @@ RUN npm ci
 COPY . .
 RUN npm run build
 
-# Stage 2: Production
+# Stage 2: Production (Giai đoạn production)
+# Sử dụng image Alpine siêu nhẹ, chỉ copy kết quả build
 FROM node:18-alpine AS production
 WORKDIR /app
 COPY --from=builder /app/dist ./dist
@@ -53,7 +71,17 @@ COPY --from=builder /app/node_modules ./node_modules
 CMD ["node", "dist/server.js"]
 ```
 
-#### Advanced Multi-stage với multiple targets
+**Giải thích (Explanation):**
+
+- `FROM node:18 AS builder`: Tạo stage tên "builder" với Node.js đầy đủ.
+- `COPY --from=builder`: Copy files từ stage "builder" sang stage hiện tại. Đây là "bí quyết" của multi-stage.
+- `node:18-alpine`: Image production chỉ ~50MB thay vì ~900MB của image đầy đủ.
+
+#### Advanced Multi-stage with Multiple Targets (Multi-stage nâng cao với nhiều targets)
+
+In real projects, you need different images for different environments. Multi-stage builds let you create multiple "target" outputs from one Dockerfile.
+
+*Trong dự án thực tế, bạn cần images khác nhau cho các môi trường khác nhau. Multi-stage builds cho phép tạo nhiều "target" từ một Dockerfile.*
 
 ```dockerfile
 # Base stage
@@ -94,9 +122,17 @@ docker build --target production -t myapp:prod .
 
 ---
 
-### 2. Image Optimization
+### 2. Image Optimization (Tối ưu hóa Image)
 
-#### Layer Optimization
+Smaller images = faster deployment, less storage, smaller attack surface. Here are key optimization techniques.
+
+*Image nhỏ hơn = deploy nhanh hơn, ít tốn storage, ít lỗ hổng hơn. Dưới đây là các kỹ thuật tối ưu chính.*
+
+#### Layer Optimization (Tối ưu hóa Layers)
+
+Each `RUN`, `COPY`, `ADD` creates a layer. Combine them to reduce image size.
+
+*Mỗi lệnh `RUN`, `COPY`, `ADD` tạo một layer. Gộp chúng lại để giảm kích thước image.*
 
 ```dockerfile
 # ❌ Bad - Creates unnecessary layers
@@ -114,7 +150,11 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 ```
 
-#### Leverage Build Cache
+#### Leverage Build Cache (Tận dụng Build Cache)
+
+Docker caches layers. Order your Dockerfile so rarely-changing files come first.
+
+*Docker cache các layers. Sắp xếp Dockerfile sao cho file ít thay đổi được copy trước.*
 
 ```dockerfile
 # ✅ Copy dependency files first
@@ -125,7 +165,11 @@ RUN npm ci
 COPY . .
 ```
 
-#### Use .dockerignore
+#### Use .dockerignore (Sử dụng .dockerignore)
+
+Like `.gitignore`, this file tells Docker what NOT to copy into the build context. This speeds up builds and keeps secrets out.
+
+*Giống `.gitignore`, file này cho Docker biết KHÔNG copy gì vào build context. Giúp build nhanh hơn và không lộ secrets.*
 
 ```dockerignore
 # .dockerignore
@@ -142,7 +186,11 @@ tests
 *.md
 ```
 
-#### Choose Right Base Image
+#### Choose Right Base Image (Chọn Base Image phù hợp)
+
+The base image dramatically affects your final image size. Choose the smallest that works.
+
+*Base image ảnh hưởng lớn đến kích thước cuối cùng. Chọn image nhỏ nhất có thể hoạt động.*
 
 ```dockerfile
 # Size comparison:
@@ -158,9 +206,13 @@ FROM gcr.io/distroless/nodejs18-debian11
 
 ---
 
-### 3. BuildKit Features
+### 3. BuildKit Features (Tính năng BuildKit)
 
-#### Enable BuildKit
+BuildKit is Docker's next-generation build engine. It's faster, more efficient, and has better caching.
+
+*BuildKit là engine build thế hệ mới của Docker. Nhanh hơn, hiệu quả hơn, và cache tốt hơn.*
+
+#### Enable BuildKit (Bật BuildKit)
 
 ```bash
 # Environment variable
@@ -175,7 +227,11 @@ docker build .
 }
 ```
 
-#### Cache Mounts
+#### Cache Mounts (Mount Cache)
+
+Persist cache between builds to speed up repeated builds significantly.
+
+*Lưu cache giữa các lần build để tăng tốc build đáng kể.*
 
 ```dockerfile
 # Cache npm packages
@@ -187,7 +243,11 @@ RUN --mount=type=cache,target=/var/cache/apt \
     apt-get update && apt-get install -y git
 ```
 
-#### Secret Mounts
+#### Secret Mounts (Mount Secrets)
+
+Mount secrets during build without storing them in the final image. Essential for private npm packages.
+
+*Mount secrets khi build mà không lưu vào image cuối. Cần thiết cho npm packages riêng.*
 
 ```dockerfile
 # Mount secrets during build (not stored in image)
@@ -199,7 +259,11 @@ RUN --mount=type=secret,id=npmrc,target=/root/.npmrc \
 docker build --secret id=npmrc,src=$HOME/.npmrc .
 ```
 
-#### SSH Mounts
+#### SSH Mounts (Mount SSH Keys)
+
+Use SSH keys to clone private repositories during build.
+
+*Sử dụng SSH keys để clone private repos khi build.*
 
 ```dockerfile
 # Clone private repos
@@ -213,9 +277,17 @@ docker build --ssh default .
 
 ---
 
-### 4. Security Best Practices
+### 4. Security Best Practices (Thực hành bảo mật tốt nhất)
 
-#### Run as Non-root User
+Secure images are critical in production. Here are essential practices.
+
+*Images bảo mật rất quan trọng trong production. Dưới đây là các thực hành cần thiết.*
+
+#### Run as Non-root User (Chạy với user không phải root)
+
+Running as root inside containers is a security risk. Always create and use a non-root user.
+
+*Chạy với quyền root trong container là rủi ro bảo mật. Luôn tạo và dùng user không phải root.*
 
 ```dockerfile
 # Create user
@@ -230,7 +302,11 @@ USER appuser
 CMD ["node", "server.js"]
 ```
 
-#### Use Read-only Filesystem
+#### Use Read-only Filesystem (Sử dụng Filesystem chỉ đọc)
+
+Mount the container filesystem as read-only to prevent attackers from modifying files.
+
+*Mount filesystem của container ở chế độ chỉ đọc để ngăn attacker sửa đổi files.*
 
 ```bash
 docker run --read-only \
@@ -239,7 +315,11 @@ docker run --read-only \
   myapp
 ```
 
-#### Scan for Vulnerabilities
+#### Scan for Vulnerabilities (Quét lỗ hổng bảo mật)
+
+Regularly scan images for known vulnerabilities before deploying.
+
+*Thường xuyên quét images để tìm lỗ hổng trước khi deploy.*
 
 ```bash
 # Docker Scout (built-in)
@@ -252,7 +332,11 @@ trivy image myimage:tag
 snyk container test myimage:tag
 ```
 
-#### Minimal Base Images
+#### Minimal Base Images (Base Images tối giản)
+
+Fewer packages = fewer vulnerabilities. Distroless and scratch images have minimal attack surface.
+
+*Ít packages = ít lỗ hổng. Images distroless và scratch có bề mặt tấn công tối thiểu.*
 
 ```dockerfile
 # Use distroless for minimal attack surface
@@ -264,7 +348,11 @@ COPY myapp /myapp
 CMD ["/myapp"]
 ```
 
-#### Don't Store Secrets in Images
+#### Don't Store Secrets in Images (Không lưu Secrets trong Images)
+
+Never hardcode secrets in Dockerfiles. Inject them at runtime instead.
+
+*Không bao giờ hardcode secrets trong Dockerfile. Inject chúng khi chạy.*
 
 ```dockerfile
 # ❌ Bad
@@ -276,7 +364,11 @@ ENV API_KEY=secret123
 
 ---
 
-### 5. Health Checks
+### 5. Health Checks (Kiểm tra sức khỏe)
+
+Health checks tell Docker whether your container is working properly. Essential for orchestrators like Kubernetes.
+
+*Health checks cho Docker biết container có hoạt động đúng không. Cần thiết cho orchestrators như Kubernetes.*
 
 ```dockerfile
 HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
@@ -289,7 +381,11 @@ HEALTHCHECK --interval=30s --timeout=3s \
 
 ---
 
-### 6. Resource Limits
+### 6. Resource Limits (Giới hạn tài nguyên)
+
+Limit container resources to prevent one container from consuming all host resources.
+
+*Giới hạn tài nguyên container để ngăn một container tiêu thụ hết tài nguyên host.*
 
 ```bash
 # Memory limit
@@ -384,18 +480,18 @@ docker run -it debug_image sh
 
 ---
 
-## 🛠️ Best Practices Summary
+## 🛠️ Best Practices Summary (Tóm tắt thực hành tốt nhất)
 
-| Practice | Description |
-|----------|-------------|
-| Multi-stage builds | Separate build and runtime |
-| Alpine/Distroless | Minimal base images |
-| Non-root user | Security |
-| .dockerignore | Smaller build context |
-| Layer ordering | Better cache utilization |
-| Health checks | Container health monitoring |
-| Resource limits | Prevent resource exhaustion |
-| Image scanning | Security vulnerabilities |
+| Practice (Thực hành) | Description (Mô tả) |
+|----------------------|---------------------|
+| Multi-stage builds | Separate build and runtime (Tách biệt build và runtime) |
+| Alpine/Distroless | Minimal base images (Image nền tối giản) |
+| Non-root user | Security (Bảo mật) |
+| .dockerignore | Smaller build context (Context build nhỏ hơn) |
+| Layer ordering | Better cache utilization (Tận dụng cache tốt hơn) |
+| Health checks | Container health monitoring (Giám sát sức khỏe container) |
+| Resource limits | Prevent resource exhaustion (Ngăn chặn cạn kiệt tài nguyên) |
+| Image scanning | Security vulnerabilities (Lỗ hổng bảo mật) |
 
 ---
 
@@ -409,7 +505,7 @@ docker run -it debug_image sh
 
 ## 📝 Module Files (Các file trong Module)
 
-| File | Description |
+| File | Description (Mô tả) |
 |------|---------------------|
 | [LABS.md](./LABS.md) | Hands-on labs (Bài thực hành) |
 | [QUIZ.md](./QUIZ.md) | Knowledge check (Kiểm tra kiến thức) |

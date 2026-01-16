@@ -24,40 +24,85 @@ After this module, you will (Sau module này, bạn sẽ):
 
 ## 📚 Content (Nội dung)
 
-### 1. Secrets Management (Quản lý Secrets)
+### 1. Why Secrets Management Matters? (Tại sao Secrets Management quan trọng?)
+
+**Problem:** Secrets (passwords, API keys, tokens) leakage is the #1 cause of data breaches.
+
+*Secrets (passwords, API keys, tokens) bị lộ là nguyên nhân #1 của các vụ data breach.*
+
+| Common Mistake | Consequence |
+|----------------|-------------|
+| Hardcode in source code | Exposed when pushed to public Git |
+| Store in `.env` file | Anyone with file access can see |
+| Share passwords | No audit trail of who used it |
+| No key rotation | Attacker has permanent access if leaked |
+
+**Solution:** Use **Secrets Manager** - centralized storage, encryption, access control.
+
+*Giải pháp: Sử dụng **Secrets Manager** - lưu trữ tập trung, mã hóa, kiểm soát truy cập.*
+
+---
+
+### 2. HashiCorp Vault
+
+**Vault** is the most popular secrets management tool. It provides **dynamic secrets** (temporary credentials for each request).
+
+*Vault là công cụ quản lý secrets phổ biến nhất. Nó cung cấp **dynamic secrets** (tạo credentials tạm thời cho mỗi request).*
 
 ```bash
-# HashiCorp Vault
-vault kv put secret/myapp db_password=secret123
+# Lưu secret vào Vault
+vault kv put secret/myapp db_password=secret123 api_key=abc123
+
+# Đọc secret từ Vault
 vault kv get secret/myapp
 
-# AWS Secrets Manager
-aws secretsmanager create-secret \
-  --name MySecret \
-  --secret-string '{"password":"secret123"}'
+# Đọc chỉ 1 field
+vault kv get -field=db_password secret/myapp
 ```
 
-### 2. AWS Security (Bảo mật AWS)
+**Giải thích:**
+
+- `secret/myapp`: Path lưu trữ (có thể phân quyền theo path)
+- `db_password=secret123`: Key-value pair
+- Secrets được mã hóa at-rest và in-transit
+
+---
+
+### 3. AWS Secrets Manager
+
+Nếu bạn dùng AWS, **Secrets Manager** tích hợp sẵn với RDS, Lambda, ECS.
 
 ```bash
-# Enable GuardDuty (Bật GuardDuty)
-aws guardduty create-detector --enable
+# Tạo secret mới
+aws secretsmanager create-secret \
+  --name prod/myapp/db \
+  --secret-string '{"username":"admin","password":"secret123"}'
 
-# Security Hub
-aws securityhub enable-security-hub
+# Đọc secret
+aws secretsmanager get-secret-value --secret-id prod/myapp/db
 
-# Config Rules (Quy tắc cấu hình)
-aws configservice put-config-rule --config-rule file://rule.json
+# Rotate secret tự động (cho RDS)
+aws secretsmanager rotate-secret --secret-id prod/myapp/db
 ```
 
-### 3. CIS Benchmarks
+**Lợi ích so với Vault:**
+
+- Không cần quản lý server
+- Tích hợp sẵn với AWS services
+- Automatic rotation cho RDS
+
+---
+
+### 4. AWS Security Best Practices (Bảo mật AWS)
+
+### 5. CIS Benchmarks
 
 - OS hardening (Hardening hệ điều hành)
 - SSH configuration (Cấu hình SSH)
 - Firewall rules (Quy tắc tường lửa)
 - Audit logging (Ghi nhật ký kiểm toán)
 
-### 4. Compliance (Tuân thủ)
+### 6. Compliance (Tuân thủ)
 
 ```yaml
 # InSpec

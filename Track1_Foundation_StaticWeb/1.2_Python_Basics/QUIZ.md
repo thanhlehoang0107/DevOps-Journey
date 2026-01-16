@@ -26,10 +26,10 @@ y = 100
 
 `x` và `y` có kiểu dữ liệu gì?
 
-a) Cả hai đều là `int`  
-b) Cả hai đều là `str`  
-c) `x` là `str`, `y` là `int`  
-d) `x` là `int`, `y` là `str`  
+- a) Cả hai đều là `int`
+- b) Cả hai đều là `str`
+- c) `x` là `str`, `y` là `int`
+- d) `x` là `int`, `y` là `str`  
 
 ---
 
@@ -37,10 +37,10 @@ d) `x` là `int`, `y` là `str`
 
 Cách nào để format string trong Python 3.6+?
 
-a) `"Hello %s" % name`  
-b) `"Hello {}".format(name)`  
-c) `f"Hello {name}"`  
-d) Tất cả đều đúng  
+- a) `"Hello %s" % name`
+- b) `"Hello {}".format(name)`
+- c) `f"Hello {name}"`
+- d) Tất cả đều đúng  
 
 ---
 
@@ -54,10 +54,10 @@ servers.pop(0)
 
 Kết quả của `servers` là gì?
 
-a) `["web1", "web2", "db1", "db2"]`  
-b) `["web2", "db1", "db2"]`  
-c) `["web1", "web2", "db1"]`  
-d) `["db2", "web2", "db1"]`  
+- a) `["web1", "web2", "db1", "db2"]`
+- b) `["web2", "db1", "db2"]`
+- c) `["web1", "web2", "db1"]`
+- d) `["db2", "web2", "db1"]`  
 
 ---
 
@@ -70,10 +70,10 @@ value = config.get("timeout", 30)
 
 `value` bằng bao nhiêu?
 
-a) `None`  
-b) `8080`  
-c) `30`  
-d) Error  
+- a) `None`
+- b) `8080`
+- c) `30`
+- d) Error  
 
 ---
 
@@ -86,10 +86,10 @@ result = [n * 2 for n in numbers if n > 2]
 
 `result` là gì?
 
-a) `[2, 4, 6, 8, 10]`  
-b) `[6, 8, 10]`  
-c) `[3, 4, 5]`  
-d) `[1, 2, 3, 4, 5]`  
+- a) `[2, 4, 6, 8, 10]`
+- b) `[6, 8, 10]`
+- c) `[3, 4, 5]`
+- d) `[1, 2, 3, 4, 5]`  
 
 ---
 
@@ -97,10 +97,10 @@ d) `[1, 2, 3, 4, 5]`
 
 Cách đúng để đọc file và tự động đóng sau khi xong?
 
-a) `f = open("file.txt"); data = f.read(); f.close()`  
-b) `with open("file.txt") as f: data = f.read()`  
-c) `data = open("file.txt").read()`  
-d) Cả a và b đều đúng, nhưng b tốt hơn  
+- a) `f = open("file.txt"); data = f.read(); f.close()`
+- b) `with open("file.txt") as f: data = f.read()`
+- c) `data = open("file.txt").read()`
+- d) Cả a và b đều đúng, nhưng b tốt hơn  
 
 ---
 
@@ -113,10 +113,10 @@ def connect(host, port=22, timeout=30):
 
 Cách gọi nào SAI?
 
-a) `connect("192.168.1.1")`  
-b) `connect("192.168.1.1", 8080)`  
-c) `connect("192.168.1.1", timeout=60)`  
-d) `connect(port=22, "192.168.1.1")`  
+- a) `connect("192.168.1.1")`
+- b) `connect("192.168.1.1", 8080)`
+- c) `connect("192.168.1.1", timeout=60)`
+- d) `connect(port=22, "192.168.1.1")`  
 
 ---
 
@@ -135,10 +135,10 @@ except:
 
 Output là gì?
 
-a) `Value Error`  
-b) `Zero Division`  
-c) `Unknown Error`  
-d) Error, program crashes  
+- a) `Value Error`
+- b) `Zero Division`
+- c) `Unknown Error`
+- d) Error, program crashes  
 
 ---
 
@@ -146,10 +146,10 @@ d) Error, program crashes
 
 Cách import đúng để sử dụng `os.path.exists()`?
 
-a) `from os import path`  
-b) `import os`  
-c) `import os.path`  
-d) Cả a, b, c đều đúng  
+- a) `from os import path`
+- b) `import os`
+- c) `import os.path`
+- d) Cả a, b, c đều đúng  
 
 ---
 
@@ -162,10 +162,10 @@ result = subprocess.run(["ls", "-la"], capture_output=True, text=True)
 
 `result.stdout` chứa gì?
 
-a) Return code của command  
-b) Output text của command  
-c) Error messages  
-d) Process ID  
+- a) Return code của command
+- b) Output text của command
+- c) Error messages
+- d) Process ID  
 
 ---
 
@@ -178,10 +178,10 @@ data = '{"name": "server1", "port": 80}'
 
 Cách chuyển `data` thành Python dictionary?
 
-a) `json.loads(data)`  
-b) `json.load(data)`  
-c) `json.dumps(data)`  
-d) `json.parse(data)`  
+- a) `json.loads(data)`
+- b) `json.load(data)`
+- c) `json.dumps(data)`
+- d) `json.parse(data)`  
 
 ---
 
@@ -189,10 +189,10 @@ d) `json.parse(data)`
 
 Cách lấy environment variable `API_KEY` với default value?
 
-a) `os.environ["API_KEY"]`  
-b) `os.getenv("API_KEY", "default")`  
-c) `os.environ.get("API_KEY")`  
-d) Cả b và c đều đúng  
+- a) `os.environ["API_KEY"]`
+- b) `os.getenv("API_KEY", "default")`
+- c) `os.environ.get("API_KEY")`
+- d) Cả b và c đều đúng  
 
 ---
 
@@ -204,10 +204,10 @@ path = "/etc/nginx/nginx.conf"
 
 Cách lấy filename `nginx.conf` từ path?
 
-a) `path.split("/")[-1]`  
-b) `os.path.basename(path)`  
-c) `path.rsplit("/", 1)[1]`  
-d) Tất cả đều đúng  
+- a) `path.split("/")[-1]`
+- b) `os.path.basename(path)`
+- c) `path.rsplit("/", 1)[1]`
+- d) Tất cả đều đúng  
 
 ---
 
@@ -221,10 +221,10 @@ result = x and not y
 
 `result` là gì?
 
-a) `True`  
-b) `False`  
-c) `None`  
-d) Error  
+- a) `True`
+- b) `False`
+- c) `None`
+- d) Error  
 
 ---
 
@@ -275,10 +275,10 @@ response = requests.get("https://api.example.com/data")
 
 Cách kiểm tra request thành công (status 200-299)?
 
-a) `if response.status_code == 200`  
-b) `if response.ok`  
-c) `if response.success`  
-d) Cả a và b đều đúng  
+- a) `if response.status_code == 200`
+- b) `if response.ok`
+- c) `if response.success`
+- d) Cả a và b đều đúng  
 
 ---
 
@@ -291,10 +291,10 @@ path = os.path.join("/var", "log", "app.log")
 
 `path` trên Linux sẽ là gì?
 
-a) `/var\log\app.log`  
-b) `/var/log/app.log`  
-c) `var/log/app.log`  
-d) `/var//log//app.log`  
+- a) `/var\log\app.log`
+- b) `/var/log/app.log`
+- c) `var/log/app.log`
+- d) `/var//log//app.log`  
 
 ---
 
@@ -302,10 +302,10 @@ d) `/var//log//app.log`
 
 Lỗi nào xảy ra khi truy cập key không tồn tại trong dictionary?
 
-a) `IndexError`  
-b) `ValueError`  
-c) `KeyError`  
-d) `AttributeError`  
+- a) `IndexError`
+- b) `ValueError`
+- c) `KeyError`
+- d) `AttributeError`  
 
 ---
 
@@ -320,10 +320,10 @@ func(1, 2, name="test")
 
 Output là gì?
 
-a) `(1, 2) {'name': 'test'}`  
-b) `[1, 2] {'name': 'test'}`  
-c) `1, 2, name=test`  
-d) Error  
+- a) `(1, 2) {'name': 'test'}`
+- b) `[1, 2] {'name': 'test'}`
+- c) `1, 2, name=test`
+- d) Error  
 
 ---
 
@@ -341,10 +341,10 @@ data = yaml.safe_load(yaml_content)
 
 Cách lấy giá trị `8080`?
 
-a) `data["server.port"]`  
-b) `data["server"]["port"]`  
-c) `data.server.port`  
-d) `data["port"]`  
+- a) `data["server.port"]`
+- b) `data["server"]["port"]`
+- c) `data.server.port`
+- d) `data["port"]`  
 
 ---
 

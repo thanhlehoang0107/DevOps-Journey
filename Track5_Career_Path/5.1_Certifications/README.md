@@ -20,9 +20,39 @@ After this module, you will (Sau module này, bạn sẽ):
 
 ---
 
+## 🤔 Why Certifications Matter? (Tại sao chứng chỉ quan trọng?)
+
+### Lợi ích của Chứng chỉ (Benefits)
+
+| Lợi ích | Giải thích |
+|---------|------------|
+| 💰 **Tăng lương** | Chứng chỉ AWS, CKA có thể tăng 10-20% lương |
+| 🎯 **Vượt qua ATS** | Nhiều công ty lọc CV theo certifications |
+| 📚 **Học có hệ thống** | Buộc bạn học đầy đủ, không bỏ sót kiến thức |
+| 🤝 **Chứng minh năng lực** | Khách quan hơn việc tự claim "biết AWS" |
+| 🌐 **Toàn cầu công nhận** | AWS, CKA được công nhận worldwide |
+
+### Khi nào NÊN và KHÔNG NÊN thi chứng chỉ?
+
+**NÊN thi khi:**
+
+- Bạn đã có kinh nghiệm thực hành (ít nhất 3-6 tháng với công cụ đó)
+- Công ty/job bạn nhắm đến yêu cầu chứng chỉ
+- Bạn muốn học một cách có hệ thống
+
+**KHÔNG NÊN thi khi:**
+
+- Chỉ vì "có càng nhiều càng tốt" (cert collector)
+- Chưa có kinh nghiệm thực hành nào
+- Không có kế hoạch sử dụng kiến thức đó
+
+*Chứng chỉ có giá trị nhất khi kết hợp với kinh nghiệm thực tế!*
+
+---
+
 ## 📚 Certification Roadmap (Lộ trình chứng chỉ)
 
-### Beginner (Người mới bắt đầu)
+### Beginner (Người mới bắt đầu) - Sau Track 1-2
 
 | Cert | Provider | Focus (Trọng tâm) |
 |------|----------|-------------------|
@@ -35,15 +65,15 @@ After this module, you will (Sau module này, bạn sẽ):
 | Cert | Provider | Focus (Trọng tâm) |
 |------|----------|-------------------|
 | AWS Solutions Architect Associate | AWS | Architecture (Kiến trúc) |
-| CKA | CNCF | Kubernetes |
-| Terraform Associate | HashiCorp | IaC |
-| Docker Certified Associate | Docker | Containers |
+| CKA | CNCF | Kubernetes (Quản trị K8s) |
+| Terraform Associate | HashiCorp | IaC (Cơ sở hạ tầng dưới dạng mã) |
+| Docker Certified Associate | Docker | Containers (Công nghệ Container) |
 
 ### Advanced (Nâng cao)
 
 | Cert | Provider | Focus (Trọng tâm) |
 |------|----------|-------------------|
-| AWS DevOps Professional | AWS | DevOps on AWS |
+| AWS DevOps Professional | AWS | DevOps on AWS (DevOps trên AWS) |
 | CKS | CNCF | K8s Security (Bảo mật K8s) |
 | CKAD | CNCF | K8s Development (Phát triển K8s) |
 

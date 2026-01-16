@@ -24,7 +24,19 @@ After this module, you will (Sau module này, bạn sẽ):
 
 ## 📚 Content (Nội dung)
 
-### 1. Architecture (Kiến trúc)
+### 1. What is Kubernetes? (Kubernetes là gì?)
+
+**Kubernetes** (K8s) is an open-source system for automating deployment, scaling, and management of containerized applications. It groups containers that make up an application into logical units for easy management and discovery.
+
+*Kubernetes (K8s) là hệ thống mã nguồn mở để tự động hóa việc triển khai, mở rộng và quản lý các ứng dụng container hóa.*
+
+**Why K8s? (Tại sao dùng K8s?)**
+
+- **Service discovery & Load balancing**: Automatically exposes containers (Tự động định tuyến traffic).
+- **Self-healing**: Restarts failed containers (Tự khởi động lại container bị lỗi).
+- **Automated rollouts/rollbacks**: Controlled updates (Cập nhật có kiểm soát).
+
+### 2. Architecture (Kiến trúc)
 
 ```
 ┌─────────────────────────────────────────┐
@@ -49,7 +61,19 @@ After this module, you will (Sau module này, bạn sẽ):
 └───────────────────────────────────────┘
 ```
 
-### 2. Basic Resources (Tài nguyên cơ bản)
+**Architecture Components (Thành phần kiến trúc):**
+
+- **Control Plane**: The brain of the cluster (Bộ não của cluster - quản lý tất cả).
+  - **API Server**: Front-end for the Kubernetes control plane (Cổng giao tiếp chính).
+  - **etcd**: Key-value store for all cluster data (Nơi lưu trữ dữ liệu của cluster).
+  - **Scheduler**: Assigns pods to nodes (Phân phối pod vào các node).
+  - **Controller Manager**: Runs controller processes (Quản lý các controller).
+- **Worker Nodes**: Machines that run your applications (Máy chạy ứng dụng).
+  - **kubelet**: Agent that runs on each node (Agent chạy trên mỗi node).
+  - **kube-proxy**: Maintains network rules (Quản lý mạng).
+  - **Pods**: The smallest deployable units (Đơn vị nhỏ nhất có thể deploy).
+
+### 3. Basic Resources (Tài nguyên cơ bản)
 
 ```yaml
 # Pod
@@ -101,7 +125,11 @@ spec:
   type: ClusterIP
 ```
 
-### 3. kubectl Commands (Các lệnh kubectl)
+### 4. kubectl Commands (Các lệnh kubectl)
+
+These are the essential kubectl commands you'll use daily to interact with your Kubernetes cluster.
+
+*Đây là các lệnh kubectl cần thiết bạn sẽ dùng hàng ngày để tương tác với Kubernetes cluster.*
 
 ```bash
 # Cluster info (Thông tin cluster)
@@ -128,7 +156,11 @@ kubectl apply -f manifest.yaml
 kubectl delete -f manifest.yaml
 ```
 
-### 4. ConfigMaps & Secrets
+### 5. ConfigMaps & Secrets
+
+ConfigMaps store non-sensitive configuration data, while Secrets store sensitive data like passwords.
+
+*ConfigMaps lưu dữ liệu cấu hình không nhạy cảm, còn Secrets lưu dữ liệu nhạy cảm như mật khẩu.*
 
 ```yaml
 # ConfigMap
@@ -151,7 +183,11 @@ data:
   DB_PASSWORD: cGFzc3dvcmQ=  # base64 encoded (mã hóa base64)
 ```
 
-### 5. Persistent Volume (Volume bền vững)
+### 6. Persistent Volume (Volume bền vững)
+
+Persistent Volumes allow data to survive pod restarts. Essential for databases.
+
+*Persistent Volumes giúp dữ liệu tồn tại khi pod khởi động lại. Cần thiết cho databases.*
 
 ```yaml
 apiVersion: v1

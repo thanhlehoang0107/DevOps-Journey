@@ -24,6 +24,25 @@ After completing Track 3, you will (Sau khi hoàn thành Track 3, bạn sẽ):
 
 ---
 
+## 🤔 Why This Track? (Tại sao học Track này?)
+
+In Track 2, you deployed on local Kubernetes. But where is real production? **Cloud (AWS, GCP, Azure)**.
+
+*Track 2 bạn deploy trên local Kubernetes. Nhưng production thực tế ở đâu? **Cloud (AWS, GCP, Azure)**.*
+
+| Skill (Kỹ năng) | Why it's important (Tại sao quan trọng) |
+|-----------------|----------------------------------------|
+| **VPC Design** | Foundation for everything - wrong design = get hacked or can't scale. *(Nền tảng cho mọi thứ - sai thiết kế = bị tấn công hoặc không scale được.)* |
+| **Terraform** | Nobody creates 100 EC2s by hand - IaC is mandatory. *(Không ai tạo 100 EC2 bằng tay - IaC là bắt buộc.)* |
+| **Ansible** | Configure servers automatically, no SSH into each machine. *(Cấu hình servers tự động, không SSH vào từng máy.)* |
+| **System Design** | Final round interview always asks - design scalable systems. *(Interview vòng cuối luôn hỏi - thiết kế hệ thống scale.)* |
+
+**Goal of this Track:** You will build full AWS infrastructure with Terraform + Ansible.
+
+*Điểm đến của Track này: Bạn sẽ build full AWS infrastructure bằng Terraform + Ansible.*
+
+---
+
 ## 📋 Prerequisites (Điều kiện tiên quyết)
 
 Before starting Track 3, you should complete (Trước khi bắt đầu Track 3, bạn cần hoàn thành):
@@ -39,13 +58,13 @@ Before starting Track 3, you should complete (Trước khi bắt đầu Track 3,
 
 | # | Module | Duration (Thời gian) | Description (Mô tả) |
 |---|--------|----------------------|---------------------|
-| 3.1 | [Network Advanced](./3.1_Network_Advanced/) | 1-2 weeks | VPC, Subnets, NAT, Load Balancing |
-| 3.2 | [AWS Core Services](./3.2_AWS_Core_Services/) | 2 weeks | EC2, S3, RDS, IAM, CloudWatch |
-| 3.3 | [Databases for DevOps](./3.3_Databases_for_DevOps/) | 1-2 weeks | MySQL, PostgreSQL, Redis, MongoDB |
-| 3.4 | [Ansible](./3.4_Config_Management_Ansible/) | 1-2 weeks | Playbooks, Roles, Inventory |
-| 3.5 | [Terraform](./3.5_Terraform_IaC/) | 2 weeks | HCL, Modules, State, Workspaces |
-| 3.6 | [System Design & Reliability](./3.6_System_Design_Reliability/) | 1 week | HA, Scalability, Disaster Recovery |
-| 3.7 | [**Capstone Project**](./3.7_Capstone_Project/) | 1-2 weeks | 🎯 Production AWS Infrastructure |
+| 3.1 | [Network Advanced](./3.1_Network_Advanced/) | 1-2 weeks | VPC, Subnets, NAT, Load Balancing (Mạng nâng cao) |
+| 3.2 | [AWS Core Services](./3.2_AWS_Core_Services/) | 2 weeks | EC2, S3, RDS, IAM, CloudWatch (Dịch vụ cốt lõi AWS) |
+| 3.3 | [Databases for DevOps](./3.3_Databases_for_DevOps/) | 1-2 weeks | MySQL, PostgreSQL, Redis, MongoDB (Cơ sở dữ liệu) |
+| 3.4 | [Ansible](./3.4_Config_Management_Ansible/) | 1-2 weeks | Playbooks, Roles, Inventory (Quản lý cấu hình) |
+| 3.5 | [Terraform](./3.5_Terraform_IaC/) | 2 weeks | HCL, Modules, State, Workspaces (Cơ sở hạ tầng như mã) |
+| 3.6 | [System Design & Reliability](./3.6_System_Design_Reliability/) | 1 week | HA, Scalability, Disaster Recovery (Thiết kế hệ thống tin cậy) |
+| 3.7 | [**Capstone Project**](./3.7_Capstone_Project/) | 1-2 weeks | 🎯 Production AWS Infrastructure (Hạ tầng AWS thực tế) |
 
 ---
 
@@ -54,44 +73,44 @@ Before starting Track 3, you should complete (Trước khi bắt đầu Track 3,
 ### Week 1-2: Network Advanced
 
 ```
-Week 1: VPC fundamentals, subnets, route tables
-Week 2: NAT Gateway, VPN, VPC Peering, Load Balancers
+Week 1: VPC fundamentals, subnets, route tables (Cơ bản về VPC, mạng con)
+Week 2: NAT Gateway, VPN, VPC Peering, Load Balancers (Kết nối mạng & Cân bằng tải)
 ```
 
 ### Week 3-4: AWS Core Services
 
 ```
-Week 3: EC2, AMI, Auto Scaling Groups
-Week 4: S3, RDS, IAM policies, CloudWatch
+Week 3: EC2, AMI, Auto Scaling Groups (Máy chủ ảo & Tự động mở rộng)
+Week 4: S3, RDS, IAM policies, CloudWatch (Lưu trữ, DB, Quyền & Giám sát)
 ```
 
 ### Week 5: Databases for DevOps
 
 ```
-Day 1-2: MySQL/PostgreSQL administration
-Day 3-4: Redis caching strategies
-Day 5-7: MongoDB for application data
+Day 1-2: MySQL/PostgreSQL administration (Quản trị DB quan hệ)
+Day 3-4: Redis caching strategies (Chiến lược Caching)
+Day 5-7: MongoDB for application data (DB NoSQL cho ứng dụng)
 ```
 
 ### Week 6-7: Ansible
 
 ```
-Week 6: Ansible basics, playbooks, modules
-Week 7: Roles, variables, templates, vault
+Week 6: Ansible basics, playbooks, modules (Cơ bản về Ansible)
+Week 7: Roles, variables, templates, vault (Roles, biến & bảo mật)
 ```
 
 ### Week 8-9: Terraform
 
 ```
-Week 8: Terraform fundamentals, resources, providers
-Week 9: Modules, state management, workspaces
+Week 8: Terraform fundamentals, resources, providers (Cơ bản Terraform)
+Week 9: Modules, state management, workspaces (Modules & Quản lý state)
 ```
 
 ### Week 10: System Design + Capstone
 
 ```
-Day 1-3: HA patterns, scalability, DR strategies
-Day 4-7: Capstone implementation
+Day 1-3: HA patterns, scalability, DR strategies (Mô hình HA, mở rộng & DR)
+Day 4-7: Capstone implementation (Triển khai đồ án)
 ```
 
 ---
@@ -100,55 +119,55 @@ Day 4-7: Capstone implementation
 
 | Tool | Purpose (Mục đích) | Documentation |
 |------|-------------------|---------------|
-| **AWS CLI** | AWS command line | [aws.amazon.com/cli](https://aws.amazon.com/cli/) |
-| **Terraform** | Infrastructure as Code | [terraform.io](https://www.terraform.io/docs/) |
-| **Ansible** | Configuration management | [docs.ansible.com](https://docs.ansible.com/) |
-| **MySQL** | Relational database | [dev.mysql.com](https://dev.mysql.com/doc/) |
-| **PostgreSQL** | Relational database | [postgresql.org](https://www.postgresql.org/docs/) |
-| **Redis** | In-memory cache | [redis.io](https://redis.io/documentation) |
-| **MongoDB** | NoSQL database | [mongodb.com](https://docs.mongodb.com/) |
+| **AWS CLI** | AWS command line (Dòng lệnh AWS) | [aws.amazon.com/cli](https://aws.amazon.com/cli/) |
+| **Terraform** | Infrastructure as Code (Hạ tầng như mã) | [terraform.io](https://www.terraform.io/docs/) |
+| **Ansible** | Configuration management (Quản lý cấu hình) | [docs.ansible.com](https://docs.ansible.com/) |
+| **MySQL** | Relational database (CSDL quan hệ) | [dev.mysql.com](https://dev.mysql.com/doc/) |
+| **PostgreSQL** | Relational database (CSDL quan hệ) | [postgresql.org](https://www.postgresql.org/docs/) |
+| **Redis** | In-memory cache (Bộ nhớ đệm) | [redis.io](https://redis.io/documentation) |
+| **MongoDB** | NoSQL database (CSDL phi quan hệ) | [mongodb.com](https://docs.mongodb.com/) |
 
 ---
 
 ## ☁️ AWS Services Covered
 
-### Compute
+### Compute (Tính toán)
 
-- **EC2** - Virtual servers
-- **Lambda** - Serverless functions
-- **ECS/EKS** - Container orchestration
+- **EC2** - Virtual servers (Máy chủ ảo)
+- **Lambda** - Serverless functions (Hàm không máy chủ)
+- **ECS/EKS** - Container orchestration (Điều phối container)
 
-### Storage
+### Storage (Lưu trữ)
 
-- **S3** - Object storage
-- **EBS** - Block storage
-- **EFS** - File storage
+- **S3** - Object storage (Lưu trữ đối tượng)
+- **EBS** - Block storage (Lưu trữ khối)
+- **EFS** - File storage (Lưu trữ tệp tin)
 
-### Database
+### Database (Cơ sở dữ liệu)
 
-- **RDS** - Managed relational databases
+- **RDS** - Managed relational databases (DB quan hệ được quản lý)
 - **DynamoDB** - NoSQL database
 - **ElastiCache** - Managed Redis/Memcached
 
-### Networking
+### Networking (Mạng)
 
-- **VPC** - Virtual Private Cloud
-- **Route 53** - DNS
-- **CloudFront** - CDN
-- **ELB/ALB/NLB** - Load Balancers
+- **VPC** - Virtual Private Cloud (Mạng ảo riêng)
+- **Route 53** - DNS (Hệ thống tên miền)
+- **CloudFront** - CDN (Mạng phân phối nội dung)
+- **ELB/ALB/NLB** - Load Balancers (Cân bằng tải)
 
-### Security
+### Security (Bảo mật)
 
-- **IAM** - Identity & Access Management
-- **KMS** - Key Management
-- **Secrets Manager** - Secrets storage
-- **WAF** - Web Application Firewall
+- **IAM** - Identity & Access Management (Quản lý danh tính & truy cập)
+- **KMS** - Key Management (Quản lý khóa)
+- **Secrets Manager** - Secrets storage (Lưu trữ bí mật)
+- **WAF** - Web Application Firewall (Tường lửa ứng dụng web)
 
-### Monitoring
+### Monitoring (Giám sát)
 
-- **CloudWatch** - Metrics & Logs
-- **CloudTrail** - API logging
-- **X-Ray** - Distributed tracing
+- **CloudWatch** - Metrics & Logs (Chỉ số & Nhật ký)
+- **CloudTrail** - API logging (Nhật ký API)
+- **X-Ray** - Distributed tracing (Truy vết phân tán)
 
 ---
 

@@ -24,7 +24,33 @@ After this module, you will (Sau module này, bạn sẽ):
 
 ## 📚 Content (Nội dung)
 
-### 1. VPC Architecture (Kiến trúc VPC)
+### 1. Why Advanced Networking Matters? (Tại sao Network Advanced quan trọng?)
+
+In cloud environments, DevOps engineers must design networking correctly **from the start** - changes later are very expensive.
+
+*Trong môi trường cloud, DevOps engineer phải thiết kế network đúng **từ đầu** - vì thay đổi sau này rất tốn kém.*
+
+| Sai lầm Network | Hậu quả |
+|-----------------|---------|
+| Subnet quá nhỏ | Không thể mở rộng (hết IP) |
+| Public subnet cho DB | Bị tấn công |
+| Single AZ | Mất toàn bộ khi AZ down |
+| Không có NAT Gateway | Private instances không thể update |
+
+---
+
+### 2. VPC Architecture (Kiến trúc VPC)
+
+**VPC (Virtual Private Cloud)** is your private network in the cloud. Like renting a building and dividing rooms yourself.
+
+*VPC là mạng riêng của bạn trong cloud. Giống như bạn thuê một tòa nhà và tự chia phòng.*
+
+**Các thành phần chính:**
+
+- **Public Subnet**: Có Internet Gateway, cho resources cần public access (ALB, Bastion)
+- **Private Subnet**: Không có direct internet access, dành cho app servers
+- **Database Subnet**: Isolated, chỉ app có thể access
+- **NAT Gateway**: Cho phép private subnet truy cập internet (để update, pull images)
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -53,7 +79,16 @@ After this module, you will (Sau module này, bạn sẽ):
 └─────────────────────────────────────────────────────────────┘
 ```
 
-### 2. Load Balancing (Cân bằng tải)
+**Giải thích diagram:**
+
+- 2 NAT Gateways ở 2 AZs → High Availability
+- ALB ở Public Subnet → nhận traffic từ internet
+- EC2 ở Private Subnet → protected, chỉ ALB có thể access
+- RDS ở Database Subnet → chỉ EC2 có thể access
+
+---
+
+### 3. Load Balancing (Cân bằng tải)
 
 ```
             ┌─────────────────────┐
@@ -101,7 +136,7 @@ User → Edge Location → Origin Server
 
 ## 📝 Module Files (Các file trong Module)
 
-| File | Description |
+| File | Description (Mô tả) |
 |------|---------------------|
 | [LABS.md](./LABS.md) | Hands-on labs (Bài thực hành) |
 | [QUIZ.md](./QUIZ.md) | Knowledge check (Kiểm tra kiến thức) |

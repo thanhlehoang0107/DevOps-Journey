@@ -34,9 +34,13 @@ After this module, you will (Sau module này, bạn sẽ):
 
 ---
 
-## 📖 Content (Nội dung)
+## 📚 Content (Nội dung)
 
 ### 1. What is CI/CD? (CI/CD là gì?) - 1 hour
+
+**CI/CD** stands for **Continuous Integration** and **Continuous Delivery/Deployment**. It is a method to frequently deliver apps to customers by introducing automation into the stages of app development.
+
+*CI/CD là viết tắt của Tích hợp liên tục và Chuyển giao/Triển khai liên tục. Đây là phương pháp chuyển giao ứng dụng cho khách hàng thường xuyên bằng cách đưa tự động hóa vào các giai đoạn phát triển ứng dụng.*
 
 #### 1.1 Continuous Integration (CI)
 
@@ -108,14 +112,14 @@ After this module, you will (Sau module này, bạn sẽ):
 
 ### 2. CI/CD Tools Overview - 30 min
 
-| Tool | Features | Use Case |
+| Tools | Features (Viết tắt) | Use Case (Trường hợp sử dụng) |
 |------|----------|----------|
-| **GitLab CI/CD** | Native GitLab, powerful | GitLab projects ⭐ |
-| **GitHub Actions** | Native GitHub, YAML | GitHub projects |
-| **Jenkins** | Self-hosted, flexible | Enterprise, legacy |
-| **CircleCI** | Cloud-based, fast | Startups |
-| **Azure DevOps** | Microsoft ecosystem | Azure, .NET |
-| **AWS CodePipeline** | AWS native | AWS workloads |
+| **GitLab CI/CD** | Native GitLab, powerful (Tích hợp sẵn GitLab, mạnh mẽ) | GitLab projects ⭐ |
+| **GitHub Actions** | Native GitHub, YAML (Tích hợp sẵn GitHub, YAML) | GitHub projects |
+| **Jenkins** | Self-hosted, flexible (Tự host, linh hoạt) | Enterprise, legacy (Doanh nghiệp, hệ thống cũ) |
+| **CircleCI** | Cloud-based, fast (Trên cloud, nhanh) | Startups |
+| **Azure DevOps** | Microsoft ecosystem (Hệ sinh thái Microsoft) | Azure, .NET |
+| **AWS CodePipeline** | AWS native (Tích hợp sẵn AWS) | AWS workloads |
 
 **In this module, we learn GitLab CI/CD.**
 
@@ -217,12 +221,12 @@ deploy:
 
 | Feature | GitLab CI | GitHub Actions |
 |---------|-----------|----------------|
-| **Config file** | `.gitlab-ci.yml` | `.github/workflows/*.yml` |
-| **Stages** | `stages:` keyword | `jobs:` with `needs:` |
-| **Scripts** | `script:` keyword | `run:` keyword |
-| **Docker image** | `image:` keyword | `container:` or in step |
-| **Conditionals** | `only:`, `except:`, `rules:` | `if:` conditions |
-| **Triggers** | Automatic on push | `on:` keyword |
+| **Config file** | `.gitlab-ci.yml` | `.gitlab-ci.yml` | `.github/workflows/*.yml` |
+| **Stages** | `stages:` keyword (từ khóa stages) | `jobs:` with `needs:` (jobs với needs)|
+| **Scripts** | `script:` keyword (từ khóa script) | `run:` keyword (từ khóa run) |
+| **Docker image** | `image:` keyword (từ khóa image) | `container:` or in step (container hoặc trong step) |
+| **Conditionals** | `only:`, `except:`, `rules:` | `if:` conditions (điều kiện if) |
+| **Triggers** | Automatic on push (Tự động khi push) | `on:` keyword (từ khóa on) |
 
 #### 4.3 Stages and Jobs
 
@@ -340,12 +344,12 @@ deploy:
 | Variable | Description |
 |----------|-------------|
 | `$CI_COMMIT_SHA` | Full commit SHA (Mã commit đầy đủ) |
-| `$CI_COMMIT_REF_NAME` | Branch or tag name (Tên branch hoặc tag) |
-| `$CI_COMMIT_REF_SLUG` | Slug of branch - url-safe (Slug của branch) |
+| `$CI_COMMIT_REF_NAME` | Branch or tag name (Tên nhánh hoặc tag) |
+| `$CI_COMMIT_REF_SLUG` | Slug of branch - url-safe (Slug của nhánh - an toàn cho URL) |
 | `$CI_PROJECT_NAME` | Project name (Tên dự án) |
-| `$CI_REGISTRY` | GitLab Container Registry URL |
+| `$CI_REGISTRY` | GitLab Container Registry URL (URL Registry của GitLab) |
 | `$CI_REGISTRY_IMAGE` | Full image path (Đường dẫn image đầy đủ) |
-| `$CI_PIPELINE_ID` | Pipeline ID |
+| `$CI_PIPELINE_ID` | Pipeline ID (Mã định danh Pipeline) |
 
 #### 6.2 Custom Variables (Biến tùy chỉnh)
 
@@ -539,7 +543,7 @@ deploy-production:
 
 <div align="center">
 
-### 🔗 Module Navigation
+### 🔗 Module Navigation (Điều hướng Module)
 
 | ← Previous | Current | Next → |
 |:----------:|:-------:|:------:|

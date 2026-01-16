@@ -4,24 +4,24 @@
 
 ---
 
-## 📋 Project Overview
+## 📋 Project Overview (Tổng quan dự án)
 
 ### Project Name: **DevOps Automation Toolkit**
 
 Xây dựng bộ tools Python cho DevOps tasks hàng ngày.
 
-### Objectives
+### Objectives (Mục tiêu)
 
-- Áp dụng Python cho real-world DevOps tasks
-- Xây dựng reusable modules
-- Practice CLI development
-- Error handling và logging
+- Apply Python to real-world DevOps tasks (Áp dụng Python cho real-world DevOps tasks)
+- Build reusable modules (Xây dựng reusable modules)
+- Practice CLI development (Thực hành phát triển CLI)
+- Error handling and logging (Xử lý lỗi và logging)
 
 ### Duration: 3-4 ngày
 
 ---
 
-## 🎯 Requirements
+## 🎯 Requirements (Yêu cầu)
 
 ### Core Modules
 
@@ -89,7 +89,7 @@ Usage:
 
 ---
 
-## 📁 Project Structure
+## 📁 Project Structure (Cấu trúc dự án)
 
 ```
 devops-toolkit/
@@ -120,7 +120,7 @@ devops-toolkit/
 
 ---
 
-## 📝 Detailed Specifications
+## 📝 Detailed Specifications (Thông số kỹ thuật chi tiết)
 
 ### monitor.py
 
@@ -257,7 +257,7 @@ class HealthChecker:
 
 ---
 
-## ✅ Acceptance Criteria
+## ✅ Acceptance Criteria (Tiêu chí chấp nhận)
 
 ### Must Have
 
@@ -283,7 +283,7 @@ class HealthChecker:
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Getting Started (Bắt đầu)
 
 ### Step 1: Setup
 
@@ -320,9 +320,9 @@ if __name__ == "__main__":
 
 ---
 
-## 📊 Evaluation
+## 📊 Evaluation (Đánh giá)
 
-| Criteria | Points |
+| Criteria (Tiêu chí) | Points (Điểm) |
 |----------|--------|
 | Functionality | 40 |
 | Code Quality | 20 |

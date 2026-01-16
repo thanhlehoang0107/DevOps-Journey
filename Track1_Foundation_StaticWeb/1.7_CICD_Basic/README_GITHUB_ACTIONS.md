@@ -34,7 +34,7 @@ After this module, you will (Sau module này, bạn sẽ):
 
 ---
 
-## 📖 Content (Nội dung)
+## 📚 Content (Nội dung)
 
 ### 1. What is CI/CD? (CI/CD là gì?) - 1 hour
 
@@ -48,11 +48,11 @@ After this module, you will (Sau module này, bạn sẽ):
 
 | Tool | Features | Use Case |
 |------|----------|----------|
-| **GitHub Actions** | Native GitHub, YAML | GitHub projects ⭐ |
-| GitLab CI/CD | Native GitLab, powerful | GitLab projects |
-| Jenkins | Self-hosted, flexible | Enterprise, legacy |
-| CircleCI | Cloud-based, fast | Startups |
-| Azure DevOps | Microsoft ecosystem | Azure, .NET |
+| **GitHub Actions** | Native GitHub, YAML (Tích hợp GitHub, YAML) | GitHub projects ⭐ |
+| GitLab CI/CD | Native GitLab, powerful (Tích hợp GitLab, mạnh mẽ) | GitLab projects |
+| Jenkins | Self-hosted, flexible (Tự host, linh hoạt) | Enterprise, legacy (Doanh nghiệp, cũ) |
+| CircleCI | Cloud-based, fast (Trên cloud, nhanh) | Startups |
+| Azure DevOps | Microsoft ecosystem (Hệ sinh thái Microsoft) | Azure, .NET |
 
 **In this guide, we learn GitHub Actions.**
 

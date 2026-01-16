@@ -56,8 +56,16 @@
 
 #### 1. Git
 
-- **Là gì**: Hệ thống quản lý phiên bản phân tán (DVCS)
-- **Tại sao học**: Mọi dự án DevOps đều sử dụng Git để quản lý code
+- **Là gì (What is it?)**:
+  - Hệ thống quản lý phiên bản phân tán (DVCS - Distributed Version Control System).
+  - Giúp theo dõi mọi thay đổi trong mã nguồn theo thời gian.
+  - Là tiêu chuẩn công nghiệp (Industry Standard) cho việc quản lý mã nguồn, từ dự án cá nhân nhỏ đến các dự án mã nguồn mở khổng lồ như Linux Kernel.
+- **Tại sao học (Why learn it?)**:
+  - **Không chỉ cho DevOps**: Đây là kỹ năng bắt buộc cho mọi Developer, Tester, và DevOps Engineer.
+  - **Hợp tác (Collaboration)**: Cho phép nhiều người cùng làm việc trên một dự án mà không ghi đè code của nhau.
+  - **Quản lý lịch sử (History Management)**: Biết chính xác ai đã thay đổi gì, khi nào, và tại sao. Dễ dàng quay lại phiên bản cũ nếu có lỗi (revert).
+  - **An toàn (Safety)**: Mỗi máy tính của developer đều là một bản backup đầy đủ của kho code.
+  - **Branching & Merging**: Tính năng mạnh mẽ nhất của Git, cho phép phát triển tính năng mới ở nhánh riêng biệt mà không ảnh hưởng đến code chính (main branch).
 - **Website**: <https://git-scm.com/>
 - **Cài đặt nhanh**:
 
@@ -74,8 +82,13 @@
 
 #### 2. VS Code
 
-- **Là gì**: Code editor nhẹ nhưng mạnh mẽ của Microsoft
-- **Tại sao học**: Extensions tuyệt vời cho DevOps (Docker, K8s, Terraform)
+- **Là gì (What is it?)**:
+  - Một trình biên tập mã nguồn (source-code editor) mạnh mẽ, chạy trên desktop và hỗ trợ đa nền tảng (Windows, macOS, Linux).
+  - Được phát triển bởi Microsoft, mã nguồn mở và miễn phí.
+  - Hỗ trợ IntelliSense, Debugging, tích hợp Git sẵn có.
+- **Tại sao học (Why learn it?)**:
+  - Hệ sinh thái Extensions khổng lồ hỗ trợ mọi ngôn ngữ và công cụ DevOps (Docker, Kubernetes, Terraform, Python, Go...).
+  - Khả năng tùy biến cao và hiệu suất tốt.
 - **Website**: <https://code.visualstudio.com/>
 - **Extensions khuyến nghị**:
   - Docker
@@ -85,8 +98,14 @@
 
 #### 3. Docker
 
-- **Là gì**: Platform containerization hàng đầu
-- **Tại sao học**: Container là nền tảng của DevOps hiện đại
+- **Là gì (What is it?)**:
+  - Một nền tảng mở (open platform) để phát triển, vận chuyển và chạy các ứng dụng.
+  - Sử dụng công nghệ ảo hóa cấp hệ điều hành (OS-level virtualization) để phân phối phần mềm trong các gói gọi là **containers**.
+  - Tách biệt ứng dụng khỏi hạ tầng (infrastructure), giúp việc chuyển giao phần mềm nhanh chóng và nhất quán.
+- **Tại sao học (Why learn it?)**:
+  - **Standardization**: Loại bỏ vấn đề "nó chạy trên máy tôi nhưng không chạy trên server".
+  - **Efficiency**: Nhẹ và khởi động nhanh hơn nhiều so với máy ảo (Virtual Machines).
+  - Là nền tảng cơ bản của hầu hết các hệ thống DevOps hiện đại.
 - **Website**: <https://www.docker.com/>
 - **Kiểm tra cài đặt**:
 
@@ -96,8 +115,12 @@
 
 #### 4. NGINX
 
-- **Là gì**: Web server/reverse proxy hiệu suất cao
-- **Tại sao học**: Serve static files, reverse proxy cho microservices
+- **Là gì (What is it?)**:
+  - **NGINX** ("engine x") là một HTTP web server, reverse proxy, content cache, load balancer, TCP/UDP proxy server, và mail proxy server.
+  - Nổi tiếng với thiết kế hướng sự kiện (event-driven), không đồng bộ (asynchronous), mang lại hiệu suất cực cao và tiêu tốn ít tài nguyên.
+- **Tại sao học (Why learn it?)**:
+  - Là web server phổ biến nhất thế giới (theo Netcraft).
+  - Đóng vai trò quan trọng trong việc bảo mật, cân bằng tải và tăng tốc độ cho các ứng dụng web hiện đại.
 - **Website**: <https://nginx.org/>
 - **Chạy nhanh với Docker**:
 
@@ -163,8 +186,12 @@
 
 #### 4. Jenkins
 
-- **Là gì**: CI/CD server mã nguồn mở phổ biến nhất
-- **Tại sao học**: Tự động hóa build, test, deploy
+- **Là gì (What is it?)**:
+  - Máy chủ tự động hóa (Automation Server) mã nguồn mở hàng đầu.
+  - Cung cấp hàng trăm plugin để hỗ trợ xây dựng (build), triển khai (deploy) và tự động hóa bất kỳ dự án nào.
+- **Tại sao học (Why learn it?)**:
+  - Tiêu chuẩn công nghiệp lâu đời cho CI/CD (Continuous Integration/Continuous Delivery).
+  - Cực kỳ linh hoạt nhờ hệ sinh thái plugin và cộng đồng lớn.
 - **Website**: <https://www.jenkins.io/>
 - **Chạy với Docker**:
 
@@ -188,8 +215,12 @@
 
 #### 1. Terraform
 
-- **Là gì**: Infrastructure as Code tool của HashiCorp
-- **Tại sao học**: Quản lý infrastructure trên mọi cloud provider
+- **Là gì (What is it?)**:
+  - Công cụ Infrastructure as Code (IaC) mã nguồn mở giúp định nghĩa và cung cấp hạ tầng trung tâm dữ liệu.
+  - Sử dụng ngôn ngữ cấu hình khai báo (declarative) trung lập gọi là HCL (HashiCorp Configuration Language).
+- **Tại sao học (Why learn it?)**:
+  - **Cloud Agnostic**: Quản lý hạ tầng trên nhiều cloud provider (AWS, Azure, GCP) với cùng một quy trình (workflow).
+  - Tự động hóa việc tạo, thay đổi và phá hủy cơ sở hạ tầng một cách an toàn và có thể kiểm soát phiên bản.
 - **Website**: <https://www.terraform.io/>
 - **Workflow cơ bản**:
 
@@ -214,8 +245,12 @@
 
 #### 3. Ansible
 
-- **Là gì**: Configuration management và automation tool
-- **Tại sao học**: Quản lý cấu hình server ở scale lớn
+- **Là gì (What is it?)**:
+  - Công cụ mã nguồn mở về tự động hóa CNTT, quản lý cấu hình (Configuration Management), provision hạ tầng và triển khai ứng dụng.
+  - Không sử dụng agent (Agentless), kết nối và thực thi qua SSH (Linux) hoặc WinRM (Windows).
+- **Tại sao học (Why learn it?)**:
+  - **Simple**: Sử dụng YAML playbook dễ đọc, dễ viết.
+  - **Powerful**: Có thể quản lý các hệ thống phức tạp, từ server đến network devices.
 - **Website**: <https://www.ansible.com/>
 
 ---

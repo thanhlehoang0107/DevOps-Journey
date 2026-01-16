@@ -9,42 +9,47 @@
 ### Q1
 
 `terraform init` làm gì?
-a) Apply changes  
-b) Initialize working directory  
-c) Destroy resources  
-d) Show plan  
+
+- a) Apply changes (Áp dụng thay đổi)
+- b) Initialize working directory (Khởi tạo thư mục làm việc)
+- c) Destroy resources (Hủy tài nguyên)
+- d) Show plan (Xem kế hoạch)  
 
 ### Q2
 
 State file chứa gì?
-a) Source code  
-b) Current infrastructure state  
-c) Variables  
-d) Logs  
+
+- a) Source code (Mã nguồn)
+- b) Current infrastructure state (Trạng thái hạ tầng hiện tại)
+- c) Variables (Biến)
+- d) Logs (Nhật ký)  
 
 ### Q3
 
 `terraform plan` có thay đổi infrastructure không?
-a) Yes  
-b) No - only preview  
-c) Sometimes  
-d) Only with -auto-approve  
+
+- a) Yes
+- b) No - only preview (Không - chỉ xem trước)
+- c) Sometimes (Thỉnh thoảng)
+- d) Only with -auto-approve (Chỉ khi có -auto-approve)  
 
 ### Q4
 
 Module source có thể từ đâu?
-a) Local path  
-b) Terraform Registry  
-c) Git  
-d) Tất cả  
+
+- a) Local path
+- b) Terraform Registry
+- c) Git
+- d) Tất cả  
 
 ### Q5
 
 `terraform.tfvars` dùng để?
-a) Store state  
-b) Define variable values  
-c) Configure backend  
-d) Define providers  
+
+- a) Store state (Lưu trữ state)
+- b) Define variable values (Định nghĩa giá trị biến)
+- c) Configure backend (Cấu hình backend)
+- d) Define providers (Định nghĩa providers)  
 
 ---
 

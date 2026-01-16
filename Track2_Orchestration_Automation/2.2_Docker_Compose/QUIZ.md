@@ -10,10 +10,10 @@
 
 Version nào của Compose file được khuyến nghị?
 
-a) 2  
-b) 3  
-c) 3.8  
-d) Không cần version  
+- a) 2
+- b) 3
+- c) 3.8
+- d) Không cần version  
 
 ---
 
@@ -21,10 +21,10 @@ d) Không cần version
 
 `depends_on` làm gì?
 
-a) Đợi service healthy  
-b) Set startup order  
-c) Link containers  
-d) Share network  
+- a) Đợi service healthy (Đợi service khỏe mạnh)
+- b) Set startup order (Thiết lập thứ tự khởi động)
+- c) Link containers (Liên kết container)
+- d) Share network (Chia sẻ mạng)  
 
 ---
 
@@ -32,10 +32,10 @@ d) Share network
 
 Lệnh start services ở background?
 
-a) `docker compose up`  
-b) `docker compose up -d`  
-c) `docker compose start`  
-d) `docker compose run`  
+- a) `docker compose up`
+- b) `docker compose up -d`
+- c) `docker compose start`
+- d) `docker compose run`  
 
 ---
 
@@ -43,10 +43,10 @@ d) `docker compose run`
 
 Named volume được define ở đâu?
 
-a) services  
-b) networks  
-c) volumes (top-level)  
-d) configs  
+- a) services
+- b) networks
+- c) volumes (top-level)
+- d) configs  
 
 ---
 
@@ -54,10 +54,10 @@ d) configs
 
 Cách dùng environment variable từ .env?
 
-a) `${VAR_NAME}`  
-b) `$VAR_NAME`  
-c) `%VAR_NAME%`  
-d) a và b  
+- a) `${VAR_NAME}`
+- b) `$VAR_NAME`
+- c) `%VAR_NAME%`
+- d) a và b  
 
 ---
 
@@ -65,10 +65,10 @@ d) a và b
 
 Override file mặc định?
 
-a) docker-compose.dev.yml  
-b) docker-compose.override.yml  
-c) docker-compose.local.yml  
-d) override.yml  
+- a) docker-compose.dev.yml
+- b) docker-compose.override.yml
+- c) docker-compose.local.yml
+- d) override.yml  
 
 ---
 
@@ -76,10 +76,10 @@ d) override.yml
 
 `restart: unless-stopped` làm gì?
 
-a) Never restart  
-b) Always restart  
-c) Restart unless manually stopped  
-d) Restart on failure  
+- a) Never restart (Không bao giờ khởi động lại)
+- b) Always restart (Luôn khởi động lại)
+- c) Restart unless manually stopped (Khởi động lại trừ khi dừng thủ công)
+- d) Restart on failure (Khởi động lại khi lỗi)  
 
 ---
 
@@ -87,10 +87,10 @@ d) Restart on failure
 
 Internal network có đặc điểm gì?
 
-a) Faster  
-b) No external access  
-c) Encrypted  
-d) Load balanced  
+- a) Faster (Nhanh hơn)
+- b) No external access (Không có truy cập bên ngoài)
+- c) Encrypted (Được mã hóa)
+- d) Load balanced (Được cân bằng tải)  
 
 ---
 
@@ -98,10 +98,10 @@ d) Load balanced
 
 Lệnh view real-time logs?
 
-a) `docker compose log`  
-b) `docker compose logs -f`  
-c) `docker compose tail`  
-d) `docker compose watch`  
+- a) `docker compose log`
+- b) `docker compose logs -f`
+- c) `docker compose tail`
+- d) `docker compose watch`  
 
 ---
 
@@ -109,10 +109,10 @@ d) `docker compose watch`
 
 Cách mount read-only?
 
-a) `./config:/config:readonly`  
-b) `./config:/config:ro`  
-c) `./config:/config[readonly]`  
-d) Không thể  
+- a) `./config:/config:readonly`
+- b) `./config:/config:ro`
+- c) `./config:/config[readonly]`
+- d) Không thể  
 
 ---
 
@@ -120,10 +120,10 @@ d) Không thể
 
 Build với custom Dockerfile?
 
-a) `dockerfile: Dockerfile.prod`  
-b) `file: Dockerfile.prod`  
-c) `build_file: Dockerfile.prod`  
-d) `FROM: Dockerfile.prod`  
+- a) `dockerfile: Dockerfile.prod`
+- b) `file: Dockerfile.prod`
+- c) `build_file: Dockerfile.prod`
+- d) `FROM: Dockerfile.prod`  
 
 ---
 
@@ -131,10 +131,10 @@ d) `FROM: Dockerfile.prod`
 
 Exec into running service?
 
-a) `docker compose exec service sh`  
-b) `docker compose run service sh`  
-c) `docker compose shell service`  
-d) `docker compose enter service`  
+- a) `docker compose exec service sh`
+- b) `docker compose run service sh`
+- c) `docker compose shell service`
+- d) `docker compose enter service`  
 
 ---
 
@@ -142,10 +142,10 @@ d) `docker compose enter service`
 
 Scale service?
 
-a) `docker compose scale api=3`  
-b) `docker compose up --scale api=3`  
-c) `docker compose replicas api 3`  
-d) `docker compose --replicas 3 api`  
+- a) `docker compose scale api=3`
+- b) `docker compose up --scale api=3`
+- c) `docker compose replicas api 3`
+- d) `docker compose --replicas 3 api`  
 
 ---
 
@@ -153,10 +153,10 @@ d) `docker compose --replicas 3 api`
 
 Remove volumes khi down?
 
-a) `docker compose down --volumes`  
-b) `docker compose down -v`  
-c) Cả a và b  
-d) `docker compose down --rm-volumes`  
+- a) `docker compose down --volumes`
+- b) `docker compose down -v`
+- c) Cả a và b
+- d) `docker compose down --rm-volumes`  
 
 ---
 
@@ -164,10 +164,10 @@ d) `docker compose down --rm-volumes`
 
 Health check condition?
 
-a) `condition: service_started`  
-b) `condition: service_healthy`  
-c) `condition: service_ready`  
-d) a và b  
+- a) `condition: service_started`
+- b) `condition: service_healthy`
+- c) `condition: service_ready`
+- d) a và b  
 
 ---
 

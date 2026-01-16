@@ -32,7 +32,19 @@ After this module, you will (Sau module này, bạn sẽ):
 
 ## 📚 Content (Nội dung)
 
-### 1. Python Basics (Cơ bản Python)
+### 1. What is Python? (Python là gì?)
+
+**Python** is a high-level, interpreted programming language known for its simplicity and readability. It is the most popular language for DevOps automation, data science, and AI.
+
+*Python là ngôn ngữ lập trình bậc cao, thông dịch, nổi tiếng với sự đơn giản và dễ đọc. Đây là ngôn ngữ phổ biến nhất cho tự động hóa DevOps, khoa học dữ liệu và AI.*
+
+**Key features for DevOps (Tính năng chính cho DevOps):**
+
+- **Readable (Dễ đọc)**: Code looks like English pseudo-code (Code nhìn giống mã giả tiếng Anh).
+- **Batteries Included (Đầy đủ tiện ích)**: Huge standard library for file I/O, networking, etc. (Thư viện chuẩn khổng lồ).
+- **Cross-platform**: Runs on Windows, Linux, macOS (Chạy trên mọi nền tảng).
+
+### 2. Python Basics (Cơ bản Python)
 
 #### Data Types (Kiểu dữ liệu)
 
@@ -59,6 +71,7 @@ config = {
     "port": 8080,
     "debug": True
 }
+
 ```
 
 #### Control Flow (Luồng điều khiển)
@@ -80,11 +93,12 @@ for server in servers:
 while retries < 3:
     try_connect()
     retries += 1
+
 ```
 
 ---
 
-### 2. Functions (Hàm)
+### 3. Functions (Hàm)
 
 ```python
 def deploy_app(app_name, environment="staging"):
@@ -97,11 +111,12 @@ def deploy_app(app_name, environment="staging"):
 # Usage (Sử dụng)
 deploy_app("my-app")
 deploy_app("my-app", environment="production")
+
 ```
 
 ---
 
-### 3. File Operations (Thao tác với File)
+### 4. File Operations (Thao tác với File)
 
 ```python
 # Read file (Đọc file)
@@ -127,11 +142,12 @@ import yaml
 
 with open("config.yaml", "r") as f:
     config = yaml.safe_load(f)
+
 ```
 
 ---
 
-### 4. Working with OS (Làm việc với Hệ điều hành)
+### 5. Working with OS (Làm việc với Hệ điều hành)
 
 ```python
 import os
@@ -153,11 +169,16 @@ result = subprocess.run(
     text=True
 )
 print(result.stdout)
+
 ```
 
 ---
 
-### 5. HTTP Requests (Yêu cầu HTTP)
+---
+
+---
+
+### 6. HTTP Requests (Yêu cầu HTTP)
 
 ```python
 import requests
@@ -176,11 +197,12 @@ response = requests.post(
 
 # Error handling (Xử lý lỗi)
 response.raise_for_status()
+
 ```
 
 ---
 
-### 6. Error Handling (Xử lý lỗi)
+### 7. Error Handling (Xử lý lỗi)
 
 ```python
 try:
@@ -191,11 +213,16 @@ except Exception as e:
     print(f"Unexpected error: {e}")
 finally:
     cleanup()
+
 ```
 
 ---
 
-### 7. Classes - OOP (Lớp - Lập trình hướng đối tượng)
+---
+
+---
+
+### 8. Classes - OOP (Lớp - Lập trình hướng đối tượng)
 
 ```python
 class Server:
@@ -215,6 +242,7 @@ class Server:
 # Usage (Sử dụng)
 web1 = Server("web1", "192.168.1.10")
 web1.start()
+
 ```
 
 ---
@@ -238,6 +266,7 @@ def load_config(config_file):
         config["database"]["host"] = os.getenv("DB_HOST")
     
     return config
+
 ```
 
 ### Log Parser (Trình phân tích log)
@@ -254,6 +283,7 @@ def parse_logs(log_file):
                 errors.append(line.strip())
     
     return errors
+
 ```
 
 ### Health Checker (Kiểm tra sức khỏe)
@@ -274,6 +304,7 @@ def check_health(urls):
             results[url] = False
     
     return results
+
 ```
 
 ---

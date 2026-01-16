@@ -24,6 +24,24 @@ After completing Track 2, you will (Sau khi hoàn thành Track 2, bạn sẽ):
 
 ---
 
+## 🤔 Why This Track? (Tại sao học Track này?)
+
+After Track 1, you can run 1 container. But real apps have **web + api + database + cache** - you need tools to manage them.
+
+*Sau Track 1, bạn đã biết chạy 1 container. Nhưng ứng dụng thực tế có **web + api + database + cache** - cần công cụ để quản lý.*
+
+| Container count (Số lượng) | Method (Phương pháp) | Note (Ghi chú) |
+|---------------------------|----------------------|----------------|
+| 1-3 | `docker run` | OK for development *(OK cho development)* |
+| 5-20 | Docker Compose | Multi-container apps |
+| 20-1000+ | Kubernetes | Production orchestration |
+
+**Goal of this Track:** You will deploy microservices + monitoring on Kubernetes cluster.
+
+*Điểm đến của Track này: Bạn sẽ deploy microservices + monitoring lên Kubernetes cluster.*
+
+---
+
 ## 📋 Prerequisites (Điều kiện tiên quyết)
 
 Before starting Track 2, you should complete (Trước khi bắt đầu Track 2, bạn cần hoàn thành):
@@ -39,12 +57,12 @@ Before starting Track 2, you should complete (Trước khi bắt đầu Track 2,
 
 | # | Module | Duration (Thời gian) | Description (Mô tả) |
 |---|--------|----------------------|---------------------|
-| 2.1 | [Docker Advanced](./2.1_Docker_Advanced/) | 1 week | Multi-stage builds, optimization, security |
-| 2.2 | [Docker Compose](./2.2_Docker_Compose/) | 1 week | Multi-container apps, networking, volumes |
-| 2.3 | [Jenkins](./2.3_Jenkins/) | 1-2 weeks | CI/CD pipelines, Jenkinsfile, plugins |
-| 2.4 | [Kubernetes Core](./2.4_Kubernetes_Core/) | 2 weeks | Pods, Deployments, Services, Ingress |
-| 2.5 | [Monitoring & Logging](./2.5_Monitoring_Logging/) | 1-2 weeks | Prometheus, Grafana, ELK Stack |
-| 2.6 | [**Capstone Project**](./2.6_Capstone_Project/) | 1 week | 🎯 Microservices on Kubernetes |
+| 2.1 | [Docker Advanced](./2.1_Docker_Advanced/) | 1 week | Multi-stage builds, optimization, security (Tối ưu images, bảo mật) |
+| 2.2 | [Docker Compose](./2.2_Docker_Compose/) | 1 week | Multi-container apps, networking, volumes (Ứng dụng đa container) |
+| 2.3 | [Jenkins](./2.3_Jenkins/) | 1-2 weeks | CI/CD pipelines, Jenkinsfile, plugins (Pipelines tự động hóa) |
+| 2.4 | [Kubernetes Core](./2.4_Kubernetes_Core/) | 2 weeks | Pods, Deployments, Services, Ingress (Thành phần cốt lõi K8s) |
+| 2.5 | [Monitoring & Logging](./2.5_Monitoring_Logging/) | 1-2 weeks | Prometheus, Grafana, ELK Stack (Giám sát & Ghi log) |
+| 2.6 | [**Capstone Project**](./2.6_Capstone_Project/) | 1 week | 🎯 Microservices on Kubernetes (Microservices trên K8s) |
 
 ---
 
@@ -53,47 +71,47 @@ Before starting Track 2, you should complete (Trước khi bắt đầu Track 2,
 ### Week 1: Docker Advanced
 
 ```
-Day 1-2: Multi-stage builds, build optimization
-Day 3-4: Docker networking deep dive
-Day 5-7: Security best practices, scanning
+Day 1-2: Multi-stage builds, build optimization (Tối ưu build đa tầng)
+Day 3-4: Docker networking deep dive (Chuyên sâu mạng Docker)
+Day 5-7: Security best practices, scanning (Bảo mật & quét lỗ hổng)
 ```
 
 ### Week 2: Docker Compose
 
 ```
-Day 1-2: Compose fundamentals, services
-Day 3-4: Networking, volumes, dependencies
-Day 5-7: Environment management, overrides
+Day 1-2: Compose fundamentals, services (Cơ bản về Compose)
+Day 3-4: Networking, volumes, dependencies (Mạng, ổ đĩa, phụ thuộc)
+Day 5-7: Environment management, overrides (Quản lý môi trường)
 ```
 
 ### Week 3-4: Jenkins
 
 ```
-Week 3: Jenkins setup, basic pipelines
-Week 4: Advanced pipelines, shared libraries, agents
+Week 3: Jenkins setup, basic pipelines (Cài đặt & pipeline cơ bản)
+Week 4: Advanced pipelines, shared libraries, agents (Pipeline nâng cao)
 ```
 
 ### Week 5-6: Kubernetes Core
 
 ```
-Week 5: K8s architecture, Pods, Deployments
-Week 6: Services, Ingress, ConfigMaps, Secrets
+Week 5: K8s architecture, Pods, Deployments (Kiến trúc K8s)
+Week 6: Services, Ingress, ConfigMaps, Secrets (Mạng & Cấu hình)
 ```
 
 ### Week 7: Monitoring & Logging
 
 ```
-Day 1-3: Prometheus setup, metrics collection
-Day 4-5: Grafana dashboards
-Day 6-7: ELK Stack, log aggregation
+Day 1-3: Prometheus setup, metrics collection (Cài đặt Prometheus)
+Day 4-5: Grafana dashboards (Biểu đồ Grafana)
+Day 6-7: ELK Stack, log aggregation (Tập trung log với ELK)
 ```
 
 ### Week 8: Capstone Project
 
 ```
-Day 1-2: Architecture design
-Day 3-5: Implementation
-Day 6-7: Testing, documentation
+Day 1-2: Architecture design (Thiết kế kiến trúc)
+Day 3-5: Implementation (Triển khai)
+Day 6-7: Testing, documentation (Kiểm thử & tài liệu)
 ```
 
 ---
@@ -102,22 +120,26 @@ Day 6-7: Testing, documentation
 
 | Tool | Purpose (Mục đích) | Documentation |
 |------|-------------------|---------------|
-| **Docker Compose** | Multi-container orchestration | [docs.docker.com](https://docs.docker.com/compose/) |
-| **Jenkins** | CI/CD automation server | [jenkins.io](https://www.jenkins.io/doc/) |
-| **Kubernetes** | Container orchestration | [kubernetes.io](https://kubernetes.io/docs/) |
-| **Minikube/Kind** | Local K8s cluster | [minikube.sigs.k8s.io](https://minikube.sigs.k8s.io/) |
-| **kubectl** | K8s CLI | [kubernetes.io/docs/reference/kubectl](https://kubernetes.io/docs/reference/kubectl/) |
-| **Prometheus** | Metrics & alerting | [prometheus.io](https://prometheus.io/docs/) |
-| **Grafana** | Visualization | [grafana.com](https://grafana.com/docs/) |
-| **Elasticsearch** | Log storage | [elastic.co](https://www.elastic.co/guide/) |
-| **Fluentd/Filebeat** | Log collection | [fluentd.org](https://docs.fluentd.org/) |
-| **Kibana** | Log visualization | [elastic.co](https://www.elastic.co/guide/en/kibana/) |
+| **Docker Compose** | Multi-container orchestration (Điều phối đa container) | [docs.docker.com](https://docs.docker.com/compose/) |
+| **Jenkins** | CI/CD automation server (Máy chủ tự động hóa CI/CD) | [jenkins.io](https://www.jenkins.io/doc/) |
+| **Kubernetes** | Container orchestration (Điều phối container quy mô lớn) | [kubernetes.io](https://kubernetes.io/docs/) |
+| **Minikube/Kind** | Local K8s cluster (Cluster K8s cục bộ) | [minikube.sigs.k8s.io](https://minikube.sigs.k8s.io/) |
+| **kubectl** | K8s CLI (Công cụ dòng lệnh K8s) | [kubernetes.io/docs/reference/kubectl](https://kubernetes.io/docs/reference/kubectl/) |
+| **Prometheus** | Metrics & alerting (Thu thập chỉ số & cảnh báo) | [prometheus.io](https://prometheus.io/docs/) |
+| **Grafana** | Visualization (Trực quan hóa dữ liệu) | [grafana.com](https://grafana.com/docs/) |
+| **Elasticsearch** | Log storage (Lưu trữ log) | [elastic.co](https://www.elastic.co/guide/) |
+| **Fluentd/Filebeat** | Log collection (Thu thập log) | [fluentd.org](https://docs.fluentd.org/) |
+| **Kibana** | Log visualization (Giao diện xem log) | [elastic.co](https://www.elastic.co/guide/en/kibana/) |
 
 ---
 
-## 🎯 Capstone Project Preview
+## 🎯 Capstone Project Preview (Xem trước Dự án Capstone)
 
-### **Microservices Deployment on Kubernetes**
+### **Microservices Deployment on Kubernetes (Triển khai Microservices trên Kubernetes)**
+
+At the end of this track, you will deploy a complete microservices application with CI/CD and monitoring.
+
+*Cuối Track này, bạn sẽ deploy ứng dụng microservices hoàn chỉnh với CI/CD và monitoring.*
 
 You will build (Bạn sẽ xây dựng):
 

@@ -8,10 +8,10 @@
 
 `git init` làm gì?
 
-a) Clone repository  
-b) Tạo mới repository  
-c) Delete repository  
-d) Update repository  
+- a) Clone repository
+- b) Tạo mới repository
+- c) Delete repository
+- d) Update repository  
 
 ---
 
@@ -19,10 +19,10 @@ d) Update repository
 
 Lệnh nào add file vào staging area?
 
-a) `git commit`  
-b) `git add`  
-c) `git push`  
-d) `git stage`  
+- a) `git commit`
+- b) `git add`
+- c) `git push`
+- d) `git stage`  
 
 ---
 
@@ -30,10 +30,10 @@ d) `git stage`
 
 Lệnh nào tạo commit?
 
-a) `git add -m "message"`  
-b) `git commit -m "message"`  
-c) `git push -m "message"`  
-d) `git save -m "message"`  
+- a) `git add -m "message"`
+- b) `git commit -m "message"`
+- c) `git push -m "message"`
+- d) `git save -m "message"`  
 
 ---
 
@@ -41,10 +41,10 @@ d) `git save -m "message"`
 
 Lệnh nào tạo và switch branch?
 
-a) `git branch new-branch`  
-b) `git checkout new-branch`  
-c) `git checkout -b new-branch`  
-d) `git switch new-branch`  
+- a) `git branch new-branch`
+- b) `git checkout new-branch`
+- c) `git checkout -b new-branch`
+- d) `git switch new-branch`  
 
 ---
 
@@ -52,10 +52,10 @@ d) `git switch new-branch`
 
 Để merge branch `feature` vào `main`:
 
-a) `git checkout feature && git merge main`  
-b) `git checkout main && git merge feature`  
-c) `git merge main feature`  
-d) `git merge feature main`  
+- a) `git checkout feature && git merge main`
+- b) `git checkout main && git merge feature`
+- c) `git merge main feature`
+- d) `git merge feature main`  
 
 ---
 
@@ -63,10 +63,10 @@ d) `git merge feature main`
 
 Lệnh xem remote repositories?
 
-a) `git remote -v`  
-b) `git remote list`  
-c) `git show remote`  
-d) `git list remote`  
+- a) `git remote -v`
+- b) `git remote list`
+- c) `git show remote`
+- d) `git list remote`  
 
 ---
 
@@ -74,10 +74,10 @@ d) `git list remote`
 
 `git pull` khác `git fetch` như thế nào?
 
-a) Pull chỉ download, fetch còn merge  
-b) Fetch chỉ download, pull còn merge  
-c) Không khác nhau  
-d) Fetch dùng cho tags  
+- a) Pull chỉ download, fetch còn merge
+- b) Fetch chỉ download, pull còn merge
+- c) Không khác nhau
+- d) Fetch dùng cho tags  
 
 ---
 
@@ -85,10 +85,10 @@ d) Fetch dùng cho tags
 
 Lệnh nào tạo commit mới để undo commit trước?
 
-a) `git reset`  
-b) `git revert`  
-c) `git undo`  
-d) `git checkout`  
+- a) `git reset`
+- b) `git revert`
+- c) `git undo`
+- d) `git checkout`  
 
 ---
 
@@ -96,10 +96,10 @@ d) `git checkout`
 
 `git stash` dùng để làm gì?
 
-a) Delete changes  
-b) Commit changes  
-c) Temporarily save changes  
-d) Push changes  
+- a) Delete changes (Xóa thay đổi)
+- b) Commit changes (Commit thay đổi)
+- c) Temporarily save changes (Lưu tạm thời thay đổi)
+- d) Push changes (Đẩy thay đổi)  
 
 ---
 
@@ -107,10 +107,10 @@ d) Push changes
 
 Lệnh xem commit history ngắn gọn?
 
-a) `git log -1`  
-b) `git log --oneline`  
-c) `git log --short`  
-d) `git history`  
+- a) `git log -1`
+- b) `git log --oneline`
+- c) `git log --short`
+- d) `git history`  
 
 ---
 
@@ -118,10 +118,10 @@ d) `git history`
 
 `git reset --hard HEAD~1` làm gì?
 
-a) Xóa commit cuối, giữ changes  
-b) Xóa commit cuối, xóa changes  
-c) Xóa 2 commits cuối  
-d) Không làm gì  
+- a) Xóa commit cuối, giữ changes
+- b) Xóa commit cuối, xóa changes
+- c) Xóa 2 commits cuối
+- d) Không làm gì  
 
 ---
 
@@ -129,10 +129,10 @@ d) Không làm gì
 
 `git cherry-pick` dùng để?
 
-a) Xóa commit  
-b) Apply specific commit từ branch khác  
-c) Create branch  
-d) Merge branches  
+- a) Xóa commit
+- b) Apply specific commit từ branch khác (Áp dụng commit cụ thể từ branch khác)
+- c) Create branch
+- d) Merge branches  
 
 ---
 
@@ -140,10 +140,10 @@ d) Merge branches
 
 `git rebase` khác `git merge` như thế nào?
 
-a) Rebase tạo merge commit  
-b) Rebase rewrite history, merge không  
-c) Không khác nhau  
-d) Merge rewrite history  
+- a) Rebase tạo merge commit
+- b) Rebase rewrite history, merge không (Rebase viết lại lịch sử, merge thì không)
+- c) Không khác nhau
+- d) Merge rewrite history  
 
 ---
 
@@ -151,10 +151,10 @@ d) Merge rewrite history
 
 File nào không bị track nếu có `.gitignore` chứa `*.log`?
 
-a) debug.log  
-b) app.log  
-c) logs/error.log  
-d) Tất cả  
+- a) debug.log
+- b) app.log
+- c) logs/error.log
+- d) Tất cả  
 
 ---
 
@@ -162,10 +162,10 @@ d) Tất cả
 
 Lệnh tạo annotated tag?
 
-a) `git tag v1.0`  
-b) `git tag -a v1.0 -m "Release"`  
-c) `git tag --annotated v1.0`  
-d) `git create-tag v1.0`  
+- a) `git tag v1.0`
+- b) `git tag -a v1.0 -m "Release"`
+- c) `git tag --annotated v1.0`
+- d) `git create-tag v1.0`  
 
 ---
 
@@ -173,10 +173,10 @@ d) `git create-tag v1.0`
 
 `git diff --staged` hiển thị gì?
 
-a) Changes not staged  
-b) Changes staged but not committed  
-c) All changes  
-d) Committed changes  
+- a) Changes not staged (Các thay đổi chưa stage)
+- b) Changes staged but not committed (Các thay đổi đã stage nhưng chưa commit)
+- c) All changes (Tất cả thay đổi)
+- d) Committed changes (Các thay đổi đã commit)  
 
 ---
 
@@ -184,10 +184,10 @@ d) Committed changes
 
 `git clone --depth 1` làm gì?
 
-a) Clone tất cả history  
-b) Clone chỉ latest commit (shallow)  
-c) Clone branch specific  
-d) Clone without files  
+- a) Clone tất cả history
+- b) Clone chỉ latest commit (shallow)
+- c) Clone branch specific
+- d) Clone without files  
 
 ---
 
@@ -195,10 +195,10 @@ d) Clone without files
 
 `git blame file.txt` hiển thị gì?
 
-a) Who modified each line  
-b) File history  
-c) Diff  
-d) Errors  
+- a) Who modified each line (Ai đã sửa từng dòng)
+- b) File history (Lịch sử file)
+- c) Diff
+- d) Errors (Lỗi)  
 
 ---
 
@@ -206,10 +206,10 @@ d) Errors
 
 Git submodule dùng để?
 
-a) Delete repositories  
-b) Include other repos as subdirectory  
-c) Create branches  
-d) Merge repos  
+- a) Delete repositories
+- b) Include other repos as subdirectory (Bao gồm repo khác như thư mục con)
+- c) Create branches
+- d) Merge repos  
 
 ---
 
@@ -217,10 +217,10 @@ d) Merge repos
 
 Pre-commit hook chạy khi nào?
 
-a) Before push  
-b) Before commit is created  
-c) After commit  
-d) After push  
+- a) Before push (Trước khi push)
+- b) Before commit is created (Trước khi commit được tạo)
+- c) After commit (Sau khi commit)
+- d) After push (Sau khi push)  
 
 ---
 

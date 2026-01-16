@@ -6,17 +6,83 @@
 > **From Zero to DevOps Engineer** - Comprehensive learning path with hands-on labs, real projects, and industry best practices.
 >
 > *Hành trình từ Zero đến DevOps Engineer - Lộ trình học tập toàn diện với labs thực hành, projects thực tế và best practices.*
+>
+> 🚀 **Refined Edition 2026:** Enhanced with Deep Dive Mechanics, Golang, and Platform Engineering.
 
 ---
 
 ## 📋 Table of Contents (Mục Lục)
 
+- [What is DevOps?](#-what-is-devops-devops-là-gì)
 - [Introduction](#-introduction-giới-thiệu)
 - [Prerequisites](#-prerequisites-yêu-cầu)
 - [Roadmap Structure](#-roadmap-structure-cấu-trúc)
-- [Tracks Overview](#-tracks-overview-tổng-quan)
+- [Track Details](#-track-details-chi-tiết-các-track)
 - [Quick Start](#-quick-start)
 - [Contributing](#-contributing-đóng-góp)
+
+---
+
+## 🤔 What is DevOps? (DevOps là gì?)
+
+### Definition (Định nghĩa)
+
+**DevOps** is the combination of cultural philosophies, practices, and tools that increases an organization's ability to deliver applications and services at high velocity. DevOps is short for **Dev**elopment and **Op**eration**s**.
+
+*DevOps là sự kết hợp giữa nhiều triết lý văn hóa, biện pháp thực hành và công cụ giúp tăng khả năng phân phối ứng dụng và dịch vụ của một tổ chức ở tốc độ cao. DevOps là viết tắt của **Dev**elopment (Phát triển) và **Op**eration**s** (Vận hành).*
+
+### How it Works (Cách thức hoạt động)
+
+In the DevOps model, **Development (Dev)** and **Operations (Ops)** teams are no longer siloed. They are merged into a single team where engineers work across the **entire application lifecycle**—from development, testing, deployment to operations.
+
+*Trong mô hình DevOps, các nhóm phát triển (Dev) và vận hành (Ops) không còn bị tách rời. Họ được hợp nhất thành một nhóm duy nhất, trong đó các kỹ sư làm việc với toàn bộ vòng đời của ứng dụng.*
+
+```
+┌───────────────────────────────────────────────────────────────────┐
+│                    DEVOPS LIFECYCLE (Vòng đời DevOps)              │
+├───────────────────────────────────────────────────────────────────┤
+│                                                                    │
+│        PLAN → CODE → BUILD → TEST → RELEASE → DEPLOY → OPERATE   │
+│          ▲                                                    │    │
+│          └────────────────── MONITOR ◄────────────────────┘    │
+│                                                                    │
+│   [DEV]─────────────────────────────────────────────────────[OPS] │
+│         Merged into a Continuous Process (Kết hợp quy trình)      │
+│                                                                    │
+└───────────────────────────────────────────────────────────────────┘
+```
+
+### Why DevOps Matters (Tại sao DevOps lại quan trọng?)
+
+Software has become an integral part of every business. Companies must change how they develop and deliver software to:
+
+*Phần mềm đã trở thành một phần không thể tách rời trong mọi doanh nghiệp. Các công ty cần phải thay đổi cách phát triển và phân phối phần mềm để:*
+
+- **Respond to customer needs faster** (Đáp ứng nhu cầu khách hàng nhanh hơn).
+- **Compete more effectively** (Cạnh tranh hiệu quả hơn trên thị trường).
+- **Release new features and bug fixes quickly** (Phát hành các tính năng mới và sửa lỗi nhanh chóng).
+
+### Benefits of DevOps (Lợi ích của DevOps)
+
+| Benefit (Lợi ích) | Description (Mô tả) |
+|-------------------|----------------------|
+| 🚀 **Speed (Tốc độ)** | Allows teams to improve products faster, adapt better to the market. *(Cho phép các nhóm cải tiến sản phẩm nhanh hơn.)* |
+| 📦 **Rapid Delivery (Phân phối nhanh)** | Increase frequency and pace of releases. *(Tăng tần suất và nhịp độ phát hành.)* |
+| ✅ **Reliability (Độ tin cậy)** | Ensure quality with CI/CD, monitoring, and logging. *(Đảm bảo chất lượng bằng CI/CD, giám sát và ghi log.)* |
+| 📈 **Scale (Quy mô)** | Automation enables efficient management of complex systems. *(Tự động hóa giúp quản lý hiệu quả.)* |
+| 🤝 **Collaboration (Cộng tác)** | Dev and Ops teams collaborate closely. *(Các nhóm Dev và Ops cộng tác chặt chẽ.)* |
+| 🔒 **Security (Bảo mật)** | Integrate security into the process (DevSecOps). *(Tích hợp bảo mật vào quy trình.)* |
+
+### Key DevOps Practices (Các phương pháp thực hành DevOps chính)
+
+1. **Continuous Integration (CI):** Developers frequently merge code to the main repository; automated builds and tests run to find bugs early.
+   *(Tích hợp liên tục: Các developer thường xuyên merge code về repository chính.)*
+2. **Continuous Delivery/Deployment (CD):** Every change that passes tests is automatically deployed to staging or production.
+   *(Phân phối liên tục: Mọi thay đổi được duyệt qua test sẽ tự động được triển khai.)*
+3. **Infrastructure as Code (IaC):** Manage infrastructure using code (Terraform, Ansible) instead of manual operations.
+   *(Cơ sở hạ tầng dưới dạng mã: Quản lý hạ tầng bằng code thay vì thao tác thủ công.)*
+4. **Monitoring & Logging:** Track application and infrastructure performance in real-time.
+   *(Giám sát và ghi log: Theo dõi hiệu năng ứng dụng và hạ tầng trong thời gian thực.)*
 
 ---
 
@@ -32,6 +98,9 @@
 - 📈 **DevOps Engineers** - Want to strengthen knowledge (Muốn củng cố kiến thức)
 
 ### ✨ Key Features (Điểm Nổi Bật)
+
+- 🦀 **Modern Tech Stack**: Added Golang & GitOps (Cập nhật công nghệ mới).
+- 🇻🇳 **Professional Bilingual**: Optimized Vietnamese/English terminology (Song ngữ chuyên ngành).
 
 | Feature | Description |
 |---------|-------------|
@@ -69,7 +138,7 @@ Before starting, you need to prepare (Trước khi bắt đầu, bạn cần chu
 - **Docker Hub Account**: For push/pull images (Để push/pull images)
 - **AWS Free Tier** (Track 3+): For cloud practice (Để thực hành cloud)
 
-👉 **[View detailed setup guide → (Xem hướng dẫn chi tiết)](./Setup_Environment/README.md)**
+👉 **[View detailed setup guide → (Xem hướng dẫn chi tiết)](./Track0_Setup_Environment/README.md)**
 
 ---
 
@@ -77,7 +146,7 @@ Before starting, you need to prepare (Trước khi bắt đầu, bạn cần chu
 
 ```
 DevOps-Journey/
-├── 📁 Setup_Environment/          # Environment setup guide (Hướng dẫn cài đặt)
+├── 📁 Track0_Setup_Environment/      # Environment setup guide (Hướng dẫn cài đặt)
 │
 ├── 📁 Track1_Foundation_StaticWeb/    # 🏗️ Foundation & Static Web (Nền tảng)
 │   ├── 1.1_Linux_Bash/
@@ -220,6 +289,8 @@ Get ready for DevOps Engineer career.
 | [5.2 Interview Prep](./Track5_Career_Path/5.2_Interview_Prep/) | Technical interview, system design | 2 weeks |
 | [5.3 Portfolio Launch](./Track5_Career_Path/5.3_Portfolio_Launch/) | GitHub profile, resume, LinkedIn | 1 week |
 | [5.4 Grand Capstone](./Track5_Career_Path/5.4_Grand_Capstone/) | Production-ready infrastructure | 2-3 weeks |
+| [5.5 Golang for DevOps](./Track5_Career_Path/5.5_Golang/) | CLI Tools & K8s Operators | 2 weeks |
+| [5.6 GitOps & Platform Eng](./Track5_Career_Path/5.6_GitOps_Platform/) | ArgoCD & Internal Dev Platforms | 2 weeks |
 
 👉 **[Start Track 5 → (Bắt đầu Track 5)](./Track5_Career_Path/README.md)**
 
@@ -301,6 +372,8 @@ Use the checklist below to track your progress (Sử dụng checklist dưới đ
 - [ ] 5.2 Interview Prep
 - [ ] 5.3 Portfolio Launch
 - [ ] 5.4 Grand Capstone
+- [ ] 5.5 Golang for DevOps
+- [ ] 5.6 GitOps & Platform Engineering
 
 ---
 
@@ -314,7 +387,7 @@ cd DevOps-Journey
 
 ```bash
 # Start with Setup Environment (Bắt đầu với Setup Environment)
-cd Setup_Environment
+cd Track0_Setup_Environment
 cat README.md
 ```
 
@@ -364,7 +437,5 @@ This project is distributed under the MIT License. See [LICENSE](LICENSE) for mo
 *Nếu dự án hữu ích, hãy cho một star!*
 
 Made with ❤️ by [ThanhRòm](https://github.com/thanhlehoang0107)
-
-</div>
 
 </div>

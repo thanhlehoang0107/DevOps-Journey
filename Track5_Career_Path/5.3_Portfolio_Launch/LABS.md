@@ -11,14 +11,15 @@
 ### Option A: GitLab Profile (Primary - Chính)
 
 1. Go to **Preferences** → **Main Settings**
-2. Update your profile with:
+2. Update your profile with (Cập nhật hồ sơ với):
    - Professional photo (Ảnh chuyên nghiệp)
-   - Bio with DevOps keywords
-   - Location and website
+   - Bio with DevOps keywords (Tiểu sử với từ khóa DevOps)
+   - Location and website (Vị trí và website)
 
 ### Option B: GitHub Profile (Alternative - Thay thế)
 
 Create a profile README by creating a repository with your username:
+*Tạo README cho profile bằng cách tạo một repository trùng với username của bạn:*
 
 ```bash
 # Create repo with your username
@@ -155,8 +156,10 @@ MIT
 
 1. **Headline**: "DevOps Engineer | AWS | Kubernetes | GitLab CI | Terraform"
 
-2. **About**:
+2. **About (Giới thiệu)**:
    "DevOps Engineer with experience in cloud infrastructure, CI/CD pipelines, and container orchestration. Passionate about automation and building reliable systems."
+
+   *"Kỹ sư DevOps với kinh nghiệm về hạ tầng đám mây, quy trình CI/CD và điều phối container. Đam mê tự động hóa và xây dựng các hệ thống tin cậy."*
 
 3. **Experience**:
    - Use bullet points (Dùng bullet points)
@@ -177,18 +180,18 @@ MIT
 
 | Platform | Pros (Ưu điểm) |
 |----------|----------------|
-| Dev.to | Built-in audience, easy setup |
-| Hashnode | Custom domain, good SEO |
-| Medium | Large audience |
-| Personal blog | Full control (Hugo/Jekyll) |
+| Dev.to | Built-in audience, easy setup (Có sẵn độc giả, thiết lập dễ) |
+| Hashnode | Custom domain, good SEO (Tên miền riêng, SEO tốt) |
+| Medium | Large audience (Lượng độc giả lớn) |
+| Personal blog | Full control (Hugo/Jekyll) (Toàn quyền kiểm soát) |
 
 ### Blog Post Ideas (Ý tưởng bài viết)
 
 1. "How I Built a CI/CD Pipeline with GitLab CI" (Cách tôi xây dựng pipeline với GitLab CI)
-2. "Kubernetes Deployment Best Practices"
-3. "My AWS Solutions Architect Certification Journey"
-4. "Monitoring Docker Containers with Prometheus and Grafana"
-5. "Infrastructure as Code with Terraform - Getting Started"
+2. "Kubernetes Deployment Best Practices" (Các thực hành tốt nhất khi triển khai Kubernetes)
+3. "My AWS Solutions Architect Certification Journey" (Hành trình đạt chứng chỉ AWS Solutions Architect của tôi)
+4. "Monitoring Docker Containers with Prometheus and Grafana" (Giám sát Docker Container với Prometheus và Grafana)
+5. "Infrastructure as Code with Terraform - Getting Started" (Làm quen với Infrastructure as Code và Terraform)
 
 ---
 

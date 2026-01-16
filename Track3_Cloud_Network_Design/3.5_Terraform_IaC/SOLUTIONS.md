@@ -73,7 +73,7 @@ terraform {
   }
 }
 
-# Create S3 bucket and DynamoDB table first
+# Create S3 bucket and DynamoDB table first (Tạo S3 bucket và bảng DynamoDB trước)
 resource "aws_s3_bucket" "state" {
   bucket = "my-terraform-state-bucket"
   
@@ -104,4 +104,4 @@ resource "aws_dynamodb_table" "locks" {
 
 ---
 
-**[← Back to Exercises](./EXERCISES.md)**
+**[← Back to Exercises (Quay lại bài tập)](./EXERCISES.md)**

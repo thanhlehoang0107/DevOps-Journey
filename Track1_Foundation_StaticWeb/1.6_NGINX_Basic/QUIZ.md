@@ -10,10 +10,10 @@
 
 NGINX chủ yếu được sử dụng cho?
 
-a) Database  
-b) Web server & reverse proxy  
-c) Container runtime  
-d) Version control  
+- a) Database
+- b) Web server & reverse proxy (Máy chủ web & reverse proxy)
+- c) Container runtime
+- d) Version control  
 
 ---
 
@@ -21,10 +21,10 @@ d) Version control
 
 File config chính của NGINX?
 
-a) /etc/nginx/nginx.config  
-b) /etc/nginx/nginx.conf  
-c) /nginx/config.conf  
-d) /etc/nginx.conf  
+- a) /etc/nginx/nginx.config
+- b) /etc/nginx/nginx.conf
+- c) /nginx/config.conf
+- d) /etc/nginx.conf  
 
 ---
 
@@ -32,10 +32,10 @@ d) /etc/nginx.conf
 
 Lệnh test config NGINX?
 
-a) `nginx -c`  
-b) `nginx -t`  
-c) `nginx --test`  
-d) `nginx -check`  
+- a) `nginx -c`
+- b) `nginx -t`
+- c) `nginx --test`
+- d) `nginx -check`  
 
 ---
 
@@ -43,10 +43,10 @@ d) `nginx -check`
 
 Directive `listen 80` có nghĩa gì?
 
-a) Listen on port 80  
-b) Forward to port 80  
-c) Block port 80  
-d) Log port 80  
+- a) Listen on port 80 (Lắng nghe trên cổng 80)
+- b) Forward to port 80 (Chuyển tiếp đến cổng 80)
+- c) Block port 80 (Chặn cổng 80)
+- d) Log port 80 (Ghi log cổng 80)  
 
 ---
 
@@ -54,10 +54,10 @@ d) Log port 80
 
 `proxy_pass` dùng để?
 
-a) Pass files  
-b) Forward requests to backend  
-c) Pass variables  
-d) Pass headers  
+- a) Pass files (Truyền file)
+- b) Forward requests to backend (Chuyển tiếp request đến backend)
+- c) Pass variables (Truyền biến)
+- d) Pass headers (Truyền header)  
 
 ---
 
@@ -65,10 +65,10 @@ d) Pass headers
 
 Reload NGINX không downtime?
 
-a) `nginx -s restart`  
-b) `nginx -s reload`  
-c) `systemctl restart nginx`  
-d) `nginx reload`  
+- a) `nginx -s restart`
+- b) `nginx -s reload`
+- c) `systemctl restart nginx`
+- d) `nginx reload`  
 
 ---
 
@@ -76,10 +76,10 @@ d) `nginx reload`
 
 `upstream` block dùng để?
 
-a) Define log format  
-b) Define backend servers  
-c) Define SSL  
-d) Define locations  
+- a) Define log format (Định nghĩa định dạng log)
+- b) Define backend servers (Định nghĩa server backend)
+- c) Define SSL
+- d) Define locations  
 
 ---
 
@@ -87,10 +87,10 @@ d) Define locations
 
 `try_files` directive làm gì?
 
-a) Try different servers  
-b) Check files exist in order  
-c) Try connections  
-d) Retry requests  
+- a) Try different servers (Thử các server khác nhau)
+- b) Check files exist in order (Kiểm tra file tồn tại theo thứ tự)
+- c) Try connections (Thử kết nối)
+- d) Retry requests (Thử lại request)  
 
 ---
 
@@ -98,10 +98,10 @@ d) Retry requests
 
 Return 301 redirect dùng khi?
 
-a) Temporary redirect  
-b) Permanent redirect  
-c) Error redirect  
-d) Internal redirect  
+- a) Temporary redirect (Chuyển hướng tạm thời)
+- b) Permanent redirect (Chuyển hướng vĩnh viễn)
+- c) Error redirect (Chuyển hướng lỗi)
+- d) Internal redirect (Chuyển hướng nội bộ)  
 
 ---
 
@@ -109,10 +109,10 @@ d) Internal redirect
 
 Gzip compression enable bằng?
 
-a) `compression on`  
-b) `gzip on`  
-c) `enable gzip`  
-d) `compress true`  
+- a) `compression on`
+- b) `gzip on`
+- c) `enable gzip`
+- d) `compress true`  
 
 ---
 
@@ -120,10 +120,10 @@ d) `compress true`
 
 Location block `location ~` có nghĩa gì?
 
-a) Exact match  
-b) Prefix match  
-c) Regex match  
-d) Default match  
+- a) Exact match (Khớp chính xác)
+- b) Prefix match (Khớp tiền tố)
+- c) Regex match (Khớp biểu thức chính quy)
+- d) Default match (Khớp mặc định)  
 
 ---
 
@@ -131,10 +131,10 @@ d) Default match
 
 SSL certificate được khai báo bằng?
 
-a) `ssl_cert`  
-b) `ssl_certificate`  
-c) `certificate`  
-d) `https_cert`  
+- a) `ssl_cert`
+- b) `ssl_certificate`
+- c) `certificate`
+- d) `https_cert`  
 
 ---
 
@@ -142,10 +142,10 @@ d) `https_cert`
 
 Default root directory của NGINX?
 
-a) /var/www/html  
-b) /usr/share/nginx/html  
-c) /etc/nginx/html  
-d) /www  
+- a) /var/www/html
+- b) /usr/share/nginx/html
+- c) /etc/nginx/html
+- d) /www  
 
 ---
 
@@ -153,10 +153,10 @@ d) /www
 
 `worker_processes auto` có nghĩa gì?
 
-a) 1 worker  
-b) Max workers  
-c) Match CPU cores  
-d) No workers  
+- a) 1 worker
+- b) Max workers
+- c) Match CPU cores (Khớp số nhân CPU)
+- d) No workers  
 
 ---
 
@@ -164,10 +164,10 @@ d) No workers
 
 Access log format default là?
 
-a) combined  
-b) common  
-c) json  
-d) simple  
+- a) combined
+- b) common
+- c) json
+- d) simple  
 
 ---
 

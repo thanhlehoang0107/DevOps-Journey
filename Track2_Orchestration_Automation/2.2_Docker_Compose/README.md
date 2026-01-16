@@ -24,7 +24,69 @@ After this module, you will (Sau module này, bạn sẽ):
 
 ## 📚 Content (Nội dung)
 
-### 1. Docker Compose Basics (Cơ bản Docker Compose)
+### 1. What is Docker Compose? (Docker Compose là gì?)
+
+**Docker Compose** is a tool for defining and running multi-container Docker applications. With Compose, you use a YAML file to configure your application's services.
+
+*Docker Compose là công cụ để định nghĩa và chạy các ứng dụng Docker đa container. Với Compose, bạn sử dụng file YAML để cấu hình các dịch vụ của ứng dụng.*
+
+#### Why Docker Compose? (Tại sao cần Docker Compose?)
+
+**Problem:** A real application usually has multiple containers (web, api, database, cache...). Starting each container with `docker run` is complex:
+
+*Vấn đề: Một ứng dụng thực tế thường có nhiều containers (web, api, database, cache...). Khởi động từng container bằng `docker run` rất phức tạp:*
+
+```bash
+# Without Compose - many complex commands:
+# Không dùng Compose - phải chạy nhiều lệnh phức tạp:
+docker network create myapp
+docker run -d --network myapp --name db -e POSTGRES_PASSWORD=secret postgres:15
+docker run -d --network myapp --name api --link db -p 3000:3000 myapi:latest
+docker run -d --network myapp --name web --link api -p 80:80 nginx:alpine
+```
+
+**Solution:** Docker Compose - 1 config file, 1 single command.
+
+*Giải pháp: Docker Compose - 1 file cấu hình, 1 lệnh duy nhất.*
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    DOCKER COMPOSE                            │
+├─────────────────────────────────────────────────────────────┤
+│                                                              │
+│   docker-compose.yml                                         │
+│   ┌─────────────────────────────────────────────────────┐   │
+│   │  services:                                           │   │
+│   │    web: ...                                          │   │
+│   │    api: ...      ──────► docker compose up ─┐       │   │
+│   │    db: ...                                    │       │   │
+│   │    redis: ...                                 │       │   │
+│   └─────────────────────────────────────────────────────┘   │
+│                                                    │         │
+│                                                    ▼         │
+│   ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐   │
+│   │   Web    │  │   API    │  │   DB     │  │  Redis   │   │
+│   │ (nginx)  │──│ (node)   │──│(postgres)│──│ (cache)  │   │
+│   └──────────┘  └──────────┘  └──────────┘  └──────────┘   │
+│                                                              │
+│   Tất cả trong 1 isolated network (All in isolated network) │
+│                                                              │
+└─────────────────────────────────────────────────────────────┘
+```
+
+**Key benefits (Lợi ích chính):**
+
+| Lợi ích | Mô tả |
+|---------|-------|
+| **Single configuration** | Define app stack in one `docker-compose.yml` |
+| **One command** | `docker compose up` starts everything |
+| **Isolated environments** | Creates isolated networks for each project |
+| **Reproducible** | Ai cũng có thể chạy giống nhau với cùng 1 file |
+| **Environment parity** | Dev/Staging/Production dùng cùng config |
+
+---
+
+### 2. Docker Compose Basics (Cơ bản Docker Compose)
 
 ```yaml
 # docker-compose.yml
@@ -58,7 +120,11 @@ volumes:
   db-data:
 ```
 
-### Commands (Các lệnh)
+### Commands (Các lệnh quan trọng)
+
+These are the essential commands you'll use daily with Docker Compose.
+
+*Đây là các lệnh cần thiết bạn sẽ dùng hàng ngày với Docker Compose.*
 
 ```bash
 docker compose up -d          # Start all services (Khởi động tất cả)
@@ -71,7 +137,11 @@ docker compose build          # Build images (Build images)
 
 ---
 
-### 2. Service Configuration (Cấu hình Service)
+### 3. Service Configuration (Cấu hình Service)
+
+Each service in `docker-compose.yml` has many configuration options. Here are the most common ones.
+
+*Mỗi service trong `docker-compose.yml` có nhiều tùy chọn cấu hình. Dưới đây là các tùy chọn phổ biến nhất.*
 
 ```yaml
 services:
@@ -122,7 +192,7 @@ services:
 
 ---
 
-### 3. Networking (Mạng)
+### 4. Networking (Mạng)
 
 ```yaml
 version: '3.8'
@@ -152,7 +222,7 @@ networks:
 
 ---
 
-### 4. Volumes
+### 5. Volumes
 
 ```yaml
 services:
@@ -178,7 +248,7 @@ volumes:
 
 ---
 
-### 5. Environment Management (Quản lý môi trường)
+### 6. Environment Management (Quản lý môi trường)
 
 ```yaml
 # .env file
@@ -208,7 +278,7 @@ secrets:
 
 ---
 
-### 6. Multiple Compose Files (Nhiều file Compose)
+### 7. Multiple Compose Files (Nhiều file Compose)
 
 ```yaml
 # docker-compose.yml (base - cơ bản)
@@ -244,7 +314,7 @@ docker compose -f docker-compose.yml -f docker-compose.prod.yml up
 
 ---
 
-### 7. Resource Limits (Giới hạn tài nguyên)
+### 8. Resource Limits (Giới hạn tài nguyên)
 
 ```yaml
 services:
@@ -261,7 +331,7 @@ services:
 
 ---
 
-### 8. Logging (Ghi log)
+### 9. Logging (Ghi log)
 
 ```yaml
 services:

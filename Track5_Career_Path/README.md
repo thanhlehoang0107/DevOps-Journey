@@ -23,6 +23,29 @@ After completing Track 5, you will have (Sau khi hoàn thành Track 5, bạn s�
 
 ---
 
+## 🤔 Why This Track? (Tại sao học Track này?)
+
+You have technical skills. But **nobody knows you have them** unless you showcase them.
+
+*Bạn đã có kỹ năng kỹ thuật. Nhưng **không ai biết bạn có kỹ năng đó** nếu bạn không show ra.*
+
+| Problem (Vấn đề) | Solution (Giải pháp) |
+|------------------|---------------------|
+| Did a lot but nothing to show | Portfolio on GitHub/GitLab *(Portfolio trên GitHub/GitLab)* |
+| Know how to do it but can't explain | System design interview prep *(Chuẩn bị system design)* |
+| Don't know how to show value | Resume optimization *(Tối ưu resume)* |
+| Can't prove skills | Certifications (AWS, CKA) *(Chứng chỉ)* |
+
+**Reality:** 2 candidates with same skills → the one with portfolio + certifications gets hired.
+
+*Thực tế: 2 ứng viên cùng kỹ năng → người có portfolio + certifications được nhận.*
+
+**Goal of this Track:** You will have a complete portfolio, ready to apply for DevOps/SRE positions.
+
+*Điểm đến của Track này: Bạn sẽ có portfolio hoàn chỉnh, sẵn sàng apply DevOps/SRE positions.*
+
+---
+
 ## 📋 Prerequisites (Điều kiện tiên quyết)
 
 Before starting Track 5 (Trước khi bắt đầu Track 5):
@@ -41,6 +64,8 @@ Before starting Track 5 (Trước khi bắt đầu Track 5):
 | 5.2 | [Interview Prep](./5.2_Interview_Prep/) | 2 weeks | Technical interview, system design |
 | 5.3 | [Portfolio Launch](./5.3_Portfolio_Launch/) | 1 week | GitHub profile, resume, LinkedIn |
 | 5.4 | [**Grand Capstone**](./5.4_Grand_Capstone/) | 2-3 weeks | 🎯 Production Infrastructure |
+| 5.5 | [**Golang for DevOps**](./5.5_Golang/) | 2 weeks | CLI Tools & K8s Operators |
+| 5.6 | [**GitOps & Platform Eng**](./5.6_GitOps_Platform/) | 2 weeks | ArgoCD & Internal Dev Platforms |
 
 ---
 
@@ -50,38 +75,38 @@ Before starting Track 5 (Trước khi bắt đầu Track 5):
 
 ```
 Week 1:
-- Day 1-2: DevOps concepts & behavioral questions
-- Day 3-4: Linux, networking, scripting questions
-- Day 5-7: Docker & Kubernetes deep dive
+- Day 1-2: DevOps concepts & behavioral questions (Các khái niệm DevOps & câu hỏi hành vi)
+- Day 3-4: Linux, networking, scripting questions (Câu hỏi về Linux, mạng, scripting)
+- Day 5-7: Docker & Kubernetes deep dive (Chuyên sâu về Docker & Kubernetes)
 
 Week 2:
-- Day 1-2: CI/CD & automation questions
-- Day 3-4: Cloud & IaC questions
-- Day 5-7: System design interviews
+- Day 1-2: CI/CD & automation questions (Câu hỏi về CI/CD & tự động hóa)
+- Day 3-4: Cloud & IaC questions (Câu hỏi về Cloud & IaC)
+- Day 5-7: System design interviews (Phỏng vấn thiết kế hệ thống)
 ```
 
 ### Week 3: Portfolio Launch
 
 ```
-Day 1-2: GitHub/GitLab profile optimization
-Day 3-4: Project documentation
-Day 5-6: Resume & cover letter
-Day 7: LinkedIn profile update
+Day 1-2: GitHub/GitLab profile optimization (Tối ưu hóa profile GitHub/GitLab)
+Day 3-4: Project documentation (Tài liệu dự án)
+Day 5-6: Resume & cover letter (Sơ yếu lý lịch & Thư xin việc)
+Day 7: LinkedIn profile update (Cập nhật profile LinkedIn)
 ```
 
 ### Week 4-6: Grand Capstone
 
 ```
-Week 4: Architecture & planning
-Week 5: Implementation
-Week 6: Documentation & presentation
+Week 4: Architecture & planning (Kiến trúc & Lập kế hoạch)
+Week 5: Implementation (Triển khai)
+Week 6: Documentation & presentation (Tài liệu & Thuyết trình)
 ```
 
 ### Ongoing: Certifications
 
 ```
-Study alongside other modules
-Schedule exams strategically
+Study alongside other modules (Học song song với các module khác)
+Schedule exams strategically (Lên lịch thi một cách chiến lược)
 ```
 
 ---

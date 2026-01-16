@@ -22,35 +22,37 @@ After this module, you will (Sau module này, bạn sẽ):
 
 ---
 
-## 📖 Content (Nội dung)
+## 📚 Content (Nội dung)
 
 ### 1. What is NGINX? (NGINX là gì?) - 30 min
 
 #### 1.1 Introduction (Giới thiệu)
 
-**NGINX** (pronounced "engine-x") is:
+**NGINX** (pronounced "engine-x") is a high-performance HTTP web server, reverse proxy, content cache, load balancer, TCP/UDP proxy server, and mail proxy server.
 
-*NGINX (đọc là "engine-x") là:*
+*NGINX (đọc là "engine-x") là một HTTP web server hiệu năng cao, kiêm reverse proxy, content cache, cân bằng tải, TCP/UDP proxy server, và mail proxy server.*
 
-- 🌐 **Web Server**: Serve static files (HTML, CSS, JS, images)
-- 🔄 **Reverse Proxy**: Route requests to backend (Điều hướng requests)
-- ⚖️ **Load Balancer**: Distribute load across servers (Phân tải)
-- 📦 **Cache**: Store cached responses (Lưu cache)
+**Key capabilities (Các tính năng chính):**
+
+- 🌐 **Web Server**: Serve static files (HTML, CSS, JS, images) with high concurrency (Phục vụ file tĩnh với khả năng xử lý đồng thời cao).
+- 🔄 **Reverse Proxy**: Route requests to application backends (Node.js, Python, Go...) (Điều hướng requests tới backend ứng dụng).
+- ⚖️ **Load Balancer**: Distribute traffic efficiently across multiple servers (Phân phối tải hiệu quả giữa các server).
+- 📦 **Cache**: Improve performance by caching responses (Tăng tốc độ bằng cách lưu đệm phản hồi).
 
 #### 1.2 NGINX vs Apache
 
 | Criteria | NGINX | Apache |
 |----------|-------|--------|
-| **Architecture** | Event-driven, async | Process/Thread per request |
-| **Static content** | ✅ Very fast | Slower |
-| **Memory** | ✅ Low RAM | More RAM |
-| **Concurrent connections** | ✅ High (10k+) | Limited |
-| **Config** | Simpler | .htaccess flexible |
-| **Modules** | Compile time | Runtime |
+| **Architecture** | Event-driven, async (Hướng sự kiện, bất đồng bộ) | Process/Thread per request (Process/Thread mỗi request) |
+| **Static content** | ✅ Very fast (Rất nhanh) | Slower (Chậm hơn) |
+| **Memory** | ✅ Low RAM (Tốn ít RAM) | More RAM (Tốn nhiều RAM) |
+| **Concurrent connections** | ✅ High (10k+) (Cao, 10k+) | Limited (Hạn chế) |
+| **Config** | Simpler (Đơn giản hơn) | .htaccess flexible (Linh hoạt với .htaccess) |
+| **Modules** | Compile time (Khi biên dịch) | Runtime (Khi chạy) |
 
 #### 1.3 Common Use Cases (Use cases phổ biến)
 
-```
+```ini
 ┌─────────────────────────────────────────────────────────────┐
 │                    NGINX USE CASES                           │
 ├─────────────────────────────────────────────────────────────┤
@@ -72,6 +74,7 @@ After this module, you will (Sau module này, bạn sẽ):
 │                      → /    → Frontend Server               │
 │                                                              │
 └─────────────────────────────────────────────────────────────┘
+
 ```
 
 ---
@@ -80,22 +83,45 @@ After this module, you will (Sau module này, bạn sẽ):
 
 #### 2.1 Run with Docker - Recommended (Chạy với Docker - Khuyến nghị)
 
-```bash
-# Run NGINX container (Chạy NGINX container)
-docker run -d -p 80:80 --name nginx nginx:alpine
+We will use **Docker** to run NGINX. This avoids installing software directly on your machine and allows you to easily switch versions or configurations.
 
-# Verify (Kiểm tra)
+*Chúng ta sẽ sử dụng **Docker** để chạy NGINX. Việc này tránh cài đặt phần mềm trực tiếp lên máy và cho phép bạn dễ dàng thay đổi phiên bản hoặc cấu hình.*
+
+**Run the following command (Chạy lệnh sau):**
+
+```bash
+docker run -d -p 80:80 --name nginx nginx:alpine
+```
+
+**Command Explanation (Giải thích lệnh):**
+
+- `docker run`: The command to create and start a new container (Lệnh tạo và chạy container mới).
+- `-d` (Detached): Runs the container in the background (Chạy ngầm).
+- `-p 80:80`: Maps port 80 of the host (laptop) to port 80 of the container (Ánh xạ cổng 80 của máy sang cổng 80 của container).
+- `--name nginx`: Assigns the name "nginx" to the container for easy reference (Đặt tên container là "nginx" để dễ quản lý).
+- `nginx:alpine`: Uses the lightweight Alpine Linux version of the NGINX image (Dùng bản NGINX siêu nhẹ trên nền Alpine Linux).
+
+**Verify the setup (Kiểm tra cài đặt):**
+
+```bash
 curl http://localhost
 # Or open browser (Hoặc mở browser): http://localhost
+```
 
-# View logs (Xem logs)
-docker logs nginx
+**You should see:** "Welcome to nginx!" HTML page.
 
-# Enter container terminal (Vào terminal container)
-docker exec -it nginx sh
+**Manage the container (Quản lý container):**
+
+```bash
+docker logs nginx       # View server logs (Xem logs của server)
+docker exec -it nginx sh # Enter the container shell (Vào trong container)
+docker stop nginx       # Stop the server (Dừng server)
+docker rm nginx         # Remove the container (Xóa container)
 ```
 
 #### 2.2 Install Directly - Optional (Cài đặt trực tiếp - Tùy chọn)
+
+- For Ubuntu/Debian (Cho Ubuntu/Debian):
 
 ```bash
 # Ubuntu/Debian
@@ -107,12 +133,15 @@ sudo systemctl enable nginx
 # Check status (Kiểm tra status)
 sudo systemctl status nginx
 
-# macOS with Homebrew
+- For macOS with Homebrew (Cho macOS với Homebrew):
 brew install nginx
 brew services start nginx
+
 ```
 
 #### 2.3 Verify Installation (Kiểm tra cài đặt)
+
+- Run the following commands to verify (Chạy các lệnh sau để kiểm tra)
 
 ```bash
 # Check version (Kiểm tra version)
@@ -123,6 +152,7 @@ nginx -t
 
 # View current config (Xem config đang dùng)
 nginx -T
+
 ```
 
 ---
@@ -131,22 +161,23 @@ nginx -T
 
 #### 3.1 Important Directories (Thư mục quan trọng)
 
-```
+```ini
 /etc/nginx/                    # Config directory (Thư mục cấu hình)
 ├── nginx.conf                 # Main config file (File config chính)
 ├── conf.d/                    # Additional configs (Configs bổ sung)
-│   └── default.conf           # Default server block
-├── sites-available/           # Available site configs (Debian)
-├── sites-enabled/             # Enabled sites (symlinks)
-├── snippets/                  # Reusable config snippets
-└── mime.types                 # MIME type mappings
+│   └── default.conf           # Default server block (Khối server mặc định)
+├── sites-available/           # Available site configs (Debian) (Cấu hình site có sẵn)
+├── sites-enabled/             # Enabled sites (symlinks) (Site đang bật)
+├── snippets/                  # Reusable config snippets (Đoạn config tái sử dụng)
+└── mime.types                 # MIME type mappings (Ánh xạ loại MIME)
 
 /var/log/nginx/                # Logs (Nhật ký)
-├── access.log                 # Access logs
-└── error.log                  # Error logs
+├── access.log                 # Access logs (Nhật ký truy cập)
+└── error.log                  # Error logs (Nhật ký lỗi)
 
 /usr/share/nginx/html/         # Default document root
 └── index.html                 # Default welcome page
+
 ```
 
 #### 3.2 In Docker Alpine (Trong Docker Alpine)
@@ -163,6 +194,7 @@ ls /usr/share/nginx/html/
 
 # Logs (Nhật ký)
 ls /var/log/nginx/
+
 ```
 
 ---
@@ -171,23 +203,31 @@ ls /var/log/nginx/
 
 #### 4.1 Config File Structure (Cấu trúc file config)
 
+The main configuration file is `nginx.conf`. It controls the global behavior of the server. Let's analyze a standard configuration.
+
+*File cấu hình chính là `nginx.conf`. Nó kiểm soát hành vi toàn cục của server. Hãy phân tích một cấu hình tiêu chuẩn.*
+
 ```nginx
 # nginx.conf - Main config file (File config chính)
 
-# Global context (Ngữ cảnh toàn cục)
+# 1. Global context (Ngữ cảnh toàn cục)
+# Defines user and worker processes matching CPU cores
+# (Định nghĩa user và số process worker khớp với số core CPU)
 user nginx;
 worker_processes auto;
 error_log /var/log/nginx/error.log warn;
 pid /var/run/nginx.pid;
 
-# Events context (Ngữ cảnh sự kiện)
+# 2. Events context (Ngữ cảnh sự kiện)
+# Handles connections (Xử lý kết nối)
 events {
-    worker_connections 1024;
+    worker_connections 1024; # Max connections per worker (Tối đa kết nối mỗi worker)
 }
 
-# HTTP context (Ngữ cảnh HTTP)
+# 3. HTTP context (Ngữ cảnh HTTP)
+# Defines how to handle HTTP traffic (Định nghĩa cách xử lý traffic HTTP)
 http {
-    include /etc/nginx/mime.types;
+    include /etc/nginx/mime.types; # Load file types (CSS, JS, Images...)
     default_type application/octet-stream;
 
     # Logging format (Định dạng log)
@@ -197,15 +237,27 @@ http {
 
     access_log /var/log/nginx/access.log main;
 
-    sendfile on;
-    keepalive_timeout 65;
+    # Optimization (Tối ưu hóa)
+    sendfile on;      # Efficient file transfer (Truyền file hiệu quả)
+    keepalive_timeout 65; # Keep connection open (Giữ kết nối mở)
 
-    # Include server blocks (Bao gồm các server block)
+    # Include server blocks (Bao gồm các server block từ thư mục con)
+    # This keeps the main config clean (Giúp file config chính gọn gàng)
     include /etc/nginx/conf.d/*.conf;
 }
 ```
 
+**Key Components (Thành phần chính):**
+
+- **worker_processes**: Should match number of CPU cores for max performance (Nên bằng số core CPU để đạt hiệu năng tối đa).
+- **worker_connections**: Total concurrent connections = workers * connections (Tổng kết nối đồng thời).
+- **include**: Imports other config files, allowing modular configuration (Import file config khác, giúp cấu hình dạng module).
+
 #### 4.2 Server Block (Virtual Host)
+
+A `server` block defines a virtual host, allowing NGINX to handle multiple domains or applications on a single server. Each `server` block listens on specific ports and responds to requests for defined `server_name`s.
+
+*Một khối `server` định nghĩa một virtual host, cho phép NGINX xử lý nhiều domain hoặc ứng dụng trên một server duy nhất. Mỗi khối `server` lắng nghe trên các cổng cụ thể và phản hồi các yêu cầu cho các `server_name` đã định nghĩa.*
 
 ```nginx
 # /etc/nginx/conf.d/default.conf
@@ -229,6 +281,7 @@ server {
         try_files $uri $uri/ =404;
     }
 }
+
 ```
 
 #### 4.3 Important Directives (Các directives quan trọng)
@@ -236,11 +289,11 @@ server {
 | Directive | Description | Example |
 |-----------|-------------|---------|
 | `listen` | Port to listen on (Port lắng nghe) | `listen 80;` |
-| `server_name` | Domain name | `server_name example.com;` |
-| `root` | Document root (Thư mục gốc) | `root /var/www/html;` |
+| `server_name` | Domain name (Tên miền) | `server_name example.com;` |
+| `root` | Document root (Thư mục gốc tài liệu) | `root /var/www/html;` |
 | `index` | Default files (Files mặc định) | `index index.html;` |
-| `location` | URL pattern matching | `location /api { }` |
-| `try_files` | Try multiple files | `try_files $uri $uri/ =404;` |
+| `location` | URL pattern matching (Khớp mẫu URL) | `location /api { }` |
+| `try_files` | Try multiple files (Thử nhiều files) | `try_files $uri $uri/ =404;` |
 | `error_page` | Custom error pages (Trang lỗi tùy chỉnh) | `error_page 404 /404.html;` |
 
 ---
@@ -251,7 +304,7 @@ server {
 
 **Project structure (Cấu trúc project):**
 
-```
+```ini
 my-website/
 ├── docker-compose.yml
 ├── nginx.conf
@@ -264,6 +317,7 @@ my-website/
     │   └── app.js
     └── images/
         └── logo.png
+
 ```
 
 **nginx.conf:**
@@ -292,6 +346,7 @@ server {
         internal;
     }
 }
+
 ```
 
 **Dockerfile:**
@@ -308,6 +363,7 @@ COPY html/ /usr/share/nginx/html/
 EXPOSE 80
 
 CMD ["nginx", "-g", "daemon off;"]
+
 ```
 
 #### 5.2 Gzip Compression
@@ -324,6 +380,7 @@ http {
                application/javascript application/json;
     gzip_disable "MSIE [1-6]\.";
 }
+
 ```
 
 ---
@@ -332,7 +389,7 @@ http {
 
 #### 6.1 Concept (Khái niệm)
 
-```
+```ini
 ┌─────────────────────────────────────────────────────────────┐
 │                    REVERSE PROXY                             │
 ├─────────────────────────────────────────────────────────────┤
@@ -354,6 +411,7 @@ http {
 │  └──────┘   └──────┘                                        │
 │                                                              │
 └─────────────────────────────────────────────────────────────┘
+
 ```
 
 #### 6.2 Basic Reverse Proxy (Cấu hình Reverse Proxy cơ bản)
@@ -373,6 +431,7 @@ server {
         proxy_set_header X-Forwarded-Proto $scheme;
     }
 }
+
 ```
 
 #### 6.3 Multiple Backends (Nhiều Backend servers)
@@ -403,6 +462,7 @@ server {
         proxy_set_header Connection "upgrade";
     }
 }
+
 ```
 
 ---
@@ -425,6 +485,7 @@ server {
         proxy_pass http://backend;
     }
 }
+
 ```
 
 #### 7.2 Weighted Load Balancing (Phân tải theo trọng số)
@@ -435,6 +496,7 @@ upstream backend {
     server backend2:3000 weight=1;  # 1x traffic
     server backend3:3000 weight=1;  # 1x traffic
 }
+
 ```
 
 #### 7.3 Health Checks (Kiểm tra sức khỏe server)
@@ -448,6 +510,7 @@ upstream backend {
     # Passive health check (Kiểm tra sức khỏe thụ động)
     server backend4:3000 max_fails=3 fail_timeout=30s;
 }
+
 ```
 
 ---
@@ -455,6 +518,8 @@ upstream backend {
 ### 8. NGINX with Docker Compose (NGINX với Docker Compose) - 1 hour
 
 #### 8.1 Full Stack Example (Ví dụ Full Stack)
+
+- Create `docker-compose.yml` (Tạo file `docker-compose.yml`):
 
 **docker-compose.yml:**
 
@@ -486,6 +551,7 @@ services:
 networks:
   app-network:
     driver: bridge
+
 ```
 
 **nginx.conf:**
@@ -510,6 +576,7 @@ server {
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     }
 }
+
 ```
 
 ---
@@ -517,6 +584,8 @@ server {
 ### 9. Debugging and Logging (Debug và Xem logs) - 30 min
 
 #### 9.1 Viewing Logs (Xem logs)
+
+- Run the following commands (Chạy các lệnh sau):
 
 ```bash
 # Docker
@@ -526,6 +595,7 @@ docker logs -f nginx
 # Linux
 sudo tail -f /var/log/nginx/access.log
 sudo tail -f /var/log/nginx/error.log
+
 ```
 
 #### 9.2 Custom Log Format (Định dạng log tùy chỉnh)
@@ -539,9 +609,12 @@ http {
     
     access_log /var/log/nginx/access.log detailed;
 }
+
 ```
 
 #### 9.3 Debug Tips (Mẹo debug)
+
+- Useful commands for debugging (Các lệnh hữu ích để debug):
 
 ```bash
 # Test config syntax (Kiểm tra cú pháp config)
@@ -556,6 +629,7 @@ nginx -s reload
 # Docker commands (Lệnh Docker)
 docker exec nginx nginx -t
 docker exec nginx nginx -s reload
+
 ```
 
 ---
@@ -589,11 +663,12 @@ server {
         deny all;
     }
 }
+
 ```
 
 ---
 
-## 📝 Module Files (Các file trong module)
+## 📝 Module Files (Các file trong Module)
 
 | File | Description |
 |------|-------------|

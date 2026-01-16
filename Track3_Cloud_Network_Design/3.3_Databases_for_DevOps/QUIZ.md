@@ -5,42 +5,47 @@
 ### Q1
 
 RDS Multi-AZ deployment dùng cho mục đích gì?
-a) Read scaling  
-b) High availability  
-c) Cost saving  
-d) Performance  
+
+- a) Read scaling (Mở rộng khả năng đọc)
+- b) High availability (Tính sẵn sàng cao)
+- c) Cost saving (Tiết kiệm chi phí)
+- d) Performance (Hiệu năng)  
 
 ### Q2
 
 Redis là loại database gì?
-a) Relational  
-b) Document  
-c) Key-Value In-Memory  
-d) Graph  
+
+- a) Relational (Quan hệ)
+- b) Document (Tài liệu)
+- c) Key-Value In-Memory
+- d) Graph (Đồ thị)  
 
 ### Q3
 
 Flyway dùng để làm gì?
-a) Database backup  
-b) Database migration  
-c) Database monitoring  
-d) Database replication  
+
+- a) Database backup (Sao lưu cơ sở dữ liệu)
+- b) Database migration (Di chuyển cơ sở dữ liệu)
+- c) Database monitoring (Giám sát cơ sở dữ liệu)
+- d) Database replication (Sao chép cơ sở dữ liệu)  
 
 ### Q4
 
 Connection pooling giúp gì?
-a) Security  
-b) Reduce connection overhead  
-c) Backup  
-d) Monitoring  
+
+- a) Security (Bảo mật)
+- b) Reduce connection overhead (Giảm chi phí kết nối)
+- c) Backup (Sao lưu)
+- d) Monitoring (Giám sát)  
 
 ### Q5
 
 Read replica dùng cho?
-a) Backup  
-b) Read scaling  
-c) High availability  
-d) Security  
+
+- a) Backup (Sao lưu)
+- b) Read scaling (Mở rộng khả năng đọc)
+- c) High availability (Tính sẵn sàng cao)
+- d) Security (Bảo mật)  
 
 ---
 

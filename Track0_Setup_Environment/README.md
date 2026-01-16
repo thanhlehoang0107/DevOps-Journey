@@ -1,4 +1,4 @@
-﻿# 🛠️ Setup Environment
+# 🛠️ Setup Environment
 
 [![Prerequisites](https://img.shields.io/badge/Prerequisites-None-green?style=flat-square)](.)
 
@@ -10,12 +10,30 @@
 
 ## 📋 Table of Contents (Mục Lục)
 
+- [Why This Setup?](#-why-this-setup-tại-sao-cần-setup)
 - [System Requirements](#-system-requirements-yêu-cầu-hệ-thống)
 - [Installation by OS](#-installation-by-os-cài-đặt-theo-os)
 - [Git Platform Setup](#-git-platform-setup-cài-đặt-git-platform)
 - [Tools Overview](#-tools-overview)
 - [Verification](#-verification)
 - [Troubleshooting](#-troubleshooting)
+
+---
+
+## 🤔 Why This Setup? (Tại sao cần Setup?)
+
+A proper DevOps environment includes many tools working together. Setting up correctly from the start will:
+
+*Một môi trường DevOps chuẩn bao gồm nhiều tools hoạt động cùng nhau. Setup đúng từ đầu sẽ:*
+
+| Benefit (Lợi ích) | Explanation (Giải thích) |
+|-------------------|--------------------------|
+| 🚀 **Avoid getting stuck** | Prevent "works on my machine" errors *(Tránh lỗi "works on my machine")* |
+| 📦 **Consistency** | Everyone on the team uses the same versions *(Mọi người trong team dùng cùng phiên bản)* |
+| ⚡ **Save time** | No need to debug the environment while learning *(Không phải debug môi trường khi học)* |
+| 🔄 **Reproducible** | Can recreate on a new machine quickly *(Có thể tái tạo trên máy mới nhanh chóng)* |
+
+**Estimated time:** 1-2 hours for complete setup *(Thời gian ước tính: 1-2 giờ cho setup hoàn chỉnh)*
 
 ---
 
@@ -44,45 +62,56 @@
 
 #### 1. Install WSL2 (Cài đặt WSL2)
 
-```powershell
-# Open PowerShell as Administrator (Mở PowerShell với quyền Admin)
-wsl --install
+- Run the following command in PowerShell with Admin privileges (Chạy lệnh sau trong PowerShell với quyền Admin)
 
-# Restart your computer (Restart máy tính)
-# After restart, Ubuntu will be installed automatically
-# (Sau khi restart, Ubuntu sẽ được cài đặt tự động)
+```powershell
+wsl --install
 ```
+
+- Restart your computer (Restart máy tính)
+- After restart, Ubuntu will be installed automatically (Sau khi restart, Ubuntu sẽ được cài đặt tự động)
 
 #### 2. Install Windows Terminal (Cài đặt Windows Terminal)
 
+- From Microsoft Store or (Từ Microsoft Store hoặc)
+- Run the following command in PowerShell with Admin privileges (Chạy lệnh sau trong PowerShell với quyền Admin)
+
 ```powershell
-# From Microsoft Store or (Từ Microsoft Store hoặc)
 winget install Microsoft.WindowsTerminal
 ```
 
 #### 3. Install Docker Desktop (Cài đặt Docker Desktop)
 
-1. Download from [docker.com](https://www.docker.com/products/docker-desktop/)
-2. Run the installer (Chạy installer)
-3. Enable WSL2 backend in settings (Bật WSL2 backend trong settings)
-4. Restart Docker Desktop
+- Download from [docker.com](https://www.docker.com/products/docker-desktop/)
+- Run the installer (Chạy installer)
+- Enable WSL2 backend in settings (Bật WSL2 backend trong settings)
+- Restart Docker Desktop
 
 #### 4. Install Git (Cài đặt Git)
 
+- Run the following command in PowerShell with Admin privileges (Chạy lệnh sau trong PowerShell với quyền Admin)
+
 ```powershell
 winget install Git.Git
+
 ```
 
 #### 5. Install VS Code (Cài đặt VS Code)
 
+- Run the following command in PowerShell with Admin privileges (Chạy lệnh sau trong PowerShell với quyền Admin)
+
 ```powershell
 winget install Microsoft.VisualStudioCode
+
 ```
 
 #### 6. Install Python (Cài đặt Python)
 
+- Run the following command in PowerShell with Admin privileges (Chạy lệnh sau trong PowerShell với quyền Admin)
+
 ```powershell
 winget install Python.Python.3.12
+
 ```
 
 ---
@@ -91,11 +120,16 @@ winget install Python.Python.3.12
 
 #### 1. Install Homebrew (Cài đặt Homebrew)
 
+- Run the following command in Terminal (Chạy lệnh sau trong Terminal)
+
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
 ```
 
 #### 2. Install Tools (Cài đặt các tools)
+
+- Run the following commands to install tools (Chạy các lệnh sau để cài đặt tools)
 
 ```bash
 # Git
@@ -112,6 +146,7 @@ brew install python@3.12
 
 # iTerm2 (optional but recommended - tùy chọn nhưng khuyến nghị)
 brew install --cask iterm2
+
 ```
 
 ---
@@ -120,17 +155,25 @@ brew install --cask iterm2
 
 #### 1. Update System (Cập nhật hệ thống)
 
+- Run the following command to update system (Chạy lệnh sau để cập nhật hệ thống)
+
 ```bash
 sudo apt update && sudo apt upgrade -y
+
 ```
 
 #### 2. Install Git (Cài đặt Git)
 
+- Run the following command (Chạy lệnh sau)
+
 ```bash
 sudo apt install git -y
+
 ```
 
 #### 3. Install Docker (Cài đặt Docker)
+
+- Run the following commands to install Docker (Chạy các lệnh sau để cài đặt Docker)
 
 ```bash
 # Add Docker's GPG key (Thêm GPG key của Docker)
@@ -146,18 +189,25 @@ sudo apt install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
 # Add user to docker group (Thêm user vào docker group)
 sudo usermod -aG docker $USER
 newgrp docker
+
 ```
 
 #### 4. Install Python (Cài đặt Python)
 
+- Run the following command (Chạy lệnh sau)
+
 ```bash
 sudo apt install python3 python3-pip python3-venv -y
+
 ```
 
 #### 5. Install VS Code (Cài đặt VS Code)
 
+- Run the following command (Chạy lệnh sau)
+
 ```bash
 sudo snap install code --classic
+
 ```
 
 ---
@@ -176,12 +226,14 @@ GitLab is the **primary platform** for this course, especially for CI/CD content
 
 #### 1. Create GitLab Account (Tạo tài khoản GitLab)
 
-1. Go to [gitlab.com](https://gitlab.com)
-2. Click **"Register"** or **"Sign up"**
-3. Fill in your information (Điền thông tin của bạn)
-4. Verify your email (Xác nhận email)
+- Go to [gitlab.com](https://gitlab.com)
+- Click **"Register"** or **"Sign up"**
+- Fill in your information (Điền thông tin của bạn)
+- Verify your email (Xác nhận email)
 
 #### 2. SSH Setup for GitLab (Cấu hình SSH cho GitLab)
+
+- Run the following commands to setup SSH (Chạy các lệnh sau để cài đặt SSH)
 
 ```bash
 # Generate SSH key (Tạo SSH key)
@@ -201,9 +253,12 @@ cat ~/.ssh/id_ed25519.pub
 # Test connection (Kiểm tra kết nối)
 ssh -T git@gitlab.com
 # Expected: Welcome to GitLab, @username!
+
 ```
 
 #### 3. Git Configuration for GitLab (Cấu hình Git cho GitLab)
+
+- Run the following commands to configure Git (Chạy các lệnh sau để cấu hình Git)
 
 ```bash
 # User information (Thông tin user)
@@ -218,6 +273,7 @@ git config --global core.editor "code --wait"
 
 # Pull strategy
 git config --global pull.rebase false
+
 ```
 
 ---
@@ -230,12 +286,14 @@ GitHub is also fully supported if you prefer it.
 
 #### 1. Create GitHub Account (Tạo tài khoản GitHub)
 
-1. Go to [github.com](https://github.com)
-2. Click **"Sign up"**
-3. Fill in your information (Điền thông tin của bạn)
-4. Verify your email (Xác nhận email)
+- Go to [github.com](https://github.com)
+- Click **"Sign up"**
+- Fill in your information (Điền thông tin của bạn)
+- Verify your email (Xác nhận email)
 
 #### 2. SSH Setup for GitHub (Cấu hình SSH cho GitHub)
+
+- Run the following commands to setup SSH (Chạy các lệnh sau để cài đặt SSH)
 
 ```bash
 # Generate SSH key (if not created already)
@@ -256,6 +314,7 @@ cat ~/.ssh/id_ed25519.pub
 # Test connection (Kiểm tra kết nối)
 ssh -T git@github.com
 # Expected: Hi username! You've successfully authenticated...
+
 ```
 
 ---
@@ -270,6 +329,7 @@ You can use both GitLab and GitHub with the same SSH key!
 # Test both connections (Kiểm tra cả hai kết nối)
 ssh -T git@gitlab.com
 ssh -T git@github.com
+
 ```
 
 ---
@@ -315,6 +375,7 @@ python3 --version
 # VS Code
 code --version
 # Expected: 1.x.x
+
 ```
 
 ### Quick Test (Kiểm tra nhanh)
@@ -334,6 +395,7 @@ ssh -T git@gitlab.com
 
 # Test GitHub connection (optional - Kiểm tra kết nối GitHub)
 ssh -T git@github.com
+
 ```
 
 ---
@@ -352,6 +414,7 @@ code --install-extension redhat.ansible
 code --install-extension ms-kubernetes-tools.vscode-kubernetes-tools
 code --install-extension gitlab.gitlab-workflow
 code --install-extension eamodio.gitlens
+
 ```
 
 ### Extension List (Danh sách extensions)

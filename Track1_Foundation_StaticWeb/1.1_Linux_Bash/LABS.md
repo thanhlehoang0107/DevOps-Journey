@@ -6,76 +6,98 @@
 
 ---
 
-## 📋 Hướng dẫn thực hiện
+## 📋 Instructions (Hướng dẫn thực hiện)
 
-1. **Môi trường**: Sử dụng WSL2 (Windows), Terminal (macOS), hoặc Linux VM
-2. **Thời gian**: Mỗi lab ~15-30 phút
-3. **Ghi chép**: Ghi lại các lệnh đã dùng để review sau
+1. **Environment (Môi trường)**: Use WSL2 (Windows), Terminal (macOS), or a Linux VM.
+   *(Sử dụng WSL2 (Windows), Terminal (macOS), hoặc Linux VM.)*
+2. **Duration (Thời gian)**: Each lab takes ~15-30 minutes.
+   *(Mỗi lab ~15-30 phút.)*
+3. **Notes (Ghi chú)**: Document the commands you use for future review.
+   *(Ghi lại các lệnh đã dùng để review sau.)*
 
 ---
 
-## Lab 1: Khám phá File System 🗂️
+## Lab 1: Explore File System (Khám phá File System) 🗂️
 
-**Mục tiêu**: Làm quen với cấu trúc thư mục Linux
+**Goal**: Familiarize with the Linux directory structure.
+*(Làm quen với cấu trúc thư mục Linux.)*
 
-### Bước 1: Kiểm tra vị trí hiện tại
+### Step 1: Check Current Location (Bước 1: Kiểm tra vị trí hiện tại)
+
+Use the `pwd` (print working directory) command to see where you are.
+*(Sử dụng lệnh `pwd` để xem bạn đang đứng ở đâu.)*
 
 ```bash
 pwd
 ```
 
-**Kết quả mong đợi**: `/home/username` hoặc tương tự
+**Expected Result (Kết quả mong đợi)**: `/home/username` or similar.
 
-### Bước 2: Liệt kê thư mục gốc
+### Step 2: List Root Directory (Bước 2: Liệt kê thư mục gốc)
+
+View the top-level directory of the Linux system.
+*(Xem thư mục cấp cao nhất của hệ thống Linux.)*
 
 ```bash
 ls /
 ```
 
-**Quan sát**: Bạn thấy những thư mục nào?
+**Observation (Quan sát)**: What directories do you see? (e.g., `bin`, `etc`, `home`, `var`).
 
-### Bước 3: Khám phá các thư mục quan trọng
+### Step 3: Explore Important Directories (Bước 3: Khám phá các thư mục quan trọng)
+
+Check contents of system configuration and log directories.
+*(Kiểm tra nội dung các thư mục cấu hình hệ thống và nhật ký.)*
 
 ```bash
-# Thư mục cấu hình
+# Configuration files (Thư mục cấu hình)
 ls /etc | head -20
 
-# Thư mục logs
+# Log files (Thư mục logs)
 ls /var/log
 
-# Thư mục tạm
+# Temporary files (Thư mục tạm)
 ls /tmp
 ```
 
-### Bước 4: Di chuyển qua các thư mục
+### Step 4: Navigate Between Directories (Bước 4: Di chuyển qua các thư mục)
+
+Practice moving around the file system using `cd`.
+*(Thực hành di chuyển trong file system bằng lệnh `cd`.)*
 
 ```bash
 cd /var/log
 pwd
 ls -la
 
+# Move to configuration directory
 cd /etc
 pwd
-ls nginx/    # Sẽ báo lỗi nếu chưa cài nginx
+ls nginx/    # Will show error if Nginx is not installed (Sẽ báo lỗi nếu chưa cài nginx)
 
+# Return home
 cd ~
-pwd          # Về home
+pwd
 ```
 
 ### ✅ Checklist
 
-- [ ] Biết vị trí hiện tại bằng `pwd`
-- [ ] Liệt kê được contents với `ls`
-- [ ] Di chuyển được bằng `cd`
-- [ ] Hiểu sự khác biệt giữa `/`, `/home`, `/etc`, `/var`
+- [ ] Identify current location with `pwd`
+- [ ] List contents with `ls`
+- [ ] Navigate with `cd`
+- [ ] Understand the purpose of `/`, `/home`, `/etc`, `/var`
 
 ---
 
-## Lab 2: Thao tác Files và Directories 📁
+## Lab 2: File and Directory Operations (Thao tác Files và Directories) 📁
 
-**Mục tiêu**: Tạo, copy, move, xóa files và directories
+**Goal**: Create, copy, move, and delete files and directories.
+*(Tạo, copy, move, xóa files và directories.)*
 
-### Bước 1: Tạo cấu trúc project
+### Step 1: Create Project Structure (Bước 1: Tạo cấu trúc project)
+
+Create nested directories for a sample project.
+*(Tạo các thư mục lồng nhau cho một project mẫu.)*
 
 ```bash
 cd ~
@@ -84,272 +106,273 @@ mkdir -p devops-lab/project1/docs
 mkdir -p devops-lab/project1/tests
 ```
 
-### Bước 2: Kiểm tra cấu trúc
+### Step 2: Verify Structure (Bước 2: Kiểm tra cấu trúc)
+
+Use the recursive list command to see the hierarchy.
+*(Sử dụng lệnh liệt kê đệ quy để xem cấu trúc phân cấp.)*
 
 ```bash
 ls -R devops-lab/
 ```
 
-**Kết quả**:
+### Step 3: Create Files (Bước 3: Tạo files)
 
-```
-devops-lab/:
-project1
-
-devops-lab/project1:
-docs  src  tests
-```
-
-### Bước 3: Tạo files
+Create empty files and files with initial content.
+*(Tạo các file rỗng và các file có nội dung ban đầu.)*
 
 ```bash
 cd devops-lab/project1
 
-# Tạo file rỗng
+# Create an empty file (Tạo file rỗng)
 touch README.md
 
-# Tạo file với nội dung
+# Create file with content (Tạo file với nội dung)
 echo "# My DevOps Project" > README.md
 echo "Version: 1.0" >> README.md
 
-# Tạo files trong src
+# Create utility scripts in src (Tạo script trong src)
 echo 'echo "Hello World"' > src/main.sh
 echo '# utility functions' > src/utils.sh
 ```
 
-### Bước 4: Xem nội dung files
+### Step 4: View File Content (Bước 4: Xem nội dung files)
+
+Use `cat` to display file contents in the terminal.
+*(Sử dụng `cat` để hiển thị nội dung file.)*
 
 ```bash
 cat README.md
 cat src/main.sh
 ```
 
-### Bước 5: Copy và Move files
+### Step 5: Copy and Move Files (Bước 5: Copy và Move files)
+
+Organize files by copying for backup and renaming.
+*(Sắp xếp files bằng cách copy dự phòng và đổi tên.)*
 
 ```bash
-# Copy file
+# Copy file to docs
 cp README.md docs/README_backup.md
 
-# Move file
+# Rename/Move file
 mv src/utils.sh src/helpers.sh
 
-# Kiểm tra
+# Verify changes (Kiểm tra)
 ls -la docs/
 ls -la src/
 ```
 
-### Bước 6: Xóa files (cẩn thận!)
+### Step 6: Delete Files and Directories (Bước 6: Xóa files và thư mục)
+
+Clean up temporary files. Be careful with these commands!
+*(Dọn dẹp các file tạm. Hãy cẩn thận với các lệnh này!)*
 
 ```bash
-# Tạo file tạm để xóa
+# Create and delete a file (Tạo và xóa file)
 touch temp_file.txt
-ls
-
-# Xóa file
 rm temp_file.txt
-ls
 
-# Xóa thư mục
+# Create and delete a directory recursively (Xóa thư mục đệ quy)
 mkdir to_delete
 rm -r to_delete
 ```
 
 ### ✅ Checklist
 
-- [ ] Tạo được thư mục lồng nhau với `mkdir -p`
-- [ ] Tạo files với `touch` và `echo`
-- [ ] Copy với `cp`, move với `mv`
-- [ ] Xóa an toàn với `rm`
+- [ ] Create nested directories with `mkdir -p`
+- [ ] Manage files with `touch` and `echo`
+- [ ] Use `cp` and `mv` correctly
+- [ ] Safely delete with `rm` and `rm -r`
 
 ---
 
-## Lab 3: Tìm kiếm Files 🔍
+## Lab 3: Find and Filter (Tìm kiếm và Lọc) 🔍
 
-**Mục tiêu**: Sử dụng `find` và `grep`
+**Goal**: Master `find` for files and `grep` for content.
+*(Làm chủ lệnh `find` cho files và `grep` cho nội dung.)*
 
-### Setup
+### Setup (Chuẩn bị)
+
+Generate sample logs for searching.
+*(Tạo dữ liệu log mẫu để thực hành tìm kiếm.)*
 
 ```bash
 cd ~/devops-lab/project1
-echo "This is a test file with ERROR" > logs/error.log 2>/dev/null || mkdir logs && echo "This is a test file with ERROR" > logs/error.log
-echo "INFO: Application started" >> logs/error.log
+mkdir -p logs
+echo "INFO: Application started" > logs/error.log
 echo "ERROR: Connection failed" >> logs/error.log
 echo "INFO: Retrying..." >> logs/error.log
 echo "ERROR: Timeout exceeded" >> logs/error.log
 ```
 
-### Bước 1: Tìm files với find
+### Step 1: Find Files (Bước 1: Tìm files với find)
+
+Locate files based on their names or types.
+*(Tìm vị trí file dựa trên tên hoặc loại.)*
 
 ```bash
-# Tìm tất cả .sh files
+# Find all shell scripts (Tìm tất cả .sh files)
 find . -name "*.sh"
 
-# Tìm tất cả .md files
+# Find documentation files (Tìm tất cả .md files)
 find . -name "*.md"
 
-# Tìm tất cả directories
+# List only directories (Liệt kê thư mục)
 find . -type d
 ```
 
-### Bước 2: Tìm trong nội dung với grep
+### Step 2: Search Content (Bước 2: Tìm trong nội dung với grep)
+
+Extract specific information from log files.
+*(Trích xuất thông tin cụ thể từ các file log.)*
 
 ```bash
-# Tìm dòng chứa ERROR
+# Find lines containing ERROR (Tìm dòng chứa ERROR)
 grep "ERROR" logs/error.log
 
-# Hiển thị số dòng
+# Show line numbers (Hiển thị số dòng)
 grep -n "ERROR" logs/error.log
 
-# Tìm không phân biệt hoa thường
+# Case-insensitive search (Tìm không phân biệt hoa thường)
 grep -i "error" logs/error.log
 
-# Đếm số lần xuất hiện
+# Count occurrences (Đếm số lần xuất hiện)
 grep -c "ERROR" logs/error.log
 ```
 
-### Bước 3: Kết hợp find và grep
+### Step 3: Combine Operations (Bước 3: Kết hợp tìm kiếm)
+
+Search for text across multiple files recursively.
+*(Tìm kiếm văn bản trong nhiều file một cách đệ quy.)*
 
 ```bash
-# Tìm tất cả files chứa "echo"
+# Find "echo" in all files (Tìm "echo" trong mọi file)
 grep -r "echo" .
 
-# Chỉ hiển thị tên file
+# Show only filenames (Chỉ hiển thị tên file)
 grep -rl "echo" .
 ```
 
-### ✅ Checklist
-
-- [ ] Tìm files theo tên với `find`
-- [ ] Tìm nội dung với `grep`
-- [ ] Sử dụng các options: `-n`, `-i`, `-c`, `-r`
-
 ---
 
-## Lab 4: Permissions 🔐
+## Lab 4: Permissions (Phân quyền) 🔐
 
-**Mục tiêu**: Hiểu và thay đổi file permissions
+**Goal**: Understand and modify Linux file security.
+*(Hiểu và thay đổi bảo mật file trong Linux.)*
 
-### Bước 1: Xem permissions hiện tại
+### Step 1: Inspect Permissions (Bước 1: Xem permissions hiện tại)
+
+Use `ls -la` to see who owns what and what access they have.
+*(Xem ai sở hữu gì và họ có quyền truy cập nào.)*
 
 ```bash
 cd ~/devops-lab/project1
-ls -la
 ls -la src/
 ```
 
-### Bước 2: Tạo script và kiểm tra permission
+### Step 2: Script Execution Test (Bước 2: Thử nghiệm chạy script)
+
+Observe "Permission denied" when a script isn't executable.
+*(Quan sát lỗi "Permission denied" khi script chưa có quyền thực thi.)*
 
 ```bash
-# Tạo script
+# Create a simple script (Tạo script)
 echo '#!/bin/bash
-echo "Hello from script!"
-date' > src/myscript.sh
+echo "Hello from script!"' > src/myscript.sh
 
-# Xem permission
+# Check default permissions (Xem permission mặc định)
 ls -l src/myscript.sh
 
-# Thử chạy (sẽ báo lỗi Permission denied)
+# Try to run (it will fail) (Thử chạy - sẽ lỗi)
 ./src/myscript.sh
 ```
 
-### Bước 3: Thêm execute permission
+### Step 3: Grant Execute Rights (Bước 3: Thêm quyền thực thi)
+
+Make the script runnable using `chmod`.
+*(Làm cho script có thể chạy được bằng lệnh `chmod`.)*
 
 ```bash
-# Thêm execute cho owner
+# Add execute for owner (Thêm execute cho owner)
 chmod u+x src/myscript.sh
 
-# Kiểm tra lại
-ls -l src/myscript.sh
-
-# Chạy script
+# Run again (it works!) (Chạy lại)
 ./src/myscript.sh
 ```
 
-### Bước 4: Thực hành với numeric mode
+### Step 4: Numeric Permissions (Bước 4: Thực hành với chế độ số)
+
+Use the 3-digit octal system to set exact permissions.
+*(Sử dụng hệ thống số 3 chữ số để thiết lập quyền chính xác.)*
 
 ```bash
-# Tạo file mới
 touch src/secret.txt
-echo "Top secret data" > src/secret.txt
-
-# Chỉ owner đọc ghi (600)
+# 600: Owner Read/Write only (Chỉ owner đọc ghi)
 chmod 600 src/secret.txt
-ls -l src/secret.txt
 
-# Mọi người đọc được, owner ghi được (644)
+# 644: Owner Read/Write, Others Read (Mọi người đọc, owner ghi)
 chmod 644 src/secret.txt
-ls -l src/secret.txt
 
-# Script executable (755)
+# 755: Common for scripts (Quyền phổ biến cho script)
 chmod 755 src/myscript.sh
-ls -l src/myscript.sh
 ```
-
-### ✅ Checklist
-
-- [ ] Đọc được permissions từ `ls -l`
-- [ ] Thêm/bớt permission với symbolic mode (`chmod u+x`)
-- [ ] Set permissions với numeric mode (`chmod 755`)
-- [ ] Hiểu ý nghĩa của 644, 755, 600
 
 ---
 
-## Lab 5: Viết Bash Script đầu tiên 📝
+## Lab 5: Write Your First Bash Script (Viết Bash Script đầu tiên) 📝
 
-**Mục tiêu**: Tạo script tự động hóa
+**Goal**: Automate simple tasks with shell scripting.
+*(Tự động hóa các nhiệm vụ đơn giản bằng shell scripting.)*
 
-### Bước 1: Script cơ bản
+### Step 1: Base Script with Variables (Bước 1: Script cơ bản với biến)
+
+Create a script that uses environment variables.
+*(Tạo script sử dụng các biến môi trường.)*
 
 ```bash
-cd ~/devops-lab/project1
-
+mkdir -p scripts
 cat > scripts/hello.sh << 'EOF'
 #!/bin/bash
-# Script: hello.sh
-# Mô tả: Script đầu tiên
-
 echo "🚀 Welcome to DevOps Journey!"
-echo "📅 Hôm nay là: $(date)"
-echo "👤 User hiện tại: $USER"
-echo "📂 Thư mục hiện tại: $(pwd)"
+echo "📅 Today is: $(date)"
+echo "👤 Current User: $USER"
+echo "📂 Current Dir: $(pwd)"
 EOF
 
-mkdir -p scripts
 chmod +x scripts/hello.sh
 ./scripts/hello.sh
 ```
 
-### Bước 2: Script với biến và input
+### Step 2: Interactive Script (Bước 2: Script tương tác)
+
+Use the `read` command to get user input.
+*(Sử dụng lệnh `read` để lấy thông tin từ người dùng.)*
 
 ```bash
 cat > scripts/greet.sh << 'EOF'
 #!/bin/bash
-# Script hỏi tên và chào
-
-echo "Bạn tên là gì?"
+echo "What is your name?"
 read NAME
-
-echo "Xin chào, $NAME! 👋"
-echo "Chào mừng đến với DevOps Journey"
+echo "Hello, $NAME! 👋 Welcome to DevOps Journey"
 EOF
 
 chmod +x scripts/greet.sh
 ./scripts/greet.sh
 ```
 
-### Bước 3: Script với điều kiện
+### Step 3: Conditional Logic (Bước 3: Script với điều kiện)
+
+Use `if/else` to check for software installation.
+*(Sử dụng `if/else` để kiểm tra phần mềm đã cài đặt chưa.)*
 
 ```bash
 cat > scripts/check_docker.sh << 'EOF'
 #!/bin/bash
-# Kiểm tra Docker đã cài đặt chưa
-
 if command -v docker &> /dev/null; then
-    echo "✅ Docker đã được cài đặt"
+    echo "✅ Docker is installed"
     docker --version
 else
-    echo "❌ Docker chưa được cài đặt"
-    echo "Hãy cài đặt Docker theo hướng dẫn trong Setup_Environment"
+    echo "❌ Docker is NOT installed"
 fi
 EOF
 
@@ -357,108 +380,32 @@ chmod +x scripts/check_docker.sh
 ./scripts/check_docker.sh
 ```
 
-### Bước 4: Script với vòng lặp
-
-```bash
-cat > scripts/countdown.sh << 'EOF'
-#!/bin/bash
-# Đếm ngược
-
-echo "🚀 Khởi động trong..."
-
-for i in 5 4 3 2 1; do
-    echo "$i..."
-    sleep 1
-done
-
-echo "🎉 BLAST OFF!"
-EOF
-
-chmod +x scripts/countdown.sh
-./scripts/countdown.sh
-```
-
-### ✅ Checklist
-
-- [ ] Tạo được script với shebang `#!/bin/bash`
-- [ ] Sử dụng biến và đọc input
-- [ ] Sử dụng điều kiện `if/else`
-- [ ] Sử dụng vòng lặp `for`
-
 ---
 
-## Lab 6: System Health Check Script 💊
+## Lab 6: System Health Check (Script kiểm tra sức khỏe hệ thống) 💊
 
-**Mục tiêu**: Tạo script thực tế để kiểm tra hệ thống
+**Goal**: Create a professional monitoring script.
+*(Tạo một script giám sát chuyên nghiệp.)*
 
-### Tạo script hoàn chỉnh
+### Create the Final Script (Tạo script hoàn chỉnh)
+
+This script combines various Linux commands into a report.
+*(Script này kết hợp nhiều lệnh Linux để tạo thành một báo cáo.)*
 
 ```bash
 cat > scripts/system_health.sh << 'EOF'
 #!/bin/bash
-###########################################
-# System Health Check Script
-# Mô tả: Kiểm tra tình trạng hệ thống
-###########################################
-
 echo "========================================"
 echo "    🏥 SYSTEM HEALTH CHECK REPORT"
 echo "========================================"
-echo ""
-
-# Thông tin hệ thống
-echo "📋 THÔNG TIN HỆ THỐNG"
-echo "----------------------------------------"
-echo "Hostname: $(hostname)"
-echo "Kernel: $(uname -r)"
-echo "Thời gian: $(date)"
-echo ""
-
-# CPU và Memory
-echo "💻 CPU & MEMORY"
-echo "----------------------------------------"
-echo "CPU cores: $(nproc)"
-echo "Memory:"
-free -h | grep -E "Mem|Swap"
-echo ""
-
-# Disk Usage
-echo "💾 DISK USAGE"
-echo "----------------------------------------"
-df -h | grep -E "Filesystem|/$"
-echo ""
-
-# Top Processes
-echo "🔝 TOP 5 PROCESSES (by CPU)"
-echo "----------------------------------------"
-ps aux --sort=-%cpu | head -6
-echo ""
-
-# Network
-echo "🌐 NETWORK"
-echo "----------------------------------------"
-echo "IP Addresses:"
-ip addr show 2>/dev/null | grep "inet " || hostname -I
-echo ""
-
-# Docker (nếu có)
-echo "🐳 DOCKER STATUS"
-echo "----------------------------------------"
-if command -v docker &> /dev/null; then
-    if docker info &> /dev/null; then
-        echo "Docker: Running ✅"
-        echo "Containers: $(docker ps -q | wc -l) running"
-        echo "Images: $(docker images -q | wc -l) available"
-    else
-        echo "Docker: Installed but not running ⚠️"
-    fi
-else
-    echo "Docker: Not installed ❌"
-fi
-
-echo ""
-echo "========================================"
-echo "    Report completed at $(date +%H:%M:%S)"
+echo "📋 SYSTEM INFO: $(hostname) | $(uname -r)"
+echo "💻 CPU CORES: $(nproc)"
+echo "📟 MEMORY:"
+free -h | grep "Mem"
+echo "💾 DISK USAGE:"
+df -h | grep "/$"
+echo "🐳 DOCKER STATUS:"
+if command -v docker &> /dev/null; then echo "Running ✅"; else echo "Not installed ❌"; fi
 echo "========================================"
 EOF
 
@@ -466,28 +413,23 @@ chmod +x scripts/system_health.sh
 ./scripts/system_health.sh
 ```
 
-### ✅ Lab hoàn thành
+---
 
-- [ ] Script chạy thành công
-- [ ] Hiển thị thông tin hệ thống
-- [ ] Kiểm tra Docker status
+## 🎯 Bonus Challenges (Thử thách bổ sung)
+
+1. **Logging**: Modify `system_health.sh` to save output to a file.
+   *(Sửa `system_health.sh` để lưu kết quả vào file log.)*
+2. **Big Files**: Create a script to find all files >10MB in your home dir.
+   *(Tạo script tìm tất cả các file lớn hơn 10MB trong thư mục home.)*
+3. **Backup**: Write a script to backup `devops-lab` to a folder named `backups_YYYYMMDD`.
+   *(Viết script backup thư mục lab vào một folder có gắn ngày tháng.)*
 
 ---
 
-## 🎯 Thử thách bổ sung
-
-Sau khi hoàn thành các labs, thử:
-
-1. **Sửa đổi `system_health.sh`** để ghi output ra file log
-2. **Tạo script** liệt kê tất cả files >10MB trong home directory
-3. **Tạo script** backup thư mục project vào folder backup với timestamp
-
----
-
-## 🔗 Navigation
+## 🔗 Navigation (Điều hướng)
 
 [⬅️ README](./README.md) | [CHEATSHEET](./CHEATSHEET.md) | [QUIZ ➡️](./QUIZ.md)
 
 ---
 
-*Cập nhật: 2025-12-29*
+*Last Updated: 2026-01-16*

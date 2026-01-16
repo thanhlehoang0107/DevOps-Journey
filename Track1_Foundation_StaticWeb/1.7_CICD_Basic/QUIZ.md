@@ -12,10 +12,10 @@
 
 CI stands for? (CI là viết tắt của?)
 
-a) Container Integration  
-b) Continuous Integration  
-c) Code Integration  
-d) Complete Integration  
+- a) Container Integration (Tích hợp Container)
+- b) Continuous Integration (Tích hợp liên tục)
+- c) Code Integration (Tích hợp mã nguồn)
+- d) Complete Integration (Tích hợp hoàn toàn)
 
 ---
 
@@ -23,10 +23,10 @@ d) Complete Integration
 
 CD can mean? (CD có thể là?)
 
-a) Continuous Delivery  
-b) Continuous Deployment  
-c) Both a and b (Cả a và b)  
-d) Continuous Development  
+- a) Continuous Delivery (Chuyển giao liên tục)
+- b) Continuous Deployment (Triển khai liên tục)
+- c) Both a and b (Cả a và b)
+- d) Continuous Development (Phát triển liên tục)
 
 ---
 
@@ -34,10 +34,10 @@ d) Continuous Development
 
 What is the main benefit of CI? (Lợi ích chính của CI là gì?)
 
-a) Faster deployments (Triển khai nhanh hơn)  
-b) Early bug detection (Phát hiện lỗi sớm)  
-c) Lower costs (Giảm chi phí)  
-d) More features (Nhiều tính năng hơn)  
+- a) Faster deployments (Triển khai nhanh hơn)
+- b) Early bug detection (Phát hiện lỗi sớm)
+- c) Lower costs (Giảm chi phí)
+- d) More features (Nhiều tính năng hơn)
 
 ---
 
@@ -45,10 +45,10 @@ d) More features (Nhiều tính năng hơn)
 
 Which stage typically comes first in a CI/CD pipeline? (Stage nào thường đầu tiên trong pipeline?)
 
-a) Deploy  
-b) Build  
-c) Lint/Test  
-d) Release  
+- a) Deploy (Triển khai)
+- b) Build (Xây dựng)
+- c) Lint/Test (Kiểm tra lỗi/Test)
+- d) Release (Phát hành)
 
 ---
 
@@ -58,10 +58,10 @@ d) Release
 
 GitLab CI pipeline file is named? (File pipeline GitLab CI tên là?)
 
-a) .gitlab-pipeline.yml  
-b) .gitlab-ci.yml  
-c) gitlab-ci.yaml  
-d) .ci.yml  
+- a) .gitlab-pipeline.yml
+- b) .gitlab-ci.yml
+- c) gitlab-ci.yaml
+- d) .ci.yml
 
 ---
 
@@ -69,10 +69,10 @@ d) .ci.yml
 
 In GitLab CI, what defines the order of execution? (Trong GitLab CI, cái gì định nghĩa thứ tự thực thi?)
 
-a) jobs  
-b) stages  
-c) scripts  
-d) variables  
+- a) jobs (các công việc)
+- b) stages (các giai đoạn)
+- c) scripts (kịch bản)
+- d) variables (biến)
 
 ---
 
@@ -80,10 +80,10 @@ d) variables
 
 How to access GitLab Container Registry? (Làm sao truy cập GitLab Container Registry?)
 
-a) `$DOCKER_REGISTRY`  
-b) `$CI_REGISTRY`  
-c) `$GITLAB_REGISTRY`  
-d) `$CONTAINER_REGISTRY`  
+- a) `$DOCKER_REGISTRY`
+- b) `$CI_REGISTRY`
+- c) `$GITLAB_REGISTRY`
+- d) `$CONTAINER_REGISTRY`
 
 ---
 
@@ -91,10 +91,10 @@ d) `$CONTAINER_REGISTRY`
 
 What does `when: manual` do in GitLab CI? (`when: manual` làm gì trong GitLab CI?)
 
-a) Runs automatically (Chạy tự động)  
-b) Requires manual trigger (Cần trigger thủ công)  
-c) Skips the job (Bỏ qua job)  
-d) Runs on schedule (Chạy theo lịch)  
+- a) Runs automatically (Chạy tự động)
+- b) Requires manual trigger (Cần trigger thủ công)
+- c) Skips the job (Bỏ qua job)
+- d) Runs on schedule (Chạy theo lịch)
 
 ---
 
@@ -102,10 +102,10 @@ d) Runs on schedule (Chạy theo lịch)
 
 How to define job dependencies in GitLab CI? (Làm sao định nghĩa dependencies trong GitLab CI?)
 
-a) `depends_on:`  
-b) `requires:`  
-c) `needs:`  
-d) `after:`  
+- a) `depends_on:`
+- b) `requires:`
+- c) `needs:`
+- d) `after:` (sau khi)
 
 ---
 
@@ -113,10 +113,10 @@ d) `after:`
 
 GitLab CI caching is configured with? (Caching trong GitLab CI được cấu hình bằng?)
 
-a) `cache:`  
-b) `caching:`  
-c) `store:`  
-d) `save:`  
+- a) `cache:`
+- b) `caching:`
+- c) `store:`
+- d) `save:`
 
 ---
 
@@ -124,10 +124,10 @@ d) `save:`
 
 What is `artifacts` used for in GitLab CI? (`artifacts` dùng để làm gì trong GitLab CI?)
 
-a) Define variables (Định nghĩa variables)  
-b) Store files between jobs (Lưu files giữa các jobs)  
-c) Run scripts (Chạy scripts)  
-d) Cache dependencies (Cache dependencies)  
+- a) Define variables (Định nghĩa variables)
+- b) Store files between jobs (Lưu files giữa các jobs)
+- c) Run scripts (Chạy scripts)
+- d) Cache dependencies (Cache dependencies)
 
 ---
 
@@ -135,10 +135,10 @@ d) Cache dependencies (Cache dependencies)
 
 How to run a job only on main branch? (Làm sao chạy job chỉ trên branch main?)
 
-a) `branch: main`  
-b) `only: - main`  
-c) `if: main`  
-d) `when: main`  
+- a) `branch: main`
+- b) `only: - main`
+- c) `if: main`
+- d) `when: main`
 
 ---
 
@@ -146,10 +146,10 @@ d) `when: main`
 
 What does `$CI_COMMIT_SHORT_SHA` contain? (`$CI_COMMIT_SHORT_SHA` chứa gì?)
 
-a) Full commit hash (Commit hash đầy đủ)  
-b) Short commit hash (Commit hash ngắn)  
-c) Branch name (Tên branch)  
-d) Project name (Tên project)  
+- a) Full commit hash (Commit hash đầy đủ)
+- b) Short commit hash (Commit hash ngắn)
+- c) Branch name (Tên branch)
+- d) Project name (Tên project)
 
 ---
 
@@ -159,10 +159,10 @@ d) Project name (Tên project)
 
 GitHub Actions workflow files are stored in? (Files workflow GitHub Actions ở đâu?)
 
-a) .github/actions/  
-b) .github/workflows/  
-c) .workflows/  
-d) workflows/  
+- a) .github/actions/
+- b) .github/workflows/
+- c) .workflows/
+- d) workflows/
 
 ---
 
@@ -170,10 +170,10 @@ d) workflows/
 
 In GitHub Actions, `runs-on: ubuntu-latest` specifies? (`runs-on: ubuntu-latest` chỉ định gì?)
 
-a) Docker image  
-b) Runner OS  
-c) Node version  
-d) Branch name  
+- a) Docker image (Ảnh Docker)
+- b) Runner OS (Hệ điều hành Runner)
+- c) Node version (Phiên bản Node)
+- d) Branch name (Tên nhánh)
 
 ---
 
@@ -181,10 +181,10 @@ d) Branch name
 
 How to access secrets in GitHub Actions? (Làm sao truy cập secrets trong GitHub Actions?)
 
-a) `$SECRETS.NAME`  
-b) `${{ secrets.NAME }}`  
-c) `secrets.NAME`  
-d) `$secrets.NAME`  
+- a) `$SECRETS.NAME`
+- b) `${{ secrets.NAME }}`
+- c) `secrets.NAME`
+- d) `$secrets.NAME`
 
 ---
 
@@ -192,10 +192,10 @@ d) `$secrets.NAME`
 
 What does `actions/checkout@v4` do? (`actions/checkout@v4` làm gì?)
 
-a) Create checkout  
-b) Clone repository (Clone repository)  
-c) Push code  
-d) Delete code  
+- a) Create checkout (Tạo checkout)
+- b) Clone repository (Sao chép kho lưu trữ)
+- c) Push code (Đẩy mã lên)
+- d) Delete code (Xóa mã)
 
 ---
 
@@ -205,10 +205,10 @@ d) Delete code
 
 Which platform uses `stages:` to define pipeline structure? (Platform nào dùng `stages:` để định nghĩa cấu trúc pipeline?)
 
-a) GitHub Actions  
-b) GitLab CI  
-c) Both (Cả hai)  
-d) Neither (Không platform nào)  
+- a) GitHub Actions
+- b) GitLab CI
+- c) Both (Cả hai)
+- d) Neither (Không platform nào)
 
 ---
 
@@ -216,10 +216,10 @@ d) Neither (Không platform nào)
 
 Which platform has built-in Container Registry? (Platform nào có Container Registry tích hợp?)
 
-a) GitHub only  
-b) GitLab only  
-c) Both (Cả hai)  
-d) Neither (Không platform nào)  
+- a) GitHub only (Chỉ GitHub)
+- b) GitLab only (Chỉ GitLab)
+- c) Both (Cả hai)
+- d) Neither (Không platform nào)
 
 ---
 
@@ -227,10 +227,10 @@ d) Neither (Không platform nào)
 
 For scheduled pipelines, which statement is correct? (Với pipeline theo lịch, statement nào đúng?)
 
-a) Only GitLab supports scheduling (Chỉ GitLab hỗ trợ)  
-b) Only GitHub supports scheduling (Chỉ GitHub hỗ trợ)  
-c) Both support scheduling through UI (Cả hai hỗ trợ qua UI)  
-d) Neither supports scheduling (Không platform nào hỗ trợ)  
+- a) Only GitLab supports scheduling (Chỉ GitLab hỗ trợ)
+- b) Only GitHub supports scheduling (Chỉ GitHub hỗ trợ)
+- c) Both support scheduling through UI (Cả hai hỗ trợ qua UI)
+- d) Neither supports scheduling (Không platform nào hỗ trợ)
 
 ---
 

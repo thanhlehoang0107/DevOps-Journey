@@ -22,7 +22,7 @@ After this module, you will (Sau module này, bạn sẽ):
 
 ---
 
-## 📖 Content (Nội dung)
+## 📚 Content (Nội dung)
 
 ### 1. What is Linux? (Linux là gì?) - 30 min
 
@@ -36,10 +36,10 @@ After this module, you will (Sau module này, bạn sẽ):
 
 | Reason | Explanation |
 |--------|-------------|
-| **Servers run Linux** | 90%+ servers on the internet run Linux |
-| **Containers** | Docker, Kubernetes are based on Linux |
-| **Scripting** | Bash scripting is a powerful automation tool |
-| **Free & Open Source** | No license cost, easy to customize |
+| **Servers run Linux** | 90%+ servers on the internet run Linux (Hơn 90% máy chủ internet chạy Linux) |
+| **Containers** | Docker, Kubernetes are based on Linux (Docker, K8s dựa trên Linux) |
+| **Scripting** | Bash scripting is a powerful automation tool (Bash scripting là công cụ tự động hóa mạnh mẽ) |
+| **Free & Open Source** | No license cost, easy to customize (Không phí bản quyền, dễ tùy chỉnh) |
 
 #### 1.3 Popular Linux Distributions (Các Linux Distributions phổ biến)
 
@@ -284,16 +284,18 @@ find . -name "*.txt" -exec grep -l "error" {} \;
 ```
 -rwxr-xr--
 │└┬─┘└┬─┘└┬─┘
-│ │   │   └── Others (o): r-- = read only (chỉ đọc)
-│ │   └────── Group (g): r-x = read + execute (đọc + chạy)
-│ └────────── User/Owner (u): rwx = full access (toàn quyền)
-└──────────── File type (- = file, d = directory)
+│ │   │   └── Others (o): r-- = read only (người khác: chỉ đọc)
+│ │   └────── Group (g): r-x = read + execute (nhóm: đọc + thực thi)
+│ └────────── User/Owner (u): rwx = full access (chủ sở hữu: toàn quyền)
+└──────────── File type (- = file, d = directory) (Loại tập tin)
 ```
 
 | Permission | Symbol | Number | Meaning |
 |------------|--------|--------|---------|
 | Read | r | 4 | Read file/list directory (Đọc file/liệt kê thư mục) |
 | Write | w | 2 | Write file/create delete in dir (Ghi file/tạo xóa) |
+| Execute | x | 1 | Run file/enter directory (Chạy file/vào thư mục) |
+
 | Execute | x | 1 | Run file/enter directory (Chạy file/vào thư mục) |
 
 #### 6.2 chmod - Change Permissions (Thay đổi permissions)
@@ -350,6 +352,8 @@ kill -9 1234    # Force kill (Buộc dừng)
 
 # Kill by name (Kill bằng tên)
 pkill nginx
+killall nginx
+
 killall nginx
 ```
 
@@ -474,7 +478,7 @@ fi
 |----------|---------|
 | `-f` | File exists (File tồn tại) |
 | `-d` | Directory exists (Thư mục tồn tại) |
-| `-eq` | Equal - numbers (Bằng - số) |
+| `-eq` | Equal - numbers (Bằng nhau - số) |
 | `-ne` | Not equal (Không bằng) |
 | `-gt` | Greater than (Lớn hơn) |
 | `-lt` | Less than (Nhỏ hơn) |
@@ -590,7 +594,7 @@ command &> all_output.txt
 
 | ← Previous | Current | Next → |
 |:------------------:|:------------------:|:-------------:|
-| [Setup Environment](../../Setup_Environment/) | **1.1 Linux & Bash** | [1.2 Python](../1.2_Python_Basics/) |
+| [Setup Environment](../../Track0_Setup_Environment/) | **1.1 Linux & Bash** | [1.2 Python](../1.2_Python_Basics/) |
 
 ---
 

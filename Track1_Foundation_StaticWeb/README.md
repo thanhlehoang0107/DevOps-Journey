@@ -24,6 +24,27 @@ After completing Track 1, you will (Sau khi hoàn thành Track 1, bạn sẽ):
 
 ---
 
+## 🤔 Why This Track? (Tại sao học Track này?)
+
+Track 1 is the **mandatory foundation** - without foundation, everything later becomes shaky.
+
+*Track 1 là **nền tảng bắt buộc** - không có nền tảng, mọi thứ sau này đều lung lay.*
+
+| Skill (Kỹ năng) | Why you can't skip it (Tại sao không thể bỏ qua) |
+|-----------------|--------------------------------------------------|
+| **Linux** | 96% of servers on the internet run Linux. You'll debug on it. *(96% servers chạy Linux. Bạn sẽ debug trên đó.)* |
+| **Python** | Script automation, write tools, process configs. *(Script automation, viết tools, xử lý configs.)* |
+| **Networking** | Can't debug "connection refused" without understanding TCP/IP. *(Debug lỗi mạng nếu không hiểu TCP/IP? Không thể.)* |
+| **Git** | All code, all configs, everything goes through Git. *(Mọi code, mọi config đều qua Git.)* |
+| **Docker** | No Docker = can't do modern DevOps. *(Không có Docker = không thể làm DevOps hiện đại.)* |
+| **CI/CD** | Core of DevOps - automate everything. *(Core của DevOps - tự động hóa mọi thứ.)* |
+
+**Goal of this Track:** Deploy a complete website with automated pipeline - **your first portfolio project**.
+
+*Điểm đến của Track này: Deploy website hoàn chỉnh với pipeline tự động - **portfolio project đầu tiên của bạn**.*
+
+---
+
 ## 📚 Module List (Danh Sách Modules)
 
 | # | Module | Duration | Description |
@@ -109,7 +130,7 @@ Day 5-7: Testing, documentation, deployment
 
 Before starting Track 1, make sure you have (Trước khi bắt đầu, hãy đảm bảo):
 
-- [ ] Installed [development environment](../Setup_Environment/README.md) (Đã cài đặt môi trường)
+- [ ] Installed [development environment](../Track0_Setup_Environment/README.md) (Đã cài đặt môi trường)
 - [ ] Created GitLab account (Primary) or GitHub account (Đã tạo tài khoản GitLab hoặc GitHub)
 - [ ] Installed Docker Desktop (Đã cài đặt Docker Desktop)
 - [ ] Installed VS Code with extensions (Đã cài đặt VS Code)
@@ -124,10 +145,10 @@ You will build (Bạn sẽ xây dựng):
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                    GitHub Repository                        │
+│                    GitLab Repository                        │
 │  ┌─────────────┐     ┌──────────────┐     ┌──────────────┐ │
-│  │   HTML/CSS  │ ──→ │   GitHub     │ ──→ │   Docker     │ │
-│  │   Website   │     │   Actions    │     │   Image      │ │
+│  │   HTML/CSS  │ ──→ │   GitLab     │ ──→ │   Docker     │ │
+│  │   Website   │     │   CI/CD      │     │   Image      │ │
 │  └─────────────┘     └──────────────┘     └──────────────┘ │
 │                              │                     │        │
 │                              ▼                     ▼        │
@@ -171,7 +192,7 @@ You will build (Bạn sẽ xây dựng):
 
 | ← Previous | Current | Next → |
 |------------|---------|--------|
-| [Setup Environment](../Setup_Environment/) | **Track 1** | [Track 2: Orchestration](../Track2_Orchestration_Automation/) |
+| [Setup Environment](../Track0_Setup_Environment/) | **Track 1** | [Track 2: Orchestration](../Track2_Orchestration_Automation/) |
 
 ---
 

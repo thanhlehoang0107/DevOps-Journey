@@ -24,6 +24,29 @@ After completing Track 4, you will (Sau khi hoàn thành Track 4, bạn sẽ):
 
 ---
 
+## 🤔 Why This Track? (Tại sao học Track này?)
+
+You've built infrastructure and CI/CD. But if code has security vulnerabilities → **entire system gets hacked**.
+
+*Bạn đã build được infrastructure và CI/CD. Nhưng nếu code có lỗ hổng bảo mật → **toàn bộ hệ thống bị hack**.*
+
+| Market Reality (Thực tế thị trường) | Statistics (Số liệu) |
+|------------------------------------|---------------------|
+| Data breaches due to misconfigs | 21% (according to Verizon) *(21% theo Verizon)* |
+| Time to detect breach | ~200 days (too late!) *(~200 ngày - quá muộn!)* |
+| Cost of a breach | $4.45 million average *(4.45 triệu đô trung bình)* |
+| Companies shifting left | 70% are adopting DevSecOps *(70% đang áp dụng DevSecOps)* |
+
+**"Shift Left"** = Find security bugs IN the pipeline, BEFORE deploying, not AFTER being hacked.
+
+*"Shift Left" = Tìm lỗi bảo mật TRONG pipeline, TRƯỚC khi deploy, không phải SAU khi bị hack.*
+
+**Goal of this Track:** You will build a secure CI/CD pipeline with SAST, DAST, secret scanning, and policy as code.
+
+*Điểm đến của Track này: Bạn sẽ build secure CI/CD pipeline với SAST, DAST, secret scanning, và policy as code.*
+
+---
+
 ## 📋 Prerequisites (Điều kiện tiên quyết)
 
 Before starting Track 4, you should complete (Trước khi bắt đầu Track 4, bạn cần hoàn thành):

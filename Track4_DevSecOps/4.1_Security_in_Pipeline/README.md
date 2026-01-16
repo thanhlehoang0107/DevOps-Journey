@@ -32,9 +32,77 @@ After this module, you will (Sau module này, bạn sẽ):
 
 ## 📚 Content (Nội dung)
 
-### 1. SAST Tools (Công cụ SAST)
+### 1. What is DevSecOps and Shift-Left Security? (DevSecOps và Shift-Left Security là gì?)
 
-#### GitLab CI - SAST (Primary - Chính)
+#### The Traditional Problem (Vấn đề truyền thống)
+
+Traditionally, security was checked at the **end** of development, before release. This led to:
+
+*Trước đây, bảo mật thường được kiểm tra **ở cuối** quá trình phát triển, trước khi release. Điều này dẫn đến:*
+
+```ini
+┌─────────────────────────────────────────────────────────────────┐
+│   MÔ HÌNH TRUYỀN THỐNG (Traditional Model)                       │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                  │
+│   Dev → Dev → Dev → Dev → QA → SECURITY → Release               │
+│                                    ↑                             │
+│                              Phát hiện lỗi ở đây                 │
+│                              = TỐN KÉM để sửa! 💸                │
+│                                                                  │
+└─────────────────────────────────────────────────────────────────┘
+
+```
+
+- 💸 **Chi phí cao**: Sửa lỗi ở production đắt gấp 100 lần so với sửa ở development
+- ⏰ **Delay release**: Phải quay lại sửa code, re-test
+- 😡 **Developers bực mình**: Lỗi phát hiện muộn, context đã mất
+
+#### Solution: Shift-Left Security (Giải pháp: Shift-Left Security)
+
+**Shift-Left** means moving security checks to the **left** (earlier) in the pipeline.
+
+*Shift-Left có nghĩa là di chuyển security checks sang **bên trái** (sớm hơn) trong pipeline.*
+
+```ini
+┌─────────────────────────────────────────────────────────────────┐
+│   MÔ HÌNH SHIFT-LEFT (Shift-Left Model)                          │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                  │
+│   Dev → SECURITY → Build → SECURITY → Deploy → SECURITY         │
+│          ↑                    ↑                  ↑               │
+│       SAST, Lint         Container Scan      DAST               │
+│       (Chi phí thấp)     (Nhanh, tự động)    (Runtime)          │
+│                                                                  │
+└─────────────────────────────────────────────────────────────────┘
+
+```
+
+#### Types of Security Testing (Các loại Security Testing)
+
+| Loại | Thời điểm | Công cụ | Phát hiện gì |
+|------|-----------|---------|--------------|
+| **SAST** (Static) | Code commit | SonarQube, CodeQL | SQL Injection, XSS trong code |
+| **SCA** (Composition) | Build | Snyk, npm audit | Vulnerabilities trong dependencies |
+| **Container Scan** | Build image | Trivy, Docker Scout | CVE trong base image |
+| **Secret Scan** | Commit | Gitleaks, TruffleHog | API keys, passwords trong code |
+| **DAST** (Dynamic) | Staging | OWASP ZAP, Nuclei | Vulnerabilities khi app chạy |
+
+---
+
+### 2. SAST - Static Application Security Testing
+
+#### What is SAST? (SAST là gì?)
+
+**SAST** analyzes source code to find security flaws **without running the application**. It's like having a security expert automatically review your code.
+
+*SAST phân tích source code để tìm lỗi bảo mật **mà không cần chạy ứng dụng**. Nó giống như có một security expert review code của bạn tự động.*
+
+#### GitLab CI - SAST (Chính)
+
+GitLab provides built-in SAST, just include the template:
+
+*GitLab cung cấp SAST sẵn có, chỉ cần include template:*
 
 ```yaml
 # .gitlab-ci.yml
@@ -44,7 +112,15 @@ include:
 sast:
   stage: test
 
-# Custom SonarQube
+```
+
+#### SonarQube - Advanced SAST (SAST nâng cao)
+
+SonarQube provides deeper analysis with a visual dashboard:
+
+*SonarQube cung cấp phân tích sâu hơn với dashboard trực quan:*
+
+```yaml
 sonarqube:
   stage: test
   image: sonarsource/sonar-scanner-cli
@@ -54,7 +130,13 @@ sonarqube:
         -Dsonar.sources=.
         -Dsonar.host.url=$SONAR_HOST_URL
         -Dsonar.login=$SONAR_TOKEN
+
 ```
+
+**Lưu ý:**
+
+- `SONAR_HOST_URL` và `SONAR_TOKEN` nên lưu trong GitLab CI/CD Variables (masked)
+- SonarQube server cần được setup riêng (self-hosted hoặc SonarCloud)
 
 #### GitHub Actions - SAST (Alternative - Thay thế)
 
@@ -66,6 +148,7 @@ sonarqube:
 # SonarQube
 - name: SonarQube Scan
   uses: sonarsource/sonarqube-scan-action@master
+
 ```
 
 ---
@@ -81,6 +164,7 @@ include:
 
 dependency_scanning:
   stage: test
+
 ```
 
 #### CLI Tools (Công cụ CLI)
@@ -96,13 +180,22 @@ snyk monitor
 
 # OWASP Dependency Check
 dependency-check --project myapp --scan ./
+
 ```
 
 ---
 
 ### 3. Secret Scanning (Quét secrets)
 
+Secret scanning detects hardcoded passwords, API keys, and tokens in your code before they're exposed.
+
+*Secret scanning phát hiện passwords, API keys, tokens hardcode trong code trước khi chúng bị lộ.*
+
 #### GitLab CI - Secret Detection
+
+GitLab has built-in secret detection. Just include the template:
+
+*GitLab có sẵn secret detection. Chỉ cần include template:*
 
 ```yaml
 # .gitlab-ci.yml
@@ -111,9 +204,14 @@ include:
 
 secret_detection:
   stage: test
+
 ```
 
 #### Gitleaks
+
+Gitleaks is a popular open-source tool for scanning secrets. Works with any Git repository.
+
+*Gitleaks là tool mã nguồn mở phổ biến để quét secrets. Hoạt động với bất kỳ Git repository nào.*
 
 ```yaml
 # GitLab CI
@@ -127,19 +225,29 @@ gitleaks:
 # GitHub Actions
 - name: Scan for secrets (Quét secrets)
   uses: gitleaks/gitleaks-action@v2
+
 ```
 
 #### TruffleHog
+
+TruffleHog scans Git history for secrets, catching secrets that were committed and later removed.
+
+*TruffleHog quét lịch sử Git tìm secrets, bắt cả secrets đã commit rồi xóa sau.*
 
 ```bash
 # Scan git history (Quét lịch sử git)
 trufflehog git https://gitlab.com/user/repo
 trufflehog git https://github.com/user/repo
+
 ```
 
 ---
 
 ### 4. Container Scanning (Quét container)
+
+Container scanning finds vulnerabilities in your Docker images before deployment.
+
+*Container scanning tìm lỗ hổng trong Docker images trước khi deploy.*
 
 #### GitLab CI - Container Scanning
 
@@ -152,6 +260,7 @@ container_scanning:
   stage: test
   variables:
     CS_IMAGE: $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA
+
 ```
 
 #### Trivy
@@ -168,6 +277,7 @@ trivy-scan:
 # Command line
 trivy image myapp:latest
 trivy image --severity CRITICAL myapp:latest
+
 ```
 
 #### Docker Scout
@@ -176,6 +286,7 @@ trivy image --severity CRITICAL myapp:latest
 # Built-in Docker scanning
 docker scout cves myapp:latest
 docker scout quickview myapp:latest
+
 ```
 
 ---
@@ -194,6 +305,7 @@ dast:
   artifacts:
     paths:
       - zap-report.html
+
 ```
 
 #### Nuclei
@@ -202,6 +314,7 @@ dast:
 # Vulnerability scanning
 nuclei -u https://example.com -t cves/
 nuclei -u https://example.com -severity critical,high
+
 ```
 
 ---
@@ -223,6 +336,7 @@ deny[msg] {
     not input.request.object.spec.template.spec.containers[_].securityContext.readOnlyRootFilesystem
     msg := "Containers must use read-only filesystem"
 }
+
 ```
 
 #### Terraform Security (IaC Scanning)
@@ -244,6 +358,7 @@ tfsec:
   image: aquasec/tfsec
   script:
     - tfsec . --format junit > tfsec-report.xml
+
 ```
 
 ---
@@ -285,6 +400,7 @@ checkov:
     - checkov -d terraform/ --output cli
   rules:
     - if: '$CI_COMMIT_BRANCH == "main"'
+
 ```
 
 ---

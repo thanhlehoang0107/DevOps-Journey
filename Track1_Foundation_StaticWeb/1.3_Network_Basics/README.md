@@ -27,7 +27,19 @@
 
 ## 📚 Content (Nội dung)
 
-### 1. OSI and TCP/IP Models (Mô hình OSI và TCP/IP)
+### 1. What is Computer Networking? (Mạng máy tính là gì?)
+
+**Computer Networking** is the practice of connecting computers together to share resources (like files, printers) and communicate (email, chat, video). In DevOps, understanding networking is crucial for connecting servers, containers, and clouds.
+
+*Mạng máy tính là việc kết nối các máy tính lại với nhau để chia sẻ tài nguyên (như file, máy in) và giao tiếp (email, chat, video). Trong DevOps, hiểu về mạng là cực kỳ quan trọng để kết nối các máy chủ, container và đám mây.*
+
+**Key Concepts (Các khái niệm chính):**
+
+- **Protocol (Giao thức)**: Rules for communication (Quy tắc giao tiếp, ví dụ: TCP, IP, HTTP).
+- **IP Address (Địa chỉ IP)**: Unique identifier for each device (Định danh duy nhất cho mỗi thiết bị).
+- **Port (Cổng)**: Endpoint for a specific service (Điểm cuối cho một dịch vụ cụ thể).
+
+### 2. OSI and TCP/IP Models (Mô hình OSI và TCP/IP)
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -48,17 +60,17 @@
 
 ---
 
-### 2. IP Addressing (Địa chỉ IP)
+### 3. IP Addressing (Địa chỉ IP)
 
 #### IPv4 Format (Định dạng IPv4)
 
 ```
 192.168.1.100
 └─┬─┘ └┬┘ └┬┘ └┬┘
-  │    │   │   └── Host (0-255)
-  │    │   └────── Subnet
-  │    └────────── Class B
-  └─────────────── Class B
+  │    │   │   └── Host (0-255) (Máy)
+  │    │   └────── Subnet (Mạng con)
+  │    └────────── Class B (Lớp B)
+  └─────────────── Class B (Lớp B)
 ```
 
 #### Important IP Ranges (Các dải IP quan trọng)
@@ -81,7 +93,7 @@
 
 ---
 
-### 3. Ports and Protocols (Cổng và Giao thức)
+### 4. Ports and Protocols (Cổng và Giao thức)
 
 #### Common Ports (Các cổng phổ biến)
 
@@ -103,9 +115,11 @@
 | Reliable - retransmit (Đáng tin cậy) | Fast - no guarantee (Nhanh) |
 | HTTP, SSH, SMTP | DNS, VoIP, Streaming |
 
+| HTTP, SSH, SMTP | DNS, VoIP, Streaming |
+
 ---
 
-### 4. DNS (Domain Name System - Hệ thống tên miền)
+### 5. DNS (Domain Name System - Hệ thống tên miền)
 
 ```
 Browser request: www.example.com
@@ -140,6 +154,10 @@ Browser request: www.example.com
      93.184.216.34
 ```
 
+     93.184.216.34
+
+```
+
 #### DNS Record Types (Các loại bản ghi DNS)
 
 | Record | Description | Example (Ví dụ) |
@@ -152,7 +170,7 @@ Browser request: www.example.com
 
 ---
 
-### 5. HTTP/HTTPS
+### 6. HTTP/HTTPS
 
 #### HTTP Methods (Các phương thức HTTP)
 
@@ -184,9 +202,11 @@ Browser request: www.example.com
 | 502 | Bad Gateway (Gateway lỗi) |
 | 503 | Service Unavailable (Dịch vụ không khả dụng) |
 
+| 503 | Service Unavailable (Dịch vụ không khả dụng) |
+
 ---
 
-### 6. Network Troubleshooting Tools (Công cụ khắc phục sự cố mạng)
+### 7. Network Troubleshooting Tools (Công cụ khắc phục sự cố mạng)
 
 #### ping - Check connectivity (Kiểm tra kết nối)
 

@@ -24,28 +24,79 @@ After this module, you will (Sau module này, bạn sẽ):
 
 ## 📚 Content (Nội dung)
 
-### 1. Prometheus
+### 1. What is Observability? (Khả năng quan sát là gì?)
+
+**Observability** (Khả năng quan sát) là khả năng hiểu trạng thái bên trong của một hệ thống chỉ bằng cách xem các đầu ra của nó. Trong DevOps, đây là kỹ năng cực kỳ quan trọng để:
+
+*Observability is the ability to understand the internal state of a system by examining its outputs. In DevOps, this is an extremely important skill to:*
+
+- **Phát hiện sự cố nhanh chóng** (Detect incidents quickly).
+- **Hiểu nguyên nhân gốc rễ** (Understand root causes).
+- **Đảm bảo hiệu năng và độ tin cậy** (Ensure performance and reliability).
+
+#### Ba trụ cột của Observability (The Three Pillars)
+
+| Trụ cột | Mô tả | Công cụ ví dụ |
+|---------|-------|---------------|
+| 📈 **Metrics (Số liệu)** | Dữ liệu định lượng theo thời gian (CPU, RAM, request count) | Prometheus, Datadog |
+| 📜 **Logs (Nhật ký)** | Bản ghi sự kiện xảy ra trong hệ thống | Loki, ELK Stack |
+| 🔗 **Traces (Dấu vết)** | Theo dõi một request đi qua nhiều services | Jaeger, Zipkin |
+
+---
+
+### 2. Prometheus - Metrics Collection (Thu thập Metrics)
+
+#### Prometheus là gì? (What is Prometheus?)
+
+**Prometheus** là hệ thống giám sát và cảnh báo mã nguồn mở, ban đầu được xây dựng tại SoundCloud. Nó thu thập và lưu trữ metrics dưới dạng **time series data** (dữ liệu chuỗi thời gian).
+
+*Prometheus is an open-source monitoring and alerting system, originally built at SoundCloud. It collects and stores metrics as time series data.*
+
+**Cách Prometheus hoạt động (How it works):**
+
+1. Prometheus **pull** (kéo) metrics từ các ứng dụng thông qua HTTP endpoint (thường là `/metrics`).
+2. Các ứng dụng **expose** metrics ở định dạng Prometheus.
+3. Prometheus lưu trữ metrics và cho phép truy vấn bằng **PromQL**.
+
+#### Prometheus Configuration (Cấu hình Prometheus)
+
+The main Prometheus config file defines "jobs" - each job is a group of targets (applications) to collect metrics from.
+
+*File cấu hình chính của Prometheus định nghĩa các "job" - mỗi job là một nhóm targets (ứng dụng) cần thu thập metrics.*
 
 ```yaml
 # prometheus.yml
 global:
-  scrape_interval: 15s
+  scrape_interval: 15s  # Thu thập metrics mỗi 15 giây
 
 scrape_configs:
+  # Job thu thập metrics của chính Prometheus
   - job_name: 'prometheus'
     static_configs:
       - targets: ['localhost:9090']
   
+  # Job thu thập metrics của Node Exporter (CPU, RAM, Disk của server)
   - job_name: 'node'
     static_configs:
       - targets: ['node-exporter:9100']
   
+  # Job thu thập metrics của ứng dụng
   - job_name: 'app'
     static_configs:
       - targets: ['app:3000']
 ```
 
-### 2. Grafana Dashboard
+**Giải thích (Explanation):**
+
+- `scrape_interval`: Tần suất Prometheus pull metrics.
+- `job_name`: Tên nhóm targets, giúp phân loại metrics.
+- `targets`: Danh sách địa chỉ `host:port` của các ứng dụng expose metrics.
+
+### 2. Grafana Dashboard (Bảng điều khiển Grafana)
+
+Grafana visualizes Prometheus metrics as beautiful, interactive dashboards. Here's a simple panel definition.
+
+*Grafana biểu diễn metrics của Prometheus thành dashboards đẹp, tương tác. Dưới đây là định nghĩa panel đơn giản.*
 
 ```json
 {
@@ -64,6 +115,10 @@ scrape_configs:
 ```
 
 ### 3. PromQL Basics (PromQL cơ bản)
+
+PromQL is Prometheus's query language. These are the most common queries you'll write.
+
+*PromQL là ngôn ngữ truy vấn của Prometheus. Đây là các query phổ biến nhất bạn sẽ viết.*
 
 ```promql
 # CPU usage (Sử dụng CPU)

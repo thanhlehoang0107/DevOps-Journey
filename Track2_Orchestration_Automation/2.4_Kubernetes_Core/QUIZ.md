@@ -9,66 +9,74 @@
 ### Q1
 
 Pod là gì?
-a) Container  
-b) Smallest deployable unit  
-c) Node  
-d) Service  
+
+- a) Container
+- b) Smallest deployable unit (Đơn vị triển khai nhỏ nhất)
+- c) Node
+- d) Service  
 
 ### Q2
 
 ReplicaSet đảm bảo gì?
-a) Desired number of pods  
-b) Network policy  
-c) Storage  
-d) Secrets  
+
+- a) Desired number of pods (Số lượng Pod mong muốn)
+- b) Network policy (Chính sách mạng)
+- c) Storage (Lưu trữ)
+- d) Secrets (Bí mật)  
 
 ### Q3
 
 Service type nào expose ra external IP?
-a) ClusterIP  
-b) NodePort  
-c) LoadBalancer  
-d) b và c  
+
+- a) ClusterIP
+- b) NodePort
+- c) LoadBalancer
+- d) b và c  
 
 ### Q4
 
 `kubectl apply -f` làm gì?
-a) Delete resource  
-b) Create or update resource  
-c) View resource  
-d) Scale resource  
+
+- a) Delete resource (Xóa tài nguyên)
+- b) Create or update resource (Tạo hoặc cập nhật tài nguyên)
+- c) View resource (Xem tài nguyên)
+- d) Scale resource (Mở rộng tài nguyên)  
 
 ### Q5
 
 ConfigMap dùng để?
-a) Store secrets  
-b) Store configuration  
-c) Store images  
-d) Store volumes  
+
+- a) Store secrets (Lưu trữ bí mật)
+- b) Store configuration (Lưu trữ cấu hình)
+- c) Store images (Lưu trữ images)
+- d) Store volumes (Lưu trữ volumes)  
 
 ### Q6
 
 Namespace dùng để?
-a) Isolate resources  
-b) Network policies  
-c) Storage  
-d) Monitoring  
+
+- a) Isolate resources (Cô lập tài nguyên)
+- b) Network policies (Chính sách mạng)
+- c) Storage (Lưu trữ)
+- d) Monitoring (Giám sát)  
 
 ### Q7
 
 Liveness probe dùng để?
-a) Check if container is ready  
-b) Check if container needs restart  
-c) Check resources  
-d) Check network  
+
+- a) Check if container is ready (Kiểm tra container sẵn sàng chưa)
+- b) Check if container needs restart (Kiểm tra container có cần restart)
+- c) Check resources (Kiểm tra tài nguyên)
+- d) Check network (Kiểm tra mạng)  
 
 ### Q8
 
 `kubectl get pods -o wide` hiển thị gì thêm?
-a) Logs  
-b) Node và IP  
-c) Events  
-d) Secrets  
+
+- a) Logs (Nhật ký)
+- b) Node và IP
+- c) Events (Sự kiện)
+- d) Secrets (Bí mật)  
 
 ---
 
