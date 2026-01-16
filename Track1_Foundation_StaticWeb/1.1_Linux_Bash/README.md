@@ -575,6 +575,32 @@ command &> all_output.txt
 
 ---
 
+### 11. Common Mistakes (Lỗi thường gặp)
+
+> ⚠️ **Mistakes beginners often make (Lỗi người mới hay mắc):**
+>
+> | Mistake | Problem | Solution |
+> |---------|---------|----------|
+> | `rm -rf /` or `rm -rf *` | **Deletes everything!** *(Xóa hết!)* | Always double-check path, use `rm -i` for confirmation *(Luôn kiểm tra path, dùng -i để xác nhận)* |
+> | `chmod 777` | Too permissive, security risk *(Quá rộng, rủi ro bảo mật)* | Use minimal permissions: 755 for dirs, 644 for files *(Dùng quyền tối thiểu)* |
+> | Spaces in `VAR = value` | Variable assignment fails *(Gán biến thất bại)* | No spaces around `=`: `VAR=value` *(Không có dấu cách quanh =)* |
+> | Using tabs in YAML | YAML syntax error *(Lỗi cú pháp YAML)* | Always use spaces, not tabs *(Luôn dùng spaces, không dùng tabs)* |
+> | Forgetting `#!/bin/bash` | Script may not run correctly *(Script có thể chạy sai)* | Always add shebang at first line *(Luôn thêm shebang ở dòng đầu)* |
+
+---
+
+> ✅ **Checkpoint - Before continuing, make sure you can answer:**
+> *(Trước khi tiếp tục, hãy chắc bạn có thể trả lời:)*
+>
+> - [ ] How to navigate to home directory? *(Làm sao về thư mục home?)*
+> - [ ] How to find files larger than 100MB? *(Làm sao tìm files lớn hơn 100MB?)*
+> - [ ] How to change file permissions to read-only? *(Làm sao đổi quyền file thành chỉ đọc?)*
+> - [ ] How to write a for loop in bash? *(Làm sao viết vòng lặp for trong bash?)*
+>
+> *If you can't answer, please re-read the sections above!*
+
+---
+
 ## 📝 Module Files (Các file trong Module)
 
 | File | Description |

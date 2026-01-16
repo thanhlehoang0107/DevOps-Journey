@@ -770,6 +770,33 @@ docker run -d -p 8080:80 --name website my-website:v1.0
 
 ---
 
+### 10. Common Mistakes (Lỗi thường gặp)
+
+> ⚠️ **Docker mistakes beginners often make (Lỗi Docker người mới hay mắc):**
+>
+> | Mistake | Problem | Solution |
+> |---------|---------|----------|
+> | Running as root in container | Security risk *(Rủi ro bảo mật)* | Add `USER node` or create non-root user *(Thêm user không phải root)* |
+> | Using `latest` tag in production | Unpredictable deployments *(Deploy không ổn định)* | Always specify version: `nginx:1.25.3` *(Luôn chỉ định version)* |
+> | Not using `.dockerignore` | Large images, slow builds *(Image lớn, build chậm)* | Create `.dockerignore` with `node_modules`, `.git` *(Tạo .dockerignore)* |
+> | `COPY . .` before `npm install` | Cache invalidated on every code change *(Cache bị xóa mỗi lần đổi code)* | Copy `package*.json` first, then `npm install` *(Copy package.json trước)* |
+> | Storing secrets in Dockerfile | Secrets exposed in image layers *(Secrets bị lộ trong image layers)* | Use runtime env vars or Docker secrets *(Dùng biến môi trường runtime)* |
+> | Not cleaning up after install | Large images *(Image lớn)* | Combine `apt install` with `rm -rf /var/lib/apt/lists/*` in same RUN |
+
+---
+
+> ✅ **Checkpoint - Before continuing, make sure you can answer:**
+> *(Trước khi tiếp tục, hãy chắc bạn có thể trả lời:)*
+>
+> - [ ] What's the difference between an image and a container? *(Image và container khác nhau như thế nào?)*
+> - [ ] How to build an image from a Dockerfile? *(Làm sao build image từ Dockerfile?)*
+> - [ ] How to persist data when container is deleted? *(Làm sao giữ data khi container bị xóa?)*
+> - [ ] How to expose a container port to the host? *(Làm sao expose port container ra host?)*
+>
+> *If you can't answer, please re-read the sections above!*
+
+---
+
 ## 📝 Module Files (Các file trong Module)
 
 | File | Description |

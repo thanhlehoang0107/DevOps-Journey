@@ -564,6 +564,32 @@ deploy-production:
 
 ---
 
+### 10. Common Mistakes (Lỗi thường gặp)
+
+> ⚠️ **CI/CD mistakes beginners often make (Lỗi CI/CD người mới hay mắc):**
+>
+> | Mistake | Problem | Solution |
+> |---------|---------|----------|
+> | Wrong YAML indentation | Pipeline fails to parse *(Pipeline không parse được)* | Use 2 spaces, not tabs. Use YAML linter *(Dùng 2 spaces, không dùng tabs. Dùng YAML linter)* |
+> | File not in root directory | Pipeline doesn't trigger *(Pipeline không chạy)* | `.gitlab-ci.yml` must be in repository root *(Phải ở thư mục gốc repository)* |
+> | Hardcoding secrets in YAML | Secrets exposed in Git history *(Secrets bị lộ trong Git history)* | Use CI/CD Variables (masked) *(Dùng CI/CD Variables (masked))* |
+> | Not using cache | Slow builds *(Build chậm)* | Cache `node_modules`, `.npm` between jobs *(Cache các thư mục giữa các jobs)* |
+> | Missing `needs` or `dependencies` | Jobs run in wrong order *(Jobs chạy sai thứ tự)* | Specify job dependencies explicitly *(Chỉ định dependencies rõ ràng)* |
+
+---
+
+> ✅ **Checkpoint - Before continuing, make sure you can answer:**
+> *(Trước khi tiếp tục, hãy chắc bạn có thể trả lời:)*
+>
+> - [ ] What's the difference between CI and CD? *(CI và CD khác nhau như thế nào?)*
+> - [ ] What are stages and jobs in GitLab CI? *(Stages và jobs trong GitLab CI là gì?)*
+> - [ ] How to store secrets in CI/CD? *(Làm sao lưu secrets trong CI/CD?)*
+> - [ ] What is an artifact and when to use it? *(Artifact là gì và khi nào dùng?)*
+>
+> *If you can't answer, please re-read the sections above!*
+
+---
+
 <div align="center">
 
 ### 🔗 Module Navigation (Điều hướng Module)
